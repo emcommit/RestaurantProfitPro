@@ -52,8 +52,8 @@ const BellMenuPage: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {bellFood.items.map(item => (
-                  <tr key={item.name}>
+                {bellFood.items.map((item, index) => (
+                  <tr key={`${item.name}-${item.category}-${index}`}>
                     <td>{item.name}</td>
                     <td>{item.category}</td>
                     <td className="text-right">£{item.sellingPrice.toFixed(2)}</td>
