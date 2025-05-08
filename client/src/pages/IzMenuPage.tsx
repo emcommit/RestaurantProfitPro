@@ -52,8 +52,8 @@ const IzMenuPage: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {izMenu.items.map(item => (
-                  <tr key={item.name}>
+                {izMenu.items.map((item, index) => (
+                  <tr key={`${item.name}-${item.category}-${index}`}>
                     <td>{item.name}</td>
                     <td>{item.category}</td>
                     <td className="text-right">£{item.sellingPrice.toFixed(2)}</td>
