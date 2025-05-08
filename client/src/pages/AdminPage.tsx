@@ -30,6 +30,7 @@ interface MenuItem {
   hasRecipe?: boolean;
   buyingPrice?: number;
   ingredients?: Record<string, number>;
+  menuSource: 'izMenu' | 'bellFood';
 }
 
 interface Ingredient {
@@ -59,7 +60,8 @@ const AdminPage: React.FC = () => {
     sellingPrice: '',
     hasRecipe: true,
     buyingPrice: '',
-    ingredients: {} as Record<string, number>
+    ingredients: {} as Record<string, number>,
+    menuSource: 'izMenu' as 'izMenu' | 'bellFood'
   });
   const [newIngredient, setNewIngredient] = useState({ name: '', cost: '', unit: '' });
   const [recipeSearch, setRecipeSearch] = useState('');
@@ -67,10 +69,15 @@ const AdminPage: React.FC = () => {
   const [ingredientSearch, setIngredientSearch] = useState('');
   const [recipeCategoryFilter, setRecipeCategoryFilter] = useState('');
   const [resaleCategoryFilter, setResaleCategoryFilter] = useState('');
+  const [recipeMenuFilter, setRecipeMenuFilter] = useState('all');
+  const [resaleMenuFilter, setResaleMenuFilter] = useState('all');
   const navigate = useNavigate();
 
   const menus = data?.data || { izMenu, bellFood: bellFoodMenu };
-  const allItems = [...menus.izMenu.items, ...menus.bellFood.items];
+  const allItems = [
+    ...menus.izMenu.items.map(item => ({ ...item, menuSource: 'izMenu' as const })),
+    ...menus.bellFood.items.map(item => ({ ...item, menuSource: 'bellFood' as const }))
+  ];
   const recipeItems = allItems.filter(item => item.hasRecipe);
   const resaleItems = allItems.filter(item => !item.hasRecipe);
   const initialIngredients = { ...menus.izMenu.initialIngredients, ...menus.bellFood.initialIngredients };
@@ -80,12 +87,12 @@ const AdminPage: React.FC = () => {
   const resaleCategories = Array.from(new Set(resaleItems.map(item => item.category)));
 
   const addItemMutation = useMutation(
-    (item: MenuItem) => axios.post(`/api/menus/${item.hasRecipe ? 'izMenu' : 'bellFood'}/dishes`, item),
+    (item: MenuItem) => axios.post(`/api/menus/${item.menuSource}/dishes`, item),
     {
       onSuccess: () => {
         queryClient.invalidateQueries('menus');
         setIsAddItemModalOpen(false);
-        setNewItem({ id: '', name: '', category: '', sellingPrice: '', hasRecipe: true, buyingPrice: '', ingredients: {} });
+        setNewItem({ id: '', name: '', category: '', sellingPrice: '', hasRecipe: true, buyingPrice: '', ingredients: {}, menuSource: 'izMenu' });
       },
       onError: (error: any) => {
         alert(`Error adding item: ${error.message}`);
@@ -94,12 +101,12 @@ const AdminPage: React.FC = () => {
   );
 
   const editItemMutation = useMutation(
-    (item: MenuItem) => axios.put(`/api/menus/${item.hasRecipe ? 'izMenu' : 'bellFood'}/dishes/${item.id}`, item),
+    (item: MenuItem) => axios.put(`/api/menus/${item.menuSource}/dishes/${item.id}`, item),
     {
       onSuccess: () => {
         queryClient.invalidateQueries('menus');
         setIsEditItemModalOpen(false);
-        setNewItem({ id: '', name: '', category: '', sellingPrice: '', hasRecipe: true, buyingPrice: '', ingredients: {} });
+        setNewItem({ id: '', name: '', category: '', sellingPrice: '', hasRecipe: true, buyingPrice: '', ingredients: {}, menuSource: 'izMenu' });
       },
       onError: (error: any) => {
         alert(`Error editing item: ${error.message}`);
@@ -108,7 +115,7 @@ const AdminPage: React.FC = () => {
   );
 
   const deleteItemMutation = useMutation(
-    ({ id, hasRecipe }: { id: string; hasRecipe: boolean }) => axios.delete(`/api/menus/${hasRecipe ? 'izMenu' : 'bellFood'}/dishes/${id}`),
+    ({ id, menuSource }: { id: string; menuSource: 'izMenu' | 'bellFood' }) => axios.delete(`/api/menus/${menuSource}/dishes/${id}`),
     {
       onSuccess: () => {
         queryClient.invalidateQueries('menus');
@@ -167,7 +174,8 @@ const AdminPage: React.FC = () => {
       sellingPrice: parseFloat(newItem.sellingPrice),
       hasRecipe: newItem.hasRecipe,
       buyingPrice: newItem.hasRecipe ? undefined : parseFloat(newItem.buyingPrice) || parseFloat(newItem.sellingPrice) * 0.7,
-      ingredients: newItem.hasRecipe ? newItem.ingredients : {}
+      ingredients: newItem.hasRecipe ? newItem.ingredients : {},
+      menuSource: newItem.menuSource
     };
     addItemMutation.mutate(itemToSave);
   };
@@ -180,14 +188,15 @@ const AdminPage: React.FC = () => {
       sellingPrice: parseFloat(newItem.sellingPrice),
       hasRecipe: newItem.hasRecipe,
       buyingPrice: newItem.hasRecipe ? undefined : parseFloat(newItem.buyingPrice) || parseFloat(newItem.sellingPrice) * 0.7,
-      ingredients: newItem.hasRecipe ? newItem.ingredients : {}
+      ingredients: newItem.hasRecipe ? newItem.ingredients : {},
+      menuSource: newItem.menuSource
     };
     editItemMutation.mutate(itemToSave);
   };
 
-  const handleDeleteItem = (id: string, hasRecipe: boolean) => {
+  const handleDeleteItem = (id: string, menuSource: 'izMenu' | 'bellFood') => {
     if (window.confirm('Are you sure you want to delete this item?')) {
-      deleteItemMutation.mutate({ id, hasRecipe });
+      deleteItemMutation.mutate({ id, menuSource });
     }
   };
 
@@ -247,8 +256,11 @@ const AdminPage: React.FC = () => {
     if (recipeCategoryFilter) {
       items = items.filter(item => item.category === recipeCategoryFilter);
     }
+    if (recipeMenuFilter !== 'all') {
+      items = items.filter(item => item.menuSource === recipeMenuFilter);
+    }
     return items;
-  }, [recipeItems, recipeSearch, recipeCategoryFilter]);
+  }, [recipeItems, recipeSearch, recipeCategoryFilter, recipeMenuFilter]);
 
   const filteredResaleItems = useMemo(() => {
     let items = resaleItems;
@@ -258,8 +270,11 @@ const AdminPage: React.FC = () => {
     if (resaleCategoryFilter) {
       items = items.filter(item => item.category === resaleCategoryFilter);
     }
+    if (resaleMenuFilter !== 'all') {
+      items = items.filter(item => item.menuSource === resaleMenuFilter);
+    }
     return items;
-  }, [resaleItems, resaleSearch, resaleCategoryFilter]);
+  }, [resaleItems, resaleSearch, resaleCategoryFilter, resaleMenuFilter]);
 
   const filteredIngredients = useMemo(() => {
     let ingredients = ingredientList;
@@ -320,6 +335,18 @@ const AdminPage: React.FC = () => {
                       className="input input-bordered"
                     />
                   </div>
+                  <div className="form-control">
+                    <label className="label"><span className="label-text">Menu</span></label>
+                    <select
+                      value={recipeMenuFilter}
+                      onChange={(e) => setRecipeMenuFilter(e.target.value)}
+                      className="select select-bordered"
+                    >
+                      <option value="all">All Menus</option>
+                      <option value="izMenu">IZ Menu</option>
+                      <option value="bellFood">Bell Menu</option>
+                    </select>
+                  </div>
                   <div className="flex space-x-2">
                     <button
                       className={`btn btn-sm ${recipeCategoryFilter === '' ? 'btn-primary' : 'btn-outline'}`}
@@ -347,6 +374,7 @@ const AdminPage: React.FC = () => {
                         <tr>
                           <th>Name</th>
                           <th>Category</th>
+                          <th>Menu</th>
                           <th className="text-right">Price (£)</th>
                           <th>Actions</th>
                         </tr>
@@ -356,6 +384,7 @@ const AdminPage: React.FC = () => {
                           <tr key={item.id || `${item.name}-${item.category}-${index}`}>
                             <td>{item.name}</td>
                             <td>{item.category}</td>
+                            <td>{item.menuSource === 'izMenu' ? 'IZ Menu' : 'Bell Menu'}</td>
                             <td className="text-right">£{item.sellingPrice.toFixed(2)}</td>
                             <td>
                               <button
@@ -368,7 +397,8 @@ const AdminPage: React.FC = () => {
                                     sellingPrice: item.sellingPrice.toString(),
                                     hasRecipe: true,
                                     buyingPrice: '',
-                                    ingredients: item.ingredients || {}
+                                    ingredients: item.ingredients || {},
+                                    menuSource: item.menuSource
                                   });
                                   setIsEditItemModalOpen(true);
                                 }}
@@ -377,7 +407,7 @@ const AdminPage: React.FC = () => {
                               </button>
                               <button
                                 className="btn btn-sm btn-error"
-                                onClick={() => handleDeleteItem(item.id, true)}
+                                onClick={() => handleDeleteItem(item.id, item.menuSource)}
                               >
                                 Delete
                               </button>
@@ -410,6 +440,18 @@ const AdminPage: React.FC = () => {
                       className="input input-bordered"
                     />
                   </div>
+                  <div className="form-control">
+                    <label className="label"><span className="label-text">Menu</span></label>
+                    <select
+                      value={resaleMenuFilter}
+                      onChange={(e) => setResaleMenuFilter(e.target.value)}
+                      className="select select-bordered"
+                    >
+                      <option value="all">All Menus</option>
+                      <option value="izMenu">IZ Menu</option>
+                      <option value="bellFood">Bell Menu</option>
+                    </select>
+                  </div>
                   <div className="flex space-x-2">
                     <button
                       className={`btn btn-sm ${resaleCategoryFilter === '' ? 'btn-primary' : 'btn-outline'}`}
@@ -437,6 +479,7 @@ const AdminPage: React.FC = () => {
                         <tr>
                           <th>Name</th>
                           <th>Category</th>
+                          <th>Menu</th>
                           <th className="text-right">Price (£)</th>
                           <th className="text-right">Buying Price (£)</th>
                           <th>Actions</th>
@@ -447,6 +490,7 @@ const AdminPage: React.FC = () => {
                           <tr key={item.id || `${item.name}-${item.category}-${index}`}>
                             <td>{item.name}</td>
                             <td>{item.category}</td>
+                            <td>{item.menuSource === 'izMenu' ? 'IZ Menu' : 'Bell Menu'}</td>
                             <td className="text-right">£{item.sellingPrice.toFixed(2)}</td>
                             <td className="text-right">£{item.buyingPrice?.toFixed(2)}</td>
                             <td>
@@ -460,7 +504,8 @@ const AdminPage: React.FC = () => {
                                     sellingPrice: item.sellingPrice.toString(),
                                     hasRecipe: false,
                                     buyingPrice: item.buyingPrice?.toString() || '',
-                                    ingredients: {}
+                                    ingredients: {},
+                                    menuSource: item.menuSource
                                   });
                                   setIsEditItemModalOpen(true);
                                 }}
@@ -469,7 +514,7 @@ const AdminPage: React.FC = () => {
                               </button>
                               <button
                                 className="btn btn-sm btn-error"
-                                onClick={() => handleDeleteItem(item.id, false)}
+                                onClick={() => handleDeleteItem(item.id, item.menuSource)}
                               >
                                 Delete
                               </button>
@@ -562,6 +607,17 @@ const AdminPage: React.FC = () => {
               onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
               className="input input-bordered w-full"
             />
+          </div>
+          <div className="form-control">
+            <label className="label"><span className="label-text">Menu</span></label>
+            <select
+              value={newItem.menuSource}
+              onChange={(e) => setNewItem({ ...newItem, menuSource: e.target.value as 'izMenu' | 'bellFood' })}
+              className="select select-bordered"
+            >
+              <option value="izMenu">IZ Menu</option>
+              <option value="bellFood">Bell Menu</option>
+            </select>
           </div>
           <div className="form-control">
             <label className="label"><span className="label-text">Category</span></label>
@@ -660,6 +716,17 @@ const AdminPage: React.FC = () => {
               onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
               className="input input-bordered w-full"
             />
+          </div>
+          <div className="form-control">
+            <label className="label"><span className="label-text">Menu</span></label>
+            <select
+              value={newItem.menuSource}
+              onChange={(e) => setNewItem({ ...newItem, menuSource: e.target.value as 'izMenu' | 'bellFood' })}
+              className="select select-bordered"
+            >
+              <option value="izMenu">IZ Menu</option>
+              <option value="bellFood">Bell Menu</option>
+            </select>
           </div>
           <div className="form-control">
             <label className="label"><span className="label-text">Category</span></label>
