@@ -1,0 +1,4602 @@
+{
+  "izMenu": {
+    "initialIngredients": {
+      "lamb": {
+        "cost": 0.0055,
+        "unit": "g"
+      },
+      "beefFillet": {
+        "cost": 0.012,
+        "unit": "g"
+      },
+      "chicken": {
+        "cost": 0.0038,
+        "unit": "g"
+      },
+      "beefRibs": {
+        "cost": 0.0065,
+        "unit": "g"
+      },
+      "lambLiver": {
+        "cost": 0.0035,
+        "unit": "g"
+      },
+      "prawns": {
+        "cost": 0.015,
+        "unit": "g"
+      },
+      "kingPrawns": {
+        "cost": 0.018,
+        "unit": "g"
+      },
+      "salmon": {
+        "cost": 0.0145,
+        "unit": "g"
+      },
+      "seabass": {
+        "cost": 0.0125,
+        "unit": "g"
+      },
+      "calamari": {
+        "cost": 0.01,
+        "unit": "g"
+      },
+      "kalamari": {
+        "cost": 0.01,
+        "unit": "g"
+      },
+      "octopus": {
+        "cost": 0.018,
+        "unit": "g"
+      },
+      "halibut": {
+        "cost": 0.02,
+        "unit": "g"
+      },
+      "mincedBeef": {
+        "cost": 0.0065,
+        "unit": "g"
+      },
+      "groundLamb": {
+        "cost": 0.0055,
+        "unit": "g"
+      },
+      "lambChops": {
+        "cost": 0.009,
+        "unit": "g"
+      },
+      "lambShank": {
+        "cost": 0.0075,
+        "unit": "g"
+      },
+      "tomatoes": {
+        "cost": 0.0025,
+        "unit": "g"
+      },
+      "cherryTomatoes": {
+        "cost": 0.003,
+        "unit": "g"
+      },
+      "cucumbers": {
+        "cost": 0.0018,
+        "unit": "g"
+      },
+      "redOnions": {
+        "cost": 0.0012,
+        "unit": "g"
+      },
+      "onions": {
+        "cost": 0.001,
+        "unit": "g"
+      },
+      "greenPeppers": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "redPeppers": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "aubergine": {
+        "cost": 0.0021,
+        "unit": "g"
+      },
+      "courgette": {
+        "cost": 0.0023,
+        "unit": "g"
+      },
+      "cauliflower": {
+        "cost": 0.0018,
+        "unit": "g"
+      },
+      "potatoes": {
+        "cost": 0.0009,
+        "unit": "g"
+      },
+      "mashedPotatoes": {
+        "cost": 0.0015,
+        "unit": "g"
+      },
+      "rosemaryPotatoes": {
+        "cost": 0.0012,
+        "unit": "g"
+      },
+      "tripleCookedChips": {
+        "cost": 0.0015,
+        "unit": "g"
+      },
+      "frenchFries": {
+        "cost": 0.0015,
+        "unit": "g"
+      },
+      "carrots": {
+        "cost": 0.0011,
+        "unit": "g"
+      },
+      "lettuce": {
+        "cost": 0.0015,
+        "unit": "g"
+      },
+      "mushrooms": {
+        "cost": 0.0028,
+        "unit": "g"
+      },
+      "oysterMushrooms": {
+        "cost": 0.004,
+        "unit": "g"
+      },
+      "spinach": {
+        "cost": 0.003,
+        "unit": "g"
+      },
+      "babySpinach": {
+        "cost": 0.0035,
+        "unit": "g"
+      },
+      "lemons": {
+        "cost": 0.0016,
+        "unit": "g"
+      },
+      "olives": {
+        "cost": 0.0045,
+        "unit": "g"
+      },
+      "kalamataOlives": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "blackOlives": {
+        "cost": 0.0045,
+        "unit": "g"
+      },
+      "capers": {
+        "cost": 0.006,
+        "unit": "g"
+      },
+      "feta": {
+        "cost": 0.0085,
+        "unit": "g"
+      },
+      "halloumi": {
+        "cost": 0.009,
+        "unit": "g"
+      },
+      "mozzarella": {
+        "cost": 0.0075,
+        "unit": "g"
+      },
+      "roquefortCheese": {
+        "cost": 0.012,
+        "unit": "g"
+      },
+      "manchegoCheese": {
+        "cost": 0.011,
+        "unit": "g"
+      },
+      "parsley": {
+        "cost": 0.004,
+        "unit": "g"
+      },
+      "redWine": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "whiteWine": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "bottling": {
+        "cost": 0.5,
+        "unit": "unit"
+      },
+      "grapes": {
+        "cost": 0.0035,
+        "unit": "g"
+      },
+      "distribution": {
+        "cost": 0.3,
+        "unit": "unit"
+      },
+      "oakBarrel": {
+        "cost": 0.004,
+        "unit": "ml"
+      },
+      "cream": {
+        "cost": 0.0025,
+        "unit": "ml"
+      },
+      "butter": {
+        "cost": 0.0058,
+        "unit": "g"
+      },
+      "milk": {
+        "cost": 0.0009,
+        "unit": "ml"
+      },
+      "eggs": {
+        "cost": 0.29,
+        "unit": "unit"
+      },
+      "rice": {
+        "cost": 0.0015,
+        "unit": "g"
+      },
+      "couscous": {
+        "cost": 0.0012,
+        "unit": "g"
+      },
+      "bulgur": {
+        "cost": 0.001,
+        "unit": "g"
+      },
+      "orzo": {
+        "cost": 0.0013,
+        "unit": "g"
+      },
+      "oliveOil": {
+        "cost": 0.006,
+        "unit": "ml"
+      },
+      "filo": {
+        "cost": 0.003,
+        "unit": "g"
+      },
+      "sourdough": {
+        "cost": 0.0025,
+        "unit": "g"
+      },
+      "pitta": {
+        "cost": 0.0005,
+        "unit": "g"
+      },
+      "tortillaWraps": {
+        "cost": 0.0015,
+        "unit": "g"
+      },
+      "pistachio": {
+        "cost": 0.012,
+        "unit": "g"
+      },
+      "almonds": {
+        "cost": 0.01,
+        "unit": "g"
+      },
+      "driedFruits": {
+        "cost": 0.007,
+        "unit": "g"
+      },
+      "honey": {
+        "cost": 0.005,
+        "unit": "ml"
+      },
+      "chocolate": {
+        "cost": 0.0065,
+        "unit": "g"
+      },
+      "churros": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "meringue": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "flour": {
+        "cost": 0.0008,
+        "unit": "g"
+      },
+      "sugar": {
+        "cost": 0.0007,
+        "unit": "g"
+      },
+      "cinnamonSugar": {
+        "cost": 0.001,
+        "unit": "g"
+      },
+      "yogurt": {
+        "cost": 0.0015,
+        "unit": "ml"
+      },
+      "tzatziki": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "ezme": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "spicyTomatoSauce": {
+        "cost": 0.002,
+        "unit": "ml"
+      },
+      "chimichurri": {
+        "cost": 0.004,
+        "unit": "ml"
+      },
+      "guacamole": {
+        "cost": 0.0045,
+        "unit": "ml"
+      },
+      "truffle": {
+        "cost": 0.05,
+        "unit": "g"
+      },
+      "truffleMayonnaise": {
+        "cost": 0.006,
+        "unit": "ml"
+      },
+      "izgaraMayonnaise": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "redPepperDip": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "cheese": {
+        "cost": 0.0075,
+        "unit": "g"
+      },
+      "squid": {
+        "cost": 0.01,
+        "unit": "g"
+      },
+      "parmesan": {
+        "cost": 0.012,
+        "unit": "g"
+      },
+      "chorizo": {
+        "cost": 0.008,
+        "unit": "g"
+      },
+      "chorizoPicante": {
+        "cost": 0.009,
+        "unit": "g"
+      },
+      "sucuk": {
+        "cost": 0.008,
+        "unit": "g"
+      },
+      "groundMince": {
+        "cost": 0.0055,
+        "unit": "g"
+      },
+      "mixedVegetables": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "tenderStemBroccoli": {
+        "cost": 0.004,
+        "unit": "g"
+      },
+      "avocado": {
+        "cost": 0.006,
+        "unit": "g"
+      },
+      "padronPeppers": {
+        "cost": 0.006,
+        "unit": "g"
+      },
+      "garlic": {
+        "cost": 0.0025,
+        "unit": "g"
+      },
+      "dill": {
+        "cost": 0.004,
+        "unit": "g"
+      },
+      "rosemary": {
+        "cost": 0.004,
+        "unit": "g"
+      },
+      "sherry": {
+        "cost": 0.007,
+        "unit": "ml"
+      },
+      "sumac": {
+        "cost": 0.008,
+        "unit": "g"
+      },
+      "bechamelSauce": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "pineappleJuice": {
+        "cost": 0.0015,
+        "unit": "ml"
+      },
+      "vanillaVodka": {
+        "cost": 0.015,
+        "unit": "ml"
+      },
+      "vodka": {
+        "cost": 0.012,
+        "unit": "ml"
+      },
+      "chambord": {
+        "cost": 0.025,
+        "unit": "ml"
+      },
+      "raki": {
+        "cost": 0.02,
+        "unit": "ml"
+      },
+      "bacardi": {
+        "cost": 0.015,
+        "unit": "ml"
+      },
+      "archers": {
+        "cost": 0.018,
+        "unit": "ml"
+      },
+      "sugarSyrup": {
+        "cost": 0.002,
+        "unit": "ml"
+      },
+      "lemonJuice": {
+        "cost": 0.002,
+        "unit": "ml"
+      },
+      "limeJuice": {
+        "cost": 0.002,
+        "unit": "ml"
+      },
+      "coconutMilk": {
+        "cost": 0.0025,
+        "unit": "ml"
+      },
+      "malibu": {
+        "cost": 0.015,
+        "unit": "ml"
+      },
+      "cucumberVodka": {
+        "cost": 0.016,
+        "unit": "ml"
+      },
+      "elderflowerLiqueur": {
+        "cost": 0.02,
+        "unit": "ml"
+      },
+      "lavenderSyrup": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "soda": {
+        "cost": 0.0005,
+        "unit": "ml"
+      },
+      "espressoLungo": {
+        "cost": 0.005,
+        "unit": "ml"
+      },
+      "hendricksGin": {
+        "cost": 0.025,
+        "unit": "ml"
+      },
+      "kiwiPuree": {
+        "cost": 0.004,
+        "unit": "ml"
+      },
+      "passoa": {
+        "cost": 0.018,
+        "unit": "ml"
+      },
+      "passionfruitSyrup": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "passionfruitPuree": {
+        "cost": 0.004,
+        "unit": "ml"
+      },
+      "gin": {
+        "cost": 0.012,
+        "unit": "ml"
+      },
+      "cointreau": {
+        "cost": 0.025,
+        "unit": "ml"
+      },
+      "kahlua": {
+        "cost": 0.02,
+        "unit": "ml"
+      },
+      "chivasRegal": {
+        "cost": 0.03,
+        "unit": "ml"
+      },
+      "disaronno": {
+        "cost": 0.02,
+        "unit": "ml"
+      },
+      "strawberrySyrup": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "angosturaBitters": {
+        "cost": 0.05,
+        "unit": "ml"
+      },
+      "tequilaSilver": {
+        "cost": 0.02,
+        "unit": "ml"
+      },
+      "tabasco": {
+        "cost": 0.01,
+        "unit": "ml"
+      },
+      "orangeJuice": {
+        "cost": 0.0015,
+        "unit": "ml"
+      },
+      "cranberryJuice": {
+        "cost": 0.0018,
+        "unit": "ml"
+      },
+      "jackDaniels": {
+        "cost": 0.025,
+        "unit": "ml"
+      },
+      "martiniRosso": {
+        "cost": 0.012,
+        "unit": "ml"
+      },
+      "campari": {
+        "cost": 0.02,
+        "unit": "ml"
+      },
+      "brownSugar": {
+        "cost": 0.0007,
+        "unit": "g"
+      },
+      "cachaca": {
+        "cost": 0.018,
+        "unit": "ml"
+      },
+      "cocaCola": {
+        "cost": 0.0008,
+        "unit": "ml"
+      },
+      "havanaWhite": {
+        "cost": 0.015,
+        "unit": "ml"
+      },
+      "havanaDark": {
+        "cost": 0.015,
+        "unit": "ml"
+      },
+      "kraken": {
+        "cost": 0.025,
+        "unit": "ml"
+      },
+      "grenadine": {
+        "cost": 0.002,
+        "unit": "ml"
+      },
+      "wrayAndNephew": {
+        "cost": 0.03,
+        "unit": "ml"
+      },
+      "lime": {
+        "cost": 0.2,
+        "unit": "unit"
+      },
+      "mint": {
+        "cost": 5e-05,
+        "unit": "g"
+      },
+      "aperol": {
+        "cost": 0.018,
+        "unit": "ml"
+      },
+      "prosecco": {
+        "cost": 0.025,
+        "unit": "ml"
+      },
+      "proseccoBrut": {
+        "cost": 0.03,
+        "unit": "ml"
+      },
+      "proseccoRose": {
+        "cost": 0.032,
+        "unit": "ml"
+      },
+      "cava": {
+        "cost": 0.028,
+        "unit": "ml"
+      },
+      "americanoCoffee": {
+        "cost": 0.1,
+        "unit": "cup"
+      },
+      "coffeeBeans": {
+        "cost": 0.2,
+        "unit": "g"
+      },
+      "milkFroth": {
+        "cost": 0.002,
+        "unit": "ml"
+      },
+      "steamedMilk": {
+        "cost": 0.002,
+        "unit": "ml"
+      },
+      "turkishCoffee": {
+        "cost": 0.15,
+        "unit": "cup"
+      },
+      "teaBag": {
+        "cost": 0.08,
+        "unit": "unit"
+      },
+      "hotChocolatePowder": {
+        "cost": 0.15,
+        "unit": "cup"
+      },
+      "irishWhiskey": {
+        "cost": 0.04,
+        "unit": "ml"
+      },
+      "tiaMaria": {
+        "cost": 0.05,
+        "unit": "ml"
+      },
+      "coffeeSweet": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "hotWater": {
+        "cost": 0.0001,
+        "unit": "ml"
+      },
+      "baileysCream": {
+        "cost": 0.04,
+        "unit": "ml"
+      },
+      "brandySpirit": {
+        "cost": 0.04,
+        "unit": "ml"
+      },
+      "espressoCoffee": {
+        "cost": 0.15,
+        "unit": "shot"
+      },
+      "efes": {
+        "cost": 3,
+        "unit": "half"
+      },
+      "efesPint": {
+        "cost": 6,
+        "unit": "pint"
+      },
+      "poretti": {
+        "cost": 3.75,
+        "unit": "half"
+      },
+      "porettiPint": {
+        "cost": 6.5,
+        "unit": "pint"
+      },
+      "estrellaDamm": {
+        "cost": 3.5,
+        "unit": "half"
+      },
+      "estrellaDammPint": {
+        "cost": 6,
+        "unit": "pint"
+      },
+      "kronenbourg": {
+        "cost": 3.5,
+        "unit": "half"
+      },
+      "kronenbourgPint": {
+        "cost": 6,
+        "unit": "pint"
+      },
+      "guinness": {
+        "cost": 3.75,
+        "unit": "half"
+      },
+      "guinnessPint": {
+        "cost": 6.5,
+        "unit": "pint"
+      },
+      "mythos": {
+        "cost": 2.3,
+        "unit": "bottle"
+      },
+      "madri": {
+        "cost": 2.3,
+        "unit": "bottle"
+      },
+      "corona": {
+        "cost": 2.3,
+        "unit": "bottle"
+      },
+      "kopparberg": {
+        "cost": 3,
+        "unit": "bottle"
+      },
+      "inches": {
+        "cost": 3.2,
+        "unit": "bottle"
+      },
+      "sanMiguel": {
+        "cost": 2.3,
+        "unit": "bottle"
+      },
+      "corona0": {
+        "cost": 2.3,
+        "unit": "bottle"
+      },
+      "kopparberg0": {
+        "cost": 2.5,
+        "unit": "bottle"
+      },
+      "cavaRose": {
+        "cost": 0.03,
+        "unit": "ml"
+      },
+      "cremantDeLoire": {
+        "cost": 0.04,
+        "unit": "ml"
+      },
+      "moet": {
+        "cost": 0.08,
+        "unit": "ml"
+      },
+      "moetRose": {
+        "cost": 0.09,
+        "unit": "ml"
+      },
+      "veuve": {
+        "cost": 0.09,
+        "unit": "ml"
+      },
+      "bollinger": {
+        "cost": 0.12,
+        "unit": "ml"
+      },
+      "laurentPerrier": {
+        "cost": 0.13,
+        "unit": "ml"
+      },
+      "riojaRose": {
+        "cost": 0.035,
+        "unit": "ml"
+      },
+      "egeoRose": {
+        "cost": 0.035,
+        "unit": "ml"
+      },
+      "pierrevertRose": {
+        "cost": 0.04,
+        "unit": "ml"
+      },
+      "heritageRose": {
+        "cost": 0.045,
+        "unit": "ml"
+      },
+      "chilli": {
+        "cost": 0.15,
+        "unit": "unit"
+      },
+      "spicedRum": {
+        "cost": 0.018,
+        "unit": "ml"
+      },
+      "eggWhite": {
+        "cost": 0.08,
+        "unit": "unit"
+      },
+      "amaretto": {
+        "cost": 0.02,
+        "unit": "ml"
+      },
+      "bourbon": {
+        "cost": 0.022,
+        "unit": "ml"
+      },
+      "vanillaIceCream": {
+        "cost": 0.004,
+        "unit": "ml"
+      },
+      "peppercorns": {
+        "cost": 0.03,
+        "unit": "g"
+      },
+      "frenchMustard": {
+        "cost": 0.04,
+        "unit": "g"
+      },
+      "beef": {
+        "cost": 0.006,
+        "unit": "g"
+      }
+    },
+    "items": [
+      {
+        "name": "King Prawns",
+        "category": "Starters",
+        "sellingPrice": 10.45,
+        "ingredients": {
+          "kingPrawns": 150,
+          "garlic": 10,
+          "chilli": 1,
+          "butter": 20,
+          "cream": 50,
+          "lemons": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sigara B\u00f6re\u011fi (V)",
+        "category": "Starters",
+        "sellingPrice": 7.45,
+        "ingredients": {
+          "feta": 50,
+          "eggs": 1,
+          "parsley": 10,
+          "filo": 100,
+          "tzatziki": 30,
+          "ezme": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "\u0130\u00e7li K\u00f6fte (N)",
+        "category": "Starters",
+        "sellingPrice": 6.75,
+        "ingredients": {
+          "groundLamb": 100,
+          "bulgur": 100,
+          "redPepperDip": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Lollipop Chicken",
+        "category": "Starters",
+        "sellingPrice": 7.95,
+        "ingredients": {
+          "chicken": 200,
+          "sugar": 20,
+          "spicyTomatoSauce": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pa\u00e7anga B\u00f6re\u011fi",
+        "category": "Starters",
+        "sellingPrice": 7.45,
+        "ingredients": {
+          "sucuk": 50,
+          "redPeppers": 30,
+          "onions": 30,
+          "mozzarella": 50,
+          "filo": 100,
+          "redPepperDip": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Oyster Chimichurri (V)",
+        "category": "Starters",
+        "sellingPrice": 5.95,
+        "ingredients": {
+          "oysterMushrooms": 150,
+          "chimichurri": 30,
+          "sourdough": 50,
+          "garlic": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Halloumi Salad (V)",
+        "category": "Starters",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "halloumi": 100,
+          "lettuce": 50,
+          "tomatoes": 50,
+          "oliveOil": 10,
+          "honey": 10,
+          "chilli": 1,
+          "lime": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Greek Salad (V)",
+        "category": "Starters",
+        "sellingPrice": 7.45,
+        "ingredients": {
+          "tomatoes": 100,
+          "cucumbers": 100,
+          "redOnions": 50,
+          "greenPeppers": 50,
+          "blackOlives": 30,
+          "feta": 50,
+          "oliveOil": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pulpo a la Gallega",
+        "category": "Starters",
+        "sellingPrice": 11.95,
+        "ingredients": {
+          "octopus": 150,
+          "redPepperDip": 50,
+          "chimichurri": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kolokithokeftedes (V)",
+        "category": "Starters",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "courgette": 150,
+          "feta": 50,
+          "tzatziki": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Chorizo",
+        "category": "Starters",
+        "sellingPrice": 8.95,
+        "ingredients": {
+          "chorizoPicante": 100,
+          "sherry": 50,
+          "sourdough": 50,
+          "garlic": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Salmon Tartare",
+        "category": "Starters",
+        "sellingPrice": 10.95,
+        "ingredients": {
+          "salmon": 100,
+          "redOnions": 30,
+          "avocado": 50,
+          "capers": 10,
+          "izgaraMayonnaise": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kalamari",
+        "category": "Starters",
+        "sellingPrice": 8.95,
+        "ingredients": {
+          "kalamari": 150,
+          "izgaraMayonnaise": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Feta Pane (V)",
+        "category": "Starters",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "feta": 100,
+          "flour": 30,
+          "ezme": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Lamb Liver",
+        "category": "Starters",
+        "sellingPrice": 7.95,
+        "ingredients": {
+          "lambLiver": 150,
+          "redOnions": 50,
+          "sumac": 5,
+          "potatoes": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Meze (Serves 2 People)(V)",
+        "category": "Starters",
+        "sellingPrice": 16.95,
+        "ingredients": {
+          "pitta": 100,
+          "ezme": 30,
+          "tzatziki": 30,
+          "halloumi": 50,
+          "courgette": 50,
+          "yogurt": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Chicken Skewer",
+        "category": "Mains Grill",
+        "sellingPrice": 18.95,
+        "ingredients": {
+          "chicken": 300,
+          "pitta": 50,
+          "rice": 100,
+          "lettuce": 50,
+          "spicyTomatoSauce": 30,
+          "tzatziki": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Beef Fillet Kebab",
+        "category": "Mains Grill",
+        "sellingPrice": 24.95,
+        "ingredients": {
+          "beefFillet": 250,
+          "pitta": 50,
+          "frenchFries": 100,
+          "spicyTomatoSauce": 30,
+          "tzatziki": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Lamb Skewer",
+        "category": "Mains Grill",
+        "sellingPrice": 20.95,
+        "ingredients": {
+          "lamb": 300,
+          "pitta": 50,
+          "rice": 100,
+          "lettuce": 50,
+          "spicyTomatoSauce": 30,
+          "tzatziki": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Adana Kebab",
+        "category": "Mains Grill",
+        "sellingPrice": 18.95,
+        "ingredients": {
+          "groundLamb": 300,
+          "pitta": 50,
+          "rice": 100,
+          "lettuce": 50,
+          "spicyTomatoSauce": 30,
+          "tzatziki": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Salmon Floretine",
+        "category": "Mains Grill",
+        "sellingPrice": 20.95,
+        "ingredients": {
+          "salmon": 250,
+          "garlic": 10,
+          "cherryTomatoes": 100,
+          "spinach": 50,
+          "chilli": 1,
+          "cream": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Lamb Liver",
+        "category": "Mains Grill",
+        "sellingPrice": 17.95,
+        "ingredients": {
+          "lambLiver": 200,
+          "pitta": 50,
+          "chimichurri": 30,
+          "spicyTomatoSauce": 30,
+          "rosemaryPotatoes": 100
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Seabass",
+        "category": "Mains Grill",
+        "sellingPrice": 18.95,
+        "ingredients": {
+          "seabass": 250,
+          "cherryTomatoes": 100,
+          "garlic": 10,
+          "rosemary": 5,
+          "chilli": 1,
+          "whiteWine": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Lamb Chops",
+        "category": "Mains Grill",
+        "sellingPrice": 25.95,
+        "ingredients": {
+          "lambChops": 300,
+          "pitta": 50,
+          "chimichurri": 30,
+          "couscous": 100
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Ineg\u00f6l K\u00f6fte",
+        "category": "Mains Grill",
+        "sellingPrice": 18.95,
+        "ingredients": {
+          "groundLamb": 150,
+          "mincedBeef": 150,
+          "pitta": 50,
+          "truffleMayonnaise": 30,
+          "frenchFries": 100,
+          "spicyTomatoSauce": 30,
+          "redPepperDip": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Cheese Keftedes",
+        "category": "Mains Grill",
+        "sellingPrice": 18.95,
+        "ingredients": {
+          "groundLamb": 150,
+          "mincedBeef": 150,
+          "mozzarella": 50,
+          "frenchFries": 100,
+          "truffleMayonnaise": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Izgara Mixed Grill",
+        "category": "Mains Grill",
+        "sellingPrice": 28.95,
+        "ingredients": {
+          "groundLamb": 100,
+          "mincedBeef": 100,
+          "lambChops": 100,
+          "chicken": 150,
+          "beefFillet": 150,
+          "pitta": 50,
+          "couscous": 100,
+          "spicyTomatoSauce": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Chicken Fajita",
+        "category": "Mains Grill",
+        "sellingPrice": 19.95,
+        "ingredients": {
+          "chicken": 250,
+          "redPeppers": 50,
+          "greenPeppers": 50,
+          "onions": 50,
+          "tortillaWraps": 100,
+          "tzatziki": 30,
+          "ezme": 30,
+          "guacamole": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Halloumi Fajita",
+        "category": "Mains Grill",
+        "sellingPrice": 17.95,
+        "ingredients": {
+          "halloumi": 200,
+          "redPeppers": 50,
+          "greenPeppers": 50,
+          "onions": 50,
+          "tortillaWraps": 100,
+          "tzatziki": 30,
+          "ezme": 30,
+          "guacamole": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Moussaka",
+        "category": "Mains Oven",
+        "sellingPrice": 15.95,
+        "ingredients": {
+          "potatoes": 100,
+          "aubergine": 100,
+          "courgette": 100,
+          "mincedBeef": 150,
+          "bechamelSauce": 100,
+          "cheese": 50,
+          "lettuce": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Lamb Tagine (N)",
+        "category": "Mains Oven",
+        "sellingPrice": 20.45,
+        "ingredients": {
+          "lamb": 300,
+          "tomatoes": 100,
+          "garlic": 10,
+          "almonds": 30,
+          "driedFruits": 50,
+          "couscous": 100
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "King Prawns",
+        "category": "Mains Oven",
+        "sellingPrice": 22.95,
+        "ingredients": {
+          "kingPrawns": 250,
+          "onions": 50,
+          "redPeppers": 50,
+          "garlic": 10,
+          "whiteWine": 50,
+          "tomatoes": 100,
+          "chilli": 1,
+          "cream": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Karniyarik",
+        "category": "Mains Oven",
+        "sellingPrice": 18.95,
+        "ingredients": {
+          "aubergine": 200,
+          "groundMince": 150,
+          "onions": 50,
+          "tomatoes": 100,
+          "rice": 100
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Beef Ribs",
+        "category": "Mains Oven",
+        "sellingPrice": 24.95,
+        "ingredients": {
+          "beefRibs": 300,
+          "tomatoes": 100,
+          "spicyTomatoSauce": 50,
+          "mashedPotatoes": 150
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Halibut del Griego",
+        "category": "Mains Oven",
+        "sellingPrice": 24.95,
+        "ingredients": {
+          "halibut": 250,
+          "kingPrawns": 100,
+          "kalamataOlives": 30,
+          "capers": 10,
+          "dill": 5,
+          "whiteWine": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sebze Bay\u0131ld\u0131 (V)",
+        "category": "Mains Oven",
+        "sellingPrice": 15.95,
+        "ingredients": {
+          "aubergine": 200,
+          "mushrooms": 100,
+          "onions": 50,
+          "redPeppers": 50,
+          "garlic": 10,
+          "tomatoes": 100,
+          "lettuce": 50,
+          "tzatziki": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Lamb Shank Kleftiko",
+        "category": "Mains Oven",
+        "sellingPrice": 25.95,
+        "ingredients": {
+          "lambShank": 300,
+          "mashedPotatoes": 150,
+          "mixedVegetables": 150
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fillet",
+        "category": "Steaks",
+        "sellingPrice": 27.95,
+        "ingredients": {
+          "beefFillet": 225,
+          "roquefortCheese": 30,
+          "tripleCookedChips": 150,
+          "tenderStemBroccoli": 100
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Tomahawk",
+        "category": "Steaks",
+        "sellingPrice": 39.95,
+        "ingredients": {
+          "beefFillet": 450,
+          "roquefortCheese": 30,
+          "tripleCookedChips": 150,
+          "tenderStemBroccoli": 100
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sauce Au Poivre",
+        "category": "Sauces",
+        "sellingPrice": 3.5,
+        "ingredients": {
+          "peppercorns": 5,
+          "redWine": 30,
+          "beef": 10,
+          "cream": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sauce Diane",
+        "category": "Sauces",
+        "sellingPrice": 3.5,
+        "ingredients": {
+          "frenchMustard": 5,
+          "redWine": 30,
+          "mushrooms": 20,
+          "onions": 10,
+          "cream": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sauce Roquefort",
+        "category": "Sauces",
+        "sellingPrice": 3.5,
+        "ingredients": {
+          "roquefortCheese": 30,
+          "whiteWine": 30,
+          "beef": 10,
+          "cream": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Orzotto Verduras",
+        "category": "Orzotto",
+        "sellingPrice": 15.95,
+        "ingredients": {
+          "orzo": 150,
+          "mixedVegetables": 150,
+          "kalamataOlives": 30,
+          "tomatoes": 80,
+          "whiteWine": 50,
+          "cream": 30,
+          "feta": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Orzotto Chorizo e Pollo",
+        "category": "Orzotto",
+        "sellingPrice": 16.95,
+        "ingredients": {
+          "orzo": 150,
+          "chicken": 150,
+          "chorizo": 80,
+          "mushrooms": 50,
+          "onions": 30,
+          "whiteWine": 50,
+          "cream": 30,
+          "feta": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Orzotto Del Mar",
+        "category": "Orzotto",
+        "sellingPrice": 18.45,
+        "ingredients": {
+          "orzo": 150,
+          "kingPrawns": 100,
+          "kalamari": 100,
+          "onions": 30,
+          "cherryTomatoes": 50,
+          "chilli": 1,
+          "tomatoes": 80,
+          "cream": 20,
+          "feta": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Churros (V)",
+        "category": "Desserts",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "churros": 150,
+          "cinnamonSugar": 20,
+          "chocolate": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Cr\u00e8me Br\u00fbl\u00e9e (V)",
+        "category": "Desserts",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "cream": 150,
+          "eggs": 2,
+          "sugar": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Eton Mess",
+        "category": "Desserts",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "cream": 150,
+          "meringue": 50,
+          "strawberrySyrup": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "K\u00fcnefe (N)",
+        "category": "Desserts",
+        "sellingPrice": 7.95,
+        "ingredients": {
+          "filo": 100,
+          "cheese": 100,
+          "pistachio": 30,
+          "vanillaIceCream": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Lemon Cheesecake",
+        "category": "Desserts",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "cream": 150,
+          "cheese": 100,
+          "lemons": 50,
+          "sugar": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Brownie (N)",
+        "category": "Desserts",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "chocolate": 100,
+          "flour": 50,
+          "sugar": 50,
+          "butter": 50,
+          "vanillaIceCream": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Baklava (N)",
+        "category": "Desserts",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "filo": 100,
+          "pistachio": 50,
+          "honey": 50,
+          "sugar": 20,
+          "vanillaIceCream": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Ice Cream (V)",
+        "category": "Desserts",
+        "sellingPrice": 5.95,
+        "ingredients": {
+          "vanillaIceCream": 150
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Cauliflower Manchego Cheese (V)(N)",
+        "category": "Side Dishes",
+        "sellingPrice": 4.5,
+        "ingredients": {
+          "cauliflower": 150,
+          "manchegoCheese": 30,
+          "almonds": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Grilled Tenderstem Broccoli (V)",
+        "category": "Side Dishes",
+        "sellingPrice": 4.95,
+        "ingredients": {
+          "tenderStemBroccoli": 150,
+          "garlic": 10,
+          "oliveOil": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "French Fries (V)",
+        "category": "Side Dishes",
+        "sellingPrice": 4.5,
+        "ingredients": {
+          "frenchFries": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Chunky Triple Cooked Chips (V)",
+        "category": "Side Dishes",
+        "sellingPrice": 4.5,
+        "ingredients": {
+          "tripleCookedChips": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Creamy Baby Spinach Leaves with Chilli (V)",
+        "category": "Side Dishes",
+        "sellingPrice": 4.95,
+        "ingredients": {
+          "babySpinach": 150,
+          "cream": 50,
+          "chilli": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Padron Peppers with Garlic (V)",
+        "category": "Side Dishes",
+        "sellingPrice": 5.95,
+        "ingredients": {
+          "padronPeppers": 150,
+          "garlic": 10,
+          "oliveOil": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fried Vegetable Tempura with Truffle (V)",
+        "category": "Side Dishes",
+        "sellingPrice": 4.95,
+        "ingredients": {
+          "mixedVegetables": 200,
+          "flour": 50,
+          "eggs": 1,
+          "truffle": 5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Tomato, Onion and Caper Salad",
+        "category": "Side Dishes",
+        "sellingPrice": 4.5,
+        "ingredients": {
+          "tomatoes": 100,
+          "onions": 50,
+          "capers": 10,
+          "oliveOil": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pitta Bread (V)",
+        "category": "Side Dishes",
+        "sellingPrice": 3.95,
+        "ingredients": {
+          "pitta": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Skin-On, Roasted, Rosemary New Potatoes (V)",
+        "category": "Side Dishes",
+        "sellingPrice": 4.5,
+        "ingredients": {
+          "rosemaryPotatoes": 200,
+          "rosemary": 5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Creamy Mashed Potato",
+        "category": "Side Dishes",
+        "sellingPrice": 3.95,
+        "ingredients": {
+          "mashedPotatoes": 200,
+          "cream": 20,
+          "butter": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Valviejo Viura (Glass)",
+        "category": "White Wines",
+        "sellingPrice": 8.85,
+        "ingredients": {
+          "grapes": 175,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sauvignon Blanc (Glass)",
+        "category": "White Wines",
+        "sellingPrice": 8.85,
+        "ingredients": {
+          "grapes": 175,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Chardonnay (Glass)",
+        "category": "White Wines",
+        "sellingPrice": 8.85,
+        "ingredients": {
+          "grapes": 175,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Ancyra Narince (Glass)",
+        "category": "White Wines",
+        "sellingPrice": 9.3,
+        "ingredients": {
+          "grapes": 175,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pinot Grigio (Glass)",
+        "category": "White Wines",
+        "sellingPrice": 9.3,
+        "ingredients": {
+          "grapes": 175,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Gavi di Gavi (Glass)",
+        "category": "White Wines",
+        "sellingPrice": 16.9,
+        "ingredients": {
+          "grapes": 175,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Valviejo Viura (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 24.95,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sauvignon Blanc (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 24.95,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Chardonnay (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 24.95,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Ancyra Narince (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 26.95,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pinot Grigio (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 26.95,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Viogner (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 30.95,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Chenin Blanc (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 31,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sauvignon Blanc Black Bird (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 33,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Vermentino Salento (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 34,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Albarino (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 36,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Picpoul De Pinet (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 40,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kavakildere Selection White (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 40.95,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pouilly Fume (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 44,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Gavi di Gavi (Bottle)",
+        "category": "White Wines",
+        "sellingPrice": 45.95,
+        "ingredients": {
+          "grapes": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Garnacha Rioja Rose (Bottle)",
+        "category": "Rose Wines",
+        "sellingPrice": 29.95,
+        "ingredients": {
+          "riojaRose": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kavakildere Egeo Rose (Bottle)",
+        "category": "Rose Wines",
+        "sellingPrice": 29.95,
+        "ingredients": {
+          "egeoRose": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Inna Pierrevert Rose (Bottle)",
+        "category": "Rose Wines",
+        "sellingPrice": 34,
+        "ingredients": {
+          "pierrevertRose": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Rose D'Une Nuit (Bottle)",
+        "category": "Rose Wines",
+        "sellingPrice": 39,
+        "ingredients": {
+          "heritageRose": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Prosecco Brut (Bottle)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 33,
+        "ingredients": {
+          "proseccoBrut": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Prosecco Brut (200ml)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 9.5,
+        "ingredients": {
+          "proseccoBrut": 200,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Cava Brut (Bottle)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 28,
+        "ingredients": {
+          "cava": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Cremant De Loire (Bottle)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 45,
+        "ingredients": {
+          "cremantDeLoire": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Prosecco Rose (Bottle)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 34,
+        "ingredients": {
+          "proseccoRose": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Prosecco Rose (200ml)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 9.5,
+        "ingredients": {
+          "proseccoRose": 200,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Cava Rose (Bottle)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 28,
+        "ingredients": {
+          "cavaRose": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Moet & Chandon (Bottle)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 75,
+        "ingredients": {
+          "moet": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Veuve Cliquot Yellow Label (Bottle)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 85,
+        "ingredients": {
+          "veuve": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Bollinger Special Cuvee (Bottle)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 95,
+        "ingredients": {
+          "bollinger": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Moet & Chandon Rose (Bottle)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 85,
+        "ingredients": {
+          "moetRose": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Laurent-Perrier Cuvee Rose (Bottle)",
+        "category": "Sparkling Wines",
+        "sellingPrice": 110,
+        "ingredients": {
+          "laurentPerrier": 750,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Tempranillo (Glass)",
+        "category": "Red Wines",
+        "sellingPrice": 8.85,
+        "ingredients": {
+          "grapes": 175,
+          "oakBarrel": 100,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Merlot (Glass)",
+        "category": "Red Wines",
+        "sellingPrice": 8.85,
+        "ingredients": {
+          "grapes": 175,
+          "oakBarrel": 100,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Ancyra Kalecik Karasi (Glass)",
+        "category": "Red Wines",
+        "sellingPrice": 9.3,
+        "ingredients": {
+          "grapes": 175,
+          "oakBarrel": 100,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Montepulciano DOCG (Glass)",
+        "category": "Red Wines",
+        "sellingPrice": 25,
+        "ingredients": {
+          "grapes": 175,
+          "oakBarrel": 100,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Tempranillo (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 24.95,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Merlot (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 24.95,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Ancyra Kalecik Karasi (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 26.95,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Shiraz Cabernet (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 26,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Syrah (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 29,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pinotage (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 30,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Malbec (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 34,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Domaine De Boissan (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 34,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "El Chocolatero Vino Organico (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 36,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Barricone Primitivo (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 36,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Plaisir Du Vin (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 37,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kavakildere Selection Red (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 40.95,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pinot Noir (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 42,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Rioja Reserva (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 43,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Barolo (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 46,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Escudo Rojo (Bottle)",
+        "category": "Red Wines",
+        "sellingPrice": 56,
+        "ingredients": {
+          "grapes": 750,
+          "oakBarrel": 400,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "French Martini",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "pineappleJuice": 100,
+          "vanillaVodka": 50,
+          "chambord": 35
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Izgara Martini",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "raki": 35,
+          "spicedRum": 35,
+          "archers": 35,
+          "lemonJuice": 30,
+          "eggWhite": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Aperol Spritz",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "prosecco": 100,
+          "aperol": 60,
+          "soda": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pina Colada",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "pineappleJuice": 100,
+          "coconutMilk": 75,
+          "malibu": 50,
+          "bacardi": 35,
+          "sugarSyrup": 25
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Purple Butterfly",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "cucumberVodka": 35,
+          "elderflowerLiqueur": 35,
+          "lavenderSyrup": 25,
+          "limeJuice": 15,
+          "soda": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Espresso Martini",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "espressoLungo": 75,
+          "vanillaVodka": 50,
+          "kahlua": 35,
+          "sugarSyrup": 25
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kiwi Kiss",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "hendricksGin": 35,
+          "kiwiPuree": 25,
+          "elderflowerLiqueur": 35,
+          "limeJuice": 15,
+          "soda": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Passion Martini",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "pineappleJuice": 75,
+          "vanillaVodka": 50,
+          "passoa": 35,
+          "passionfruitSyrup": 25,
+          "passionfruitPuree": 25
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "White Lady",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "gin": 50,
+          "cointreau": 35,
+          "lemonJuice": 35,
+          "eggWhite": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "White Russian",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "vodka": 50,
+          "kahlua": 50,
+          "cream": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Mojito",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "lime": 1,
+          "sugarSyrup": 25,
+          "bacardi": 50,
+          "mint": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "The Godfather",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "chivasRegal": 70,
+          "amaretto": 35
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Strawberry Mojito",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "lime": 1,
+          "sugarSyrup": 25,
+          "bacardi": 50,
+          "mint": 50,
+          "strawberrySyrup": 25
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Old Fashioned",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "chivasRegal": 70,
+          "sugarSyrup": 25,
+          "angosturaBitters": 0.5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Long Island Iced Tea",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "vodka": 15,
+          "gin": 15,
+          "tequilaSilver": 15,
+          "cointreau": 15,
+          "bacardi": 15,
+          "limeJuice": 15,
+          "lemonJuice": 30,
+          "cocaCola": 100
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Margarita",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "lemonJuice": 40,
+          "limeJuice": 40,
+          "cointreau": 75,
+          "tequilaSilver": 50,
+          "sugarSyrup": 25
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Spicy Margarita",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "lemonJuice": 40,
+          "limeJuice": 40,
+          "cointreau": 75,
+          "tequilaSilver": 50,
+          "sugarSyrup": 25,
+          "chilli": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sex on the Beach",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "vanillaVodka": 50,
+          "archers": 35,
+          "orangeJuice": 50,
+          "cranberryJuice": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Whiskey Sour",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "bourbon": 60,
+          "lemonJuice": 30,
+          "sugarSyrup": 25,
+          "eggWhite": 1,
+          "angosturaBitters": 0.5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Negroni",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "gin": 35,
+          "martiniRosso": 35,
+          "campari": 35
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Caipirinha",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "lime": 1,
+          "brownSugar": 20,
+          "sugarSyrup": 15,
+          "cachaca": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Cuba Libre",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "cocaCola": 150,
+          "bacardi": 50,
+          "limeJuice": 25
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Zombie",
+        "category": "Cocktails",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "havanaWhite": 20,
+          "havanaDark": 20,
+          "kraken": 20,
+          "pineappleJuice": 50,
+          "orangeJuice": 30,
+          "limeJuice": 30,
+          "grenadine": 10,
+          "wrayAndNephew": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Efes (Half Pint)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 3.5,
+        "ingredients": {
+          "efes": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Efes (Pint)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 6,
+        "ingredients": {
+          "efesPint": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Poretti (Half Pint)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 3.75,
+        "ingredients": {
+          "poretti": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Poretti (Pint)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 6.5,
+        "ingredients": {
+          "porettiPint": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Estrella Damm (Half Pint)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 3.5,
+        "ingredients": {
+          "estrellaDamm": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Estrella Damm (Pint)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 6,
+        "ingredients": {
+          "estrellaDammPint": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kronenbourg Blanc (Half Pint)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 3.5,
+        "ingredients": {
+          "kronenbourg": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kronenbourg Blanc (Pint)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 6,
+        "ingredients": {
+          "kronenbourgPint": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Guinness (Half Pint)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 3.75,
+        "ingredients": {
+          "guinness": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Guinness (Pint)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 6.5,
+        "ingredients": {
+          "guinnessPint": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Mythos (330ml)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 4.5,
+        "ingredients": {
+          "mythos": 1,
+          "bottling": 1,
+          "distribution": 0.5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Madri (330ml)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 4.5,
+        "ingredients": {
+          "madri": 1,
+          "bottling": 1,
+          "distribution": 0.5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Corona (330ml)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 4.5,
+        "ingredients": {
+          "corona": 1,
+          "bottling": 1,
+          "distribution": 0.5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kopparberg Cider - Strawberry & Lime (500ml)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 6,
+        "ingredients": {
+          "kopparberg": 1,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kopparberg Cider - Wild Berries (500ml)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 6,
+        "ingredients": {
+          "kopparberg": 1,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Inch's Apple Cider (500ml)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 6.5,
+        "ingredients": {
+          "inches": 1,
+          "bottling": 1,
+          "distribution": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "San Miguel 0% (330ml)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 4.5,
+        "ingredients": {
+          "sanMiguel": 1,
+          "bottling": 1,
+          "distribution": 0.5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Corona 0% (330ml)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 4.5,
+        "ingredients": {
+          "corona0": 1,
+          "bottling": 1,
+          "distribution": 0.5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Kopparberg 0% Mixed Fruit (500ml)",
+        "category": "Beers & Ciders",
+        "sellingPrice": 5,
+        "ingredients": {
+          "kopparberg0": 1,
+          "bottling": 1,
+          "distribution": 0.5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Coca Cola (330ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "coke": 330
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Diet Coke (330ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "dietCoke": 330
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Coke Zero (330ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "cokeZero": 330
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sprite (330ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "lemonade": 330
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fanta (330ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "fanta": 330
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Bitter Lemonade (200ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "bitterLemonade": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Appletiser (330ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "appletiser": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "J20 - Orange & Passionfruit (275ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "j20": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "J20 - Apple & Mango (275ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "j20": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "J20 - Apple & Raspberry (275ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "j20": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fever Tree - Premium Indian Tonic (200ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "feverTree": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fever Tree - Refreshingly Light Tonic (200ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "feverTree": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fever Tree - Mediterranean Tonic (200ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "feverTree": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fever Tree - Ginger Ale (200ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "feverTree": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fever Tree - Lemonade (200ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "feverTree": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fever Tree - Soda (200ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "feverTree": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Still Mineral Water (750ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 4.25,
+        "ingredients": {
+          "stillWater": 750
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sparkling Mineral Water (750ml)",
+        "category": "Soft Drinks",
+        "sellingPrice": 4.25,
+        "ingredients": {
+          "sparklingWater": 750
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fresh Orange Juice",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.75,
+        "ingredients": {
+          "orangeJuice": 250
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fresh Apple Juice",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.75,
+        "ingredients": {
+          "appleJuice": 250
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fresh Pineapple Juice",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.75,
+        "ingredients": {
+          "pineappleJuice": 250
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fresh Cranberry Juice",
+        "category": "Soft Drinks",
+        "sellingPrice": 3.75,
+        "ingredients": {
+          "cranberryJuice": 250
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Americano",
+        "category": "Hot Drinks",
+        "sellingPrice": 3.5,
+        "ingredients": {
+          "americanoCoffee": 1,
+          "hotWater": 150
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Latte",
+        "category": "Hot Drinks",
+        "sellingPrice": 4.45,
+        "ingredients": {
+          "espressoCoffee": 1,
+          "steamedMilk": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Espresso",
+        "category": "Hot Drinks",
+        "sellingPrice": 3.5,
+        "ingredients": {
+          "espressoCoffee": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Turkish Coffee",
+        "category": "Hot Drinks",
+        "sellingPrice": 4.95,
+        "ingredients": {
+          "turkishCoffee": 1,
+          "coffeeSweet": 5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Cappuccino",
+        "category": "Hot Drinks",
+        "sellingPrice": 4.45,
+        "ingredients": {
+          "espressoCoffee": 1,
+          "steamedMilk": 150,
+          "milkFroth": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Mocca",
+        "category": "Hot Drinks",
+        "sellingPrice": 4.45,
+        "ingredients": {
+          "espressoCoffee": 1,
+          "hotChocolatePowder": 20,
+          "steamedMilk": 150
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Tea",
+        "category": "Hot Drinks",
+        "sellingPrice": 3.5,
+        "ingredients": {
+          "teaBag": 1,
+          "hotWater": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Hot Chocolate",
+        "category": "Hot Drinks",
+        "sellingPrice": 4.45,
+        "ingredients": {
+          "hotChocolatePowder": 25,
+          "steamedMilk": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Irish Coffee (Whiskey)",
+        "category": "Liqueur Coffees",
+        "sellingPrice": 6.45,
+        "ingredients": {
+          "americanoCoffee": 1,
+          "irishWhiskey": 35,
+          "steamedMilk": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Calypso Coffee (Tia Maria)",
+        "category": "Liqueur Coffees",
+        "sellingPrice": 6.45,
+        "ingredients": {
+          "americanoCoffee": 1,
+          "tiaMaria": 35,
+          "steamedMilk": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Special Coffee (Cointreau)",
+        "category": "Liqueur Coffees",
+        "sellingPrice": 6.45,
+        "ingredients": {
+          "americanoCoffee": 1,
+          "cointreau": 35,
+          "steamedMilk": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Baileys Coffee",
+        "category": "Liqueur Coffees",
+        "sellingPrice": 6.45,
+        "ingredients": {
+          "americanoCoffee": 1,
+          "baileysCream": 35,
+          "steamedMilk": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Brandy Coffee",
+        "category": "Liqueur Coffees",
+        "sellingPrice": 6.45,
+        "ingredients": {
+          "americanoCoffee": 1,
+          "brandySpirit": 35,
+          "steamedMilk": 50
+        },
+        "hasRecipe": true
+      }
+    ],
+    "costMultiplier": 1.1,
+    "categories": [
+      "Starters",
+      "Mains Grill",
+      "Mains Oven",
+      "Steaks",
+      "Sauces",
+      "Orzotto",
+      "Desserts",
+      "Cocktails",
+      "Side Dishes",
+      "White Wines",
+      "Red Wines",
+      "Rose Wines",
+      "Sparkling Wines",
+      "Beers & Ciders",
+      "Soft Drinks",
+      "Hot Drinks",
+      "Liqueur Coffees"
+    ]
+  },
+  "bellFood": {
+    "initialIngredients": {
+      "chicken": {
+        "cost": 0.0038,
+        "unit": "g"
+      },
+      "beefSirloin": {
+        "cost": 0.0085,
+        "unit": "g"
+      },
+      "beefFillet": {
+        "cost": 0.012,
+        "unit": "g"
+      },
+      "beefMince": {
+        "cost": 0.0055,
+        "unit": "g"
+      },
+      "madeira": {
+        "cost": 0.015,
+        "unit": "ml"
+      },
+      "truffleOil": {
+        "cost": 0.03,
+        "unit": "ml"
+      },
+      "crouton": {
+        "cost": 0.001,
+        "unit": "g"
+      },
+      "oxCheek": {
+        "cost": 0.006,
+        "unit": "g"
+      },
+      "lamb": {
+        "cost": 0.0055,
+        "unit": "g"
+      },
+      "pork": {
+        "cost": 0.0045,
+        "unit": "g"
+      },
+      "duck": {
+        "cost": 0.014,
+        "unit": "g"
+      },
+      "prawns": {
+        "cost": 0.015,
+        "unit": "g"
+      },
+      "kingPrawns": {
+        "cost": 0.016,
+        "unit": "g"
+      },
+      "greenlandPrawns": {
+        "cost": 0.012,
+        "unit": "g"
+      },
+      "lobster": {
+        "cost": 0.025,
+        "unit": "g"
+      },
+      "cod": {
+        "cost": 0.012,
+        "unit": "g"
+      },
+      "salmon": {
+        "cost": 0.0145,
+        "unit": "g"
+      },
+      "seabass": {
+        "cost": 0.0125,
+        "unit": "g"
+      },
+      "squid": {
+        "cost": 0.01,
+        "unit": "g"
+      },
+      "kingScallops": {
+        "cost": 0.025,
+        "unit": "g"
+      },
+      "octopus": {
+        "cost": 0.018,
+        "unit": "g"
+      },
+      "mussels": {
+        "cost": 0.008,
+        "unit": "g"
+      },
+      "mozzarella": {
+        "cost": 0.0075,
+        "unit": "g"
+      },
+      "mortadella": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "chickenLiverPate": {
+        "cost": 0.004,
+        "unit": "g"
+      },
+      "goatCheese": {
+        "cost": 0.009,
+        "unit": "g"
+      },
+      "ricotta": {
+        "cost": 0.006,
+        "unit": "g"
+      },
+      "parmesan": {
+        "cost": 0.012,
+        "unit": "g"
+      },
+      "granaPadano": {
+        "cost": 0.01,
+        "unit": "g"
+      },
+      "mushrooms": {
+        "cost": 0.0028,
+        "unit": "g"
+      },
+      "buttonMushrooms": {
+        "cost": 0.003,
+        "unit": "g"
+      },
+      "porciniMushrooms": {
+        "cost": 0.02,
+        "unit": "g"
+      },
+      "onions": {
+        "cost": 0.0012,
+        "unit": "g"
+      },
+      "redOnions": {
+        "cost": 0.0012,
+        "unit": "g"
+      },
+      "springOnions": {
+        "cost": 0.0025,
+        "unit": "g"
+      },
+      "tenderstemBroccoli": {
+        "cost": 0.0035,
+        "unit": "g"
+      },
+      "potatoes": {
+        "cost": 0.0009,
+        "unit": "g"
+      },
+      "cherryTomatoes": {
+        "cost": 0.003,
+        "unit": "g"
+      },
+      "tomatoes": {
+        "cost": 0.0025,
+        "unit": "g"
+      },
+      "sunDriedTomatoes": {
+        "cost": 0.006,
+        "unit": "g"
+      },
+      "asparagus": {
+        "cost": 0.0045,
+        "unit": "g"
+      },
+      "spinach": {
+        "cost": 0.003,
+        "unit": "g"
+      },
+      "beetroot": {
+        "cost": 0.0015,
+        "unit": "g"
+      },
+      "rocket": {
+        "cost": 0.003,
+        "unit": "g"
+      },
+      "lettuce": {
+        "cost": 0.0015,
+        "unit": "g"
+      },
+      "redPeppers": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "greenPeppers": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "olives": {
+        "cost": 0.0045,
+        "unit": "g"
+      },
+      "courgettes": {
+        "cost": 0.0023,
+        "unit": "g"
+      },
+      "mixedVegetables": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "apples": {
+        "cost": 0.0015,
+        "unit": "g"
+      },
+      "pineapple": {
+        "cost": 0.003,
+        "unit": "g"
+      },
+      "avocado": {
+        "cost": 0.004,
+        "unit": "g"
+      },
+      "italianSausage": {
+        "cost": 0.0065,
+        "unit": "g"
+      },
+      "calabrianSausage": {
+        "cost": 0.007,
+        "unit": "g"
+      },
+      "ndujaSausage": {
+        "cost": 0.008,
+        "unit": "g"
+      },
+      "ham": {
+        "cost": 0.006,
+        "unit": "g"
+      },
+      "sanDanieleHam": {
+        "cost": 0.015,
+        "unit": "g"
+      },
+      "cream": {
+        "cost": 0.0025,
+        "unit": "ml"
+      },
+      "butter": {
+        "cost": 0.0058,
+        "unit": "g"
+      },
+      "lemonButter": {
+        "cost": 0.0075,
+        "unit": "g"
+      },
+      "oliveOil": {
+        "cost": 0.006,
+        "unit": "ml"
+      },
+      "basilOil": {
+        "cost": 0.008,
+        "unit": "ml"
+      },
+      "redWine": {
+        "cost": 0.002,
+        "unit": "ml"
+      },
+      "whiteWine": {
+        "cost": 0.002,
+        "unit": "ml"
+      },
+      "marsalaWine": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "pasta": {
+        "cost": 0.0012,
+        "unit": "g"
+      },
+      "arborioRice": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "vegetableStock": {
+        "cost": 0.0015,
+        "unit": "ml"
+      },
+      "flour": {
+        "cost": 0.0008,
+        "unit": "g"
+      },
+      "egg": {
+        "cost": 0.29,
+        "unit": "unit"
+      },
+      "mayonnaise": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "lemon": {
+        "cost": 0.0016,
+        "unit": "g"
+      },
+      "lemonZest": {
+        "cost": 0.0016,
+        "unit": "g"
+      },
+      "mascarpone": {
+        "cost": 0.0065,
+        "unit": "g"
+      },
+      "coffee": {
+        "cost": 0.008,
+        "unit": "g"
+      },
+      "cocoa": {
+        "cost": 0.007,
+        "unit": "g"
+      },
+      "sugar": {
+        "cost": 0.0007,
+        "unit": "g"
+      },
+      "chocolate": {
+        "cost": 0.0065,
+        "unit": "g"
+      },
+      "pepperoni": {
+        "cost": 0.006,
+        "unit": "g"
+      },
+      "jalapenos": {
+        "cost": 0.006,
+        "unit": "g"
+      },
+      "chilli": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "freshChilli": {
+        "cost": 0.006,
+        "unit": "g"
+      },
+      "basilFresh": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "englishMustard": {
+        "cost": 0.0025,
+        "unit": "ml"
+      },
+      "frenchMustard": {
+        "cost": 0.0028,
+        "unit": "ml"
+      },
+      "rosemary": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "garlic": {
+        "cost": 0.0035,
+        "unit": "g"
+      },
+      "ginger": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "peppercorn": {
+        "cost": 0.01,
+        "unit": "g"
+      },
+      "greenPeppercorn": {
+        "cost": 0.012,
+        "unit": "g"
+      },
+      "demiGlace": {
+        "cost": 0.005,
+        "unit": "ml"
+      },
+      "oregano": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "italianHerbs": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "parsley": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "mint": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "sage": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "pancetta": {
+        "cost": 0.008,
+        "unit": "g"
+      },
+      "bechamel": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "bolognese": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "gelatine": {
+        "cost": 0.015,
+        "unit": "g"
+      },
+      "vanilla": {
+        "cost": 0.02,
+        "unit": "g"
+      },
+      "marieRoseSauce": {
+        "cost": 0.0035,
+        "unit": "ml"
+      },
+      "orange": {
+        "cost": 0.0015,
+        "unit": "g"
+      },
+      "cinnamon": {
+        "cost": 0.01,
+        "unit": "g"
+      },
+      "breadcrumbs": {
+        "cost": 0.002,
+        "unit": "g"
+      },
+      "bbqSauce": {
+        "cost": 0.003,
+        "unit": "ml"
+      },
+      "balsamicGlaze": {
+        "cost": 0.005,
+        "unit": "ml"
+      },
+      "saffron": {
+        "cost": 2,
+        "unit": "g"
+      },
+      "anchovies": {
+        "cost": 0.01,
+        "unit": "g"
+      },
+      "artichoke": {
+        "cost": 0.005,
+        "unit": "g"
+      },
+      "capers": {
+        "cost": 0.008,
+        "unit": "g"
+      },
+      "feverTree": {
+        "cost": 1.2,
+        "unit": "unit"
+      },
+      "appletiser": {
+        "cost": 1.5,
+        "unit": "unit"
+      },
+      "j20": {
+        "cost": 1.4,
+        "unit": "unit"
+      },
+      "fruitShoot": {
+        "cost": 0.8,
+        "unit": "unit"
+      },
+      "lemonade": {
+        "cost": 0.001,
+        "unit": "ml"
+      },
+      "bitterLemonade": {
+        "cost": 0.0012,
+        "unit": "ml"
+      },
+      "fanta": {
+        "cost": 0.001,
+        "unit": "ml"
+      },
+      "orangeJuice": {
+        "cost": 0.0015,
+        "unit": "ml"
+      },
+      "appleJuice": {
+        "cost": 0.0015,
+        "unit": "ml"
+      },
+      "pineappleJuice": {
+        "cost": 0.0015,
+        "unit": "ml"
+      },
+      "cranberryJuice": {
+        "cost": 0.0018,
+        "unit": "ml"
+      },
+      "coke": {
+        "cost": 0.0008,
+        "unit": "ml"
+      },
+      "dietCoke": {
+        "cost": 0.0008,
+        "unit": "ml"
+      },
+      "cokeZero": {
+        "cost": 0.0008,
+        "unit": "ml"
+      },
+      "stillWater": {
+        "cost": 0.0003,
+        "unit": "ml"
+      },
+      "sparklingWater": {
+        "cost": 0.0004,
+        "unit": "ml"
+      }
+    },
+    "items": [
+      {
+        "name": "Soup of the Day",
+        "category": "Starters",
+        "sellingPrice": 5.95,
+        "ingredients": {
+          "mixedVegetables": 100,
+          "potatoes": 50,
+          "butter": 20,
+          "flour": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Bruschetta Ricotta e Pomodoro",
+        "category": "Starters",
+        "sellingPrice": 6.25,
+        "ingredients": {
+          "flour": 50,
+          "ricotta": 50,
+          "tomatoes": 50,
+          "basilOil": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Calamari Fritti con Salsa all'Aglio",
+        "category": "Starters",
+        "sellingPrice": 7.25,
+        "ingredients": {
+          "squid": 150,
+          "flour": 50,
+          "egg": 1,
+          "mayonnaise": 20,
+          "lemon": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Insalata dell'Adriatico",
+        "category": "Starters",
+        "sellingPrice": 8.75,
+        "ingredients": {
+          "prawns": 50,
+          "squid": 50,
+          "octopus": 50,
+          "mussels": 50,
+          "olives": 20,
+          "redPeppers": 50,
+          "lettuce": 50,
+          "marieRoseSauce": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pat\u00e9 di Fegatini all'Umbra",
+        "category": "Starters",
+        "sellingPrice": 6.75,
+        "ingredients": {
+          "chickenLiverPate": 100,
+          "flour": 50,
+          "apples": 50,
+          "orange": 50,
+          "cinnamon": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Involtini di Asparagi (N)",
+        "category": "Starters",
+        "sellingPrice": 7.95,
+        "ingredients": {
+          "asparagus": 100,
+          "mortadella": 50,
+          "breadcrumbs": 20,
+          "parmesan": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Costicine di Maiale",
+        "category": "Starters",
+        "sellingPrice": 9.25,
+        "ingredients": {
+          "pork": 200,
+          "bbqSauce": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Polpette Salentine",
+        "category": "Starters",
+        "sellingPrice": 7.25,
+        "ingredients": {
+          "beefMince": 100,
+          "mozzarella": 50,
+          "tomatoes": 50,
+          "basilFresh": 10,
+          "cream": 20,
+          "flour": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Caprino Impanato",
+        "category": "Starters",
+        "sellingPrice": 7.45,
+        "ingredients": {
+          "goatCheese": 100,
+          "flour": 50,
+          "egg": 1,
+          "rocket": 50,
+          "apples": 50,
+          "orange": 50,
+          "cinnamon": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Funghi all'Aglio e Prezzemolo",
+        "category": "Starters",
+        "sellingPrice": 6.75,
+        "ingredients": {
+          "mushrooms": 150,
+          "whiteWine": 50,
+          "oliveOil": 10,
+          "garlic": 10,
+          "parsley": 10,
+          "cream": 20,
+          "crouton": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Carpaccio di Manzo",
+        "category": "Starters",
+        "sellingPrice": 9.75,
+        "ingredients": {
+          "beefFillet": 100,
+          "rocket": 50,
+          "parmesan": 20,
+          "flour": 50,
+          "truffleOil": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Gamberoni allo Zafferano",
+        "category": "Starters",
+        "sellingPrice": 9.95,
+        "ingredients": {
+          "prawns": 150,
+          "garlic": 10,
+          "saffron": 0.1,
+          "springOnions": 50,
+          "whiteWine": 50,
+          "freshChilli": 10,
+          "butter": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Insalata Tricolore",
+        "category": "Starters",
+        "sellingPrice": 7.75,
+        "ingredients": {
+          "mozzarella": 100,
+          "tomatoes": 100,
+          "avocado": 50,
+          "basilOil": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza Margherita",
+        "category": "Pizzas",
+        "sellingPrice": 11.95,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "tomatoes": 100,
+          "basilOil": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza Alternativa",
+        "category": "Pizzas",
+        "sellingPrice": 13.45,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "chicken": 100,
+          "redOnions": 50,
+          "redPeppers": 50,
+          "parsley": 10,
+          "bbqSauce": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza Calabrese",
+        "category": "Pizzas",
+        "sellingPrice": 14.45,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "tomatoes": 100,
+          "spinach": 50,
+          "redOnions": 50,
+          "calabrianSausage": 100
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Calzone Primavera",
+        "category": "Pizzas",
+        "sellingPrice": 13.95,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "spinach": 50,
+          "mushrooms": 50,
+          "ricotta": 50,
+          "tomatoes": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza Fresca (N)",
+        "category": "Pizzas",
+        "sellingPrice": 13.45,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "mortadella": 100,
+          "rocket": 50,
+          "balsamicGlaze": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza Chiaramonti",
+        "category": "Pizzas",
+        "sellingPrice": 13.45,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "mushrooms": 50,
+          "ham": 50,
+          "garlic": 10,
+          "goatCheese": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza Napoli",
+        "category": "Pizzas",
+        "sellingPrice": 13.95,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "tomatoes": 100,
+          "anchovies": 50,
+          "olives": 20,
+          "artichoke": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza Domenico",
+        "category": "Pizzas",
+        "sellingPrice": 14.45,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "tomatoes": 100,
+          "chicken": 50,
+          "pepperoni": 50,
+          "ham": 50,
+          "beefMince": 50,
+          "freshChilli": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza Gondola",
+        "category": "Pizzas",
+        "sellingPrice": 14.45,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "bolognese": 80,
+          "ndujaSausage": 50,
+          "egg": 1,
+          "rocket": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Calzone Mezza Luna",
+        "category": "Pizzas",
+        "sellingPrice": 15.45,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "chicken": 50,
+          "ham": 50,
+          "mushrooms": 50,
+          "garlic": 10,
+          "honey": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza Bella Vita",
+        "category": "Pizzas",
+        "sellingPrice": 15.45,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "tomatoes": 100,
+          "sanDanieleHam": 100,
+          "rocket": 50,
+          "parmesan": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza Diavola",
+        "category": "Pizzas",
+        "sellingPrice": 14.45,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "tomatoes": 100,
+          "pepperoni": 50,
+          "jalapenos": 50,
+          "redPeppers": 50,
+          "chilli": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pizza 'Nduja",
+        "category": "Pizzas",
+        "sellingPrice": 15.95,
+        "ingredients": {
+          "flour": 150,
+          "mozzarella": 100,
+          "tomatoes": 100,
+          "ndujaSausage": 80,
+          "garlic": 10,
+          "kingPrawns": 50,
+          "springOnions": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Tagliatelle Salmone e Spinaci",
+        "category": "Pastas",
+        "sellingPrice": 15.45,
+        "ingredients": {
+          "pasta": 100,
+          "salmon": 80,
+          "garlic": 10,
+          "chilli": 10,
+          "onions": 30,
+          "spinach": 50,
+          "cream": 50,
+          "whiteWine": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Tagliatelle Campagnola",
+        "category": "Pastas",
+        "sellingPrice": 14.45,
+        "ingredients": {
+          "pasta": 100,
+          "onions": 50,
+          "garlic": 10,
+          "cherryTomatoes": 50,
+          "goatCheese": 50,
+          "asparagus": 50,
+          "parmesan": 20,
+          "beetroot": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Penne Boscaiola",
+        "category": "Pastas",
+        "sellingPrice": 14.45,
+        "ingredients": {
+          "pasta": 100,
+          "chicken": 80,
+          "buttonMushrooms": 50,
+          "sunDriedTomatoes": 30,
+          "garlic": 10,
+          "parsley": 10,
+          "tomatoes": 50,
+          "cream": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Linguine Arrabbiata",
+        "category": "Pastas",
+        "sellingPrice": 14.45,
+        "ingredients": {
+          "pasta": 100,
+          "italianSausage": 80,
+          "redOnions": 30,
+          "redPeppers": 30,
+          "freshChilli": 10,
+          "garlic": 10,
+          "italianHerbs": 10,
+          "tomatoes": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Tagliatelle Scoglio",
+        "category": "Pastas",
+        "sellingPrice": 16.95,
+        "ingredients": {
+          "pasta": 100,
+          "cod": 60,
+          "kingPrawns": 60,
+          "squid": 60,
+          "cherryTomatoes": 40,
+          "basilFresh": 10,
+          "garlic": 10,
+          "freshChilli": 10,
+          "whiteWine": 40,
+          "tomatoes": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Penne al Baccal\u00e1",
+        "category": "Pastas",
+        "sellingPrice": 15.95,
+        "ingredients": {
+          "pasta": 100,
+          "cod": 80,
+          "greenlandPrawns": 60,
+          "sunDriedTomatoes": 30,
+          "garlic": 10,
+          "parsley": 10,
+          "capers": 10,
+          "lemonButter": 30,
+          "cream": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Linguine con Capesante",
+        "category": "Pastas",
+        "sellingPrice": 16.45,
+        "ingredients": {
+          "pasta": 100,
+          "kingScallops": 80,
+          "garlic": 10,
+          "onions": 30,
+          "basilFresh": 10,
+          "redPeppers": 30,
+          "lemonZest": 10,
+          "whiteWine": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Spaghetti con Gamberoni",
+        "category": "Pastas",
+        "sellingPrice": 16.45,
+        "ingredients": {
+          "pasta": 100,
+          "kingPrawns": 80,
+          "salmon": 60,
+          "garlic": 10,
+          "parsley": 10,
+          "springOnions": 30,
+          "whiteWine": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Tortelloni d'Asparagi",
+        "category": "Pastas",
+        "sellingPrice": 15.45,
+        "ingredients": {
+          "pasta": 100,
+          "ricotta": 50,
+          "granaPadano": 20,
+          "asparagus": 50,
+          "mushrooms": 50,
+          "onions": 50,
+          "garlic": 10,
+          "whiteWine": 50,
+          "parsley": 10,
+          "tomatoes": 50,
+          "cream": 20,
+          "rocket": 50,
+          "parmesan": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Ravioli d'Aragosta",
+        "category": "Pastas",
+        "sellingPrice": 16.95,
+        "ingredients": {
+          "pasta": 100,
+          "lobster": 80,
+          "kingPrawns": 60,
+          "garlic": 10,
+          "mushrooms": 40,
+          "parsley": 10,
+          "butter": 30,
+          "whiteWine": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Ravioli di Carne",
+        "category": "Pastas",
+        "sellingPrice": 15.95,
+        "ingredients": {
+          "pasta": 100,
+          "beefMince": 80,
+          "ginger": 10,
+          "onions": 30,
+          "redPeppers": 30,
+          "garlic": 10,
+          "whiteWine": 50,
+          "englishMustard": 10,
+          "italianHerbs": 10,
+          "cream": 40,
+          "rocket": 20,
+          "beetroot": 20,
+          "balsamicGlaze": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Lasagna Pasticciata",
+        "category": "Pastas",
+        "sellingPrice": 14.95,
+        "ingredients": {
+          "pasta": 100,
+          "bolognese": 100,
+          "bechamel": 80
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Risotto di Mare",
+        "category": "Risottos",
+        "sellingPrice": 17.95,
+        "ingredients": {
+          "arborioRice": 100,
+          "prawns": 50,
+          "squid": 50,
+          "mussels": 50,
+          "tomatoes": 50,
+          "whiteWine": 50,
+          "vegetableStock": 100,
+          "oliveOil": 10,
+          "garlic": 10,
+          "courgettes": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Risotto dell'Orto",
+        "category": "Risottos",
+        "sellingPrice": 15.45,
+        "ingredients": {
+          "arborioRice": 100,
+          "garlic": 10,
+          "chilli": 5,
+          "onions": 30,
+          "redPeppers": 30,
+          "asparagus": 50,
+          "ginger": 5,
+          "cream": 50,
+          "whiteWine": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Risotto con Pollo e Porcini",
+        "category": "Risottos",
+        "sellingPrice": 16.45,
+        "ingredients": {
+          "arborioRice": 100,
+          "chicken": 100,
+          "porciniMushrooms": 50,
+          "mushrooms": 50,
+          "onions": 50,
+          "garlic": 10,
+          "whiteWine": 50,
+          "cream": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pollo all'Inglese",
+        "category": "Mains",
+        "sellingPrice": 16.5,
+        "ingredients": {
+          "chicken": 200,
+          "mushrooms": 50,
+          "onions": 50,
+          "cream": 50,
+          "whiteWine": 50,
+          "englishMustard": 10,
+          "garlic": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pollo alla Valdostana",
+        "category": "Mains",
+        "sellingPrice": 16.95,
+        "ingredients": {
+          "chicken": 200,
+          "mortadella": 50,
+          "mozzarella": 50,
+          "tomatoes": 50,
+          "garlic": 10,
+          "oliveOil": 10,
+          "whiteWine": 30
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Bistecca di Manzo Diana",
+        "category": "Mains",
+        "sellingPrice": 22.95,
+        "ingredients": {
+          "beefSirloin": 250,
+          "mushrooms": 50,
+          "onions": 50,
+          "cream": 50,
+          "redWine": 50,
+          "frenchMustard": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Guancia di Bue al Vino Rosso",
+        "category": "Mains",
+        "sellingPrice": 21.95,
+        "ingredients": {
+          "oxCheek": 250,
+          "potatoes": 150,
+          "redWine": 50,
+          "rosemary": 10,
+          "garlic": 10,
+          "oliveOil": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Filetto di Manzo Pepe",
+        "category": "Mains",
+        "sellingPrice": 29.95,
+        "ingredients": {
+          "beefFillet": 200,
+          "cream": 50,
+          "redWine": 50,
+          "greenPeppercorn": 10,
+          "demiGlace": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Filetto di Manzo Rossini",
+        "category": "Mains",
+        "sellingPrice": 29.95,
+        "ingredients": {
+          "beefFillet": 200,
+          "chickenLiverPate": 30,
+          "flour": 30,
+          "madeira": 50,
+          "truffleOil": 10,
+          "crouton": 20
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Anatra al Gran Marnier",
+        "category": "Mains",
+        "sellingPrice": 20.95,
+        "ingredients": {
+          "duck": 200,
+          "orange": 50,
+          "pineapple": 50,
+          "honey": 20,
+          "chilli": 5
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Agnello Abruzzo",
+        "category": "Mains",
+        "sellingPrice": 24.95,
+        "ingredients": {
+          "lamb": 250,
+          "redWine": 50,
+          "rosemary": 10,
+          "potatoes": 150
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Carr\u00e9 d'Agnello",
+        "category": "Mains",
+        "sellingPrice": 22.95,
+        "ingredients": {
+          "lamb": 250,
+          "redWine": 50,
+          "mint": 10,
+          "oliveOil": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Tiramisu",
+        "category": "Desserts",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "mascarpone": 100,
+          "egg": 2,
+          "coffee": 20,
+          "cocoa": 10,
+          "sugar": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Hot Chocolate Fudge Cake",
+        "category": "Desserts",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "flour": 50,
+          "sugar": 50,
+          "chocolate": 50,
+          "cream": 50
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Dark and White Chocolate Mousse",
+        "category": "Desserts",
+        "sellingPrice": 6.75,
+        "ingredients": {
+          "chocolate": 50,
+          "cream": 100,
+          "egg": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Panna Cotta",
+        "category": "Desserts",
+        "sellingPrice": 6.95,
+        "ingredients": {
+          "cream": 100,
+          "sugar": 50,
+          "gelatine": 10,
+          "vanilla": 10
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fever Tree Premium",
+        "category": "Drinks",
+        "sellingPrice": 2.95,
+        "ingredients": {
+          "feverTree": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Appletiser",
+        "category": "Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "appletiser": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "J20 Orange & Passionfruit",
+        "category": "Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "j20": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "J20 Apple & Raspberry",
+        "category": "Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "j20": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "J20 Apple & Mango",
+        "category": "Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "j20": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fruit Shoot Orange",
+        "category": "Drinks",
+        "sellingPrice": 1.95,
+        "ingredients": {
+          "fruitShoot": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fruit Shoot Summer Fruit",
+        "category": "Drinks",
+        "sellingPrice": 1.95,
+        "ingredients": {
+          "fruitShoot": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fruit Shoot Blackcurrant",
+        "category": "Drinks",
+        "sellingPrice": 1.95,
+        "ingredients": {
+          "fruitShoot": 1
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Lemonade",
+        "category": "Drinks",
+        "sellingPrice": 2.95,
+        "ingredients": {
+          "lemonade": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Bitter Lemonade",
+        "category": "Drinks",
+        "sellingPrice": 2.95,
+        "ingredients": {
+          "bitterLemonade": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Fanta",
+        "category": "Drinks",
+        "sellingPrice": 2.95,
+        "ingredients": {
+          "fanta": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Orange Juice",
+        "category": "Drinks",
+        "sellingPrice": 2.95,
+        "ingredients": {
+          "orangeJuice": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Apple Juice",
+        "category": "Drinks",
+        "sellingPrice": 2.95,
+        "ingredients": {
+          "appleJuice": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Pineapple Juice",
+        "category": "Drinks",
+        "sellingPrice": 2.95,
+        "ingredients": {
+          "pineappleJuice": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Cranberry Juice",
+        "category": "Drinks",
+        "sellingPrice": 2.95,
+        "ingredients": {
+          "cranberryJuice": 200
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Coca Cola",
+        "category": "Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "coke": 330
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Diet Coke",
+        "category": "Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "dietCoke": 330
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Coke Zero",
+        "category": "Drinks",
+        "sellingPrice": 3.25,
+        "ingredients": {
+          "cokeZero": 330
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Still Mineral Water",
+        "category": "Drinks",
+        "sellingPrice": 3.95,
+        "ingredients": {
+          "stillWater": 750
+        },
+        "hasRecipe": true
+      },
+      {
+        "name": "Sparkling Mineral Water",
+        "category": "Drinks",
+        "sellingPrice": 3.95,
+        "ingredients": {
+          "sparklingWater": 750
+        },
+        "hasRecipe": true
+      }
+    ],
+    "costMultiplier": 1.1,
+    "categories": [
+      "Starters",
+      "Pizzas",
+      "Pastas",
+      "Risottos",
+      "Mains",
+      "Desserts",
+      "Drinks"
+    ]
+  }
+}
