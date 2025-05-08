@@ -1,4 +1,3 @@
-
 import json
 import uuid
 
@@ -7,27 +6,35 @@ def fix_menus():
         data = json.load(f)
     
     recipe_categories = {'Food', 'Cocktails', 'Liquor Coffees', 'Desserts'}
-    resale_categories = {'Drinks', 'Wines'}
     
     for menu_key in ['izMenu', 'bellFood']:
         if menu_key not in data:
             data[menu_key] = {"items": [], "initialIngredients": {}, "costMultiplier": 1.1, "categories": []}
         items = []
         for item in data[menu_key]['items']:
-            # Determine if item is recipe or resale based on category
-            category = item.get('category', '').strip()
-            if category in recipe_categories:
+            # Normalize category name
+            category = item.get('category', '').strip().replace('&', 'and').lower()
+            is_recipe = any(cat.lower() in category for cat in recipe_categories)
+            is_resale = (
+                'wine' in category or
+                'soft drink' in category or
+                'beer' in category or
+                'cider' in category or
+                (category == 'drinks' and not any(c.lower() in category for c in ['Cocktails', 'Liquor Coffees']))
+            )
+            
+            if is_recipe:
                 item['hasRecipe'] = True
                 item['ingredients'] = item.get('ingredients', {})
                 if 'buyingPrice' in item:
                     del item['buyingPrice']
-            elif category in resale_categories:
+            elif is_resale:
                 item['hasRecipe'] = False
                 item['buyingPrice'] = item.get('buyingPrice', item['sellingPrice'] * 0.7)
                 if 'ingredients' in item:
                     del item['ingredients']
             else:
-                # Default to recipe if category is unknown
+                # Default to recipe for unknown categories
                 item['hasRecipe'] = True
                 item['ingredients'] = item.get('ingredients', {})
                 if 'buyingPrice' in item:
@@ -42,7 +49,6 @@ def fix_menus():
             items.append(item)
         
         data[menu_key]['items'] = items
-        # Update categories
         data[menu_key]['categories'] = list(set(item['category'] for item in items if item['category']))
     
     with open('server/menus.json', 'w') as f:
