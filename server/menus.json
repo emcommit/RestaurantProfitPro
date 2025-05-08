@@ -3,835 +3,1043 @@
     "initialIngredients": {
       "lamb": {
         "cost": 0.0055,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "beefFillet": {
         "cost": 0.012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "chicken": {
         "cost": 0.0038,
-        "unit": "g"
+        "unit": "g",
+        "category": "Proteins"
       },
       "beefRibs": {
         "cost": 0.0065,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "lambLiver": {
         "cost": 0.0035,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "prawns": {
         "cost": 0.015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "kingPrawns": {
         "cost": 0.018,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "salmon": {
         "cost": 0.0145,
-        "unit": "g"
+        "unit": "g",
+        "category": "Proteins"
       },
       "seabass": {
         "cost": 0.0125,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "calamari": {
         "cost": 0.01,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "kalamari": {
         "cost": 0.01,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "octopus": {
         "cost": 0.018,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "halibut": {
         "cost": 0.02,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mincedBeef": {
         "cost": 0.0065,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "groundLamb": {
         "cost": 0.0055,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "lambChops": {
         "cost": 0.009,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "lambShank": {
         "cost": 0.0075,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "tomatoes": {
         "cost": 0.0025,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "cherryTomatoes": {
         "cost": 0.003,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "cucumbers": {
         "cost": 0.0018,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "redOnions": {
         "cost": 0.0012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "onions": {
         "cost": 0.001,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "greenPeppers": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "redPeppers": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "aubergine": {
         "cost": 0.0021,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "courgette": {
         "cost": 0.0023,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "cauliflower": {
         "cost": 0.0018,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "potatoes": {
         "cost": 0.0009,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mashedPotatoes": {
         "cost": 0.0015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "rosemaryPotatoes": {
         "cost": 0.0012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "tripleCookedChips": {
         "cost": 0.0015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "frenchFries": {
         "cost": 0.0015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "carrots": {
         "cost": 0.0011,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "lettuce": {
         "cost": 0.0015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mushrooms": {
         "cost": 0.0028,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "oysterMushrooms": {
         "cost": 0.004,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "spinach": {
         "cost": 0.003,
-        "unit": "g"
+        "unit": "g",
+        "category": "Fruit and Veg"
       },
       "babySpinach": {
         "cost": 0.0035,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "lemons": {
         "cost": 0.0016,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "olives": {
         "cost": 0.0045,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "kalamataOlives": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "blackOlives": {
         "cost": 0.0045,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "capers": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "feta": {
         "cost": 0.0085,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "halloumi": {
         "cost": 0.009,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mozzarella": {
         "cost": 0.0075,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "roquefortCheese": {
         "cost": 0.012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "manchegoCheese": {
         "cost": 0.011,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "parsley": {
         "cost": 0.004,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "redWine": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "whiteWine": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "bottling": {
         "cost": 0.5,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "grapes": {
         "cost": 0.0035,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "distribution": {
         "cost": 0.3,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "oakBarrel": {
         "cost": 0.004,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "cream": {
         "cost": 0.0025,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "butter": {
         "cost": 0.0058,
-        "unit": "g"
+        "unit": "g",
+        "category": "Dairy and Eggs"
       },
       "milk": {
         "cost": 0.0009,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Dairy and Eggs"
       },
       "eggs": {
         "cost": 0.29,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "rice": {
         "cost": 0.0015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Grains and Carbs"
       },
       "couscous": {
         "cost": 0.0012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "bulgur": {
         "cost": 0.001,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "orzo": {
         "cost": 0.0013,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "oliveOil": {
         "cost": 0.006,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "filo": {
         "cost": 0.003,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "sourdough": {
         "cost": 0.0025,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "pitta": {
         "cost": 0.0005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "tortillaWraps": {
         "cost": 0.0015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "pistachio": {
         "cost": 0.012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "almonds": {
         "cost": 0.01,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "driedFruits": {
         "cost": 0.007,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "honey": {
         "cost": 0.005,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Sweeteners"
       },
       "chocolate": {
         "cost": 0.0065,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "churros": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "meringue": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "flour": {
         "cost": 0.0008,
-        "unit": "g"
+        "unit": "g",
+        "category": "Grains and Carbs"
       },
       "sugar": {
         "cost": 0.0007,
-        "unit": "g"
+        "unit": "g",
+        "category": "Sweeteners"
       },
       "cinnamonSugar": {
         "cost": 0.001,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "yogurt": {
         "cost": 0.0015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "tzatziki": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "ezme": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "spicyTomatoSauce": {
         "cost": 0.002,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "chimichurri": {
         "cost": 0.004,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "guacamole": {
         "cost": 0.0045,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "truffle": {
         "cost": 0.05,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "truffleMayonnaise": {
         "cost": 0.006,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "izgaraMayonnaise": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "redPepperDip": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "cheese": {
         "cost": 0.0075,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "squid": {
         "cost": 0.01,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "parmesan": {
         "cost": 0.012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "chorizo": {
         "cost": 0.008,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "chorizoPicante": {
         "cost": 0.009,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "sucuk": {
         "cost": 0.008,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "groundMince": {
         "cost": 0.0055,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mixedVegetables": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "tenderStemBroccoli": {
         "cost": 0.004,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "avocado": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "padronPeppers": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "garlic": {
         "cost": 0.0025,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "dill": {
         "cost": 0.004,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "rosemary": {
         "cost": 0.004,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "sherry": {
         "cost": 0.007,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "sumac": {
         "cost": 0.008,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "bechamelSauce": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "pineappleJuice": {
         "cost": 0.0015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "vanillaVodka": {
         "cost": 0.015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "vodka": {
         "cost": 0.012,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "chambord": {
         "cost": 0.025,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "raki": {
         "cost": 0.02,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "bacardi": {
         "cost": 0.015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "archers": {
         "cost": 0.018,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "sugarSyrup": {
         "cost": 0.002,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "lemonJuice": {
         "cost": 0.002,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "limeJuice": {
         "cost": 0.002,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "coconutMilk": {
         "cost": 0.0025,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "malibu": {
         "cost": 0.015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "cucumberVodka": {
         "cost": 0.016,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "elderflowerLiqueur": {
         "cost": 0.02,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "lavenderSyrup": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "soda": {
         "cost": 0.0005,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "espressoLungo": {
         "cost": 0.005,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "hendricksGin": {
         "cost": 0.025,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "kiwiPuree": {
         "cost": 0.004,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "passoa": {
         "cost": 0.018,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "passionfruitSyrup": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "passionfruitPuree": {
         "cost": 0.004,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "gin": {
         "cost": 0.012,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "cointreau": {
         "cost": 0.025,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "kahlua": {
         "cost": 0.02,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "chivasRegal": {
         "cost": 0.03,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "disaronno": {
         "cost": 0.02,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "strawberrySyrup": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "angosturaBitters": {
         "cost": 0.05,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "tequilaSilver": {
         "cost": 0.02,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "tabasco": {
         "cost": 0.01,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "orangeJuice": {
         "cost": 0.0015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "cranberryJuice": {
         "cost": 0.0018,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "jackDaniels": {
         "cost": 0.025,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "martiniRosso": {
         "cost": 0.012,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "campari": {
         "cost": 0.02,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "brownSugar": {
         "cost": 0.0007,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "cachaca": {
         "cost": 0.018,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "cocaCola": {
         "cost": 0.0008,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "havanaWhite": {
         "cost": 0.015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "havanaDark": {
         "cost": 0.015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "kraken": {
         "cost": 0.025,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "grenadine": {
         "cost": 0.002,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "wrayAndNephew": {
         "cost": 0.03,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "lime": {
         "cost": 0.2,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "mint": {
         "cost": 5e-05,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "aperol": {
         "cost": 0.018,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "prosecco": {
         "cost": 0.025,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "proseccoBrut": {
         "cost": 0.03,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "proseccoRose": {
         "cost": 0.032,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "cava": {
         "cost": 0.028,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "americanoCoffee": {
         "cost": 0.1,
-        "unit": "cup"
+        "unit": "cup",
+        "category": "Miscellaneous"
       },
       "coffeeBeans": {
         "cost": 0.2,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "milkFroth": {
         "cost": 0.002,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "steamedMilk": {
         "cost": 0.002,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "turkishCoffee": {
         "cost": 0.15,
-        "unit": "cup"
+        "unit": "cup",
+        "category": "Miscellaneous"
       },
       "teaBag": {
         "cost": 0.08,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "hotChocolatePowder": {
         "cost": 0.15,
-        "unit": "cup"
+        "unit": "cup",
+        "category": "Miscellaneous"
       },
       "irishWhiskey": {
         "cost": 0.04,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "tiaMaria": {
         "cost": 0.05,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "coffeeSweet": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "hotWater": {
         "cost": 0.0001,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "baileysCream": {
         "cost": 0.04,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "brandySpirit": {
         "cost": 0.04,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "espressoCoffee": {
         "cost": 0.15,
-        "unit": "shot"
+        "unit": "shot",
+        "category": "Miscellaneous"
       },
       "efes": {
         "cost": 3,
-        "unit": "half"
+        "unit": "half",
+        "category": "Miscellaneous"
       },
       "efesPint": {
         "cost": 6,
-        "unit": "pint"
+        "unit": "pint",
+        "category": "Miscellaneous"
       },
       "poretti": {
         "cost": 3.75,
-        "unit": "half"
+        "unit": "half",
+        "category": "Miscellaneous"
       },
       "porettiPint": {
         "cost": 6.5,
-        "unit": "pint"
+        "unit": "pint",
+        "category": "Miscellaneous"
       },
       "estrellaDamm": {
         "cost": 3.5,
-        "unit": "half"
+        "unit": "half",
+        "category": "Miscellaneous"
       },
       "estrellaDammPint": {
         "cost": 6,
-        "unit": "pint"
+        "unit": "pint",
+        "category": "Miscellaneous"
       },
       "kronenbourg": {
         "cost": 3.5,
-        "unit": "half"
+        "unit": "half",
+        "category": "Miscellaneous"
       },
       "kronenbourgPint": {
         "cost": 6,
-        "unit": "pint"
+        "unit": "pint",
+        "category": "Miscellaneous"
       },
       "guinness": {
         "cost": 3.75,
-        "unit": "half"
+        "unit": "half",
+        "category": "Miscellaneous"
       },
       "guinnessPint": {
         "cost": 6.5,
-        "unit": "pint"
+        "unit": "pint",
+        "category": "Miscellaneous"
       },
       "mythos": {
         "cost": 2.3,
-        "unit": "bottle"
+        "unit": "bottle",
+        "category": "Miscellaneous"
       },
       "madri": {
         "cost": 2.3,
-        "unit": "bottle"
+        "unit": "bottle",
+        "category": "Miscellaneous"
       },
       "corona": {
         "cost": 2.3,
-        "unit": "bottle"
+        "unit": "bottle",
+        "category": "Miscellaneous"
       },
       "kopparberg": {
         "cost": 3,
-        "unit": "bottle"
+        "unit": "bottle",
+        "category": "Miscellaneous"
       },
       "inches": {
         "cost": 3.2,
-        "unit": "bottle"
+        "unit": "bottle",
+        "category": "Miscellaneous"
       },
       "sanMiguel": {
         "cost": 2.3,
-        "unit": "bottle"
+        "unit": "bottle",
+        "category": "Miscellaneous"
       },
       "corona0": {
         "cost": 2.3,
-        "unit": "bottle"
+        "unit": "bottle",
+        "category": "Miscellaneous"
       },
       "kopparberg0": {
         "cost": 2.5,
-        "unit": "bottle"
+        "unit": "bottle",
+        "category": "Miscellaneous"
       },
       "cavaRose": {
         "cost": 0.03,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "cremantDeLoire": {
         "cost": 0.04,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "moet": {
         "cost": 0.08,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "moetRose": {
         "cost": 0.09,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "veuve": {
         "cost": 0.09,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "bollinger": {
         "cost": 0.12,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "laurentPerrier": {
         "cost": 0.13,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "riojaRose": {
         "cost": 0.035,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "egeoRose": {
         "cost": 0.035,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "pierrevertRose": {
         "cost": 0.04,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "heritageRose": {
         "cost": 0.045,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "chilli": {
         "cost": 0.15,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "spicedRum": {
         "cost": 0.018,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "eggWhite": {
         "cost": 0.08,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "amaretto": {
         "cost": 0.02,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "bourbon": {
         "cost": 0.022,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "vanillaIceCream": {
         "cost": 0.004,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "peppercorns": {
         "cost": 0.03,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "frenchMustard": {
         "cost": 0.04,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "beef": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       }
     },
     "items": [
@@ -1715,693 +1923,449 @@
         "name": "Valviejo Viura (Glass)",
         "category": "White Wines",
         "sellingPrice": 8.85,
-        "ingredients": {
-          "grapes": 175,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "a2a20809-426d-49d0-ae06-95b72fc1d2d7"
+        "hasRecipe": false,
+        "id": "a2a20809-426d-49d0-ae06-95b72fc1d2d7",
+        "buyingPrice": 6.194999999999999
       },
       {
         "name": "Sauvignon Blanc (Glass)",
         "category": "White Wines",
         "sellingPrice": 8.85,
-        "ingredients": {
-          "grapes": 175,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "354f5840-c032-4b49-b596-efee84c91b32"
+        "hasRecipe": false,
+        "id": "354f5840-c032-4b49-b596-efee84c91b32",
+        "buyingPrice": 6.194999999999999
       },
       {
         "name": "Chardonnay (Glass)",
         "category": "White Wines",
         "sellingPrice": 8.85,
-        "ingredients": {
-          "grapes": 175,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "0e12c180-2461-4457-aa4e-5ee07b450ed9"
+        "hasRecipe": false,
+        "id": "0e12c180-2461-4457-aa4e-5ee07b450ed9",
+        "buyingPrice": 6.194999999999999
       },
       {
         "name": "Ancyra Narince (Glass)",
         "category": "White Wines",
         "sellingPrice": 9.3,
-        "ingredients": {
-          "grapes": 175,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "761525c4-9f90-4216-989e-ab5c2acda437"
+        "hasRecipe": false,
+        "id": "761525c4-9f90-4216-989e-ab5c2acda437",
+        "buyingPrice": 6.51
       },
       {
         "name": "Pinot Grigio (Glass)",
         "category": "White Wines",
         "sellingPrice": 9.3,
-        "ingredients": {
-          "grapes": 175,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "aab49a23-bd4f-4f1f-bca9-9e4cd7b5ae99"
+        "hasRecipe": false,
+        "id": "aab49a23-bd4f-4f1f-bca9-9e4cd7b5ae99",
+        "buyingPrice": 6.51
       },
       {
         "name": "Gavi di Gavi (Glass)",
         "category": "White Wines",
         "sellingPrice": 16.9,
-        "ingredients": {
-          "grapes": 175,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "8e924b71-0791-4d68-8c8d-9f56de908d37"
+        "hasRecipe": false,
+        "id": "8e924b71-0791-4d68-8c8d-9f56de908d37",
+        "buyingPrice": 11.829999999999998
       },
       {
         "name": "Valviejo Viura (Bottle)",
         "category": "White Wines",
         "sellingPrice": 24.95,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "ff40ff0f-f1dc-4762-a44b-2b5b1c3bb532"
+        "hasRecipe": false,
+        "id": "ff40ff0f-f1dc-4762-a44b-2b5b1c3bb532",
+        "buyingPrice": 17.465
       },
       {
         "name": "Sauvignon Blanc (Bottle)",
         "category": "White Wines",
         "sellingPrice": 24.95,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "e28047ca-51e9-45ef-82f1-cca5505a8ea1"
+        "hasRecipe": false,
+        "id": "e28047ca-51e9-45ef-82f1-cca5505a8ea1",
+        "buyingPrice": 17.465
       },
       {
         "name": "Chardonnay (Bottle)",
         "category": "White Wines",
         "sellingPrice": 24.95,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "1975b592-dfbe-4ca9-99ca-5bbb0b7ed3ac"
+        "hasRecipe": false,
+        "id": "1975b592-dfbe-4ca9-99ca-5bbb0b7ed3ac",
+        "buyingPrice": 17.465
       },
       {
         "name": "Ancyra Narince (Bottle)",
         "category": "White Wines",
         "sellingPrice": 26.95,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "ca73c65f-125a-498d-9687-ecbb2d36be63"
+        "hasRecipe": false,
+        "id": "ca73c65f-125a-498d-9687-ecbb2d36be63",
+        "buyingPrice": 18.865
       },
       {
         "name": "Pinot Grigio (Bottle)",
         "category": "White Wines",
         "sellingPrice": 26.95,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "36cd49ba-af43-455d-804d-4b5fa4bd78cc"
+        "hasRecipe": false,
+        "id": "36cd49ba-af43-455d-804d-4b5fa4bd78cc",
+        "buyingPrice": 18.865
       },
       {
         "name": "Viogner (Bottle)",
         "category": "White Wines",
         "sellingPrice": 30.95,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "4ee291b7-eacd-4f3a-8224-86460cf8ab05"
+        "hasRecipe": false,
+        "id": "4ee291b7-eacd-4f3a-8224-86460cf8ab05",
+        "buyingPrice": 21.665
       },
       {
         "name": "Chenin Blanc (Bottle)",
         "category": "White Wines",
         "sellingPrice": 31,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "f6d1e6b3-7560-4d09-b1e7-86a079471850"
+        "hasRecipe": false,
+        "id": "f6d1e6b3-7560-4d09-b1e7-86a079471850",
+        "buyingPrice": 21.7
       },
       {
         "name": "Sauvignon Blanc Black Bird (Bottle)",
         "category": "White Wines",
         "sellingPrice": 33,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "be20af11-f2ee-4032-8691-d09cc43172be"
+        "hasRecipe": false,
+        "id": "be20af11-f2ee-4032-8691-d09cc43172be",
+        "buyingPrice": 23.099999999999998
       },
       {
         "name": "Vermentino Salento (Bottle)",
         "category": "White Wines",
         "sellingPrice": 34,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "3bb74e90-6874-4e4e-b98d-973bf719f9b0"
+        "hasRecipe": false,
+        "id": "3bb74e90-6874-4e4e-b98d-973bf719f9b0",
+        "buyingPrice": 23.799999999999997
       },
       {
         "name": "Albarino (Bottle)",
         "category": "White Wines",
         "sellingPrice": 36,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "83e0510f-a0bb-4b72-b640-c5758fa2c6e3"
+        "hasRecipe": false,
+        "id": "83e0510f-a0bb-4b72-b640-c5758fa2c6e3",
+        "buyingPrice": 25.2
       },
       {
         "name": "Picpoul De Pinet (Bottle)",
         "category": "White Wines",
         "sellingPrice": 40,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "5b4158db-3dcb-4dce-bfd8-7bf827196d8e"
+        "hasRecipe": false,
+        "id": "5b4158db-3dcb-4dce-bfd8-7bf827196d8e",
+        "buyingPrice": 28.0
       },
       {
         "name": "Kavakildere Selection White (Bottle)",
         "category": "White Wines",
         "sellingPrice": 40.95,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "f2745831-a219-46a0-a38f-299b640abc3d"
+        "hasRecipe": false,
+        "id": "f2745831-a219-46a0-a38f-299b640abc3d",
+        "buyingPrice": 28.665
       },
       {
         "name": "Pouilly Fume (Bottle)",
         "category": "White Wines",
         "sellingPrice": 44,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "06e6ba64-68a3-411d-bde7-c4bf576f67fb"
+        "hasRecipe": false,
+        "id": "06e6ba64-68a3-411d-bde7-c4bf576f67fb",
+        "buyingPrice": 30.799999999999997
       },
       {
         "name": "Gavi di Gavi (Bottle)",
         "category": "White Wines",
         "sellingPrice": 45.95,
-        "ingredients": {
-          "grapes": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "e2e3d08b-16a9-4339-aac2-7bf8c55b1d60"
+        "hasRecipe": false,
+        "id": "e2e3d08b-16a9-4339-aac2-7bf8c55b1d60",
+        "buyingPrice": 32.165
       },
       {
         "name": "Garnacha Rioja Rose (Bottle)",
         "category": "Rose Wines",
         "sellingPrice": 29.95,
-        "ingredients": {
-          "riojaRose": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "5dbc40b4-50b0-4088-b625-ede638038cc8"
+        "hasRecipe": false,
+        "id": "5dbc40b4-50b0-4088-b625-ede638038cc8",
+        "buyingPrice": 20.965
       },
       {
         "name": "Kavakildere Egeo Rose (Bottle)",
         "category": "Rose Wines",
         "sellingPrice": 29.95,
-        "ingredients": {
-          "egeoRose": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "30484b4f-2066-48b9-953e-0164e50f4dfa"
+        "hasRecipe": false,
+        "id": "30484b4f-2066-48b9-953e-0164e50f4dfa",
+        "buyingPrice": 20.965
       },
       {
         "name": "Inna Pierrevert Rose (Bottle)",
         "category": "Rose Wines",
         "sellingPrice": 34,
-        "ingredients": {
-          "pierrevertRose": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "049140d9-076b-432e-8dba-c04e9aa8731a"
+        "hasRecipe": false,
+        "id": "049140d9-076b-432e-8dba-c04e9aa8731a",
+        "buyingPrice": 23.799999999999997
       },
       {
         "name": "Rose D'Une Nuit (Bottle)",
         "category": "Rose Wines",
         "sellingPrice": 39,
-        "ingredients": {
-          "heritageRose": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "fd7333c8-f7ef-442c-a698-656e3c0327bc"
+        "hasRecipe": false,
+        "id": "fd7333c8-f7ef-442c-a698-656e3c0327bc",
+        "buyingPrice": 27.299999999999997
       },
       {
         "name": "Prosecco Brut (Bottle)",
         "category": "Sparkling Wines",
         "sellingPrice": 33,
-        "ingredients": {
-          "proseccoBrut": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "0e95d338-dcd4-4163-9bbe-71d5bc8979d3"
+        "hasRecipe": false,
+        "id": "0e95d338-dcd4-4163-9bbe-71d5bc8979d3",
+        "buyingPrice": 23.099999999999998
       },
       {
         "name": "Prosecco Brut (200ml)",
         "category": "Sparkling Wines",
         "sellingPrice": 9.5,
-        "ingredients": {
-          "proseccoBrut": 200,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "2c35586d-4de1-427a-8c52-fd124ea88041"
+        "hasRecipe": false,
+        "id": "2c35586d-4de1-427a-8c52-fd124ea88041",
+        "buyingPrice": 6.6499999999999995
       },
       {
         "name": "Cava Brut (Bottle)",
         "category": "Sparkling Wines",
         "sellingPrice": 28,
-        "ingredients": {
-          "cava": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "9e3a848b-7513-48e7-b0f5-9955ce7080a2"
+        "hasRecipe": false,
+        "id": "9e3a848b-7513-48e7-b0f5-9955ce7080a2",
+        "buyingPrice": 19.599999999999998
       },
       {
         "name": "Cremant De Loire (Bottle)",
         "category": "Sparkling Wines",
         "sellingPrice": 45,
-        "ingredients": {
-          "cremantDeLoire": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "9bf86e15-ac28-4c31-a040-7d3d35dd4375"
+        "hasRecipe": false,
+        "id": "9bf86e15-ac28-4c31-a040-7d3d35dd4375",
+        "buyingPrice": 31.499999999999996
       },
       {
         "name": "Prosecco Rose (Bottle)",
         "category": "Sparkling Wines",
         "sellingPrice": 34,
-        "ingredients": {
-          "proseccoRose": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "e2ac1a66-21e9-4544-ae74-1040ad3b7c52"
+        "hasRecipe": false,
+        "id": "e2ac1a66-21e9-4544-ae74-1040ad3b7c52",
+        "buyingPrice": 23.799999999999997
       },
       {
         "name": "Prosecco Rose (200ml)",
         "category": "Sparkling Wines",
         "sellingPrice": 9.5,
-        "ingredients": {
-          "proseccoRose": 200,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "3fce6287-620d-4d4e-b157-6d79a4ecede3"
+        "hasRecipe": false,
+        "id": "3fce6287-620d-4d4e-b157-6d79a4ecede3",
+        "buyingPrice": 6.6499999999999995
       },
       {
         "name": "Cava Rose (Bottle)",
         "category": "Sparkling Wines",
         "sellingPrice": 28,
-        "ingredients": {
-          "cavaRose": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "f8316f44-4cd4-4736-b3bb-3466b3907824"
+        "hasRecipe": false,
+        "id": "f8316f44-4cd4-4736-b3bb-3466b3907824",
+        "buyingPrice": 19.599999999999998
       },
       {
         "name": "Moet & Chandon (Bottle)",
         "category": "Sparkling Wines",
         "sellingPrice": 75,
-        "ingredients": {
-          "moet": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "9b16858b-1490-4446-a888-5df936182afe"
+        "hasRecipe": false,
+        "id": "9b16858b-1490-4446-a888-5df936182afe",
+        "buyingPrice": 52.5
       },
       {
         "name": "Veuve Cliquot Yellow Label (Bottle)",
         "category": "Sparkling Wines",
         "sellingPrice": 85,
-        "ingredients": {
-          "veuve": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "ea19c0c4-72c5-44af-9de1-3bbb9d556a95"
+        "hasRecipe": false,
+        "id": "ea19c0c4-72c5-44af-9de1-3bbb9d556a95",
+        "buyingPrice": 59.49999999999999
       },
       {
         "name": "Bollinger Special Cuvee (Bottle)",
         "category": "Sparkling Wines",
         "sellingPrice": 95,
-        "ingredients": {
-          "bollinger": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "a94e284a-c281-42be-a81f-19f97fcbe366"
+        "hasRecipe": false,
+        "id": "a94e284a-c281-42be-a81f-19f97fcbe366",
+        "buyingPrice": 66.5
       },
       {
         "name": "Moet & Chandon Rose (Bottle)",
         "category": "Sparkling Wines",
         "sellingPrice": 85,
-        "ingredients": {
-          "moetRose": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "eb96c66d-d8a5-4031-9382-9d2c66cfe22e"
+        "hasRecipe": false,
+        "id": "eb96c66d-d8a5-4031-9382-9d2c66cfe22e",
+        "buyingPrice": 59.49999999999999
       },
       {
         "name": "Laurent-Perrier Cuvee Rose (Bottle)",
         "category": "Sparkling Wines",
         "sellingPrice": 110,
-        "ingredients": {
-          "laurentPerrier": 750,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "06be8c84-4bb6-4671-bcfc-7ede33f4c8e6"
+        "hasRecipe": false,
+        "id": "06be8c84-4bb6-4671-bcfc-7ede33f4c8e6",
+        "buyingPrice": 77.0
       },
       {
         "name": "Tempranillo (Glass)",
         "category": "Red Wines",
         "sellingPrice": 8.85,
-        "ingredients": {
-          "grapes": 175,
-          "oakBarrel": 100,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "be4132d2-958a-4392-9d7d-5a9146eed81f"
+        "hasRecipe": false,
+        "id": "be4132d2-958a-4392-9d7d-5a9146eed81f",
+        "buyingPrice": 6.194999999999999
       },
       {
         "name": "Merlot (Glass)",
         "category": "Red Wines",
         "sellingPrice": 8.85,
-        "ingredients": {
-          "grapes": 175,
-          "oakBarrel": 100,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "d710e929-3ffc-449a-8af9-2df9e94aa129"
+        "hasRecipe": false,
+        "id": "d710e929-3ffc-449a-8af9-2df9e94aa129",
+        "buyingPrice": 6.194999999999999
       },
       {
         "name": "Ancyra Kalecik Karasi (Glass)",
         "category": "Red Wines",
         "sellingPrice": 9.3,
-        "ingredients": {
-          "grapes": 175,
-          "oakBarrel": 100,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "8f4adaf7-8a0d-4a6f-8d32-aa55eee3fb6a"
+        "hasRecipe": false,
+        "id": "8f4adaf7-8a0d-4a6f-8d32-aa55eee3fb6a",
+        "buyingPrice": 6.51
       },
       {
         "name": "Montepulciano DOCG (Glass)",
         "category": "Red Wines",
         "sellingPrice": 25,
-        "ingredients": {
-          "grapes": 175,
-          "oakBarrel": 100,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "e388ebe7-046d-4d45-a655-ed860b2b7963"
+        "hasRecipe": false,
+        "id": "e388ebe7-046d-4d45-a655-ed860b2b7963",
+        "buyingPrice": 17.5
       },
       {
         "name": "Tempranillo (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 24.95,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "ab66c251-aff3-4dd7-8737-95af488f6d27"
+        "hasRecipe": false,
+        "id": "ab66c251-aff3-4dd7-8737-95af488f6d27",
+        "buyingPrice": 17.465
       },
       {
         "name": "Merlot (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 24.95,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "fe27ad9b-9158-46d8-92cd-df8b2081521a"
+        "hasRecipe": false,
+        "id": "fe27ad9b-9158-46d8-92cd-df8b2081521a",
+        "buyingPrice": 17.465
       },
       {
         "name": "Ancyra Kalecik Karasi (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 26.95,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "54c2220a-49e7-4dcb-8636-5d7e63dc3751"
+        "hasRecipe": false,
+        "id": "54c2220a-49e7-4dcb-8636-5d7e63dc3751",
+        "buyingPrice": 18.865
       },
       {
         "name": "Shiraz Cabernet (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 26,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "68e312fc-4801-4f87-909f-9fc687085456"
+        "hasRecipe": false,
+        "id": "68e312fc-4801-4f87-909f-9fc687085456",
+        "buyingPrice": 18.2
       },
       {
         "name": "Syrah (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 29,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "9b9264fd-fc89-4c58-b853-ad4b3b47eb19"
+        "hasRecipe": false,
+        "id": "9b9264fd-fc89-4c58-b853-ad4b3b47eb19",
+        "buyingPrice": 20.299999999999997
       },
       {
         "name": "Pinotage (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 30,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "d4c65926-2d0b-40ec-a391-7a58b6de9f97"
+        "hasRecipe": false,
+        "id": "d4c65926-2d0b-40ec-a391-7a58b6de9f97",
+        "buyingPrice": 21.0
       },
       {
         "name": "Malbec (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 34,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "96e7fb66-ee18-4b40-8154-ff2ee400b734"
+        "hasRecipe": false,
+        "id": "96e7fb66-ee18-4b40-8154-ff2ee400b734",
+        "buyingPrice": 23.799999999999997
       },
       {
         "name": "Domaine De Boissan (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 34,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "951ae2ce-4047-474c-bdf8-2e98e9294108"
+        "hasRecipe": false,
+        "id": "951ae2ce-4047-474c-bdf8-2e98e9294108",
+        "buyingPrice": 23.799999999999997
       },
       {
         "name": "El Chocolatero Vino Organico (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 36,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "fb2df80b-8181-450a-a87f-894dd8b4e6ae"
+        "hasRecipe": false,
+        "id": "fb2df80b-8181-450a-a87f-894dd8b4e6ae",
+        "buyingPrice": 25.2
       },
       {
         "name": "Barricone Primitivo (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 36,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "46e278a6-cd5b-43a1-b0fb-965f64327ee2"
+        "hasRecipe": false,
+        "id": "46e278a6-cd5b-43a1-b0fb-965f64327ee2",
+        "buyingPrice": 25.2
       },
       {
         "name": "Plaisir Du Vin (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 37,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "5f068b47-2c68-4d96-9cfb-ed82dc949fc3"
+        "hasRecipe": false,
+        "id": "5f068b47-2c68-4d96-9cfb-ed82dc949fc3",
+        "buyingPrice": 25.9
       },
       {
         "name": "Kavakildere Selection Red (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 40.95,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "86c4c8ca-0ea8-4e96-9af4-01fac7186738"
+        "hasRecipe": false,
+        "id": "86c4c8ca-0ea8-4e96-9af4-01fac7186738",
+        "buyingPrice": 28.665
       },
       {
         "name": "Pinot Noir (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 42,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "cc7e3497-4b05-426b-b75c-0bba55425ba9"
+        "hasRecipe": false,
+        "id": "cc7e3497-4b05-426b-b75c-0bba55425ba9",
+        "buyingPrice": 29.4
       },
       {
         "name": "Rioja Reserva (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 43,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "20f58986-c7cd-4318-b5dc-dc2aa788f350"
+        "hasRecipe": false,
+        "id": "20f58986-c7cd-4318-b5dc-dc2aa788f350",
+        "buyingPrice": 30.099999999999998
       },
       {
         "name": "Barolo (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 46,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "eae34d9f-3a61-4171-8a87-9b9430b9787b"
+        "hasRecipe": false,
+        "id": "eae34d9f-3a61-4171-8a87-9b9430b9787b",
+        "buyingPrice": 32.199999999999996
       },
       {
         "name": "Escudo Rojo (Bottle)",
         "category": "Red Wines",
         "sellingPrice": 56,
-        "ingredients": {
-          "grapes": 750,
-          "oakBarrel": 400,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "14a9cefb-b253-4486-9cbd-5b64ed60dfc1"
+        "hasRecipe": false,
+        "id": "14a9cefb-b253-4486-9cbd-5b64ed60dfc1",
+        "buyingPrice": 39.199999999999996
       },
       {
         "name": "French Martini",
@@ -2716,429 +2680,329 @@
         "name": "Efes (Half Pint)",
         "category": "Beers & Ciders",
         "sellingPrice": 3.5,
-        "ingredients": {
-          "efes": 1
-        },
-        "hasRecipe": true,
-        "id": "82b86bd8-c1cf-433e-9289-103cd77f191e"
+        "hasRecipe": false,
+        "id": "82b86bd8-c1cf-433e-9289-103cd77f191e",
+        "buyingPrice": 2.4499999999999997
       },
       {
         "name": "Efes (Pint)",
         "category": "Beers & Ciders",
         "sellingPrice": 6,
-        "ingredients": {
-          "efesPint": 1
-        },
-        "hasRecipe": true,
-        "id": "a687bb7f-d9d6-468b-99ee-db749e7d3d7b"
+        "hasRecipe": false,
+        "id": "a687bb7f-d9d6-468b-99ee-db749e7d3d7b",
+        "buyingPrice": 4.199999999999999
       },
       {
         "name": "Poretti (Half Pint)",
         "category": "Beers & Ciders",
         "sellingPrice": 3.75,
-        "ingredients": {
-          "poretti": 1
-        },
-        "hasRecipe": true,
-        "id": "f7c2a9a5-eff4-4c82-ab9e-ab5a82312a14"
+        "hasRecipe": false,
+        "id": "f7c2a9a5-eff4-4c82-ab9e-ab5a82312a14",
+        "buyingPrice": 2.625
       },
       {
         "name": "Poretti (Pint)",
         "category": "Beers & Ciders",
         "sellingPrice": 6.5,
-        "ingredients": {
-          "porettiPint": 1
-        },
-        "hasRecipe": true,
-        "id": "6aee4a17-f256-47ce-b2a5-8e30ce37358c"
+        "hasRecipe": false,
+        "id": "6aee4a17-f256-47ce-b2a5-8e30ce37358c",
+        "buyingPrice": 4.55
       },
       {
         "name": "Estrella Damm (Half Pint)",
         "category": "Beers & Ciders",
         "sellingPrice": 3.5,
-        "ingredients": {
-          "estrellaDamm": 1
-        },
-        "hasRecipe": true,
-        "id": "85d3c11f-1c65-49c7-9269-b7e2cd4f7425"
+        "hasRecipe": false,
+        "id": "85d3c11f-1c65-49c7-9269-b7e2cd4f7425",
+        "buyingPrice": 2.4499999999999997
       },
       {
         "name": "Estrella Damm (Pint)",
         "category": "Beers & Ciders",
         "sellingPrice": 6,
-        "ingredients": {
-          "estrellaDammPint": 1
-        },
-        "hasRecipe": true,
-        "id": "8afab3d2-8946-411e-8fbb-df30812cb74b"
+        "hasRecipe": false,
+        "id": "8afab3d2-8946-411e-8fbb-df30812cb74b",
+        "buyingPrice": 4.199999999999999
       },
       {
         "name": "Kronenbourg Blanc (Half Pint)",
         "category": "Beers & Ciders",
         "sellingPrice": 3.5,
-        "ingredients": {
-          "kronenbourg": 1
-        },
-        "hasRecipe": true,
-        "id": "f87497c9-3124-4251-b917-0462b926887a"
+        "hasRecipe": false,
+        "id": "f87497c9-3124-4251-b917-0462b926887a",
+        "buyingPrice": 2.4499999999999997
       },
       {
         "name": "Kronenbourg Blanc (Pint)",
         "category": "Beers & Ciders",
         "sellingPrice": 6,
-        "ingredients": {
-          "kronenbourgPint": 1
-        },
-        "hasRecipe": true,
-        "id": "a88f4e37-f45f-4919-bd05-e6abac2c9f21"
+        "hasRecipe": false,
+        "id": "a88f4e37-f45f-4919-bd05-e6abac2c9f21",
+        "buyingPrice": 4.199999999999999
       },
       {
         "name": "Guinness (Half Pint)",
         "category": "Beers & Ciders",
         "sellingPrice": 3.75,
-        "ingredients": {
-          "guinness": 1
-        },
-        "hasRecipe": true,
-        "id": "d03930ba-d7e5-4ebf-b269-85375af79ed2"
+        "hasRecipe": false,
+        "id": "d03930ba-d7e5-4ebf-b269-85375af79ed2",
+        "buyingPrice": 2.625
       },
       {
         "name": "Guinness (Pint)",
         "category": "Beers & Ciders",
         "sellingPrice": 6.5,
-        "ingredients": {
-          "guinnessPint": 1
-        },
-        "hasRecipe": true,
-        "id": "3dfd871e-cf21-41fb-ad95-e0b87ac306da"
+        "hasRecipe": false,
+        "id": "3dfd871e-cf21-41fb-ad95-e0b87ac306da",
+        "buyingPrice": 4.55
       },
       {
         "name": "Mythos (330ml)",
         "category": "Beers & Ciders",
         "sellingPrice": 4.5,
-        "ingredients": {
-          "mythos": 1,
-          "bottling": 1,
-          "distribution": 0.5
-        },
-        "hasRecipe": true,
-        "id": "244c774a-d80f-4862-902f-6c82800f68b1"
+        "hasRecipe": false,
+        "id": "244c774a-d80f-4862-902f-6c82800f68b1",
+        "buyingPrice": 3.15
       },
       {
         "name": "Madri (330ml)",
         "category": "Beers & Ciders",
         "sellingPrice": 4.5,
-        "ingredients": {
-          "madri": 1,
-          "bottling": 1,
-          "distribution": 0.5
-        },
-        "hasRecipe": true,
-        "id": "7a6a5c3b-9dbb-4b15-bdd6-1826023adf48"
+        "hasRecipe": false,
+        "id": "7a6a5c3b-9dbb-4b15-bdd6-1826023adf48",
+        "buyingPrice": 3.15
       },
       {
         "name": "Corona (330ml)",
         "category": "Beers & Ciders",
         "sellingPrice": 4.5,
-        "ingredients": {
-          "corona": 1,
-          "bottling": 1,
-          "distribution": 0.5
-        },
-        "hasRecipe": true,
-        "id": "03fd375d-d1fa-420b-a866-e1f50ade55cf"
+        "hasRecipe": false,
+        "id": "03fd375d-d1fa-420b-a866-e1f50ade55cf",
+        "buyingPrice": 3.15
       },
       {
         "name": "Kopparberg Cider - Strawberry & Lime (500ml)",
         "category": "Beers & Ciders",
         "sellingPrice": 6,
-        "ingredients": {
-          "kopparberg": 1,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "c06c9b6f-0264-40f2-8731-2b4f9b802caf"
+        "hasRecipe": false,
+        "id": "c06c9b6f-0264-40f2-8731-2b4f9b802caf",
+        "buyingPrice": 4.199999999999999
       },
       {
         "name": "Kopparberg Cider - Wild Berries (500ml)",
         "category": "Beers & Ciders",
         "sellingPrice": 6,
-        "ingredients": {
-          "kopparberg": 1,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "f45421b0-6bde-41fd-acdf-78132bf2a3da"
+        "hasRecipe": false,
+        "id": "f45421b0-6bde-41fd-acdf-78132bf2a3da",
+        "buyingPrice": 4.199999999999999
       },
       {
         "name": "Inch's Apple Cider (500ml)",
         "category": "Beers & Ciders",
         "sellingPrice": 6.5,
-        "ingredients": {
-          "inches": 1,
-          "bottling": 1,
-          "distribution": 1
-        },
-        "hasRecipe": true,
-        "id": "14c27499-37dc-498d-ab8e-b2c4c395165f"
+        "hasRecipe": false,
+        "id": "14c27499-37dc-498d-ab8e-b2c4c395165f",
+        "buyingPrice": 4.55
       },
       {
         "name": "San Miguel 0% (330ml)",
         "category": "Beers & Ciders",
         "sellingPrice": 4.5,
-        "ingredients": {
-          "sanMiguel": 1,
-          "bottling": 1,
-          "distribution": 0.5
-        },
-        "hasRecipe": true,
-        "id": "ae02c2cd-3750-4652-87f2-9398b6b02774"
+        "hasRecipe": false,
+        "id": "ae02c2cd-3750-4652-87f2-9398b6b02774",
+        "buyingPrice": 3.15
       },
       {
         "name": "Corona 0% (330ml)",
         "category": "Beers & Ciders",
         "sellingPrice": 4.5,
-        "ingredients": {
-          "corona0": 1,
-          "bottling": 1,
-          "distribution": 0.5
-        },
-        "hasRecipe": true,
-        "id": "19878289-2bac-49a7-a16d-14b2975df7cc"
+        "hasRecipe": false,
+        "id": "19878289-2bac-49a7-a16d-14b2975df7cc",
+        "buyingPrice": 3.15
       },
       {
         "name": "Kopparberg 0% Mixed Fruit (500ml)",
         "category": "Beers & Ciders",
         "sellingPrice": 5,
-        "ingredients": {
-          "kopparberg0": 1,
-          "bottling": 1,
-          "distribution": 0.5
-        },
-        "hasRecipe": true,
-        "id": "92dd4c86-fae9-4274-a4e2-87d8befd2a1f"
+        "hasRecipe": false,
+        "id": "92dd4c86-fae9-4274-a4e2-87d8befd2a1f",
+        "buyingPrice": 3.5
       },
       {
         "name": "Coca Cola (330ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "coke": 330
-        },
-        "hasRecipe": true,
-        "id": "5dd74fe7-399a-4a7e-9d13-25d7ac768092"
+        "hasRecipe": false,
+        "id": "5dd74fe7-399a-4a7e-9d13-25d7ac768092",
+        "buyingPrice": 2.275
       },
       {
         "name": "Diet Coke (330ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "dietCoke": 330
-        },
-        "hasRecipe": true,
-        "id": "a842dd98-28cb-4764-aa54-ebe6dfdfbc45"
+        "hasRecipe": false,
+        "id": "a842dd98-28cb-4764-aa54-ebe6dfdfbc45",
+        "buyingPrice": 2.275
       },
       {
         "name": "Coke Zero (330ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "cokeZero": 330
-        },
-        "hasRecipe": true,
-        "id": "1f935f6a-cdbb-42f9-9a83-312443972664"
+        "hasRecipe": false,
+        "id": "1f935f6a-cdbb-42f9-9a83-312443972664",
+        "buyingPrice": 2.275
       },
       {
         "name": "Sprite (330ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "lemonade": 330
-        },
-        "hasRecipe": true,
-        "id": "15cccc2c-dd38-4ed2-bd48-09b593bffd81"
+        "hasRecipe": false,
+        "id": "15cccc2c-dd38-4ed2-bd48-09b593bffd81",
+        "buyingPrice": 2.275
       },
       {
         "name": "Fanta (330ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "fanta": 330
-        },
-        "hasRecipe": true,
-        "id": "58a3f63d-132a-456f-9839-45a3747298a9"
+        "hasRecipe": false,
+        "id": "58a3f63d-132a-456f-9839-45a3747298a9",
+        "buyingPrice": 2.275
       },
       {
         "name": "Bitter Lemonade (200ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "bitterLemonade": 200
-        },
-        "hasRecipe": true,
-        "id": "436aa1e9-3991-47a7-832d-db62e43dcdcd"
+        "hasRecipe": false,
+        "id": "436aa1e9-3991-47a7-832d-db62e43dcdcd",
+        "buyingPrice": 2.275
       },
       {
         "name": "Appletiser (330ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "appletiser": 1
-        },
-        "hasRecipe": true,
-        "id": "0b1d0b10-6ac0-4f3f-b358-64223b91b7dc"
+        "hasRecipe": false,
+        "id": "0b1d0b10-6ac0-4f3f-b358-64223b91b7dc",
+        "buyingPrice": 2.275
       },
       {
         "name": "J20 - Orange & Passionfruit (275ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "j20": 1
-        },
-        "hasRecipe": true,
-        "id": "dfe31ab4-d909-45f2-8482-8f32fc7e5323"
+        "hasRecipe": false,
+        "id": "dfe31ab4-d909-45f2-8482-8f32fc7e5323",
+        "buyingPrice": 2.275
       },
       {
         "name": "J20 - Apple & Mango (275ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "j20": 1
-        },
-        "hasRecipe": true,
-        "id": "907cde5a-9ad9-46e8-b341-7666d80b7785"
+        "hasRecipe": false,
+        "id": "907cde5a-9ad9-46e8-b341-7666d80b7785",
+        "buyingPrice": 2.275
       },
       {
         "name": "J20 - Apple & Raspberry (275ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "j20": 1
-        },
-        "hasRecipe": true,
-        "id": "1620d908-8b4a-40ac-bdee-807c27bd19f1"
+        "hasRecipe": false,
+        "id": "1620d908-8b4a-40ac-bdee-807c27bd19f1",
+        "buyingPrice": 2.275
       },
       {
         "name": "Fever Tree - Premium Indian Tonic (200ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "feverTree": 1
-        },
-        "hasRecipe": true,
-        "id": "6611f4ce-5f9c-453f-9bdb-f573aad8107d"
+        "hasRecipe": false,
+        "id": "6611f4ce-5f9c-453f-9bdb-f573aad8107d",
+        "buyingPrice": 2.275
       },
       {
         "name": "Fever Tree - Refreshingly Light Tonic (200ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "feverTree": 1
-        },
-        "hasRecipe": true,
-        "id": "b10e816b-efce-443c-9d8f-3478121e19b3"
+        "hasRecipe": false,
+        "id": "b10e816b-efce-443c-9d8f-3478121e19b3",
+        "buyingPrice": 2.275
       },
       {
         "name": "Fever Tree - Mediterranean Tonic (200ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "feverTree": 1
-        },
-        "hasRecipe": true,
-        "id": "78093dd6-56e0-40d7-bd52-0498cf27aa47"
+        "hasRecipe": false,
+        "id": "78093dd6-56e0-40d7-bd52-0498cf27aa47",
+        "buyingPrice": 2.275
       },
       {
         "name": "Fever Tree - Ginger Ale (200ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "feverTree": 1
-        },
-        "hasRecipe": true,
-        "id": "fbd431bc-3b67-4708-9cf2-10925095e366"
+        "hasRecipe": false,
+        "id": "fbd431bc-3b67-4708-9cf2-10925095e366",
+        "buyingPrice": 2.275
       },
       {
         "name": "Fever Tree - Lemonade (200ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "feverTree": 1
-        },
-        "hasRecipe": true,
-        "id": "97dea127-911e-4906-8665-ecb0fc259b79"
+        "hasRecipe": false,
+        "id": "97dea127-911e-4906-8665-ecb0fc259b79",
+        "buyingPrice": 2.275
       },
       {
         "name": "Fever Tree - Soda (200ml)",
         "category": "Soft Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "feverTree": 1
-        },
-        "hasRecipe": true,
-        "id": "da0e7718-9423-4709-9798-e3cfa1820130"
+        "hasRecipe": false,
+        "id": "da0e7718-9423-4709-9798-e3cfa1820130",
+        "buyingPrice": 2.275
       },
       {
         "name": "Still Mineral Water (750ml)",
         "category": "Soft Drinks",
         "sellingPrice": 4.25,
-        "ingredients": {
-          "stillWater": 750
-        },
-        "hasRecipe": true,
-        "id": "d2183a37-caa2-4509-8809-6fae3353cdf7"
+        "hasRecipe": false,
+        "id": "d2183a37-caa2-4509-8809-6fae3353cdf7",
+        "buyingPrice": 2.9749999999999996
       },
       {
         "name": "Sparkling Mineral Water (750ml)",
         "category": "Soft Drinks",
         "sellingPrice": 4.25,
-        "ingredients": {
-          "sparklingWater": 750
-        },
-        "hasRecipe": true,
-        "id": "d5327cbb-2257-41ac-8c1d-eac3e3dc3e6a"
+        "hasRecipe": false,
+        "id": "d5327cbb-2257-41ac-8c1d-eac3e3dc3e6a",
+        "buyingPrice": 2.9749999999999996
       },
       {
         "name": "Fresh Orange Juice",
         "category": "Soft Drinks",
         "sellingPrice": 3.75,
-        "ingredients": {
-          "orangeJuice": 250
-        },
-        "hasRecipe": true,
-        "id": "da9f6dc5-31c9-49e3-aa4c-b3d2730b3630"
+        "hasRecipe": false,
+        "id": "da9f6dc5-31c9-49e3-aa4c-b3d2730b3630",
+        "buyingPrice": 2.625
       },
       {
         "name": "Fresh Apple Juice",
         "category": "Soft Drinks",
         "sellingPrice": 3.75,
-        "ingredients": {
-          "appleJuice": 250
-        },
-        "hasRecipe": true,
-        "id": "c0f9f8ae-3e9d-48a7-9eae-37ab9c332ec3"
+        "hasRecipe": false,
+        "id": "c0f9f8ae-3e9d-48a7-9eae-37ab9c332ec3",
+        "buyingPrice": 2.625
       },
       {
         "name": "Fresh Pineapple Juice",
         "category": "Soft Drinks",
         "sellingPrice": 3.75,
-        "ingredients": {
-          "pineappleJuice": 250
-        },
-        "hasRecipe": true,
-        "id": "170f7985-2588-47de-a0f8-bf58bb8a6bf1"
+        "hasRecipe": false,
+        "id": "170f7985-2588-47de-a0f8-bf58bb8a6bf1",
+        "buyingPrice": 2.625
       },
       {
         "name": "Fresh Cranberry Juice",
         "category": "Soft Drinks",
         "sellingPrice": 3.75,
-        "ingredients": {
-          "cranberryJuice": 250
-        },
-        "hasRecipe": true,
-        "id": "aa3b6e68-afe4-4f2e-be42-429400057a0e"
+        "hasRecipe": false,
+        "id": "aa3b6e68-afe4-4f2e-be42-429400057a0e",
+        "buyingPrice": 2.625
       },
       {
         "name": "Americano",
@@ -3288,552 +3152,670 @@
         },
         "hasRecipe": true,
         "id": "21f24eb6-29f1-4dd1-a4d0-40e433064598"
-      },
-      {
-        "name": "test",
-        "category": "test",
-        "sellingPrice": 2,
-        "hasRecipe": false,
-        "buyingPrice": 1,
-        "ingredients": {},
-        "id": "b792ece5-e05f-482e-bdea-88655423b0a5"
       }
     ],
     "costMultiplier": 1.1,
     "categories": [
-      "Starters",
-      "Mains Grill",
-      "Mains Oven",
-      "Steaks",
-      "Sauces",
-      "Orzotto",
-      "Desserts",
-      "Cocktails",
       "Side Dishes",
-      "White Wines",
-      "Red Wines",
-      "Rose Wines",
-      "Sparkling Wines",
-      "Beers & Ciders",
       "Soft Drinks",
-      "Hot Drinks",
+      "Sauces",
+      "Mains Oven",
+      "Cocktails",
+      "Beers & Ciders",
+      "Starters",
+      "Red Wines",
+      "Mains Grill",
+      "White Wines",
+      "Orzotto",
+      "Sparkling Wines",
+      "Steaks",
+      "Desserts",
       "Liqueur Coffees",
-      "test"
+      "Hot Drinks",
+      "Rose Wines"
     ]
   },
   "bellFood": {
     "initialIngredients": {
       "chicken": {
         "cost": 0.0038,
-        "unit": "g"
+        "unit": "g",
+        "category": "Proteins"
       },
       "beefSirloin": {
         "cost": 0.0085,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "beefFillet": {
         "cost": 0.012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "beefMince": {
         "cost": 0.0055,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "madeira": {
         "cost": 0.015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "truffleOil": {
         "cost": 0.03,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "crouton": {
         "cost": 0.001,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "oxCheek": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "lamb": {
         "cost": 0.0055,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "pork": {
         "cost": 0.0045,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "duck": {
         "cost": 0.014,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "prawns": {
         "cost": 0.015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "kingPrawns": {
         "cost": 0.016,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "greenlandPrawns": {
         "cost": 0.012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "lobster": {
         "cost": 0.025,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "cod": {
         "cost": 0.012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "salmon": {
         "cost": 0.0145,
-        "unit": "g"
+        "unit": "g",
+        "category": "Proteins"
       },
       "seabass": {
         "cost": 0.0125,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "squid": {
         "cost": 0.01,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "kingScallops": {
         "cost": 0.025,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "octopus": {
         "cost": 0.018,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mussels": {
         "cost": 0.008,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mozzarella": {
         "cost": 0.0075,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mortadella": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "chickenLiverPate": {
         "cost": 0.004,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "goatCheese": {
         "cost": 0.009,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "ricotta": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "parmesan": {
         "cost": 0.012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "granaPadano": {
         "cost": 0.01,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mushrooms": {
         "cost": 0.0028,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "buttonMushrooms": {
         "cost": 0.003,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "porciniMushrooms": {
         "cost": 0.02,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "onions": {
         "cost": 0.0012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "redOnions": {
         "cost": 0.0012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "springOnions": {
         "cost": 0.0025,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "tenderstemBroccoli": {
         "cost": 0.0035,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "potatoes": {
         "cost": 0.0009,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "cherryTomatoes": {
         "cost": 0.003,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "tomatoes": {
         "cost": 0.0025,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "sunDriedTomatoes": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "asparagus": {
         "cost": 0.0045,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "spinach": {
         "cost": 0.003,
-        "unit": "g"
+        "unit": "g",
+        "category": "Fruit and Veg"
       },
       "beetroot": {
         "cost": 0.0015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "rocket": {
         "cost": 0.003,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "lettuce": {
         "cost": 0.0015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "redPeppers": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "greenPeppers": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "olives": {
         "cost": 0.0045,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "courgettes": {
         "cost": 0.0023,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mixedVegetables": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "apples": {
         "cost": 0.0015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "pineapple": {
         "cost": 0.003,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "avocado": {
         "cost": 0.004,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "italianSausage": {
         "cost": 0.0065,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "calabrianSausage": {
         "cost": 0.007,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "ndujaSausage": {
         "cost": 0.008,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "ham": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "sanDanieleHam": {
         "cost": 0.015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "cream": {
         "cost": 0.0025,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "butter": {
         "cost": 0.0058,
-        "unit": "g"
+        "unit": "g",
+        "category": "Dairy and Eggs"
       },
       "lemonButter": {
         "cost": 0.0075,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "oliveOil": {
         "cost": 0.006,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "basilOil": {
         "cost": 0.008,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "redWine": {
         "cost": 0.002,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "whiteWine": {
         "cost": 0.002,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "marsalaWine": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "pasta": {
         "cost": 0.0012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "arborioRice": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "vegetableStock": {
         "cost": 0.0015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "flour": {
         "cost": 0.0008,
-        "unit": "g"
+        "unit": "g",
+        "category": "Grains and Carbs"
       },
       "egg": {
         "cost": 0.29,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Dairy and Eggs"
       },
       "mayonnaise": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "lemon": {
         "cost": 0.0016,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "lemonZest": {
         "cost": 0.0016,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mascarpone": {
         "cost": 0.0065,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "coffee": {
         "cost": 0.008,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "cocoa": {
         "cost": 0.007,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "sugar": {
         "cost": 0.0007,
-        "unit": "g"
+        "unit": "g",
+        "category": "Sweeteners"
       },
       "chocolate": {
         "cost": 0.0065,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "pepperoni": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "jalapenos": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "chilli": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "freshChilli": {
         "cost": 0.006,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "basilFresh": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "englishMustard": {
         "cost": 0.0025,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "frenchMustard": {
         "cost": 0.0028,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "rosemary": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "garlic": {
         "cost": 0.0035,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "ginger": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "peppercorn": {
         "cost": 0.01,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "greenPeppercorn": {
         "cost": 0.012,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "demiGlace": {
         "cost": 0.005,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "oregano": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "italianHerbs": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "parsley": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "mint": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "sage": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "pancetta": {
         "cost": 0.008,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "bechamel": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "bolognese": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "gelatine": {
         "cost": 0.015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "vanilla": {
         "cost": 0.02,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "marieRoseSauce": {
         "cost": 0.0035,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "orange": {
         "cost": 0.0015,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "cinnamon": {
         "cost": 0.01,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "breadcrumbs": {
         "cost": 0.002,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "bbqSauce": {
         "cost": 0.003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "balsamicGlaze": {
         "cost": 0.005,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "saffron": {
         "cost": 2,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "anchovies": {
         "cost": 0.01,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "artichoke": {
         "cost": 0.005,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "capers": {
         "cost": 0.008,
-        "unit": "g"
+        "unit": "g",
+        "category": "Miscellaneous"
       },
       "feverTree": {
         "cost": 1.2,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "appletiser": {
         "cost": 1.5,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "j20": {
         "cost": 1.4,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "fruitShoot": {
         "cost": 0.8,
-        "unit": "unit"
+        "unit": "unit",
+        "category": "Miscellaneous"
       },
       "lemonade": {
         "cost": 0.001,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "bitterLemonade": {
         "cost": 0.0012,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "fanta": {
         "cost": 0.001,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "orangeJuice": {
         "cost": 0.0015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "appleJuice": {
         "cost": 0.0015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "pineappleJuice": {
         "cost": 0.0015,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "cranberryJuice": {
         "cost": 0.0018,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "coke": {
         "cost": 0.0008,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "dietCoke": {
         "cost": 0.0008,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "cokeZero": {
         "cost": 0.0008,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "stillWater": {
         "cost": 0.0003,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       },
       "sparklingWater": {
         "cost": 0.0004,
-        "unit": "ml"
+        "unit": "ml",
+        "category": "Miscellaneous"
       }
     },
     "items": [
@@ -4672,212 +4654,172 @@
         "name": "Fever Tree Premium",
         "category": "Drinks",
         "sellingPrice": 2.95,
-        "ingredients": {
-          "feverTree": 1
-        },
-        "hasRecipe": true,
-        "id": "a67b1681-a7a1-49ca-bab7-015f350104cc"
+        "hasRecipe": false,
+        "id": "a67b1681-a7a1-49ca-bab7-015f350104cc",
+        "buyingPrice": 2.065
       },
       {
         "name": "Appletiser",
         "category": "Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "appletiser": 1
-        },
-        "hasRecipe": true,
-        "id": "8e01de20-73eb-4a4c-bf96-d0d1f32b25e2"
+        "hasRecipe": false,
+        "id": "8e01de20-73eb-4a4c-bf96-d0d1f32b25e2",
+        "buyingPrice": 2.275
       },
       {
         "name": "J20 Orange & Passionfruit",
         "category": "Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "j20": 1
-        },
-        "hasRecipe": true,
-        "id": "c3d06a98-a337-4cf4-9365-b53846df7f8d"
+        "hasRecipe": false,
+        "id": "c3d06a98-a337-4cf4-9365-b53846df7f8d",
+        "buyingPrice": 2.275
       },
       {
         "name": "J20 Apple & Raspberry",
         "category": "Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "j20": 1
-        },
-        "hasRecipe": true,
-        "id": "727939dd-dc8e-4574-a2d6-c210738d21e6"
+        "hasRecipe": false,
+        "id": "727939dd-dc8e-4574-a2d6-c210738d21e6",
+        "buyingPrice": 2.275
       },
       {
         "name": "J20 Apple & Mango",
         "category": "Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "j20": 1
-        },
-        "hasRecipe": true,
-        "id": "2106e027-502e-4ad2-8559-355d22abfad4"
+        "hasRecipe": false,
+        "id": "2106e027-502e-4ad2-8559-355d22abfad4",
+        "buyingPrice": 2.275
       },
       {
         "name": "Fruit Shoot Orange",
         "category": "Drinks",
         "sellingPrice": 1.95,
-        "ingredients": {
-          "fruitShoot": 1
-        },
-        "hasRecipe": true,
-        "id": "1d17f0c7-5613-4099-8369-d86268fe8e87"
+        "hasRecipe": false,
+        "id": "1d17f0c7-5613-4099-8369-d86268fe8e87",
+        "buyingPrice": 1.365
       },
       {
         "name": "Fruit Shoot Summer Fruit",
         "category": "Drinks",
         "sellingPrice": 1.95,
-        "ingredients": {
-          "fruitShoot": 1
-        },
-        "hasRecipe": true,
-        "id": "6b071401-d8dd-43e6-b467-b63053047145"
+        "hasRecipe": false,
+        "id": "6b071401-d8dd-43e6-b467-b63053047145",
+        "buyingPrice": 1.365
       },
       {
         "name": "Fruit Shoot Blackcurrant",
         "category": "Drinks",
         "sellingPrice": 1.95,
-        "ingredients": {
-          "fruitShoot": 1
-        },
-        "hasRecipe": true,
-        "id": "ab9506f7-4faf-4e4f-ab21-5e5aa10776bc"
+        "hasRecipe": false,
+        "id": "ab9506f7-4faf-4e4f-ab21-5e5aa10776bc",
+        "buyingPrice": 1.365
       },
       {
         "name": "Lemonade",
         "category": "Drinks",
         "sellingPrice": 2.95,
-        "ingredients": {
-          "lemonade": 200
-        },
-        "hasRecipe": true,
-        "id": "9b8e2e2c-235a-4f4b-8ed8-1938e8ce963f"
+        "hasRecipe": false,
+        "id": "9b8e2e2c-235a-4f4b-8ed8-1938e8ce963f",
+        "buyingPrice": 2.065
       },
       {
         "name": "Bitter Lemonade",
         "category": "Drinks",
         "sellingPrice": 2.95,
-        "ingredients": {
-          "bitterLemonade": 200
-        },
-        "hasRecipe": true,
-        "id": "f3b78c7a-99b0-49d0-8154-1f172c5e43f6"
+        "hasRecipe": false,
+        "id": "f3b78c7a-99b0-49d0-8154-1f172c5e43f6",
+        "buyingPrice": 2.065
       },
       {
         "name": "Fanta",
         "category": "Drinks",
         "sellingPrice": 2.95,
-        "ingredients": {
-          "fanta": 200
-        },
-        "hasRecipe": true,
-        "id": "36e2df09-5509-4e75-b95d-1a32f3f63cd0"
+        "hasRecipe": false,
+        "id": "36e2df09-5509-4e75-b95d-1a32f3f63cd0",
+        "buyingPrice": 2.065
       },
       {
         "name": "Orange Juice",
         "category": "Drinks",
         "sellingPrice": 2.95,
-        "ingredients": {
-          "orangeJuice": 200
-        },
-        "hasRecipe": true,
-        "id": "01c41e1c-db93-4b00-b512-5f0ef24660b8"
+        "hasRecipe": false,
+        "id": "01c41e1c-db93-4b00-b512-5f0ef24660b8",
+        "buyingPrice": 2.065
       },
       {
         "name": "Apple Juice",
         "category": "Drinks",
         "sellingPrice": 2.95,
-        "ingredients": {
-          "appleJuice": 200
-        },
-        "hasRecipe": true,
-        "id": "57e2a3c8-4273-4a89-a20a-25d54c4e7880"
+        "hasRecipe": false,
+        "id": "57e2a3c8-4273-4a89-a20a-25d54c4e7880",
+        "buyingPrice": 2.065
       },
       {
         "name": "Pineapple Juice",
         "category": "Drinks",
         "sellingPrice": 2.95,
-        "ingredients": {
-          "pineappleJuice": 200
-        },
-        "hasRecipe": true,
-        "id": "f822a5a8-e720-4b68-b6e8-7ac983801fe8"
+        "hasRecipe": false,
+        "id": "f822a5a8-e720-4b68-b6e8-7ac983801fe8",
+        "buyingPrice": 2.065
       },
       {
         "name": "Cranberry Juice",
         "category": "Drinks",
         "sellingPrice": 2.95,
-        "ingredients": {
-          "cranberryJuice": 200
-        },
-        "hasRecipe": true,
-        "id": "978517f9-acda-4ab9-b510-c09f389f4383"
+        "hasRecipe": false,
+        "id": "978517f9-acda-4ab9-b510-c09f389f4383",
+        "buyingPrice": 2.065
       },
       {
         "name": "Coca Cola",
         "category": "Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "coke": 330
-        },
-        "hasRecipe": true,
-        "id": "601d0139-6494-4dce-ab7e-67aa7e1025be"
+        "hasRecipe": false,
+        "id": "601d0139-6494-4dce-ab7e-67aa7e1025be",
+        "buyingPrice": 2.275
       },
       {
         "name": "Diet Coke",
         "category": "Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "dietCoke": 330
-        },
-        "hasRecipe": true,
-        "id": "1acb7f4b-6098-47b4-9504-502adbe16721"
+        "hasRecipe": false,
+        "id": "1acb7f4b-6098-47b4-9504-502adbe16721",
+        "buyingPrice": 2.275
       },
       {
         "name": "Coke Zero",
         "category": "Drinks",
         "sellingPrice": 3.25,
-        "ingredients": {
-          "cokeZero": 330
-        },
-        "hasRecipe": true,
-        "id": "75f64d28-c0a9-4a67-a652-2ab72f36f386"
+        "hasRecipe": false,
+        "id": "75f64d28-c0a9-4a67-a652-2ab72f36f386",
+        "buyingPrice": 2.275
       },
       {
         "name": "Still Mineral Water",
         "category": "Drinks",
         "sellingPrice": 3.95,
-        "ingredients": {
-          "stillWater": 750
-        },
-        "hasRecipe": true,
-        "id": "56b52157-6e43-4d48-99f7-5baf77a72543"
+        "hasRecipe": false,
+        "id": "56b52157-6e43-4d48-99f7-5baf77a72543",
+        "buyingPrice": 2.765
       },
       {
         "name": "Sparkling Mineral Water",
         "category": "Drinks",
         "sellingPrice": 3.95,
-        "ingredients": {
-          "sparklingWater": 750
-        },
-        "hasRecipe": true,
-        "id": "06d8ee95-48f7-4831-9ccb-e523f9e5e035"
+        "hasRecipe": false,
+        "id": "06d8ee95-48f7-4831-9ccb-e523f9e5e035",
+        "buyingPrice": 2.765
       }
     ],
     "costMultiplier": 1.1,
     "categories": [
-      "Starters",
       "Pizzas",
-      "Pastas",
-      "Risottos",
+      "Starters",
       "Mains",
+      "Pastas",
+      "Drinks",
       "Desserts",
-      "Drinks"
+      "Risottos"
     ]
   }
 }
