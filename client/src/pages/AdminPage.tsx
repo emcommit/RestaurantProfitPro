@@ -8,13 +8,13 @@ import { MenuInterface, izMenu, bellFoodMenu } from '../components/MenuData';
 import create from 'zustand';
 
 interface AppState {
-  selectedMenu: string;
-  setSelectedMenu: (menu: string) => void;
+  selectedTab: string;
+  setSelectedTab: (tab: string) => void;
 }
 
 const useAppStore = create<AppState>((set) => ({
-  selectedMenu: 'izMenu',
-  setSelectedMenu: (menu) => set({ selectedMenu: menu })
+  selectedTab: 'recipe',
+  setSelectedTab: (tab) => set({ selectedTab: tab })
 }));
 
 interface MenusResponse {
@@ -32,6 +32,12 @@ interface MenuItem {
   ingredients?: Record<string, number>;
 }
 
+interface Ingredient {
+  name: string;
+  cost: number;
+  unit: string;
+}
+
 const fetchMenus = async (): Promise<MenusResponse> => {
   const { data } = await axios.get('/api/menus');
   if (!data.success) throw new Error('Failed to fetch menus');
@@ -39,11 +45,13 @@ const fetchMenus = async (): Promise<MenusResponse> => {
 };
 
 const AdminPage: React.FC = () => {
-  const { selectedMenu, setSelectedMenu } = useAppStore();
+  const { selectedTab, setSelectedTab } = useAppStore();
   const queryClient = useQueryClient();
   const { data, error, isLoading } = useQuery('menus', fetchMenus, { retry: 1 });
   const [isAddItemModalOpen, setIsAddItemModalOpen] = useState(false);
   const [isEditItemModalOpen, setIsEditItemModalOpen] = useState(false);
+  const [isAddIngredientModalOpen, setIsAddIngredientModalOpen] = useState(false);
+  const [isEditIngredientModalOpen, setIsEditIngredientModalOpen] = useState(false);
   const [newItem, setNewItem] = useState({
     id: '',
     name: '',
@@ -53,16 +61,26 @@ const AdminPage: React.FC = () => {
     buyingPrice: '',
     ingredients: {} as Record<string, number>
   });
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [sortBy, setSortBy] = useState('name');
+  const [newIngredient, setNewIngredient] = useState({ name: '', cost: '', unit: '' });
+  const [recipeSearch, setRecipeSearch] = useState('');
+  const [resaleSearch, setResaleSearch] = useState('');
+  const [ingredientSearch, setIngredientSearch] = useState('');
+  const [recipeCategoryFilter, setRecipeCategoryFilter] = useState('');
+  const [resaleCategoryFilter, setResaleCategoryFilter] = useState('');
   const navigate = useNavigate();
 
   const menus = data?.data || { izMenu, bellFood: bellFoodMenu };
-  const currentMenu = menus[selectedMenu] || { items: [], initialIngredients: {}, costMultiplier: 1.1, categories: [] };
+  const allItems = [...menus.izMenu.items, ...menus.bellFood.items];
+  const recipeItems = allItems.filter(item => item.hasRecipe);
+  const resaleItems = allItems.filter(item => !item.hasRecipe);
+  const initialIngredients = { ...menus.izMenu.initialIngredients, ...menus.bellFood.initialIngredients };
+  const ingredientList = Object.entries(initialIngredients).map(([name, { cost, unit }]) => ({ name, cost, unit }));
+
+  const recipeCategories = Array.from(new Set(recipeItems.map(item => item.category)));
+  const resaleCategories = Array.from(new Set(resaleItems.map(item => item.category)));
 
   const addItemMutation = useMutation(
-    (item: MenuItem) => axios.post(`/api/menus/${selectedMenu}/dishes`, item),
+    (item: MenuItem) => axios.post(`/api/menus/${item.hasRecipe ? 'izMenu' : 'bellFood'}/dishes`, item),
     {
       onSuccess: () => {
         queryClient.invalidateQueries('menus');
@@ -76,7 +94,7 @@ const AdminPage: React.FC = () => {
   );
 
   const editItemMutation = useMutation(
-    (item: MenuItem) => axios.put(`/api/menus/${selectedMenu}/dishes/${item.id}`, item),
+    (item: MenuItem) => axios.put(`/api/menus/${item.hasRecipe ? 'izMenu' : 'bellFood'}/dishes/${item.id}`, item),
     {
       onSuccess: () => {
         queryClient.invalidateQueries('menus');
@@ -90,13 +108,53 @@ const AdminPage: React.FC = () => {
   );
 
   const deleteItemMutation = useMutation(
-    (id: string) => axios.delete(`/api/menus/${selectedMenu}/dishes/${id}`),
+    ({ id, hasRecipe }: { id: string; hasRecipe: boolean }) => axios.delete(`/api/menus/${hasRecipe ? 'izMenu' : 'bellFood'}/dishes/${id}`),
     {
       onSuccess: () => {
         queryClient.invalidateQueries('menus');
       },
       onError: (error: any) => {
         alert(`Error deleting item: ${error.message}`);
+      }
+    }
+  );
+
+  const addIngredientMutation = useMutation(
+    (ingredient: Ingredient) => axios.post('/api/ingredients', ingredient),
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries('menus');
+        setIsAddIngredientModalOpen(false);
+        setNewIngredient({ name: '', cost: '', unit: '' });
+      },
+      onError: (error: any) => {
+        alert(`Error adding ingredient: ${error.message}`);
+      }
+    }
+  );
+
+  const editIngredientMutation = useMutation(
+    (ingredient: Ingredient) => axios.put(`/api/ingredients/${ingredient.name}`, ingredient),
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries('menus');
+        setIsEditIngredientModalOpen(false);
+        setNewIngredient({ name: '', cost: '', unit: '' });
+      },
+      onError: (error: any) => {
+        alert(`Error editing ingredient: ${error.message}`);
+      }
+    }
+  );
+
+  const deleteIngredientMutation = useMutation(
+    (name: string) => axios.delete(`/api/ingredients/${name}`),
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries('menus');
+      },
+      onError: (error: any) => {
+        alert(`Error deleting ingredient: ${error.message}`);
       }
     }
   );
@@ -127,20 +185,44 @@ const AdminPage: React.FC = () => {
     editItemMutation.mutate(itemToSave);
   };
 
-  const handleDeleteItem = (id: string) => {
+  const handleDeleteItem = (id: string, hasRecipe: boolean) => {
     if (window.confirm('Are you sure you want to delete this item?')) {
-      deleteItemMutation.mutate(id);
+      deleteItemMutation.mutate({ id, hasRecipe });
     }
   };
 
   const handleAddIngredient = () => {
+    const ingredientToSave: Ingredient = {
+      name: newIngredient.name,
+      cost: parseFloat(newIngredient.cost),
+      unit: newIngredient.unit
+    };
+    addIngredientMutation.mutate(ingredientToSave);
+  };
+
+  const handleEditIngredient = () => {
+    const ingredientToSave: Ingredient = {
+      name: newIngredient.name,
+      cost: parseFloat(newIngredient.cost),
+      unit: newIngredient.unit
+    };
+    editIngredientMutation.mutate(ingredientToSave);
+  };
+
+  const handleDeleteIngredient = (name: string) => {
+    if (window.confirm('Are you sure you want to delete this ingredient?')) {
+      deleteIngredientMutation.mutate(name);
+    }
+  };
+
+  const handleAddItemIngredient = () => {
     setNewItem({
       ...newItem,
       ingredients: { ...newItem.ingredients, '': 0 }
     });
   };
 
-  const handleUpdateIngredient = (oldName: string, newName: string, quantity: number) => {
+  const handleUpdateItemIngredient = (oldName: string, newName: string, quantity: number) => {
     const newIngredients = { ...newItem.ingredients };
     if (newName && newName !== oldName) {
       newIngredients[newName] = quantity;
@@ -151,38 +233,41 @@ const AdminPage: React.FC = () => {
     setNewItem({ ...newItem, ingredients: newIngredients });
   };
 
-  const handleRemoveIngredient = (name: string) => {
+  const handleRemoveItemIngredient = (name: string) => {
     const newIngredients = { ...newItem.ingredients };
     delete newIngredients[name];
     setNewItem({ ...newItem, ingredients: newIngredients });
   };
 
-  const filteredItems = useMemo(() => {
-    let items = [...currentMenu.items];
-
-    console.log('All items:', items); // Debug log
-
-    if (searchQuery) {
-      items = items.filter(item => item.name.toLowerCase().includes(searchQuery.toLowerCase()));
+  const filteredRecipeItems = useMemo(() => {
+    let items = recipeItems;
+    if (recipeSearch) {
+      items = items.filter(item => item.name.toLowerCase().includes(recipeSearch.toLowerCase()));
     }
-
-    if (filterCategory) {
-      items = items.filter(item => item.category === filterCategory);
+    if (recipeCategoryFilter) {
+      items = items.filter(item => item.category === recipeCategoryFilter);
     }
-
-    items.sort((a, b) => {
-      if (sortBy === 'name') {
-        return a.name.localeCompare(b.name);
-      } else if (sortBy === 'price') {
-        return a.sellingPrice - b.sellingPrice;
-      }
-      return 0;
-    });
-
-    console.log('Filtered items:', items); // Debug log
-
     return items;
-  }, [currentMenu.items, searchQuery, filterCategory, sortBy]);
+  }, [recipeItems, recipeSearch, recipeCategoryFilter]);
+
+  const filteredResaleItems = useMemo(() => {
+    let items = resaleItems;
+    if (resaleSearch) {
+      items = items.filter(item => item.name.toLowerCase().includes(resaleSearch.toLowerCase()));
+    }
+    if (resaleCategoryFilter) {
+      items = items.filter(item => item.category === resaleCategoryFilter);
+    }
+    return items;
+  }, [resaleItems, resaleSearch, resaleCategoryFilter]);
+
+  const filteredIngredients = useMemo(() => {
+    let ingredients = ingredientList;
+    if (ingredientSearch) {
+      ingredients = ingredients.filter(ing => ing.name.toLowerCase().includes(ingredientSearch.toLowerCase()));
+    }
+    return ingredients;
+  }, [ingredientList, ingredientSearch]);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {(error as Error).message}</div>;
@@ -202,114 +287,272 @@ const AdminPage: React.FC = () => {
       </header>
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-bold text-center my-6 text-navy">Menu Management Dashboard</h1>
-        {error && <div className="alert alert-error">{(error as Error).message}</div>}
         <div className="tabs tabs-boxed mb-4">
-          <a className={`tab ${selectedMenu === 'izMenu' ? 'tab-active' : ''}`} onClick={() => setSelectedMenu('izMenu')}>
-            IZ Menu
+          <a className={`tab ${selectedTab === 'recipe' ? 'tab-active' : ''}`} onClick={() => setSelectedTab('recipe')}>
+            Recipe Items
           </a>
-          <a className={`tab ${selectedMenu === 'bellFood' ? 'tab-active' : ''}`} onClick={() => setSelectedMenu('bellFood')}>
-            Bell Food
+          <a className={`tab ${selectedTab === 'resale' ? 'tab-active' : ''}`} onClick={() => setSelectedTab('resale')}>
+            Resale Items
+          </a>
+          <a className={`tab ${selectedTab === 'ingredients' ? 'tab-active' : ''}`} onClick={() => setSelectedTab('ingredients')}>
+            Ingredient Management
           </a>
         </div>
         <div className="card bg-base-100 shadow-xl">
           <div className="card-body">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="card-title text-navy">Menu Items</h2>
-              <button className="btn btn-primary" onClick={() => setIsAddItemModalOpen(true)}>Add Item</button>
-            </div>
-            <div className="flex space-x-4 mb-4">
-              <div className="form-control">
-                <label className="label"><span className="label-text">Search</span></label>
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search by name"
-                  className="input input-bordered"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label"><span className="label-text">Filter by Category</span></label>
-                <select
-                  value={filterCategory}
-                  onChange={(e) => setFilterCategory(e.target.value)}
-                  className="select select-bordered"
-                >
-                  <option value="">All Categories</option>
-                  {currentMenu.categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="form-control">
-                <label className="label"><span className="label-text">Sort By</span></label>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="select select-bordered"
-                >
-                  <option value="name">Name</option>
-                  <option value="price">Price</option>
-                </select>
-              </div>
-            </div>
-            {filteredItems.length === 0 ? (
-              <p className="text-gray-500">No items found.</p>
-            ) : (
-              <div className="overflow-x-auto">
-                <table className="table w-full">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Category</th>
-                      <th className="text-right">Price (£)</th>
-                      <th>Type</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filteredItems.map((item, index) => (
-                      <tr key={item.id || `${item.name}-${item.category}-${index}`} className={item.hasRecipe ? '' : 'bg-base-200'}>
-                        <td>{item.name}</td>
-                        <td>{item.category}</td>
-                        <td className="text-right">£{item.sellingPrice.toFixed(2)}</td>
-                        <td>{item.hasRecipe ? 'Recipe' : 'Resale'}</td>
-                        <td>
-                          <button
-                            className="btn btn-sm btn-outline mr-2"
-                            onClick={() => {
-                              setNewItem({
-                                id: item.id,
-                                name: item.name,
-                                category: item.category,
-                                sellingPrice: item.sellingPrice.toString(),
-                                hasRecipe: item.hasRecipe || true,
-                                buyingPrice: item.buyingPrice?.toString() || '',
-                                ingredients: item.ingredients || {}
-                              });
-                              setIsEditItemModalOpen(true);
-                            }}
-                          >
-                            Edit
-                          </button>
-                          <button
-                            className="btn btn-sm btn-error"
-                            onClick={() => handleDeleteItem(item.id)}
-                          >
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
+            {selectedTab === 'recipe' && (
+              <>
+                <div className="flex justify-between items-center mb-4">
+                  <h2 className="card-title text-navy">Recipe Items</h2>
+                  <button className="btn btn-primary" onClick={() => {
+                    setNewItem({ ...newItem, hasRecipe: true });
+                    setIsAddItemModalOpen(true);
+                  }}>Add Recipe Item</button>
+                </div>
+                <div className="flex space-x-4 mb-4">
+                  <div className="form-control">
+                    <label className="label"><span className="label-text">Search</span></label>
+                    <input
+                      type="text"
+                      value={recipeSearch}
+                      onChange={(e) => setRecipeSearch(e.target.value)}
+                      placeholder="Search by name"
+                      className="input input-bordered"
+                    />
+                  </div>
+                  <div className="flex space-x-2">
+                    <button
+                      className={`btn btn-sm ${recipeCategoryFilter === '' ? 'btn-primary' : 'btn-outline'}`}
+                      onClick={() => setRecipeCategoryFilter('')}
+                    >
+                      All
+                    </button>
+                    {recipeCategories.map(category => (
+                      <button
+                        key={category}
+                        className={`btn btn-sm ${recipeCategoryFilter === category ? 'btn-primary' : 'btn-outline'}`}
+                        onClick={() => setRecipeCategoryFilter(category)}
+                      >
+                        {category}
+                      </button>
                     ))}
-                  </tbody>
-                </table>
-              </div>
+                  </div>
+                </div>
+                {filteredRecipeItems.length === 0 ? (
+                  <p className="text-gray-500">No recipe items found.</p>
+                ) : (
+                  <div className="overflow-x-auto">
+                    <table className="table w-full">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Category</th>
+                          <th className="text-right">Price (£)</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {filteredRecipeItems.map((item, index) => (
+                          <tr key={item.id || `${item.name}-${item.category}-${index}`}>
+                            <td>{item.name}</td>
+                            <td>{item.category}</td>
+                            <td className="text-right">£{item.sellingPrice.toFixed(2)}</td>
+                            <td>
+                              <button
+                                className="btn btn-sm btn-outline mr-2"
+                                onClick={() => {
+                                  setNewItem({
+                                    id: item.id,
+                                    name: item.name,
+                                    category: item.category,
+                                    sellingPrice: item.sellingPrice.toString(),
+                                    hasRecipe: true,
+                                    buyingPrice: '',
+                                    ingredients: item.ingredients || {}
+                                  });
+                                  setIsEditItemModalOpen(true);
+                                }}
+                              >
+                                Edit
+                              </button>
+                              <button
+                                className="btn btn-sm btn-error"
+                                onClick={() => handleDeleteItem(item.id, true)}
+                              >
+                                Delete
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </>
+            )}
+            {selectedTab === 'resale' && (
+              <>
+                <div className="flex justify-between items-center mb-4">
+                  <h2 className="card-title text-navy">Resale Items</h2>
+                  <button className="btn btn-primary" onClick={() => {
+                    setNewItem({ ...newItem, hasRecipe: false });
+                    setIsAddItemModalOpen(true);
+                  }}>Add Resale Item</button>
+                </div>
+                <div className="flex space-x-4 mb-4">
+                  <div className="form-control">
+                    <label className="label"><span className="label-text">Search</span></label>
+                    <input
+                      type="text"
+                      value={resaleSearch}
+                      onChange={(e) => setResaleSearch(e.target.value)}
+                      placeholder="Search by name"
+                      className="input input-bordered"
+                    />
+                  </div>
+                  <div className="flex space-x-2">
+                    <button
+                      className={`btn btn-sm ${resaleCategoryFilter === '' ? 'btn-primary' : 'btn-outline'}`}
+                      onClick={() => setResaleCategoryFilter('')}
+                    >
+                      All
+                    </button>
+                    {resaleCategories.map(category => (
+                      <button
+                        key={category}
+                        className={`btn btn-sm ${resaleCategoryFilter === category ? 'btn-primary' : 'btn-outline'}`}
+                        onClick={() => setResaleCategoryFilter(category)}
+                      >
+                        {category}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                {filteredResaleItems.length === 0 ? (
+                  <p className="text-gray-500">No resale items found.</p>
+                ) : (
+                  <div className="overflow-x-auto">
+                    <table className="table w-full">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Category</th>
+                          <th className="text-right">Price (£)</th>
+                          <th className="text-right">Buying Price (£)</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {filteredResaleItems.map((item, index) => (
+                          <tr key={item.id || `${item.name}-${item.category}-${index}`}>
+                            <td>{item.name}</td>
+                            <td>{item.category}</td>
+                            <td className="text-right">£{item.sellingPrice.toFixed(2)}</td>
+                            <td className="text-right">£{item.buyingPrice?.toFixed(2)}</td>
+                            <td>
+                              <button
+                                className="btn btn-sm btn-outline mr-2"
+                                onClick={() => {
+                                  setNewItem({
+                                    id: item.id,
+                                    name: item.name,
+                                    category: item.category,
+                                    sellingPrice: item.sellingPrice.toString(),
+                                    hasRecipe: false,
+                                    buyingPrice: item.buyingPrice?.toString() || '',
+                                    ingredients: {}
+                                  });
+                                  setIsEditItemModalOpen(true);
+                                }}
+                              >
+                                Edit
+                              </button>
+                              <button
+                                className="btn btn-sm btn-error"
+                                onClick={() => handleDeleteItem(item.id, false)}
+                              >
+                                Delete
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </>
+            )}
+            {selectedTab === 'ingredients' && (
+              <>
+                <div className="flex justify-between items-center mb-4">
+                  <h2 className="card-title text-navy">Ingredient Management</h2>
+                  <button className="btn btn-primary" onClick={() => setIsAddIngredientModalOpen(true)}>Add Ingredient</button>
+                </div>
+                <div className="flex space-x-4 mb-4">
+                  <div className="form-control">
+                    <label className="label"><span className="label-text">Search</span></label>
+                    <input
+                      type="text"
+                      value={ingredientSearch}
+                      onChange={(e) => setIngredientSearch(e.target.value)}
+                      placeholder="Search by name"
+                      className="input input-bordered"
+                    />
+                  </div>
+                </div>
+                {filteredIngredients.length === 0 ? (
+                  <p className="text-gray-500">No ingredients found.</p>
+                ) : (
+                  <div className="overflow-x-auto">
+                    <table className="table w-full">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Cost (£)</th>
+                          <th>Unit</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {filteredIngredients.map((ingredient, index) => (
+                          <tr key={ingredient.name || index}>
+                            <td>{ingredient.name}</td>
+                            <td>£{ingredient.cost.toFixed(2)}</td>
+                            <td>{ingredient.unit}</td>
+                            <td>
+                              <button
+                                className="btn btn-sm btn-outline mr-2"
+                                onClick={() => {
+                                  setNewIngredient({
+                                    name: ingredient.name,
+                                    cost: ingredient.cost.toString(),
+                                    unit: ingredient.unit
+                                  });
+                                  setIsEditIngredientModalOpen(true);
+                                }}
+                              >
+                                Edit
+                              </button>
+                              <button
+                                className="btn btn-sm btn-error"
+                                onClick={() => handleDeleteIngredient(ingredient.name)}
+                              >
+                                Delete
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>
       </div>
       {/* Add Item Modal */}
-      <Modal isOpen={isAddItemModalOpen} onClose={() => setIsAddItemModalOpen(false)} title="Add New Item">
+      <Modal isOpen={isAddItemModalOpen} onClose={() => setIsAddItemModalOpen(false)} title={newItem.hasRecipe ? 'Add Recipe Item' : 'Add Resale Item'}>
         <div className="space-y-4">
           <div className="form-control">
             <label className="label"><span className="label-text">Name</span></label>
@@ -326,24 +569,21 @@ const AdminPage: React.FC = () => {
               value={newItem.category}
               onChange={(e) => {
                 const category = e.target.value;
-                const isRecipe = ['Food', 'Cocktails', 'Liquor Coffees', 'Desserts'].includes(category);
                 setNewItem({
                   ...newItem,
                   category,
-                  hasRecipe: isRecipe,
-                  ingredients: isRecipe ? newItem.ingredients : {},
-                  buyingPrice: isRecipe ? '' : newItem.buyingPrice
+                  ingredients: newItem.hasRecipe ? newItem.ingredients : {},
+                  buyingPrice: newItem.hasRecipe ? '' : newItem.buyingPrice
                 });
               }}
               className="select select-bordered"
             >
               <option value="">Select Category</option>
-              <option value="Food">Food</option>
-              <option value="Cocktails">Cocktails</option>
-              <option value="Liquor Coffees">Liquor Coffees</option>
-              <option value="Desserts">Desserts</option>
-              <option value="Drinks">Drinks</option>
-              <option value="Wines">Wines</option>
+              {newItem.hasRecipe ? recipeCategories.map(cat => (
+                <option key={cat} value={cat}>{cat}</option>
+              )) : resaleCategories.map(cat => (
+                <option key={cat} value={cat}>{cat}</option>
+              ))}
             </select>
           </div>
           <div className="form-control">
@@ -355,18 +595,6 @@ const AdminPage: React.FC = () => {
               onChange={(e) => setNewItem({ ...newItem, sellingPrice: e.target.value })}
               className="input input-bordered w-full"
             />
-          </div>
-          <div className="form-control">
-            <label className="label cursor-pointer">
-              <span className="label-text">Has Recipe</span>
-              <input
-                type="checkbox"
-                checked={newItem.hasRecipe}
-                onChange={(e) => setNewItem({ ...newItem, hasRecipe: e.target.checked, ingredients: e.target.checked ? {} : {} })}
-                className="checkbox"
-                disabled // Controlled by category
-              />
-            </label>
           </div>
           {!newItem.hasRecipe && (
             <div className="form-control">
@@ -388,20 +616,20 @@ const AdminPage: React.FC = () => {
                   <input
                     type="text"
                     value={name}
-                    onChange={(e) => handleUpdateIngredient(name, e.target.value, quantity)}
+                    onChange={(e) => handleUpdateItemIngredient(name, e.target.value, quantity)}
                     placeholder="Ingredient name"
                     className="input input-bordered w-1/2"
                   />
                   <input
                     type="number"
                     value={quantity}
-                    onChange={(e) => handleUpdateIngredient(name, name, parseFloat(e.target.value) || 0)}
+                    onChange={(e) => handleUpdateItemIngredient(name, name, parseFloat(e.target.value) || 0)}
                     placeholder="Quantity"
                     className="input input-bordered w-1/4"
                   />
                   <button
                     className="btn btn-sm btn-error"
-                    onClick={() => handleRemoveIngredient(name)}
+                    onClick={() => handleRemoveItemIngredient(name)}
                   >
                     Remove
                   </button>
@@ -409,7 +637,7 @@ const AdminPage: React.FC = () => {
               ))}
               <button
                 className="btn btn-sm btn-outline mt-2"
-                onClick={handleAddIngredient}
+                onClick={handleAddItemIngredient}
               >
                 Add Ingredient
               </button>
@@ -422,7 +650,7 @@ const AdminPage: React.FC = () => {
         </div>
       </Modal>
       {/* Edit Item Modal */}
-      <Modal isOpen={isEditItemModalOpen} onClose={() => setIsEditItemModalOpen(false)} title="Edit Item">
+      <Modal isOpen={isEditItemModalOpen} onClose={() => setIsEditItemModalOpen(false)} title={newItem.hasRecipe ? 'Edit Recipe Item' : 'Edit Resale Item'}>
         <div className="space-y-4">
           <div className="form-control">
             <label className="label"><span className="label-text">Name</span></label>
@@ -439,24 +667,21 @@ const AdminPage: React.FC = () => {
               value={newItem.category}
               onChange={(e) => {
                 const category = e.target.value;
-                const isRecipe = ['Food', 'Cocktails', 'Liquor Coffees', 'Desserts'].includes(category);
                 setNewItem({
                   ...newItem,
                   category,
-                  hasRecipe: isRecipe,
-                  ingredients: isRecipe ? newItem.ingredients : {},
-                  buyingPrice: isRecipe ? '' : newItem.buyingPrice
+                  ingredients: newItem.hasRecipe ? newItem.ingredients : {},
+                  buyingPrice: newItem.hasRecipe ? '' : newItem.buyingPrice
                 });
               }}
               className="select select-bordered"
             >
               <option value="">Select Category</option>
-              <option value="Food">Food</option>
-              <option value="Cocktails">Cocktails</option>
-              <option value="Liquor Coffees">Liquor Coffees</option>
-              <option value="Desserts">Desserts</option>
-              <option value="Drinks">Drinks</option>
-              <option value="Wines">Wines</option>
+              {newItem.hasRecipe ? recipeCategories.map(cat => (
+                <option key={cat} value={cat}>{cat}</option>
+              )) : resaleCategories.map(cat => (
+                <option key={cat} value={cat}>{cat}</option>
+              ))}
             </select>
           </div>
           <div className="form-control">
@@ -468,18 +693,6 @@ const AdminPage: React.FC = () => {
               onChange={(e) => setNewItem({ ...newItem, sellingPrice: e.target.value })}
               className="input input-bordered w-full"
             />
-          </div>
-          <div className="form-control">
-            <label className="label cursor-pointer">
-              <span className="label-text">Has Recipe</span>
-              <input
-                type="checkbox"
-                checked={newItem.hasRecipe}
-                onChange={(e) => setNewItem({ ...newItem, hasRecipe: e.target.checked, ingredients: e.target.checked ? newItem.ingredients : {} })}
-                className="checkbox"
-                disabled // Controlled by category
-              />
-            </label>
           </div>
           {!newItem.hasRecipe && (
             <div className="form-control">
@@ -501,20 +714,20 @@ const AdminPage: React.FC = () => {
                   <input
                     type="text"
                     value={name}
-                    onChange={(e) => handleUpdateIngredient(name, e.target.value, quantity)}
+                    onChange={(e) => handleUpdateItemIngredient(name, e.target.value, quantity)}
                     placeholder="Ingredient name"
                     className="input input-bordered w-1/2"
                   />
                   <input
                     type="number"
                     value={quantity}
-                    onChange={(e) => handleUpdateIngredient(name, name, parseFloat(e.target.value) || 0)}
+                    onChange={(e) => handleUpdateItemIngredient(name, name, parseFloat(e.target.value) || 0)}
                     placeholder="Quantity"
                     className="input input-bordered w-1/4"
                   />
                   <button
                     className="btn btn-sm btn-error"
-                    onClick={() => handleRemoveIngredient(name)}
+                    onClick={() => handleRemoveItemIngredient(name)}
                   >
                     Remove
                   </button>
@@ -522,7 +735,7 @@ const AdminPage: React.FC = () => {
               ))}
               <button
                 className="btn btn-sm btn-outline mt-2"
-                onClick={handleAddIngredient}
+                onClick={handleAddItemIngredient}
               >
                 Add Ingredient
               </button>
@@ -531,6 +744,80 @@ const AdminPage: React.FC = () => {
           <div className="modal-action">
             <button className="btn btn-ghost" onClick={() => setIsEditItemModalOpen(false)}>Cancel</button>
             <button className="btn btn-primary" onClick={handleEditItem}>Save</button>
+          </div>
+        </div>
+      </Modal>
+      {/* Add Ingredient Modal */}
+      <Modal isOpen={isAddIngredientModalOpen} onClose={() => setIsAddIngredientModalOpen(false)} title="Add Ingredient">
+        <div className="space-y-4">
+          <div className="form-control">
+            <label className="label"><span className="label-text">Name</span></label>
+            <input
+              type="text"
+              value={newIngredient.name}
+              onChange={(e) => setNewIngredient({ ...newIngredient, name: e.target.value })}
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div className="form-control">
+            <label className="label"><span className="label-text">Cost (£)</span></label>
+            <input
+              type="number"
+              step="0.01"
+              value={newIngredient.cost}
+              onChange={(e) => setNewIngredient({ ...newIngredient, cost: e.target.value })}
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div className="form-control">
+            <label className="label"><span className="label-text">Unit</span></label>
+            <input
+              type="text"
+              value={newIngredient.unit}
+              onChange={(e) => setNewIngredient({ ...newIngredient, unit: e.target.value })}
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div className="modal-action">
+            <button className="btn btn-ghost" onClick={() => setIsAddIngredientModalOpen(false)}>Cancel</button>
+            <button className="btn btn-primary" onClick={handleAddIngredient}>Add</button>
+          </div>
+        </div>
+      </Modal>
+      {/* Edit Ingredient Modal */}
+      <Modal isOpen={isEditIngredientModalOpen} onClose={() => setIsEditIngredientModalOpen(false)} title="Edit Ingredient">
+        <div className="space-y-4">
+          <div className="form-control">
+            <label className="label"><span className="label-text">Name</span></label>
+            <input
+              type="text"
+              value={newIngredient.name}
+              disabled
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div className="form-control">
+            <label className="label"><span className="label-text">Cost (£)</span></label>
+            <input
+              type="number"
+              step="0.01"
+              value={newIngredient.cost}
+              onChange={(e) => setNewIngredient({ ...newIngredient, cost: e.target.value })}
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div className="form-control">
+            <label className="label"><span className="label-text">Unit</span></label>
+            <input
+              type="text"
+              value={newIngredient.unit}
+              onChange={(e) => setNewIngredient({ ...newIngredient, unit: e.target.value })}
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div className="modal-action">
+            <button className="btn btn-ghost" onClick={() => setIsEditIngredientModalOpen(false)}>Cancel</button>
+            <button className="btn btn-primary" onClick={handleEditIngredient}>Save</button>
           </div>
         </div>
       </Modal>
