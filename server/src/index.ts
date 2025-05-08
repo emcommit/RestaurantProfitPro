@@ -1,12 +1,14 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
-import { Low } from 'lowdb';
-import { JSONFile } from 'lowdb/node';
-import { z } from 'zod';
-import path from 'path';
+import { readFile, writeFile } from 'fs/promises';
+import { join } from 'path';
 
-// Define the database schema
+const fastify = Fastify({ logger: true });
+
+fastify.register(cors, { origin: '*' });
+
 interface MenuItem {
+  id: string;
   name: string;
   category: string;
   sellingPrice: number;
@@ -22,84 +24,126 @@ interface Menu {
   categories: string[];
 }
 
-interface Database {
+interface Menus {
   izMenu: Menu;
   bellFood: Menu;
-  [key: string]: Menu; // Allow additional menus
 }
 
-const app = Fastify();
-app.register(cors, { origin: ['http://localhost:5173'] });
+// Load menus.json
+const menusFile = join(__dirname, '../menus.json');
+async function loadMenus(): Promise<Menus> {
+  try {
+    const data = await readFile(menusFile, 'utf-8');
+    return JSON.parse(data);
+  } catch (error) {
+    console.error('Error loading menus:', error);
+    return { izMenu: { items: [], initialIngredients: {}, costMultiplier: 1.1, categories: [] }, bellFood: { items: [], initialIngredients: {}, costMultiplier: 1.1, categories: [] } };
+  }
+}
 
-// Initialize LowDB
-const file = path.join(__dirname, '../menus.json');
-const adapter = new JSONFile<Database>(file);
-const db = new Low<Database>(adapter, {
-  izMenu: { items: [], initialIngredients: {}, costMultiplier: 1.1, categories: [] },
-  bellFood: { items: [], initialIngredients: {}, costMultiplier: 1.1, categories: [] }
+// Save menus.json
+async function saveMenus(menus: Menus) {
+  await writeFile(menusFile, JSON.stringify(menus, null, 2));
+}
+
+// Validate item data
+function validateItem(item: Partial<MenuItem>): { valid: boolean; error?: string } {
+  if (!item.name || typeof item.name !== 'string' || item.name.trim() === '') {
+    return { valid: false, error: 'Name is required and must be a non-empty string' };
+  }
+  if (!item.category || typeof item.category !== 'string' || item.category.trim() === '') {
+    return { valid: false, error: 'Category is required and must be a non-empty string' };
+  }
+  if (typeof item.sellingPrice !== 'number' || item.sellingPrice <= 0) {
+    return { valid: false, error: 'Selling price must be a positive number' };
+  }
+  if (item.hasRecipe === false && (typeof item.buyingPrice !== 'number' || item.buyingPrice <= 0)) {
+    return { valid: false, error: 'Buying price must be a positive number for resale items' };
+  }
+  return { valid: true };
+}
+
+// GET /menus
+fastify.get('/menus', async (request, reply) => {
+  const menus = await loadMenus();
+  return { success: true, data: menus };
 });
 
-// Zod schema for runtime validation
-const ItemSchema = z.object({
-  name: z.string().min(1),
-  category: z.string().min(1),
-  sellingPrice: z.number().positive(),
-  hasRecipe: z.boolean().optional(),
-  buyingPrice: z.number().positive().optional(),
-  ingredients: z.record(z.number()).optional()
+// POST /menus/:menu/dishes
+fastify.post('/menus/:menu/dishes', async (request, reply) => {
+  const { menu } = request.params as { menu: string };
+  const newItem = request.body as MenuItem;
+
+  const validation = validateItem(newItem);
+  if (!validation.valid) {
+    reply.status(400);
+    return { success: false, error: validation.error };
+  }
+
+  const menus = await loadMenus();
+  if (!menus[menu]) {
+    reply.status(404);
+    return { success: false, error: 'Menu not found' };
+  }
+
+  menus[menu].items.push(newItem);
+  await saveMenus(menus);
+  return { success: true };
 });
 
-// Fastify JSON Schema for route validation
-const ItemJsonSchema = {
-  type: 'object',
-  required: ['name', 'category', 'sellingPrice'],
-  properties: {
-    name: { type: 'string', minLength: 1 },
-    category: { type: 'string', minLength: 1 },
-    sellingPrice: { type: 'number', minimum: 0.01 },
-    hasRecipe: { type: 'boolean' },
-    buyingPrice: { type: 'number', minimum: 0.01 },
-    ingredients: { type: 'object', additionalProperties: { type: 'number' } }
-  }
-};
+// PUT /menus/:menu/dishes/:id
+fastify.put('/menus/:menu/dishes/:id', async (request, reply) => {
+  const { menu, id } = request.params as { menu: string; id: string };
+  const updatedItem = request.body as MenuItem;
 
-// Routes
-app.get('/menus', async (_, reply) => {
-  await db.read();
-  return { success: true, data: db.data };
+  const validation = validateItem(updatedItem);
+  if (!validation.valid) {
+    reply.status(400);
+    return { success: false, error: validation.error };
+  }
+
+  const menus = await loadMenus();
+  if (!menus[menu]) {
+    reply.status(404);
+    return { success: false, error: 'Menu not found' };
+  }
+
+  const itemIndex = menus[menu].items.findIndex(item => item.id === id);
+  if (itemIndex === -1) {
+    reply.status(404);
+    return { success: false, error: 'Item not found' };
+  }
+
+  menus[menu].items[itemIndex] = { ...updatedItem, id };
+  await saveMenus(menus);
+  return { success: true };
 });
 
-app.post('/menus/:menuKey/dishes', {
-  schema: {
-    body: ItemJsonSchema,
-    params: {
-      type: 'object',
-      required: ['menuKey'],
-      properties: {
-        menuKey: { type: 'string', enum: ['izMenu', 'bellFood'] }
-      }
-    }
+// DELETE /menus/:menu/dishes/:id
+fastify.delete('/menus/:menu/dishes/:id', async (request, reply) => {
+  const { menu, id } = request.params as { menu: string; id: string };
+
+  const menus = await loadMenus();
+  if (!menus[menu]) {
+    reply.status(404);
+    return { success: false, error: 'Menu not found' };
   }
-}, async (request, reply) => {
-  const { menuKey } = request.params as { menuKey: 'izMenu' | 'bellFood' };
-  const newItem = ItemSchema.parse(request.body); // Runtime validation with Zod
-  await db.read();
-  if (!db.data[menuKey]) {
-    db.data[menuKey] = { items: [], initialIngredients: {}, costMultiplier: 1.1, categories: [] };
+
+  const itemIndex = menus[menu].items.findIndex(item => item.id === id);
+  if (itemIndex === -1) {
+    reply.status(404);
+    return { success: false, error: 'Item not found' };
   }
-  db.data[menuKey].items.push(newItem);
-  if (!db.data[menuKey].categories.includes(newItem.category)) {
-    db.data[menuKey].categories.push(newItem.category);
-  }
-  await db.write();
-  return db.data[menuKey];
+
+  menus[menu].items.splice(itemIndex, 1);
+  await saveMenus(menus);
+  return { success: true };
 });
 
-// Start server
-app.listen({ port: 3000 }, (err) => {
+fastify.listen({ port: 3000 }, (err, address) => {
   if (err) {
-    console.error(err);
+    fastify.log.error(err);
     process.exit(1);
   }
-  console.log('Server running on port 3000');
+  console.log(`Server running on ${address}`);
 });
