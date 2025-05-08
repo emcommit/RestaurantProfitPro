@@ -28,11 +28,20 @@ const fetchMenus = async (): Promise<MenusResponse> => {
 };
 
 const AdminPage: React.FC = () => {
+  // Move all hooks to the top, before any early returns
   const { selectedMenu, setSelectedMenu } = useAppStore();
-  const { data: menus = { izMenu, bellFood: bellFoodMenu }, error } = useQuery('menus', fetchMenus, { retry: 1 });
+  const { data, error, isLoading } = useQuery('menus', fetchMenus, { retry: 1 });
   const [isAddItemModalOpen, setIsAddItemModalOpen] = useState(false);
   const [newItem, setNewItem] = useState({ name: '', category: '', sellingPrice: '', hasRecipe: true, buyingPrice: '' });
   const navigate = useNavigate();
+
+  // Handle data and fallback
+  const menus = data?.data || { izMenu, bellFood: bellFoodMenu };
+  const currentMenu = menus[selectedMenu] || { items: [], initialIngredients: {}, costMultiplier: 1.1, categories: [] };
+
+  // Early returns after all hooks
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {(error as Error).message}</div>;
 
   const handleAddItem = async () => {
     try {
@@ -51,8 +60,6 @@ const AdminPage: React.FC = () => {
       alert(`Error adding item: ${error.message}`);
     }
   };
-
-  const currentMenu = menus[selectedMenu];
 
   return (
     <div className="min-h-screen bg-base-200">
