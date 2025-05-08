@@ -24,9 +24,11 @@ interface Menu {
   categories: string[];
 }
 
+// Add index signature to allow string keys
 interface Menus {
   izMenu: Menu;
   bellFood: Menu;
+  [key: string]: Menu; // Index signature
 }
 
 // Load menus.json
@@ -108,7 +110,7 @@ fastify.put('/menus/:menu/dishes/:id', async (request, reply) => {
     return { success: false, error: 'Menu not found' };
   }
 
-  const itemIndex = menus[menu].items.findIndex(item => item.id === id);
+  const itemIndex = menus[menu].items.findIndex((item: MenuItem) => item.id === id);
   if (itemIndex === -1) {
     reply.status(404);
     return { success: false, error: 'Item not found' };
@@ -129,7 +131,7 @@ fastify.delete('/menus/:menu/dishes/:id', async (request, reply) => {
     return { success: false, error: 'Menu not found' };
   }
 
-  const itemIndex = menus[menu].items.findIndex(item => item.id === id);
+  const itemIndex = menus[menu].items.findIndex((item: MenuItem) => item.id === id);
   if (itemIndex === -1) {
     reply.status(404);
     return { success: false, error: 'Item not found' };
