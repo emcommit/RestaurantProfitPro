@@ -13,11 +13,11 @@ const CategoryTable: React.FC<CategoryTableProps> = React.memo(({ category, item
       <h3 className="text-2xl font-semibold text-navy mb-4">{category}</h3>
       <DataTable
         columns={[
-          { header: 'Name', accessor: 'name', tooltip: 'Item Name' },
+          { header: 'Name', accessor: 'name', tooltip: 'Item Name', sortable: true },
           { header: 'Description', accessor: 'description', tooltip: 'Item Description (for recipe items)' },
-          { header: 'Selling Price', accessor: 'sellingPrice', align: 'right', tooltip: 'Price at which the item is sold' },
-          { header: 'Cost', accessor: 'cost', align: 'right', tooltip: 'Cost to produce or buy the item' },
-          { header: 'Profit Margin', accessor: 'profitMargin', align: 'right', tooltip: 'Percentage of profit relative to selling price' }
+          { header: 'Selling Price', accessor: 'sellingPrice', align: 'right', tooltip: 'Price at which the item is sold', sortable: true },
+          { header: 'Cost', accessor: 'cost', align: 'right', tooltip: 'Cost to produce or buy the item', sortable: true },
+          { header: 'Profit Margin', accessor: 'profitMargin', align: 'right', tooltip: 'Percentage of profit relative to selling price', sortable: true }
         ]}
         data={items}
         onRowClick={onRowClick}

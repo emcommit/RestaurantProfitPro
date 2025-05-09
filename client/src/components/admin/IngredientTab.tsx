@@ -44,7 +44,7 @@ const IngredientTab: React.FC<IngredientTabProps> = React.memo(({ ingredients, i
   });
 
   return (
-    <div className="card bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="card bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in">
       <div className="card-body p-6">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-semibold text-navy">Ingredients</h2>
@@ -64,10 +64,10 @@ const IngredientTab: React.FC<IngredientTabProps> = React.memo(({ ingredients, i
         />
         <DataTable
           columns={[
-            { header: 'Name', accessor: 'name', tooltip: 'Ingredient Name' },
-            { header: 'Category', accessor: 'category', tooltip: 'Ingredient Category' },
-            { header: 'Cost', accessor: 'costDisplay', tooltip: 'Cost per unit' },
-            { header: 'Unit', accessor: 'unit', tooltip: 'Unit of measurement' },
+            { header: 'Name', accessor: 'name', tooltip: 'Ingredient Name', sortable: true },
+            { header: 'Category', accessor: 'category', tooltip: 'Ingredient Category', sortable: true },
+            { header: 'Cost', accessor: 'costDisplay', tooltip: 'Cost per unit', sortable: true },
+            { header: 'Unit', accessor: 'unit', tooltip: 'Unit of measurement', sortable: true },
             { header: 'Actions', accessor: 'actions', align: 'right', tooltip: 'Edit or delete the ingredient' }
           ]}
           data={filteredItems}

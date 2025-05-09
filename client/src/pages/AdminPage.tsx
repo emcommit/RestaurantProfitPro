@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import { useAppStore } from '../store';
 import GenericModal from '../components/common/GenericModal';
+import ToastProvider from '../components/common/ToastProvider';
 import IngredientTab from '../components/admin/IngredientTab';
 import RecipeItemsTab from '../components/admin/RecipeItemsTab';
 import ResaleItemsTab from '../components/admin/ResaleItemsTab';
@@ -38,11 +40,12 @@ const AdminPage: React.FC = () => {
 
   const { isLoading, error } = useQuery('menus', fetchMenus, {
     retry: 1,
-    onSuccess: (data) => setMenus(data.data)
+    onSuccess: (data) => setMenus(data.data),
+    onError: () => toast.error('Failed to fetch menus')
   });
 
-  if (isLoading) return <div className="flex justify-center items-center h-screen text-navy">Loading...</div>;
-  if (error) return <div className="container mx-auto p-4 text-red-500 text-center">Error: {(error as Error).message}</div>;
+  if (isLoading) return <div className="flex justify-center items-center h-screen text-foreground">Loading...</div>;
+  if (error) return <div className="container mx-auto p-4 text-destructive text-center">Error: {(error as Error).message}</div>;
 
   const currentMenu = menus[selectedMenu];
 
@@ -76,6 +79,7 @@ const AdminPage: React.FC = () => {
         const updatedIngredients = { ...prev[selectedMenu].initialIngredients };
         if (modalData?.name) {
           delete updatedIngredients[modalData.name];
+          toast.success(`Ingredient "${modalData.name}" deleted successfully`);
         }
         return {
           ...prev,
@@ -86,6 +90,7 @@ const AdminPage: React.FC = () => {
         };
       } else {
         const updatedItems = prev[selectedMenu].items.filter((item: any) => item.name !== modalData?.name);
+        toast.success(`Item "${modalData.name}" deleted successfully`);
         return {
           ...prev,
           [selectedMenu]: {
@@ -110,6 +115,7 @@ const AdminPage: React.FC = () => {
           unit: data.unit === 'kg' ? 'g' : data.unit === 'L' ? 'ml' : 'unit',
           category: data.category
         };
+        toast.success(`Ingredient "${data.name}" ${modalData ? 'updated' : 'added'} successfully`);
         return {
           ...prev,
           [selectedMenu]: {
@@ -122,6 +128,7 @@ const AdminPage: React.FC = () => {
           item.name === modalData?.name ? { ...item, ...data } : item
         );
         if (!modalData) updatedItems.push({ ...data, hasRecipe: !!data.ingredients });
+        toast.success(`Item "${data.name}" ${modalData ? 'updated' : 'added'} successfully`);
         return {
           ...prev,
           [selectedMenu]: {
@@ -152,47 +159,48 @@ const AdminPage: React.FC = () => {
   const resaleItems = currentMenu.items.filter((item: any) => !item.hasRecipe);
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-navy text-white py-4 shadow-md">
+    <div className="min-h-screen bg-background">
+      <ToastProvider />
+      <header className="bg-gradient-navy text-white py-5 shadow-lg">
         <div className="container mx-auto px-4 flex items-center justify-between">
-          <h1 className="text-xl font-bold text-gold">Admin Dashboard</h1>
-          <nav className="flex space-x-2">
-            <Link to="/" className="btn btn-ghost text-white hover:bg-navy-700">Home</Link>
-            <Link to="/analysis" className="btn btn-ghost text-white hover:bg-navy-700">Analysis</Link>
-            <Link to="/admin" className="btn btn-ghost text-gold hover:bg-navy-700">Admin</Link>
+          <h1 className="text-2xl font-bold text-accent">Admin Dashboard</h1>
+          <nav className="flex space-x-3">
+            <Link to="/" className="btn btn-ghost text-white hover:bg-primary-foreground/10">Home</Link>
+            <Link to="/analysis" className="btn btn-ghost text-white hover:bg-primary-foreground/10">Analysis</Link>
+            <Link to="/admin" className="btn btn-ghost text-accent hover:bg-primary-foreground/10">Admin</Link>
           </nav>
         </div>
       </header>
-      <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold text-navy text-center mb-8">Admin Panel</h1>
-        <div className="mb-6 flex justify-center">
-          <div className="w-full max-w-md">
-            <label className="label"><span className="label-text text-lg font-semibold text-navy">Select Restaurant Menu</span></label>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="mb-8 animate-fade-in">Admin Panel</h1>
+        <div className="mb-8 flex justify-center">
+          <div className="w-full max-w-md animate-fade-in delay-100">
+            <label className="label"><span className="label-text">Select Restaurant Menu</span></label>
             <select
               value={selectedMenu}
               onChange={(e) => setSelectedMenu(e.target.value as 'izMenu' | 'bellFood')}
-              className="select select-bordered w-full bg-white text-navy"
+              className="select w-full"
             >
               <option value="izMenu">IZ Menu</option>
               <option value="bellFood">Bell Menu</option>
             </select>
           </div>
         </div>
-        <div className="tabs mb-6">
+        <div className="tabs mb-8 border-b border-border">
           <button
-            className={`tab tab-bordered ${activeTab === 'ingredients' ? 'tab-active text-navy' : 'text-gray-500'}`}
+            className={`tab tab-bordered px-4 py-2 text-sm font-medium ${activeTab === 'ingredients' ? 'border-b-2 border-accent text-accent' : 'text-muted-foreground hover:text-foreground'}`}
             onClick={() => setActiveTab('ingredients')}
           >
             Ingredients
           </button>
           <button
-            className={`tab tab-bordered ${activeTab === 'recipeItems' ? 'tab-active text-navy' : 'text-gray-500'}`}
+            className={`tab tab-bordered px-4 py-2 text-sm font-medium ${activeTab === 'recipeItems' ? 'border-b-2 border-accent text-accent' : 'text-muted-foreground hover:text-foreground'}`}
             onClick={() => setActiveTab('recipeItems')}
           >
             Recipe Items
           </button>
           <button
-            className={`tab tab-bordered ${activeTab === 'resaleItems' ? 'tab-active text-navy' : 'text-gray-500'}`}
+            className={`tab tab-bordered px-4 py-2 text-sm font-medium ${activeTab === 'resaleItems' ? 'border-b-2 border-accent text-accent' : 'text-muted-foreground hover:text-foreground'}`}
             onClick={() => setActiveTab('resaleItems')}
           >
             Resale Items

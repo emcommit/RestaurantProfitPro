@@ -12,7 +12,7 @@ interface SummarySectionProps {
 const SummarySection: React.FC<SummarySectionProps> = React.memo(
   ({ title, stats, topItems, bottomItems, onRowClick }) => {
     return (
-      <div className="card bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="card bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in">
         <div className="card-body p-6">
           <h2 className="card-title text-navy text-xl">{title}</h2>
           <div className="grid grid-cols-2 gap-4 mb-4">
@@ -32,9 +32,9 @@ const SummarySection: React.FC<SummarySectionProps> = React.memo(
           <h3 className="text-lg font-semibold text-navy mt-4">Top 3 Performers</h3>
           <DataTable
             columns={[
-              { header: 'Name', accessor: 'name', tooltip: 'Item Name' },
-              { header: 'Category', accessor: 'category', tooltip: 'Item Category' },
-              { header: 'Profit Margin', accessor: 'profitMargin', align: 'right', tooltip: 'Percentage of profit relative to selling price' },
+              { header: 'Name', accessor: 'name', tooltip: 'Item Name', sortable: true },
+              { header: 'Category', accessor: 'category', tooltip: 'Item Category', sortable: true },
+              { header: 'Profit Margin', accessor: 'profitMargin', align: 'right', tooltip: 'Percentage of profit relative to selling price', sortable: true },
               { header: '', accessor: 'profitMarginBar', align: 'right' }
             ]}
             data={topItems}
@@ -44,9 +44,9 @@ const SummarySection: React.FC<SummarySectionProps> = React.memo(
           <h3 className="text-lg font-semibold text-navy mt-4">Bottom 3 Performers</h3>
           <DataTable
             columns={[
-              { header: 'Name', accessor: 'name', tooltip: 'Item Name' },
-              { header: 'Category', accessor: 'category', tooltip: 'Item Category' },
-              { header: 'Profit Margin', accessor: 'profitMargin', align: 'right', tooltip: 'Percentage of profit relative to selling price' },
+              { header: 'Name', accessor: 'name', tooltip: 'Item Name', sortable: true },
+              { header: 'Category', accessor: 'category', tooltip: 'Item Category', sortable: true },
+              { header: 'Profit Margin', accessor: 'profitMargin', align: 'right', tooltip: 'Percentage of profit relative to selling price', sortable: true },
               { header: '', accessor: 'profitMarginBar', align: 'right' }
             ]}
             data={bottomItems}

@@ -2,9 +2,11 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import { useAppStore } from '../store';
 import FilterBar from '../components/common/FilterBar';
 import GenericModal from '../components/common/GenericModal';
+import ToastProvider from '../components/common/ToastProvider';
 import SummarySection from '../components/analysis/SummarySection';
 import CategoryTable from '../components/analysis/CategoryTable';
 import useSearchAndFilter from '../hooks/useSearchAndFilter';
@@ -35,15 +37,12 @@ const Analysis: React.FC = () => {
 
   const { isLoading, error } = useQuery('menus', fetchMenus, {
     retry: 1,
-    onSuccess: (data) => setMenus(data.data)
+    onSuccess: (data) => setMenus(data.data),
+    onError: () => toast.error('Failed to fetch menus')
   });
 
-  if (isLoading) return <div className="flex justify-center items-center h-screen text-navy">Loading...</div>;
-  if (error) return <div className="container mx-auto p-4 text-red-500 text-center">Error: {(error as Error).message}</div>;
+  const currentMenu = menus[selectedMenu] || { initialIngredients: {}, items: [], costMultiplier: 1 };
 
-  const currentMenu = menus[selectedMenu];
-
-  // Memoize ingredientList to prevent recomputation
   const ingredientList = useMemo(() => {
     return Object.entries(currentMenu.initialIngredients).map(([name, { cost, unit, category }]) => ({
       name,
@@ -53,7 +52,6 @@ const Analysis: React.FC = () => {
     }));
   }, [currentMenu.initialIngredients]);
 
-  // Memoize itemsWithMetrics
   const itemsWithMetrics = useMemo(() => {
     return currentMenu.items.map((item: any) => ({
       ...item,
@@ -66,9 +64,9 @@ const Analysis: React.FC = () => {
           ? calculateProfitMargin(item.sellingPrice, item.buyingPrice)
           : '0.00',
       profitMarginBar: (
-        <div className="relative w-20 h-3 bg-gray-200 rounded shadow-sm">
+        <div className="relative w-20 h-3 bg-gray-200 rounded-full overflow-hidden">
           <div
-            className={`absolute h-3 rounded ${getProfitMarginColor(parseFloat(item.hasRecipe ? calculateProfitMargin(item.sellingPrice, calculateRecipeCost(item.ingredients || {}, ingredientList, currentMenu.costMultiplier)) : item.buyingPrice ? calculateProfitMargin(item.sellingPrice, item.buyingPrice) : '0.00'))}`}
+            className={`absolute h-3 rounded-full ${getProfitMarginColor(parseFloat(item.hasRecipe ? calculateProfitMargin(item.sellingPrice, calculateRecipeCost(item.ingredients || {}, ingredientList, currentMenu.costMultiplier)) : item.buyingPrice ? calculateProfitMargin(item.sellingPrice, item.buyingPrice) : '0.00'))}`}
             style={{ width: `${Math.min(parseFloat(item.hasRecipe ? calculateProfitMargin(item.sellingPrice, calculateRecipeCost(item.ingredients || {}, ingredientList, currentMenu.costMultiplier)) : item.buyingPrice ? calculateProfitMargin(item.sellingPrice, item.buyingPrice) : '0.00'), 100)}%`, transition: 'width 0.3s ease' }}
           ></div>
         </div>
@@ -160,7 +158,7 @@ const Analysis: React.FC = () => {
         profitMargin: (
           <div className="flex items-center justify-end">
             {item.profitMarginBar}
-            <span className="ml-2 text-sm font-medium text-gray-800">{item.profitMargin}%</span>
+            <span className="ml-2 text-sm font-medium text-foreground">{item.profitMargin}%</span>
           </div>
         ),
         tooltip: `${item.profitMargin}%`
@@ -205,74 +203,83 @@ const Analysis: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-navy text-white py-4 shadow-md">
+    <div className="min-h-screen bg-background">
+      <ToastProvider />
+      <header className="bg-gradient-navy text-white py-5 shadow-lg">
         <div className="container mx-auto px-4 flex items-center justify-between">
-          <h1 className="text-xl font-bold text-gold">Restaurant Analytics</h1>
-          <nav className="flex space-x-2">
-            <Link to="/" className="btn btn-ghost text-white hover:bg-navy-700">Home</Link>
-            <Link to="/analysis" className="btn btn-ghost text-gold hover:bg-navy-700">Analysis</Link>
-            <Link to="/admin" className="btn btn-ghost text-white hover:bg-navy-700">Admin</Link>
+          <h1 className="text-2xl font-bold text-accent">Restaurant Analytics</h1>
+          <nav className="flex space-x-3">
+            <Link to="/" className="btn btn-ghost text-white hover:bg-primary-foreground/10">Home</Link>
+            <Link to="/analysis" className="btn btn-ghost text-accent hover:bg-primary-foreground/10">Analysis</Link>
+            <Link to="/admin" className="btn btn-ghost text-white hover:bg-primary-foreground/10">Admin</Link>
           </nav>
         </div>
       </header>
-      <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold text-navy text-center mb-8">Profit Analysis</h1>
-        <div className="mb-6 flex justify-center">
-          <div className="w-full max-w-md">
-            <label className="label"><span className="label-text text-lg font-semibold text-navy">Select Restaurant Menu</span></label>
-            <select
-              value={selectedMenu}
-              onChange={(e) => setSelectedMenu(e.target.value as 'izMenu' | 'bellFood')}
-              className="select select-bordered w-full bg-white text-navy"
-            >
-              <option value="izMenu">IZ Menu</option>
-              <option value="bellFood">Bell Menu</option>
-            </select>
-          </div>
-        </div>
-        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <SummarySection
-            title="Recipe Items Summary"
-            stats={recipeStats}
-            topItems={topRecipeItems}
-            bottomItems={bottomRecipeItems}
-            onRowClick={(row) => handleItemClick(recipeItems.find(item => item.name === row.name))}
-          />
-          <SummarySection
-            title="Resale Items Summary"
-            stats={resaleStats}
-            topItems={topResaleItems}
-            bottomItems={bottomResaleItems}
-          />
-        </div>
-        <div className="card bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
-          <div className="card-body p-6">
-            <h2 className="card-title text-navy text-xl">Menu Analysis</h2>
-            <FilterBar
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              categories={uniqueCategories}
-              selectedCategory={selectedCategory}
-              setSelectedCategory={setSelectedCategory}
-            />
-            {sortedCategories.length === 0 ? (
-              <p className="text-gray-500">No items found for this menu.</p>
-            ) : (
-              sortedCategories.map(category => (
-                <CategoryTable
-                  key={category}
-                  category={category}
-                  items={itemsByCategory[category]}
-                  onRowClick={(row) => {
-                    const item = itemsWithMetrics.find((i: any) => i.name === row.name);
-                    if (item?.hasRecipe) handleItemClick(item);
-                  }}
+      <div className="container mx-auto px-4 py-8">
+        {isLoading ? (
+          <div className="flex justify-center items-center h-[calc(100vh-5rem)] text-foreground">Loading...</div>
+        ) : error ? (
+          <div className="container mx-auto p-4 text-destructive text-center">Error: {(error as Error).message}</div>
+        ) : (
+          <>
+            <h1 className="mb-8 animate-fade-in">Profit Analysis</h1>
+            <div className="mb-8 flex justify-center">
+              <div className="w-full max-w-md animate-fade-in delay-100">
+                <label className="label"><span className="label-text">Select Restaurant Menu</span></label>
+                <select
+                  value={selectedMenu}
+                  onChange={(e) => setSelectedMenu(e.target.value as 'izMenu' | 'bellFood')}
+                  className="select w-full"
+                >
+                  <option value="izMenu">IZ Menu</option>
+                  <option value="bellFood">Bell Menu</option>
+                </select>
+              </div>
+            </div>
+            <div className="mb-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <SummarySection
+                title="Recipe Items Summary"
+                stats={recipeStats}
+                topItems={topRecipeItems}
+                bottomItems={bottomRecipeItems}
+                onRowClick={(row) => handleItemClick(recipeItems.find(item => item.name === row.name))}
+              />
+              <SummarySection
+                title="Resale Items Summary"
+                stats={resaleStats}
+                topItems={topResaleItems}
+                bottomItems={bottomResaleItems}
+              />
+            </div>
+            <div className="card animate-fade-in delay-300">
+              <div className="card-body">
+                <h2 className="card-title">Menu Analysis</h2>
+                <FilterBar
+                  searchQuery={searchQuery}
+                  setSearchQuery={setSearchQuery}
+                  categories={uniqueCategories}
+                  selectedCategory={selectedCategory}
+                  setSelectedCategory={setSelectedCategory}
                 />
-              ))
-            )}
-          </div>
-        </div>
+                {sortedCategories.length === 0 ? (
+                  <p className="text-muted-foreground">No items found for this menu.</p>
+                ) : (
+                  sortedCategories.map(category => (
+                    <CategoryTable
+                      key={category}
+                      category={category}
+                      items={itemsByCategory[category]}
+                      onRowClick={(row) => {
+                        const item = itemsWithMetrics.find((i: any) => i.name === row.name);
+                        if (item?.hasRecipe) handleItemClick(item);
+                      }}
+                    />
+                  ))
+                )}
+              </div>
+            </div>
+          </>
+        )}
       </div>
       <GenericModal
         title="Ingredients for Recipe"

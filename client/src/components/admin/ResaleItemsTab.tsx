@@ -51,9 +51,9 @@ const ResaleItemsTab: React.FC<ResaleItemsTabProps> = React.memo(({ resaleItems,
         />
         <DataTable
           columns={[
-            { header: 'Name', accessor: 'name', tooltip: 'Item Name' },
-            { header: 'Category', accessor: 'category', tooltip: 'Item Category' },
-            { header: 'Selling Price', accessor: 'sellingPrice', align: 'right', tooltip: 'Price at which the item is sold' },
+            { header: 'Name', accessor: 'name', tooltip: 'Item Name', sortable: true },
+            { header: 'Category', accessor: 'category', tooltip: 'Item Category', sortable: true },
+            { header: 'Selling Price', accessor: 'sellingPrice', align: 'right', tooltip: 'Price at which the item is sold', sortable: true },
             { header: 'Actions', accessor: 'actions', align: 'right', tooltip: 'Edit or delete the item' }
           ]}
           data={filteredItems}
