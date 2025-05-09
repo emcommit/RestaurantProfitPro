@@ -10,9 +10,9 @@ const ALLOWED_UNITS = ['kg', 'L', 'unit'];
 
 interface IngredientModalProps {
   onClose: () => void;
-  ingredient?: any; // For single ingredient (edit mode)
-  ingredientsList?: { name: string; quantity: number }[]; // For list of ingredients (read-only mode)
-  initialIngredients?: Record<string, { cost: number; unit: string; category: string }>; // For ingredient details
+  ingredient?: any;
+  ingredientsList?: { name: string; quantity: number }[];
+  initialIngredients?: Record<string, { cost: number; unit: string; category: string }>;
   readOnly?: boolean;
 }
 
@@ -49,52 +49,49 @@ const IngredientModal: React.FC<IngredientModalProps> = ({ onClose, ingredient, 
     setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!validateForm()) return;
-    // Convert cost to per base unit (g, ml, unit)
-    const costPerBaseUnit = formData.unit === 'kg' || formData.unit === 'L' ? formData.cost / 1000 : formData.cost;
-    // Convert unit to base unit for storage
-    const baseUnit = formData.unit === 'kg' ? 'g' : formData.unit === 'L' ? 'ml' : 'unit';
-    // Update the ingredient in the store
-    setMenus(prev => ({
-      ...prev,
-      [selectedMenu]: {
-        ...prev[selectedMenu],
-        initialIngredients: {
-          ...prev[selectedMenu].initialIngredients,
-          [formData.name]: {
-            cost: costPerBaseUnit,
-            unit: baseUnit,
-            category: formData.category
-          }
-        }
-      }
-    }));
-    onClose();
-  };
-
   const handleClose = () => {
     setIsVisible(false);
     setTimeout(onClose, 300);
   };
 
-  // Fetch ingredient details from initialIngredients prop for read-only mode
+  // Calculate ingredient details with proper unit conversion
   const ingredientDetails = ingredientsList?.map(ing => {
     const details = initialIngredients[ing.name] || {};
+    const unit = details.unit || 'g/ml';
+    let costPerBaseUnit = details.cost || 0;
+    let baseUnit = unit;
+
+    // Convert cost to base unit (g, ml, or unit)
+    if (unit === 'kg') {
+      costPerBaseUnit = details.cost / 1000; // Convert kg to g
+      baseUnit = 'g';
+    } else if (unit === 'L') {
+      costPerBaseUnit = details.cost / 1000; // Convert L to ml
+      baseUnit = 'ml';
+    }
+
+    // Calculate total cost using the cost per base unit
+    const totalCost = ing.quantity * costPerBaseUnit;
+
     return {
       name: ing.name,
       quantity: ing.quantity,
       cost: details.cost || 0,
-      unit: details.unit || 'N/A',
-      category: details.category || 'N/A'
+      costPerBaseUnit: costPerBaseUnit,
+      unit: unit,
+      baseUnit: baseUnit,
+      category: details.category || 'N/A',
+      totalCost: totalCost
     };
   }) || [];
+
+  // Calculate the sum of total costs
+  const totalSum = ingredientDetails.reduce((sum, ing) => sum + ing.totalCost, 0);
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300">
       <div 
-        className={`card bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-2xl w-full max-w-md p-8 transform transition-all duration-300 ${
+        className={`card bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-2xl w-full max-w-lg p-8 transform transition-all duration-300 ${
           isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
       >
@@ -107,17 +104,30 @@ const IngredientModal: React.FC<IngredientModalProps> = ({ onClose, ingredient, 
               {ingredientDetails.length === 0 ? (
                 <p className="text-gray-500">No ingredients found.</p>
               ) : (
-                <ul className="space-y-4">
-                  {ingredientDetails.map((ing, index) => (
-                    <li key={index} className="border-b border-gray-200 pb-2">
-                      <p className="text-navy font-semibold">{ing.name}</p>
-                      <p className="text-gray-800">Quantity: {ing.quantity}g/ml</p>
-                      <p className="text-gray-800">Cost: £{ing.cost.toFixed(4)} per {ing.unit}</p>
-                      <p className="text-gray-800">Category: {ing.category}</p>
-                      <p className="text-gray-800 font-semibold">Total Cost: £{(ing.cost * ing.quantity).toFixed(2)}</p>
-                    </li>
-                  ))}
-                </ul>
+                <div className="overflow-x-auto">
+                  <table className="table w-full table-zebra">
+                    <thead>
+                      <tr className="text-navy bg-gray-100">
+                        <th className="text-left px-4 py-3 font-semibold border-b border-gray-200">Name</th>
+                        <th className="text-left px-4 py-3 font-semibold border-b border-gray-200">Quantity</th>
+                        <th className="text-right px-4 py-3 font-semibold border-b border-gray-200">Total Cost</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {ingredientDetails.map((ing, index) => (
+                        <tr key={index} className="hover:bg-gray-50 transition-colors duration-200">
+                          <td className="text-gray-800 px-4 py-3 border-b border-gray-200">{ing.name}</td>
+                          <td className="text-gray-800 px-4 py-3 border-b border-gray-200">{ing.quantity}{ing.baseUnit}</td>
+                          <td className="text-gray-800 text-right px-4 py-3 border-b border-gray-200">£{ing.totalCost.toFixed(2)}</td>
+                        </tr>
+                      ))}
+                      <tr className="bg-gray-100 font-semibold">
+                        <td className="text-navy px-4 py-3 border-t border-gray-300" colSpan={2}>Total</td>
+                        <td className="text-navy text-right px-4 py-3 border-t border-gray-300">£{totalSum.toFixed(2)}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               )}
               <div className="flex justify-end mt-6">
                 <button
@@ -130,11 +140,34 @@ const IngredientModal: React.FC<IngredientModalProps> = ({ onClose, ingredient, 
               </div>
             </div>
           ) : (
-            <div>
+            <>
               <h2 className="card-title text-navy text-2xl mb-6 font-bold tracking-tight">
                 {ingredient ? 'Edit Ingredient' : 'Add Ingredient'}
               </h2>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={(e) => {
+                e.preventDefault();
+                if (!validateForm()) return;
+                // Convert cost to per base unit (g, ml, unit)
+                const costPerBaseUnit = formData.unit === 'kg' || formData.unit === 'L' ? formData.cost / 1000 : formData.cost;
+                // Convert unit to base unit for storage
+                const baseUnit = formData.unit === 'kg' ? 'g' : formData.unit === 'L' ? 'ml' : 'unit';
+                // Update the ingredient in the store
+                setMenus(prev => ({
+                  ...prev,
+                  [selectedMenu]: {
+                    ...prev[selectedMenu],
+                    initialIngredients: {
+                      ...prev[selectedMenu].initialIngredients,
+                      [formData.name]: {
+                        cost: costPerBaseUnit,
+                        unit: baseUnit,
+                        category: formData.category
+                      }
+                    }
+                  }
+                }));
+                onClose();
+              }}>
                 <div className="mb-5">
                   <label className="label"><span className="label-text text-navy font-semibold">Name</span></label>
                   <input
@@ -190,37 +223,23 @@ const IngredientModal: React.FC<IngredientModalProps> = ({ onClose, ingredient, 
                   </select>
                   {errors.unit && <p className="text-red-500 text-sm mt-1">{errors.unit}</p>}
                 </div>
-                <div className="flex justify-between space-x-4">
-                  {ingredient && (
-                    <button
-                      type="button"
-                      className="btn bg-red-500 text-white hover:bg-red-600 hover:scale-105 transition-transform duration-200 rounded-lg px-6 py-2"
-                      onClick={() => {
-                        // Delete logic (omitted for brevity)
-                        onClose();
-                      }}
-                    >
-                      Delete
-                    </button>
-                  )}
-                  <div className="flex space-x-4">
-                    <button
-                      type="button"
-                      className="btn btn-ghost text-navy hover:bg-gray-200 hover:scale-105 transition-transform duration-200 rounded-lg px-6 py-2"
-                      onClick={handleClose}
-                    >
-                      Cancel
-                    </button>
-                    <button
-                      type="submit"
-                      className="btn btn-primary hover:scale-105 transition-transform duration-200 rounded-lg px-6 py-2"
-                    >
-                      Save
-                    </button>
-                  </div>
+                <div className="flex justify-end space-x-4">
+                  <button
+                    type="button"
+                    className="btn btn-ghost text-navy hover:bg-gray-200 hover:scale-105 transition-transform duration-200 rounded-lg px-6 py-2"
+                    onClick={handleClose}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    className="btn btn-primary hover:scale-105 transition-transform duration-200 rounded-lg px-6 py-2"
+                  >
+                    Save
+                  </button>
                 </div>
               </form>
-            </div>
+            </>
           )}
         </div>
       </div>
