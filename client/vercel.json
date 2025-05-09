@@ -1,0 +1,17 @@
+{
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist"
+        }
+      }
+    ],
+    "engines": {
+      "node": "18.x"
+    },
+    "framework": "vite",
+    "installCommand": "npm install",
+    "buildCommand": "npm run build"
+  }
