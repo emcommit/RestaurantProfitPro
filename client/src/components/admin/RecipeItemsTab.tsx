@@ -1,78 +1,66 @@
-import React, { useState } from 'react';
-import useMenuData from '../../hooks/useMenuData';
-import ItemModal from './ItemModal';
+import React from 'react';
+import DataTable from '../common/DataTable';
+import FilterBar from '../common/FilterBar';
+import useSearchAndFilter from '../../hooks/useSearchAndFilter';
 
-const RecipeItemsTab: React.FC = () => {
-  const { currentMenu } = useMenuData();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<any>(null);
+interface RecipeItemsTabProps {
+  recipeItems: any[];
+  onAdd: () => void;
+  onEdit: (item: any) => void;
+}
 
-  const recipeItems = currentMenu.items.filter(item => item.hasRecipe);
+const RecipeItemsTab: React.FC<RecipeItemsTabProps> = React.memo(({ recipeItems, onAdd, onEdit }) => {
+  const mappedRecipeItems = recipeItems.map((item: any) => ({
+    name: item.name,
+    category: item.category || 'N/A',
+    sellingPrice: `£${item.sellingPrice.toFixed(2)}`,
+    actions: (
+      <button
+        onClick={() => onEdit(item)}
+        className="btn btn-ghost text-navy hover:bg-gray-200 rounded-lg px-4 py-2"
+      >
+        Edit
+      </button>
+    )
+  }));
 
-  const handleEdit = (item: any) => {
-    setSelectedItem(item);
-    setIsModalOpen(true);
-  };
-
-  const handleAdd = () => {
-    setSelectedItem(null);
-    setIsModalOpen(true);
-  };
+  const { filteredItems, searchQuery, setSearchQuery, selectedCategory, setSelectedCategory, uniqueCategories } = useSearchAndFilter({
+    items: mappedRecipeItems,
+    searchField: 'name',
+    categoryField: 'category'
+  });
 
   return (
-    <div>
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-semibold text-navy">Recipe Items</h2>
-        <button
-          onClick={handleAdd}
-          className="btn btn-primary hover:scale-105 transition-transform duration-200 rounded-lg px-6 py-2"
-        >
-          Add Item
-        </button>
-      </div>
-      {recipeItems.length === 0 ? (
-        <p className="text-gray-500">No recipe items found.</p>
-      ) : (
-        <div className="overflow-x-auto">
-          <table className="table w-full table-zebra">
-            <thead>
-              <tr className="text-navy">
-                <th className="text-left">Name</th>
-                <th className="text-left">Category</th>
-                <th className="text-right">Selling Price (£)</th>
-                <th className="text-right">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {recipeItems.map(item => (
-                <tr key={item.name} className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="text-gray-800">{item.name}</td>
-                  <td className="text-gray-600">{item.category || 'N/A'}</td>
-                  <td className="text-right text-gray-800">£{item.sellingPrice.toFixed(2)}</td>
-                  <td className="text-right">
-                    <button
-                      onClick={() => handleEdit(item)}
-                      className="btn btn-ghost text-navy hover:bg-gray-200 rounded-lg px-4 py-2"
-                    >
-                      Edit
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+    <div className="card bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="card-body p-6">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-semibold text-navy">Recipe Items</h2>
+          <button
+            onClick={onAdd}
+            className="btn btn-primary hover:scale-105 transition-transform duration-200 rounded-lg px-6 py-2"
+          >
+            Add Item
+          </button>
         </div>
-      )}
-      {isModalOpen && (
-        <ItemModal
-          onClose={() => { setIsModalOpen(false); setSelectedItem(null); }}
-          item={selectedItem}
-          initialIngredients={currentMenu.initialIngredients}
-          readOnly={false}
+        <FilterBar
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          categories={uniqueCategories}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
         />
-      )}
+        <DataTable
+          columns={[
+            { header: 'Name', accessor: 'name', tooltip: 'Item Name' },
+            { header: 'Category', accessor: 'category', tooltip: 'Item Category' },
+            { header: 'Selling Price', accessor: 'sellingPrice', align: 'right', tooltip: 'Price at which the item is sold' },
+            { header: 'Actions', accessor: 'actions', align: 'right', tooltip: 'Edit or delete the item' }
+          ]}
+          data={filteredItems}
+        />
+      </div>
     </div>
   );
-};
+});
 
 export default RecipeItemsTab;

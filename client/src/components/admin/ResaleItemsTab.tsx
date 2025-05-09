@@ -1,168 +1,66 @@
-import React, { useState } from 'react';
-import ItemModal from './ItemModal';
-import useMenuData from '../../hooks/useMenuData';
+import React from 'react';
+import DataTable from '../common/DataTable';
+import FilterBar from '../common/FilterBar';
+import useSearchAndFilter from '../../hooks/useSearchAndFilter';
 
-const CATEGORY_ORDER = [
-  'Starters', 'Mains', 'Mains Grill', 'Mains Oven', 'Steaks', 'Pizzas', 'Pastas', 'Risottos', 'Orzotto', 'Side Dishes', 'Desserts',
-  'Drinks', 'Soft Drinks', 'Beers & Ciders', 'White Wines', 'Red Wines', 'Rose Wines', 'Sparkling Wines', 'Cocktails', 'Hot Drinks', 'Liqueur Coffees',
-  'Baking Supplies', 'Beverages', 'Canned Goods', 'Condiments', 'Dairy', 'Fruits', 'Grains', 'Herbs and Spices', 'Miscellaneous', 'Nuts and Seeds',
-  'Oils and Vinegars', 'Proteins', 'Sauces', 'Sweeteners', 'Vegetables', 'Uncategorized'
-];
+interface ResaleItemsTabProps {
+  resaleItems: any[];
+  onAdd: () => void;
+  onEdit: (item: any) => void;
+}
 
-const ResaleItemsTab: React.FC = () => {
-  const { menus, currentMenu, isLoading, error } = useMenuData();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<any>(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc' | ''>('');
+const ResaleItemsTab: React.FC<ResaleItemsTabProps> = React.memo(({ resaleItems, onAdd, onEdit }) => {
+  const mappedResaleItems = resaleItems.map((item: any) => ({
+    name: item.name,
+    category: item.category || 'N/A',
+    sellingPrice: `£${item.sellingPrice.toFixed(2)}`,
+    actions: (
+      <button
+        onClick={() => onEdit(item)}
+        className="btn btn-ghost text-navy hover:bg-gray-200 rounded-lg px-4 py-2"
+      >
+        Edit
+      </button>
+    )
+  }));
 
-  const resaleItems = currentMenu.items.filter(item => !item.hasRecipe) || [];
-
-  let filteredItems = resaleItems;
-
-  if (searchTerm) {
-    filteredItems = filteredItems.filter(item => 
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  }
-
-  if (filterCategory) {
-    filteredItems = filteredItems.filter(item => 
-      item.category === filterCategory
-    );
-  }
-
-  if (sortOrder) {
-    filteredItems = [...filteredItems].sort((a, b) => {
-      const costA = a.buyingPrice || 0;
-      const costB = b.buyingPrice || 0;
-      if (sortOrder === 'asc') {
-        return costA - costB;
-      } else {
-        return costB - costA;
-      }
-    });
-  }
-
-  const itemsByCategory: Record<string, any[]> = {};
-  filteredItems.forEach(item => {
-    const category = item.category || 'Uncategorized';
-    if (!itemsByCategory[category]) itemsByCategory[category] = [];
-    itemsByCategory[category].push({ ...item, menuData: menus });
+  const { filteredItems, searchQuery, setSearchQuery, selectedCategory, setSelectedCategory, uniqueCategories } = useSearchAndFilter({
+    items: mappedResaleItems,
+    searchField: 'name',
+    categoryField: 'category'
   });
-
-  const sortedCategories = Object.keys(itemsByCategory).sort((a, b) => {
-    const aIndex = CATEGORY_ORDER.indexOf(a);
-    const bIndex = CATEGORY_ORDER.indexOf(b);
-    const aPos = aIndex === -1 ? CATEGORY_ORDER.length : aIndex;
-    const bPos = bIndex === -1 ? CATEGORY_ORDER.length : bIndex;
-    return aPos - bPos;
-  });
-
-  const handleEdit = (item: any) => {
-    setSelectedItem(item);
-    setIsModalOpen(true);
-  };
 
   return (
-    <div>
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-semibold text-navy tracking-wide">Resale Items</h2>
-        <button 
-          className="btn btn-primary hover:scale-105 transition-transform duration-200" 
-          onClick={() => { setSelectedItem(null); setIsModalOpen(true); }}
-        >
-          Add Resale Item
-        </button>
-      </div>
-      <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-4 sm:space-y-0">
-        <div className="w-full sm:w-1/3">
-          <input
-            type="text"
-            placeholder="Search by name..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="input input-bordered w-full bg-white text-navy shadow-sm hover:shadow-md transition-shadow duration-200 rounded-lg focus:ring-2 focus:ring-accent-500"
-          />
-        </div>
-        <div className="w-full sm:w-1/3">
-          <select
-            value={filterCategory}
-            onChange={(e) => setFilterCategory(e.target.value)}
-            className="select select-bordered w-full bg-white text-navy shadow-sm hover:shadow-md transition-shadow duration-200 rounded-lg focus:ring-2 focus:ring-accent-500"
-          >
-            <option value="">All Categories</option>
-            {CATEGORY_ORDER.map(category => (
-              <option key={category} value={category}>{category}</option>
-            ))}
-          </select>
-        </div>
-        <div className="flex space-x-2">
+    <div className="card bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="card-body p-6">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-semibold text-navy">Resale Items</h2>
           <button
-            className={`btn btn-ghost text-navy hover:bg-gray-200 hover:scale-105 transition-transform duration-200 rounded-lg px-4 py-2 ${sortOrder === 'asc' ? 'bg-gray-200' : ''}`}
-            onClick={() => setSortOrder(sortOrder === 'asc' ? '' : 'asc')}
+            onClick={onAdd}
+            className="btn btn-primary hover:scale-105 transition-transform duration-200 rounded-lg px-6 py-2"
           >
-            Sort Cost ↑
-          </button>
-          <button
-            className={`btn btn-ghost text-navy hover:bg-gray-200 hover:scale-105 transition-transform duration-200 rounded-lg px-4 py-2 ${sortOrder === 'desc' ? 'bg-gray-200' : ''}`}
-            onClick={() => setSortOrder(sortOrder === 'desc' ? '' : 'desc')}
-          >
-            Sort Cost ↓
+            Add Item
           </button>
         </div>
-      </div>
-      {isLoading ? (
-        <div className="text-center text-navy">Loading...</div>
-      ) : error ? (
-        <div className="text-center text-red-500">Error: {error}</div>
-      ) : sortedCategories.length === 0 ? (
-        <p className="text-center text-gray-500">No resale items found.</p>
-      ) : (
-        sortedCategories.map(category => (
-          <div key={category} className="mb-8">
-            <h3 className="text-lg font-semibold text-navy mb-3 tracking-wide">{category}</h3>
-            <div className="overflow-x-auto">
-              <table className="table w-full border-separate border-spacing-0">
-                <thead>
-                  <tr className="text-navy bg-gray-100">
-                    <th className="w-2/5 text-left px-4 py-3 font-semibold border-b border-gray-200">Name</th>
-                    <th className="w-2/5 text-left px-4 py-3 font-semibold border-b border-gray-200">Category</th>
-                    <th className="w-1/5 text-right px-4 py-3 font-semibold border-b border-gray-200">Cost (£)</th>
-                    <th className="w-1/5 text-right px-4 py-3 font-semibold border-b border-gray-200">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {itemsByCategory[category].map(item => (
-                    <tr key={item.id} className="hover:bg-gray-50 transition-colors duration-200">
-                      <td className="text-gray-800 px-4 py-3 border-b border-gray-200 truncate">{item.name}</td>
-                      <td className="text-gray-600 px-4 py-3 border-b border-gray-200 truncate">{item.category}</td>
-                      <td className="text-right text-gray-800 px-4 py-3 border-b border-gray-200">£{(item.buyingPrice || 0).toFixed(2)}</td>
-                      <td className="text-right px-4 py-3 border-b border-gray-200">
-                        <button 
-                          className="btn btn-ghost text-navy hover:bg-gray-200 hover:scale-105 transition-transform duration-200" 
-                          onClick={() => handleEdit(item)}
-                        >
-                          Edit
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        ))
-      )}
-      {isModalOpen && (
-        <ItemModal 
-          onClose={() => { setIsModalOpen(false); setSelectedItem(null); }} 
-          item={selectedItem} 
+        <FilterBar
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          categories={uniqueCategories}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
         />
-      )}
+        <DataTable
+          columns={[
+            { header: 'Name', accessor: 'name', tooltip: 'Item Name' },
+            { header: 'Category', accessor: 'category', tooltip: 'Item Category' },
+            { header: 'Selling Price', accessor: 'sellingPrice', align: 'right', tooltip: 'Price at which the item is sold' },
+            { header: 'Actions', accessor: 'actions', align: 'right', tooltip: 'Edit or delete the item' }
+          ]}
+          data={filteredItems}
+        />
+      </div>
     </div>
   );
-};
+});
 
 export default ResaleItemsTab;

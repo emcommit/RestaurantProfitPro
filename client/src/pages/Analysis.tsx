@@ -1,27 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import { MenusResponse, MenuInterface } from '../types/menu';
-import { calculateRecipeCost } from '../utils/menuUtils';
 import { useAppStore } from '../store';
-import IngredientModal from '../components/admin/IngredientModal';
+import FilterBar from '../components/common/FilterBar';
+import GenericModal from '../components/common/GenericModal';
+import SummarySection from '../components/analysis/SummarySection';
+import CategoryTable from '../components/analysis/CategoryTable';
+import useSearchAndFilter from '../hooks/useSearchAndFilter';
+import { calculateRecipeCost, calculateProfitMargin, getProfitMarginColor } from '../utils/menuUtils';
 
-// Custom category order: Recipe items first, resale items last
-const CATEGORY_ORDER = [
-  'Starters', 'Mains', 'Mains Grill', 'Mains Oven', 'Steaks', 'Pizzas', 'Pastas', 'Risottos', 'Orzotto', 'Side Dishes', 'Desserts',
-  'Drinks', 'Soft Drinks', 'Beers & Ciders', 'White Wines', 'Red Wines', 'Rose Wines', 'Sparkling Wines', 'Cocktails', 'Hot Drinks', 'Liqueur Coffees',
-  'Baking Supplies', 'Beverages', 'Canned Goods', 'Condiments', 'Dairy', 'Fruits', 'Grains', 'Herbs and Spices', 'Miscellaneous', 'Nuts and Seeds',
-  'Oils and Vinegars', 'Proteins', 'Sauces', 'Sweeteners', 'Vegetables', 'Uncategorized'
-];
-
-// Determine progress bar color based on profit margin
-const getProfitMarginColor = (profitMargin: number): string => {
-  if (profitMargin < 60) return 'bg-red-500';
-  if (profitMargin <= 70) return 'bg-orange-500';
-  if (profitMargin <= 80) return 'bg-yellow-500';
-  return 'bg-green-500';
-};
+interface MenusResponse {
+  success: boolean;
+  data: Record<string, any>;
+}
 
 const fetchMenus = async (): Promise<MenusResponse> => {
   const { data } = await axios.get('http://localhost:3000/api/menus');
@@ -29,82 +21,187 @@ const fetchMenus = async (): Promise<MenusResponse> => {
   return data;
 };
 
+const CATEGORY_ORDER = [
+  'Starters', 'Mains', 'Mains Grill', 'Mains Oven', 'Steaks', 'Pizzas', 'Pastas', 'Risottos', 'Orzotto', 'Side Dishes', 'Desserts',
+  'Drinks', 'Soft Drinks', 'Beers & Ciders', 'White Wines', 'Red Wines', 'Rose Wines', 'Sparkling Wines', 'Cocktails', 'Hot Drinks', 'Liqueur Coffees',
+  'Baking Supplies', 'Beverages', 'Canned Goods', 'Condiments', 'Dairy', 'Fruits', 'Grains', 'Herbs and Spices', 'Miscellaneous', 'Nuts and Seeds',
+  'Oils and Vinegars', 'Proteins', 'Sauces', 'Sweeteners', 'Vegetables', 'Uncategorized'
+];
+
 const Analysis: React.FC = () => {
-  const { selectedMenu, setSelectedMenu } = useAppStore();
-  const { data, error, isLoading } = useQuery('menus', fetchMenus, { retry: 1 });
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedIngredients, setSelectedIngredients] = useState<{ name: string; quantity: number }[]>([]);
+  const { menus, selectedMenu, setMenus, setSelectedMenu } = useAppStore();
+  const [isIngredientsModalOpen, setIsIngredientsModalOpen] = useState(false);
+  const [selectedIngredients, setSelectedIngredients] = useState<any[]>([]);
+
+  const { isLoading, error } = useQuery('menus', fetchMenus, {
+    retry: 1,
+    onSuccess: (data) => setMenus(data.data)
+  });
 
   if (isLoading) return <div className="flex justify-center items-center h-screen text-navy">Loading...</div>;
   if (error) return <div className="container mx-auto p-4 text-red-500 text-center">Error: {(error as Error).message}</div>;
 
-  const menus = data?.data || { 
-    izMenu: { items: [], initialIngredients: {}, costMultiplier: 1 }, 
-    bellFood: { items: [], initialIngredients: {}, costMultiplier: 1 } 
-  };
-  const currentMenu: MenuInterface = menus[selectedMenu];
+  const currentMenu = menus[selectedMenu];
 
-  const ingredientList = Object.entries(currentMenu.initialIngredients).map(([name, { cost, unit, category }]) => ({
-    name,
-    cost,
-    unit,
-    category
-  }));
+  // Memoize ingredientList to prevent recomputation
+  const ingredientList = useMemo(() => {
+    return Object.entries(currentMenu.initialIngredients).map(([name, { cost, unit, category }]) => ({
+      name,
+      cost,
+      unit,
+      category
+    }));
+  }, [currentMenu.initialIngredients]);
 
-  // Calculate items with cost and profit margin
-  const itemsWithMetrics = currentMenu.items.map(item => ({
-    ...item,
-    cost: item.hasRecipe 
-      ? calculateRecipeCost(item.ingredients || {}, ingredientList, currentMenu.costMultiplier)
-      : item.buyingPrice || 0,
-    profitMargin: item.hasRecipe 
-      ? ((item.sellingPrice - calculateRecipeCost(item.ingredients || {}, ingredientList, currentMenu.costMultiplier)) / item.sellingPrice * 100).toFixed(2)
-      : item.buyingPrice ? ((item.sellingPrice - item.buyingPrice) / item.sellingPrice * 100).toFixed(2) : '0.00'
-  }));
+  // Memoize itemsWithMetrics
+  const itemsWithMetrics = useMemo(() => {
+    return currentMenu.items.map((item: any) => ({
+      ...item,
+      cost: item.hasRecipe
+        ? calculateRecipeCost(item.ingredients || {}, ingredientList, currentMenu.costMultiplier)
+        : item.buyingPrice || 0,
+      profitMargin: item.hasRecipe
+        ? calculateProfitMargin(item.sellingPrice, calculateRecipeCost(item.ingredients || {}, ingredientList, currentMenu.costMultiplier))
+        : item.buyingPrice
+          ? calculateProfitMargin(item.sellingPrice, item.buyingPrice)
+          : '0.00',
+      profitMarginBar: (
+        <div className="relative w-20 h-3 bg-gray-200 rounded shadow-sm">
+          <div
+            className={`absolute h-3 rounded ${getProfitMarginColor(parseFloat(item.hasRecipe ? calculateProfitMargin(item.sellingPrice, calculateRecipeCost(item.ingredients || {}, ingredientList, currentMenu.costMultiplier)) : item.buyingPrice ? calculateProfitMargin(item.sellingPrice, item.buyingPrice) : '0.00'))}`}
+            style={{ width: `${Math.min(parseFloat(item.hasRecipe ? calculateProfitMargin(item.sellingPrice, calculateRecipeCost(item.ingredients || {}, ingredientList, currentMenu.costMultiplier)) : item.buyingPrice ? calculateProfitMargin(item.sellingPrice, item.buyingPrice) : '0.00'), 100)}%`, transition: 'width 0.3s ease' }}
+          ></div>
+        </div>
+      )
+    }));
+  }, [currentMenu.items, ingredientList, currentMenu.costMultiplier]);
 
-  // Get top and bottom 3 recipe and resale items by profit margin
-  const recipeItems = itemsWithMetrics.filter(item => item.hasRecipe);
-  const resaleItems = itemsWithMetrics.filter(item => !item.hasRecipe);
-  const topRecipeItems = recipeItems.sort((a, b) => parseFloat(b.profitMargin) - parseFloat(a.profitMargin)).slice(0, 3);
-  const bottomRecipeItems = recipeItems.sort((a, b) => parseFloat(a.profitMargin) - parseFloat(b.profitMargin)).slice(0, 3);
-  const topResaleItems = resaleItems.sort((a, b) => parseFloat(b.profitMargin) - parseFloat(a.profitMargin)).slice(0, 3);
-  const bottomResaleItems = resaleItems.sort((a, b) => parseFloat(a.profitMargin) - parseFloat(b.profitMargin)).slice(0, 3);
+  const recipeItems = useMemo(() => itemsWithMetrics.filter((item: any) => item.hasRecipe), [itemsWithMetrics]);
+  const resaleItems = useMemo(() => itemsWithMetrics.filter((item: any) => !item.hasRecipe), [itemsWithMetrics]);
 
-  // Summary statistics
-  const recipeStats = {
+  const topRecipeItems = useMemo(() =>
+    [...recipeItems]
+      .sort((a, b) => parseFloat(b.profitMargin) - parseFloat(a.profitMargin))
+      .slice(0, 3)
+      .map(item => ({
+        name: item.name,
+        category: item.category,
+        profitMargin: `${item.profitMargin}%`,
+        profitMarginBar: item.profitMarginBar,
+        tooltip: `${item.profitMargin}%`
+      })), [recipeItems]
+  );
+
+  const bottomRecipeItems = useMemo(() =>
+    [...recipeItems]
+      .sort((a, b) => parseFloat(a.profitMargin) - parseFloat(b.profitMargin))
+      .slice(0, 3)
+      .map(item => ({
+        name: item.name,
+        category: item.category,
+        profitMargin: `${item.profitMargin}%`,
+        profitMarginBar: item.profitMarginBar,
+        tooltip: `${item.profitMargin}%`
+      })), [recipeItems]
+  );
+
+  const topResaleItems = useMemo(() =>
+    [...resaleItems]
+      .sort((a, b) => parseFloat(b.profitMargin) - parseFloat(a.profitMargin))
+      .slice(0, 3)
+      .map(item => ({
+        name: item.name,
+        category: item.category,
+        profitMargin: `${item.profitMargin}%`,
+        profitMarginBar: item.profitMarginBar,
+        tooltip: `${item.profitMargin}%`
+      })), [resaleItems]
+  );
+
+  const bottomResaleItems = useMemo(() =>
+    [...resaleItems]
+      .sort((a, b) => parseFloat(a.profitMargin) - parseFloat(b.profitMargin))
+      .slice(0, 3)
+      .map(item => ({
+        name: item.name,
+        category: item.category,
+        profitMargin: `${item.profitMargin}%`,
+        profitMarginBar: item.profitMarginBar,
+        tooltip: `${item.profitMargin}%`
+      })), [resaleItems]
+  );
+
+  const recipeStats = useMemo(() => ({
     totalItems: recipeItems.length,
-    avgProfitMargin: recipeItems.length > 0 ? (recipeItems.reduce((sum, item) => sum + parseFloat(item.profitMargin), 0) / recipeItems.length).toFixed(2) : '0.00'
-  };
-  const resaleStats = {
+    avgProfitMargin: recipeItems.length > 0 ? (recipeItems.reduce((sum: number, item: any) => sum + parseFloat(item.profitMargin), 0) / recipeItems.length).toFixed(2) : '0.00'
+  }), [recipeItems]);
+
+  const resaleStats = useMemo(() => ({
     totalItems: resaleItems.length,
-    avgProfitMargin: resaleItems.length > 0 ? (resaleItems.reduce((sum, item) => sum + parseFloat(item.profitMargin), 0) / resaleItems.length).toFixed(2) : '0.00'
-  };
+    avgProfitMargin: resaleItems.length > 0 ? (resaleItems.reduce((sum: number, item: any) => sum + parseFloat(item.profitMargin), 0) / resaleItems.length).toFixed(2) : '0.00'
+  }), [resaleItems]);
 
-  // Group items by category
-  const itemsByCategory: Record<string, any[]> = {};
-  itemsWithMetrics.forEach(item => {
-    const category = item.category || 'Uncategorized';
-    if (!itemsByCategory[category]) itemsByCategory[category] = [];
-    itemsByCategory[category].push(item);
+  const { filteredItems, searchQuery, setSearchQuery, selectedCategory, setSelectedCategory, uniqueCategories } = useSearchAndFilter({
+    items: itemsWithMetrics,
+    searchField: 'name',
+    categoryField: 'category'
   });
 
-  // Sort categories based on CATEGORY_ORDER
-  const sortedCategories = Object.keys(itemsByCategory).sort((a, b) => {
-    const aIndex = CATEGORY_ORDER.indexOf(a);
-    const bIndex = CATEGORY_ORDER.indexOf(b);
-    const aPos = aIndex === -1 ? CATEGORY_ORDER.length : aIndex;
-    const bPos = bIndex === -1 ? CATEGORY_ORDER.length : bIndex;
-    return aPos - bPos;
-  });
+  const itemsByCategory = useMemo(() => {
+    const grouped: Record<string, any[]> = {};
+    filteredItems.forEach((item: any) => {
+      const category = item.category || 'Uncategorized';
+      if (!grouped[category]) grouped[category] = [];
+      grouped[category].push({
+        name: item.name,
+        description: item.hasRecipe ? (item.description || 'No description available') : '',
+        sellingPrice: `£${item.sellingPrice.toFixed(2)}`,
+        cost: `£${item.cost.toFixed(2)}`,
+        profitMargin: (
+          <div className="flex items-center justify-end">
+            {item.profitMarginBar}
+            <span className="ml-2 text-sm font-medium text-gray-800">{item.profitMargin}%</span>
+          </div>
+        ),
+        tooltip: `${item.profitMargin}%`
+      });
+    });
+    return grouped;
+  }, [filteredItems]);
+
+  const sortedCategories = useMemo(() => {
+    return Object.keys(itemsByCategory).sort((a, b) => {
+      const aIndex = CATEGORY_ORDER.indexOf(a);
+      const bIndex = CATEGORY_ORDER.indexOf(b);
+      const aPos = aIndex === -1 ? CATEGORY_ORDER.length : aIndex;
+      const bPos = bIndex === -1 ? CATEGORY_ORDER.length : bIndex;
+      return aPos - bPos;
+    });
+  }, [itemsByCategory]);
 
   const handleItemClick = (item: any) => {
-    // Convert the ingredients object to a list of { name, quantity }
-    const ingredientsArray = Object.entries(item.ingredients || {}).map(([name, quantity]) => ({
-      name,
-      quantity: Number(quantity)
-    }));
+    const ingredientsArray = Object.entries(item.ingredients || {}).map(([name, quantity]) => {
+      const details = currentMenu.initialIngredients[name] || {};
+      const unit = details.unit || 'g/ml';
+      let costPerBaseUnit = details.cost || 0;
+      let baseUnit = unit;
+
+      if (unit === 'kg') {
+        costPerBaseUnit = details.cost / 1000;
+        baseUnit = 'g';
+      } else if (unit === 'L') {
+        costPerBaseUnit = details.cost / 1000;
+        baseUnit = 'ml';
+      }
+
+      return {
+        name,
+        quantity: `${quantity}${baseUnit}`,
+        totalCost: (quantity as number) * costPerBaseUnit
+      };
+    });
     setSelectedIngredients(ingredientsArray);
-    setIsModalOpen(true);
+    setIsIngredientsModalOpen(true);
   };
 
   return (
@@ -134,210 +231,56 @@ const Analysis: React.FC = () => {
             </select>
           </div>
         </div>
-        {/* Dashboard Section */}
         <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="card bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="card-body p-6">
-              <h2 className="card-title text-navy text-xl">Recipe Items Summary</h2>
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="flex items-center">
-                  <svg className="w-6 h-6 text-navy mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h10m0 0v10m0-10l-6 6" /></svg>
-                  <p className="text-gray-700">Total Items: <span className="font-semibold">{recipeStats.totalItems}</span></p>
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-6 h-6 text-navy mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" /></svg>
-                  <p className="text-gray-700">Avg Profit Margin: <span className="font-semibold">{recipeStats.avgProfitMargin}%</span></p>
-                </div>
-              </div>
-              <h3 className="text-lg font-semibold text-navy mt-4">Top 3 Performers</h3>
-              {topRecipeItems.length === 0 ? (
-                <p className="text-gray-500">No recipe items found.</p>
-              ) : (
-                <ul>
-                  {topRecipeItems.map(item => (
-                    <li key={item.id || item.name} className="mb-3 flex justify-between items-center hover:bg-gray-50 p-2 rounded transition-colors duration-200">
-                      <span className="text-gray-800">
-                        <span
-                          className="cursor-pointer underline hover:text-navy-700"
-                          onClick={() => handleItemClick(item)}
-                        >
-                          {item.name}
-                        </span>
-                        <span className="text-sm text-gray-500"> ({item.category})</span>
-                      </span>
-                      <div className="flex items-center">
-                        <div className="relative w-20 h-3 bg-gray-200 rounded shadow-sm">
-                          <div 
-                            className={`absolute h-3 rounded ${getProfitMarginColor(parseFloat(item.profitMargin))}`} 
-                            style={{ width: `${Math.min(parseFloat(item.profitMargin), 100)}%`, transition: 'width 0.3s ease' }}
-                          ></div>
-                        </div>
-                        <span className="ml-2 text-sm font-medium text-gray-800">{item.profitMargin}%</span>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <h3 className="text-lg font-semibold text-navy mt-4">Bottom 3 Performers</h3>
-              {bottomRecipeItems.length === 0 ? (
-                <p className="text-gray-500">No recipe items found.</p>
-              ) : (
-                <ul>
-                  {bottomRecipeItems.map(item => (
-                    <li key={item.id || item.name} className="mb-3 flex justify-between items-center hover:bg-gray-50 p-2 rounded transition-colors duration-200">
-                      <span className="text-gray-800">
-                        <span
-                          className="cursor-pointer underline hover:text-navy-700"
-                          onClick={() => handleItemClick(item)}
-                        >
-                          {item.name}
-                        </span>
-                        <span className="text-sm text-gray-500"> ({item.category})</span>
-                      </span>
-                      <div className="flex items-center">
-                        <div className="relative w-20 h-3 bg-gray-200 rounded shadow-sm">
-                          <div 
-                            className={`absolute h-3 rounded ${getProfitMarginColor(parseFloat(item.profitMargin))}`} 
-                            style={{ width: `${Math.min(parseFloat(item.profitMargin), 100)}%`, transition: 'width 0.3s ease' }}
-                          ></div>
-                        </div>
-                        <span className="ml-2 text-sm font-medium text-gray-800">{item.profitMargin}%</span>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </div>
-          <div className="card bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="card-body p-6">
-              <h2 className="card-title text-navy text-xl">Resale Items Summary</h2>
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="flex items-center">
-                  <svg className="w-6 h-6 text-navy mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h10m0 0v10m0-10l-6 6" /></svg>
-                  <p className="text-gray-700">Total Items: <span className="font-semibold">{resaleStats.totalItems}</span></p>
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-6 h-6 text-navy mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" /></svg>
-                  <p className="text-gray-700">Avg Profit Margin: <span className="font-semibold">{resaleStats.avgProfitMargin}%</span></p>
-                </div>
-              </div>
-              <h3 className="text-lg font-semibold text-navy mt-4">Top 3 Performers</h3>
-              {topResaleItems.length === 0 ? (
-                <p className="text-gray-500">No resale items found.</p>
-              ) : (
-                <ul>
-                  {topResaleItems.map(item => (
-                    <li key={item.id || item.name} className="mb-3 flex justify-between items-center hover:bg-gray-50 p-2 rounded transition-colors duration-200">
-                      <span className="text-gray-800">{item.name} <span className="text-sm text-gray-500">({item.category})</span></span>
-                      <div className="flex items-center">
-                        <div className="relative w-20 h-3 bg-gray-200 rounded shadow-sm">
-                          <div 
-                            className={`absolute h-3 rounded ${getProfitMarginColor(parseFloat(item.profitMargin))}`} 
-                            style={{ width: `${Math.min(parseFloat(item.profitMargin), 100)}%`, transition: 'width 0.3s ease' }}
-                          ></div>
-                        </div>
-                        <span className="ml-2 text-sm font-medium text-gray-800">{item.profitMargin}%</span>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <h3 className="text-lg font-semibold text-navy mt-4">Bottom 3 Performers</h3>
-              {bottomResaleItems.length === 0 ? (
-                <p className="text-gray-500">No resale items found.</p>
-              ) : (
-                <ul>
-                  {bottomResaleItems.map(item => (
-                    <li key={item.id || item.name} className="mb-3 flex justify-between items-center hover:bg-gray-50 p-2 rounded transition-colors duration-200">
-                      <span className="text-gray-800">{item.name} <span className="text-sm text-gray-500">({item.category})</span></span>
-                      <div className="flex items-center">
-                        <div className="relative w-20 h-3 bg-gray-200 rounded shadow-sm">
-                          <div 
-                            className={`absolute h-3 rounded ${getProfitMarginColor(parseFloat(item.profitMargin))}`} 
-                            style={{ width: `${Math.min(parseFloat(item.profitMargin), 100)}%`, transition: 'width 0.3s ease' }}
-                          ></div>
-                        </div>
-                        <span className="ml-2 text-sm font-medium text-gray-800">{item.profitMargin}%</span>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </div>
+          <SummarySection
+            title="Recipe Items Summary"
+            stats={recipeStats}
+            topItems={topRecipeItems}
+            bottomItems={bottomRecipeItems}
+            onRowClick={(row) => handleItemClick(recipeItems.find(item => item.name === row.name))}
+          />
+          <SummarySection
+            title="Resale Items Summary"
+            stats={resaleStats}
+            topItems={topResaleItems}
+            bottomItems={bottomResaleItems}
+          />
         </div>
-        {/* Category Tables */}
-        <div className="card bg-white shadow-lg rounded-lg">
+        <div className="card bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
           <div className="card-body p-6">
             <h2 className="card-title text-navy text-xl">Menu Analysis</h2>
+            <FilterBar
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              categories={uniqueCategories}
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+            />
             {sortedCategories.length === 0 ? (
               <p className="text-gray-500">No items found for this menu.</p>
             ) : (
               sortedCategories.map(category => (
-                <div key={category} className="mb-10">
-                  <h3 className="text-2xl font-semibold text-navy mb-4">{category}</h3>
-                  <div className="overflow-x-auto">
-                    <table className="table w-full table-zebra">
-                      <thead>
-                        <tr className="text-navy">
-                          <th className="text-left">Name</th>
-                          <th className="text-left">Description</th>
-                          <th className="text-right">Selling Price (£)</th>
-                          <th className="text-right">Cost (£)</th>
-                          <th className="text-right">Profit Margin (%)</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {itemsByCategory[category].map((item, index) => (
-                          <tr key={item.id || `${item.name}-${item.category}-${index}`} className="hover:bg-gray-50 transition-colors duration-200">
-                            <td className="text-gray-800">
-                              {item.hasRecipe ? (
-                                <span
-                                  className="cursor-pointer underline hover:text-navy-700"
-                                  onClick={() => handleItemClick(item)}
-                                >
-                                  {item.name}
-                                </span>
-                              ) : (
-                                item.name
-                              )}
-                            </td>
-                            <td className="text-gray-600">{item.hasRecipe ? (item.description || 'No description available') : ''}</td>
-                            <td className="text-right text-gray-800">£{item.sellingPrice.toFixed(2)}</td>
-                            <td className="text-right text-gray-800">£{item.cost.toFixed(2)}</td>
-                            <td className="text-right">
-                              <div className="flex items-center justify-end">
-                                <div className="relative w-20 h-3 bg-gray-200 rounded shadow-sm">
-                                  <div 
-                                    className={`absolute h-3 rounded ${getProfitMarginColor(parseFloat(item.profitMargin))}`} 
-                                    style={{ width: `${Math.min(parseFloat(item.profitMargin), 100)}%`, transition: 'width 0.3s ease' }}
-                                  ></div>
-                                </div>
-                                <span className="ml-2 text-sm font-medium text-gray-800">{item.profitMargin}%</span>
-                              </div>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+                <CategoryTable
+                  key={category}
+                  category={category}
+                  items={itemsByCategory[category]}
+                  onRowClick={(row) => {
+                    const item = itemsWithMetrics.find((i: any) => i.name === row.name);
+                    if (item?.hasRecipe) handleItemClick(item);
+                  }}
+                />
               ))
             )}
           </div>
         </div>
       </div>
-
-      {/* Ingredient Modal */}
-      {isModalOpen && (
-        <IngredientModal
-          onClose={() => { setIsModalOpen(false); setSelectedIngredients([]); }}
-          ingredientsList={selectedIngredients}
-          initialIngredients={currentMenu.initialIngredients}
-          readOnly={true}
-        />
-      )}
+      <GenericModal
+        title="Ingredients for Recipe"
+        isOpen={isIngredientsModalOpen}
+        onClose={() => { setIsIngredientsModalOpen(false); setSelectedIngredients([]); }}
+        tableData={selectedIngredients}
+        readOnly={true}
+      />
     </div>
   );
 };
