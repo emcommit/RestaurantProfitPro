@@ -13,5 +13,5 @@
     },
     "framework": "vite",
     "installCommand": "npm install",
-    "buildCommand": "npm run build"
+    "buildCommand": "node -v && npm run build"
   }
