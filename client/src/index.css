@@ -77,3 +77,25 @@ nav {
 input, select {
   @apply border-gray-200 rounded-lg focus:ring-accent-500 focus:border-accent-500;
 }
+
+.tooltip-wrapper {
+    position: relative;
+  }
+  
+  .tooltip-wrapper:hover .tooltip {
+    display: block;
+  }
+  
+  .tooltip {
+    display: none;
+  }
+
+  table {
+    position: relative;
+    overflow: visible !important;
+  }
+  
+  td {
+    position: relative;
+    overflow: visible !important;
+  }

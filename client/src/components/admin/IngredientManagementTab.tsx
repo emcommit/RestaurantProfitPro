@@ -19,8 +19,17 @@ const IngredientManagementTab: React.FC = () => {
     name,
     cost,
     unit,
-    category
+    category,
+    recipes: [] as string[]
   }));
+
+  // Populate recipes for each ingredient
+  ingredientList = ingredientList.map(ingredient => {
+    const recipesUsingIngredient = (currentMenu.items || [])
+      .filter(item => item.hasRecipe && item.ingredients && item.ingredients[ingredient.name])
+      .map(item => item.name);
+    return { ...ingredient, recipes: recipesUsingIngredient };
+  });
 
   if (searchTerm) {
     ingredientList = ingredientList.filter(ingredient => 
@@ -84,13 +93,13 @@ const IngredientManagementTab: React.FC = () => {
         </div>
         <div className="flex space-x-2">
           <button
-            className={`btn btn-ghost text-navy hover:bg-gray-200 hover:scale-105 transition-transform duration-200 rounded-lg px-4 py-2 ${sortOrder === 'asc' ? 'bg-gray-200' : ''}`}
+            className={`btn btn-ghost text-navy hover:bg-gray-200 hover:scale-105 transition-transform duration-200 rounded-lg px-4 py-3 ${sortOrder === 'asc' ? 'bg-gray-200' : ''}`}
             onClick={() => setSortOrder(sortOrder === 'asc' ? '' : 'asc')}
           >
             Sort Cost ↑
           </button>
           <button
-            className={`btn btn-ghost text-navy hover:bg-gray-200 hover:scale-105 transition-transform duration-200 rounded-lg px-4 py-2 ${sortOrder === 'desc' ? 'bg-gray-200' : ''}`}
+            className={`btn btn-ghost text-navy hover:bg-gray-200 hover:scale-105 transition-transform duration-200 rounded-lg px-4 py-3 ${sortOrder === 'desc' ? 'bg-gray-200' : ''}`}
             onClick={() => setSortOrder(sortOrder === 'desc' ? '' : 'desc')}
           >
             Sort Cost ↓
@@ -104,7 +113,7 @@ const IngredientManagementTab: React.FC = () => {
       ) : ingredientList.length === 0 ? (
         <p className="text-center text-gray-500">No ingredients found.</p>
       ) : (
-        <div className="overflow-x-auto">
+        <div className="relative">
           <table className="table w-full border-separate border-spacing-0">
             <thead>
               <tr className="text-navy bg-gray-100">
@@ -118,7 +127,25 @@ const IngredientManagementTab: React.FC = () => {
             <tbody>
               {ingredientList.map((ingredient, index) => (
                 <tr key={index} className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="text-gray-800 px-4 py-3 border-b border-gray-200 truncate">{ingredient.name}</td>
+                  <td className="text-gray-800 px-4 py-3 border-b border-gray-200 truncate relative">
+                    <div className="relative inline-block tooltip-wrapper">
+                      <span className="hover:cursor-pointer">{ingredient.name}</span>
+                      <div className="tooltip absolute top-[-10px] left-0 transform -translate-y-[calc(100%+8px)] bg-navy text-white text-sm rounded-lg p-2 shadow-lg z-[9999] max-w-xs min-w-[200px] transition-opacity duration-200">
+                        {ingredient.recipes.length > 0 ? (
+                          <>
+                            <p className="font-semibold">Used in recipes:</p>
+                            <ul className="list-disc list-inside">
+                              {ingredient.recipes.map((recipe, recipeIndex) => (
+                                <li key={`${recipe}-${recipeIndex}`}>{recipe}</li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : (
+                          <p className="font-semibold">Not used in any recipes.</p>
+                        )}
+                      </div>
+                    </div>
+                  </td>
                   <td className="text-gray-600 px-4 py-3 border-b border-gray-200 truncate">{ingredient.category || 'N/A'}</td>
                   <td className="text-right text-gray-800 px-4 py-3 border-b border-gray-200">£{ingredient.cost.toFixed(2)}</td>
                   <td className="text-right text-gray-800 px-4 py-3 border-b border-gray-200">{ingredient.unit}</td>

@@ -1,4 +1,3 @@
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -33,6 +32,12 @@ module.exports = {
         sans: ['Inter', 'sans-serif']
       }
     }
+  },
+  variants: {
+    extend: {
+      opacity: ['group-hover'], // Enable group-hover for opacity
+      visibility: ['group-hover'], // Enable group-hover for visibility (just in case)
+    },
   },
   plugins: []
 }

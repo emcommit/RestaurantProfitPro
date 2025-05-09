@@ -1,11 +1,11 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from 'axios';
 import { MenusResponse, MenuInterface } from '../types/menu';
 import { calculateRecipeCost } from '../utils/menuUtils';
 import { useAppStore } from '../store';
+import IngredientModal from '../components/admin/IngredientModal';
 
 // Custom category order: Recipe items first, resale items last
 const CATEGORY_ORDER = [
@@ -32,6 +32,8 @@ const fetchMenus = async (): Promise<MenusResponse> => {
 const Analysis: React.FC = () => {
   const { selectedMenu, setSelectedMenu } = useAppStore();
   const { data, error, isLoading } = useQuery('menus', fetchMenus, { retry: 1 });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedIngredients, setSelectedIngredients] = useState<{ name: string; quantity: number }[]>([]);
 
   if (isLoading) return <div className="flex justify-center items-center h-screen text-navy">Loading...</div>;
   if (error) return <div className="container mx-auto p-4 text-red-500 text-center">Error: {(error as Error).message}</div>;
@@ -95,6 +97,16 @@ const Analysis: React.FC = () => {
     return aPos - bPos;
   });
 
+  const handleItemClick = (item: any) => {
+    // Convert the ingredients object to a list of { name, quantity }
+    const ingredientsArray = Object.entries(item.ingredients || {}).map(([name, quantity]) => ({
+      name,
+      quantity: Number(quantity)
+    }));
+    setSelectedIngredients(ingredientsArray);
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-gray-100">
       <header className="bg-navy text-white py-4 shadow-md">
@@ -144,7 +156,15 @@ const Analysis: React.FC = () => {
                 <ul>
                   {topRecipeItems.map(item => (
                     <li key={item.id || item.name} className="mb-3 flex justify-between items-center hover:bg-gray-50 p-2 rounded transition-colors duration-200">
-                      <span className="text-gray-800">{item.name} <span className="text-sm text-gray-500">({item.category})</span></span>
+                      <span className="text-gray-800">
+                        <span
+                          className="cursor-pointer underline hover:text-navy-700"
+                          onClick={() => handleItemClick(item)}
+                        >
+                          {item.name}
+                        </span>
+                        <span className="text-sm text-gray-500"> ({item.category})</span>
+                      </span>
                       <div className="flex items-center">
                         <div className="relative w-20 h-3 bg-gray-200 rounded shadow-sm">
                           <div 
@@ -165,7 +185,15 @@ const Analysis: React.FC = () => {
                 <ul>
                   {bottomRecipeItems.map(item => (
                     <li key={item.id || item.name} className="mb-3 flex justify-between items-center hover:bg-gray-50 p-2 rounded transition-colors duration-200">
-                      <span className="text-gray-800">{item.name} <span className="text-sm text-gray-500">({item.category})</span></span>
+                      <span className="text-gray-800">
+                        <span
+                          className="cursor-pointer underline hover:text-navy-700"
+                          onClick={() => handleItemClick(item)}
+                        >
+                          {item.name}
+                        </span>
+                        <span className="text-sm text-gray-500"> ({item.category})</span>
+                      </span>
                       <div className="flex items-center">
                         <div className="relative w-20 h-3 bg-gray-200 rounded shadow-sm">
                           <div 
@@ -263,7 +291,18 @@ const Analysis: React.FC = () => {
                       <tbody>
                         {itemsByCategory[category].map((item, index) => (
                           <tr key={item.id || `${item.name}-${item.category}-${index}`} className="hover:bg-gray-50 transition-colors duration-200">
-                            <td className="text-gray-800">{item.name}</td>
+                            <td className="text-gray-800">
+                              {item.hasRecipe ? (
+                                <span
+                                  className="cursor-pointer underline hover:text-navy-700"
+                                  onClick={() => handleItemClick(item)}
+                                >
+                                  {item.name}
+                                </span>
+                              ) : (
+                                item.name
+                              )}
+                            </td>
                             <td className="text-gray-600">{item.hasRecipe ? (item.description || 'No description available') : ''}</td>
                             <td className="text-right text-gray-800">£{item.sellingPrice.toFixed(2)}</td>
                             <td className="text-right text-gray-800">£{item.cost.toFixed(2)}</td>
@@ -289,6 +328,16 @@ const Analysis: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Ingredient Modal */}
+      {isModalOpen && (
+        <IngredientModal
+          onClose={() => { setIsModalOpen(false); setSelectedIngredients([]); }}
+          ingredientsList={selectedIngredients}
+          initialIngredients={currentMenu.initialIngredients}
+          readOnly={true}
+        />
+      )}
     </div>
   );
 };
