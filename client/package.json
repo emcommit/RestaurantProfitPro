@@ -7,7 +7,7 @@
     "scripts": {
         "prebuild": "node -v && npm list vite || echo 'vite not found'",
         "dev": "vite",
-        "build": "tsc && vite build",
+        "build": "./build.sh",
         "preview": "vite preview"
     },
     "dependencies": {
