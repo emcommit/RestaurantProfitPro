@@ -1,0 +1,317 @@
+[
+  {
+    "ingredient": "chicken",
+    "menu": "izMenu",
+    "reason": "Cost 0.004200000000000001 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "tomatoes",
+    "menu": "izMenu",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "cherryTomatoes",
+    "menu": "izMenu",
+    "reason": "Cost 0.0036 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "cucumbers",
+    "menu": "izMenu",
+    "reason": "Cost 0.0018 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "redOnions",
+    "menu": "izMenu",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "onions",
+    "menu": "izMenu",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "greenPeppers",
+    "menu": "izMenu",
+    "reason": "Cost 0.003 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "redPeppers",
+    "menu": "izMenu",
+    "reason": "Cost 0.003 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "aubergine",
+    "menu": "izMenu",
+    "reason": "Cost 0.003 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "courgette",
+    "menu": "izMenu",
+    "reason": "Cost 0.003 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "cauliflower",
+    "menu": "izMenu",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "potatoes",
+    "menu": "izMenu",
+    "reason": "Cost 0.0012 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "mashedPotatoes",
+    "menu": "izMenu",
+    "reason": "Cost 0.0018 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "rosemaryPotatoes",
+    "menu": "izMenu",
+    "reason": "Cost 0.0018 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "tripleCookedChips",
+    "menu": "izMenu",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "frenchFries",
+    "menu": "izMenu",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "carrots",
+    "menu": "izMenu",
+    "reason": "Cost 0.0014399999999999999 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "lettuce",
+    "menu": "izMenu",
+    "reason": "Cost 0.00216 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "mushrooms",
+    "menu": "izMenu",
+    "reason": "Cost 0.0036 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "spinach",
+    "menu": "izMenu",
+    "reason": "Cost 0.004200000000000001 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "babySpinach",
+    "menu": "izMenu",
+    "reason": "Cost 0.0048 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "lemons",
+    "menu": "izMenu",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "redWine",
+    "menu": "izMenu",
+    "reason": "Cost 0.0048 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "whiteWine",
+    "menu": "izMenu",
+    "reason": "Cost 0.0048 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "grapes",
+    "menu": "izMenu",
+    "reason": "Cost 0.004200000000000001 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "eggs",
+    "menu": "izMenu",
+    "reason": "Cost 0.006 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "rice",
+    "menu": "izMenu",
+    "reason": "Cost 0.0018 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "couscous",
+    "menu": "izMenu",
+    "reason": "Cost 0.00216 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "bulgur",
+    "menu": "izMenu",
+    "reason": "Cost 0.0018 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "tortillaWraps",
+    "menu": "izMenu",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "flour",
+    "menu": "izMenu",
+    "reason": "Cost 0.0096 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "mixedVegetables",
+    "menu": "izMenu",
+    "reason": "Cost 0.003 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "avocado",
+    "menu": "izMenu",
+    "reason": "Cost 0.0048 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "garlic",
+    "menu": "izMenu",
+    "reason": "Cost 0.004200000000000001 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "sugarSyrup",
+    "menu": "izMenu",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "chicken",
+    "menu": "bellFood",
+    "reason": "Cost 0.004200000000000001 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "mushrooms",
+    "menu": "bellFood",
+    "reason": "Cost 0.0036 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "buttonMushrooms",
+    "menu": "bellFood",
+    "reason": "Cost 0.0036 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "onions",
+    "menu": "bellFood",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "redOnions",
+    "menu": "bellFood",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "springOnions",
+    "menu": "bellFood",
+    "reason": "Cost 0.0036 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "potatoes",
+    "menu": "bellFood",
+    "reason": "Cost 0.0012 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "cherryTomatoes",
+    "menu": "bellFood",
+    "reason": "Cost 0.0036 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "tomatoes",
+    "menu": "bellFood",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "spinach",
+    "menu": "bellFood",
+    "reason": "Cost 0.004200000000000001 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "beetroot",
+    "menu": "bellFood",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "rocket",
+    "menu": "bellFood",
+    "reason": "Cost 0.0048 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "lettuce",
+    "menu": "bellFood",
+    "reason": "Cost 0.00216 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "redPeppers",
+    "menu": "bellFood",
+    "reason": "Cost 0.003 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "greenPeppers",
+    "menu": "bellFood",
+    "reason": "Cost 0.003 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "courgettes",
+    "menu": "bellFood",
+    "reason": "Cost 0.003 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "mixedVegetables",
+    "menu": "bellFood",
+    "reason": "Cost 0.003 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "apples",
+    "menu": "bellFood",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "pineapple",
+    "menu": "bellFood",
+    "reason": "Cost 0.0036 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "avocado",
+    "menu": "bellFood",
+    "reason": "Cost 0.0048 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "redWine",
+    "menu": "bellFood",
+    "reason": "Cost 0.0048 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "whiteWine",
+    "menu": "bellFood",
+    "reason": "Cost 0.0048 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "pasta",
+    "menu": "bellFood",
+    "reason": "Cost 0.0018 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "arborioRice",
+    "menu": "bellFood",
+    "reason": "Cost 0.003 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "flour",
+    "menu": "bellFood",
+    "reason": "Cost 0.0096 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "egg",
+    "menu": "bellFood",
+    "reason": "Cost 0.006 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "lemon",
+    "menu": "bellFood",
+    "reason": "Cost 0.0024 out of range (0.5, 10.0) for unit unit"
+  },
+  {
+    "ingredient": "garlic",
+    "menu": "bellFood",
+    "reason": "Cost 0.004200000000000001 out of range (0.5, 10.0) for unit unit"
+  }
+]
