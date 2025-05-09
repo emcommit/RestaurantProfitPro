@@ -1,3 +1,79 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F3F4F6;
+  color: #1B263B;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #1B263B;
+}
+
+header {
+  @apply fixed top-0 left-0 w-full bg-navy text-white py-4 shadow-lg z-50;
+}
+
+nav {
+  @apply flex space-x-3;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 text-base;
+}
+
+.btn-primary {
+  @apply bg-accent-500 text-white hover:bg-accent hover:shadow-md;
+}
+
+.btn-ghost {
+  @apply bg-transparent text-gray-500 hover:bg-gray-100 hover:text-gray-700;
+}
+
+.nav-btn {
+  @apply btn btn-ghost px-4 py-2 text-white font-semibold hover:bg-navy-700 rounded-lg text-base z-10;
+}
+
+.table {
+  @apply w-full border-collapse rounded-lg overflow-hidden;
+}
+
+.table th, .table td {
+  @apply px-4 py-3 text-sm;
+}
+
+.table th {
+  @apply text-left font-semibold text-navy bg-gray-100;
+}
+
+.table tr {
+  @apply hover:bg-gray-50 transition-colors duration-200;
+}
+
+.progress-bar {
+  @apply relative w-20 h-3 bg-gray-200 rounded-full shadow-sm;
+}
+
+.progress-bar-fill {
+  @apply absolute h-3 rounded-full transition duration-300 ease-in-out;
+}
+
+.tabs .tab {
+  @apply px-6 py-3 text-base font-medium rounded-t-lg transition-colors duration-200;
+}
+
+.tab-active {
+  @apply bg-white text-navy border-b-2 border-accent-500;
+}
+
+input, select {
+  @apply border-gray-200 rounded-lg focus:ring-accent-500 focus:border-accent-500;
+}

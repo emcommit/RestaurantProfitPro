@@ -1,225 +1,178 @@
+import express from 'express';
+import cors from 'cors';
+import fs from 'fs/promises';
+import path from 'path';
 
-import Fastify from 'fastify';
-import cors from '@fastify/cors';
-import { readFile, writeFile } from 'fs/promises';
-import { join } from 'path';
+const app = express();
+const PORT = process.env.PORT || 3000;
+const menusFilePath = path.join(__dirname, '../menus.json');
 
-const fastify = Fastify({ logger: true });
+app.use(cors());
+app.use(express.json());
 
-fastify.register(cors, { origin: '*' });
-
-interface MenuItem {
-  id: string;
-  name: string;
-  category: string;
-  sellingPrice: number;
-  hasRecipe?: boolean;
-  buyingPrice?: number;
-  ingredients?: Record<string, number>;
-}
-
-interface Ingredient {
-  cost: number;
-  unit: string;
-}
-
-interface Menu {
-  items: MenuItem[];
-  initialIngredients: Record<string, Ingredient>;
-  costMultiplier: number;
-  categories: string[];
-}
-
-interface Menus {
-  izMenu: Menu;
-  bellFood: Menu;
-  [key: string]: Menu;
-}
-
-const menusFile = join(__dirname, '../menus.json');
-async function loadMenus(): Promise<Menus> {
+// GET /api/menus - Fetch all menus
+app.get('/api/menus', async (req, res) => {
   try {
-    const data = await readFile(menusFile, 'utf-8');
-    return JSON.parse(data);
+    console.log('Handling GET /api/menus');
+    const data = await fs.readFile(menusFilePath, 'utf-8');
+    const menus = JSON.parse(data);
+    res.json({ success: true, data: menus });
   } catch (error) {
-    console.error('Error loading menus:', error);
-    return { izMenu: { items: [], initialIngredients: {}, costMultiplier: 1.1, categories: [] }, bellFood: { items: [], initialIngredients: {}, costMultiplier: 1.1, categories: [] } };
+    console.error('Error in GET /api/menus:', error);
+    res.status(500).json({ success: false, message: 'Failed to fetch menus' });
   }
-}
-
-async function saveMenus(menus: Menus) {
-  await writeFile(menusFile, JSON.stringify(menus, null, 2));
-}
-
-function validateItem(item: Partial<MenuItem>): { valid: boolean; error?: string } {
-  if (!item.name || typeof item.name !== 'string' || item.name.trim() === '') {
-    return { valid: false, error: 'Name is required and must be a non-empty string' };
-  }
-  if (!item.category || typeof item.category !== 'string' || item.category.trim() === '') {
-    return { valid: false, error: 'Category is required and must be a non-empty string' };
-  }
-  if (typeof item.sellingPrice !== 'number' || item.sellingPrice <= 0) {
-    return { valid: false, error: 'Selling price must be a positive number' };
-  }
-  if (item.hasRecipe === false && (typeof item.buyingPrice !== 'number' || item.buyingPrice <= 0)) {
-    return { valid: false, error: 'Buying price must be a positive number for resale items' };
-  }
-  return { valid: true };
-}
-
-function validateIngredient(ingredient: Partial<Ingredient & { name: string }>): { valid: boolean; error?: string } {
-  if (!ingredient.name || typeof ingredient.name !== 'string' || ingredient.name.trim() === '') {
-    return { valid: false, error: 'Name is required and must be a non-empty string' };
-  }
-  if (typeof ingredient.cost !== 'number' || ingredient.cost <= 0) {
-    return { valid: false, error: 'Cost must be a positive number' };
-  }
-  if (!ingredient.unit || typeof ingredient.unit !== 'string' || ingredient.unit.trim() === '') {
-    return { valid: false, error: 'Unit is required and must be a non-empty string' };
-  }
-  return { valid: true };
-}
-
-// GET /menus
-fastify.get('/menus', async (request, reply) => {
-  const menus = await loadMenus();
-  return { success: true, data: menus };
 });
 
-// POST /menus/:menu/dishes
-fastify.post('/menus/:menu/dishes', async (request, reply) => {
-  const { menu } = request.params as { menu: string };
-  const newItem = request.body as MenuItem;
+// POST /api/ingredients - Add a new ingredient
+app.post('/api/ingredients', async (req, res) => {
+  try {
+    const { name, cost, unit, category } = req.body;
+    if (!name || typeof cost !== 'number' || !unit || !category) {
+      res.status(400).json({ success: false, message: 'Invalid ingredient data' });
+      return;
+    }
 
-  const validation = validateItem(newItem);
-  if (!validation.valid) {
-    reply.status(400);
-    return { success: false, error: validation.error };
+    const data = await fs.readFile(menusFilePath, 'utf-8');
+    const menus = JSON.parse(data);
+
+    ['izMenu', 'bellFood'].forEach(menuKey => {
+      if (!menus[menuKey].initialIngredients[name]) {
+        menus[menuKey].initialIngredients[name] = { cost, unit, category };
+      }
+    });
+
+    await fs.writeFile(menusFilePath, JSON.stringify(menus, null, 2));
+    res.status(201).json({ success: true, message: 'Ingredient added successfully' });
+  } catch (error) {
+    console.error('Error in POST /api/ingredients:', error);
+    res.status(500).json({ success: false, message: 'Failed to add ingredient' });
   }
-
-  const menus = await loadMenus();
-  if (!menus[menu]) {
-    reply.status(404);
-    return { success: false, error: 'Menu not found' };
-  }
-
-  menus[menu].items.push(newItem);
-  await saveMenus(menus);
-  return { success: true };
 });
 
-// PUT /menus/:menu/dishes/:id
-fastify.put('/menus/:menu/dishes/:id', async (request, reply) => {
-  const { menu, id } = request.params as { menu: string; id: string };
-  const updatedItem = request.body as MenuItem;
+// POST /api/menus/:menu/dishes - Add a new dish to the specified menu
+app.post('/api/menus/:menu/dishes', async (req, res) => {
+  try {
+    const { menu } = req.params;
+    const { id, name, category, sellingPrice, hasRecipe, buyingPrice, ingredients } = req.body;
+    if (!id || !name || !category || typeof sellingPrice !== 'number' || typeof hasRecipe !== 'boolean') {
+      res.status(400).json({ success: false, message: 'Invalid dish data' });
+      return;
+    }
+    if (hasRecipe && (!ingredients || typeof ingredients !== 'object')) {
+      res.status(400).json({ success: false, message: 'Ingredients required for recipe item' });
+      return;
+    }
+    if (!hasRecipe && (typeof buyingPrice !== 'number' || buyingPrice <= 0)) {
+      res.status(400).json({ success: false, message: 'Valid buying price required for resale item' });
+      return;
+    }
 
-  const validation = validateItem(updatedItem);
-  if (!validation.valid) {
-    reply.status(400);
-    return { success: false, error: validation.error };
+    const data = await fs.readFile(menusFilePath, 'utf-8');
+    const menus = JSON.parse(data);
+
+    if (!menus[menu]) {
+      res.status(400).json({ success: false, message: 'Invalid menu specified' });
+      return;
+    }
+
+    menus[menu].items.push({
+      id,
+      name,
+      category,
+      sellingPrice,
+      hasRecipe,
+      buyingPrice: hasRecipe ? undefined : buyingPrice,
+      ingredients: hasRecipe ? ingredients : {}
+    });
+
+    await fs.writeFile(menusFilePath, JSON.stringify(menus, null, 2));
+    res.status(201).json({ success: true, message: 'Dish added successfully' });
+  } catch (error) {
+    console.error('Error in POST /api/menus/:menu/dishes:', error);
+    res.status(500).json({ success: false, message: 'Failed to add dish' });
   }
-
-  const menus = await loadMenus();
-  if (!menus[menu]) {
-    reply.status(404);
-    return { success: false, error: 'Menu not found' };
-  }
-
-  const itemIndex = menus[menu].items.findIndex((item: MenuItem) => item.id === id);
-  if (itemIndex === -1) {
-    reply.status(404);
-    return { success: false, error: 'Item not found' };
-  }
-
-  menus[menu].items[itemIndex] = { ...updatedItem, id };
-  await saveMenus(menus);
-  return { success: true };
 });
 
-// DELETE /menus/:menu/dishes/:id
-fastify.delete('/menus/:menu/dishes/:id', async (request, reply) => {
-  const { menu, id } = request.params as { menu: string; id: string };
+// PUT /api/menus/:menu/dishes/:id - Update a dish
+app.put('/api/menus/:menu/dishes/:id', async (req, res) => {
+  try {
+    const { menu, id } = req.params;
+    const { name, category, sellingPrice, hasRecipe, buyingPrice, ingredients } = req.body;
 
-  const menus = await loadMenus();
-  if (!menus[menu]) {
-    reply.status(404);
-    return { success: false, error: 'Menu not found' };
+    if (!name || !category || typeof sellingPrice !== 'number' || typeof hasRecipe !== 'boolean') {
+      res.status(400).json({ success: false, message: 'Invalid dish data' });
+      return;
+    }
+    if (hasRecipe && (!ingredients || typeof ingredients !== 'object')) {
+      res.status(400).json({ success: false, message: 'Ingredients required for recipe item' });
+      return;
+    }
+    if (!hasRecipe && (typeof buyingPrice !== 'number' || buyingPrice <= 0)) {
+      res.status(400).json({ success: false, message: 'Valid buying price required for resale item' });
+      return;
+    }
+
+    const data = await fs.readFile(menusFilePath, 'utf-8');
+    const menus = JSON.parse(data);
+
+    if (!menus[menu]) {
+      res.status(400).json({ success: false, message: 'Invalid menu specified' });
+      return;
+    }
+
+    const dishIndex = menus[menu].items.findIndex((item: any) => item.id === id);
+    if (dishIndex === -1) {
+      res.status(404).json({ success: false, message: 'Dish not found' });
+      return;
+    }
+
+    menus[menu].items[dishIndex] = {
+      id,
+      name,
+      category,
+      sellingPrice,
+      hasRecipe,
+      buyingPrice: hasRecipe ? undefined : buyingPrice,
+      ingredients: hasRecipe ? ingredients : {}
+    };
+
+    await fs.writeFile(menusFilePath, JSON.stringify(menus, null, 2));
+    res.json({ success: true, message: 'Dish updated successfully' });
+  } catch (error) {
+    console.error('Error in PUT /api/menus/:menu/dishes/:id:', error);
+    res.status(500).json({ success: false, message: 'Failed to update dish' });
   }
-
-  const itemIndex = menus[menu].items.findIndex((item: MenuItem) => item.id === id);
-  if (itemIndex === -1) {
-    reply.status(404);
-    return { success: false, error: 'Item not found' };
-  }
-
-  menus[menu].items.splice(itemIndex, 1);
-  await saveMenus(menus);
-  return { success: true };
 });
 
-// POST /ingredients
-fastify.post('/api/ingredients', async (request, reply) => {
-  const ingredient = request.body as Ingredient & { name: string };
+// DELETE /api/menus/:menu/dishes/:id - Delete a dish
+app.delete('/api/menus/:menu/dishes/:id', async (req, res) => {
+  try {
+    const { menu, id } = req.params;
 
-  const validation = validateIngredient(ingredient);
-  if (!validation.valid) {
-    reply.status(400);
-    return { success: false, error: validation.error };
+    const data = await fs.readFile(menusFilePath, 'utf-8');
+    const menus = JSON.parse(data);
+
+    if (!menus[menu]) {
+      res.status(400).json({ success: false, message: 'Invalid menu specified' });
+      return;
+    }
+
+    const dishIndex = menus[menu].items.findIndex((item: any) => item.id === id);
+    if (dishIndex === -1) {
+      res.status(404).json({ success: false, message: 'Dish not found' });
+      return;
+    }
+
+    menus[menu].items.splice(dishIndex, 1);
+
+    await fs.writeFile(menusFilePath, JSON.stringify(menus, null, 2));
+    res.json({ success: true, message: 'Dish deleted successfully' });
+  } catch (error) {
+    console.error('Error in DELETE /api/menus/:menu/dishes/:id:', error);
+    res.status(500).json({ success: false, message: 'Failed to delete dish' });
   }
-
-  const menus = await loadMenus();
-  menus.izMenu.initialIngredients[ingredient.name] = {
-    cost: ingredient.cost,
-    unit: ingredient.unit
-  };
-  await saveMenus(menus);
-  return { success: true };
 });
 
-// PUT /ingredients/:name
-fastify.put('/api/ingredients/:name', async (request, reply) => {
-  const { name } = request.params as { name: string };
-  const updatedIngredient = request.body as Ingredient & { name: string };
-
-  const validation = validateIngredient(updatedIngredient);
-  if (!validation.valid) {
-    reply.status(400);
-    return { success: false, error: validation.error };
-  }
-
-  const menus = await loadMenus();
-  if (!menus.izMenu.initialIngredients[name]) {
-    reply.status(404);
-    return { success: false, error: 'Ingredient not found' };
-  }
-
-  menus.izMenu.initialIngredients[name] = {
-    cost: updatedIngredient.cost,
-    unit: updatedIngredient.unit
-  };
-  await saveMenus(menus);
-  return { success: true };
-});
-
-// DELETE /ingredients/:name
-fastify.delete('/api/ingredients/:name', async (request, reply) => {
-  const { name } = request.params as { name: string };
-
-  const menus = await loadMenus();
-  if (!menus.izMenu.initialIngredients[name]) {
-    reply.status(404);
-    return { success: false, error: 'Ingredient not found' };
-  }
-
-  delete menus.izMenu.initialIngredients[name];
-  await saveMenus(menus);
-  return { success: true };
-});
-
-fastify.listen({ port: 3000 }, (err, address) => {
-  if (err) {
-    fastify.log.error(err);
-    process.exit(1);
-  }
-  console.log(`Server running on ${address}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

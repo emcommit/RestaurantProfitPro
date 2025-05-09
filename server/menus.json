@@ -2,1043 +2,1048 @@
   "izMenu": {
     "initialIngredients": {
       "lamb": {
-        "cost": 0.0055,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.8,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "beefFillet": {
-        "cost": 0.012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 18.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "chicken": {
-        "cost": 0.0038,
-        "unit": "g",
+        "cost": 4.2,
+        "unit": "kg",
         "category": "Proteins"
       },
       "beefRibs": {
-        "cost": 0.0065,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 9.6,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "lambLiver": {
-        "cost": 0.0035,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "prawns": {
-        "cost": 0.015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 9.6,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "kingPrawns": {
-        "cost": 0.018,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "salmon": {
-        "cost": 0.0145,
-        "unit": "g",
+        "cost": 14.4,
+        "unit": "kg",
         "category": "Proteins"
       },
       "seabass": {
-        "cost": 0.0125,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "calamari": {
-        "cost": 0.01,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 8.4,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "kalamari": {
-        "cost": 0.01,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 8.4,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "octopus": {
-        "cost": 0.018,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 14.4,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "halibut": {
-        "cost": 0.02,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 18.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "mincedBeef": {
-        "cost": 0.0065,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.6,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "groundLamb": {
-        "cost": 0.0055,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.8,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "lambChops": {
-        "cost": 0.009,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "lambShank": {
-        "cost": 0.0075,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 10.2,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "tomatoes": {
-        "cost": 0.0025,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "cherryTomatoes": {
-        "cost": 0.003,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "cucumbers": {
-        "cost": 0.0018,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 1.8,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "redOnions": {
-        "cost": 0.0012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "onions": {
-        "cost": 0.001,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "greenPeppers": {
-        "cost": 0.002,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "redPeppers": {
-        "cost": 0.002,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "aubergine": {
-        "cost": 0.0021,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "courgette": {
-        "cost": 0.0023,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "cauliflower": {
-        "cost": 0.0018,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "potatoes": {
-        "cost": 0.0009,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 1.2,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "mashedPotatoes": {
-        "cost": 0.0015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 1.8,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "rosemaryPotatoes": {
-        "cost": 0.0012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 1.8,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "tripleCookedChips": {
-        "cost": 0.0015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "frenchFries": {
-        "cost": 0.0015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "carrots": {
-        "cost": 0.0011,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 1.44,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "lettuce": {
-        "cost": 0.0015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.16,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "mushrooms": {
-        "cost": 0.0028,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "oysterMushrooms": {
-        "cost": 0.004,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "spinach": {
-        "cost": 0.003,
-        "unit": "g",
-        "category": "Fruit and Veg"
+        "cost": 4.2,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "babySpinach": {
-        "cost": 0.0035,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 4.8,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "lemons": {
-        "cost": 0.0016,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Fruits"
       },
       "olives": {
-        "cost": 0.0045,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Canned Goods"
       },
       "kalamataOlives": {
-        "cost": 0.005,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Canned Goods"
       },
       "blackOlives": {
-        "cost": 0.0045,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Canned Goods"
       },
       "capers": {
-        "cost": 0.006,
-        "unit": "g",
+        "cost": 9.6,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "feta": {
-        "cost": 0.0085,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "halloumi": {
-        "cost": 0.009,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 8.4,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "mozzarella": {
-        "cost": 0.0075,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "roquefortCheese": {
-        "cost": 0.012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 14.4,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "manchegoCheese": {
-        "cost": 0.011,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "parsley": {
-        "cost": 0.004,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "redWine": {
-        "cost": 0.003,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 4.8,
+        "unit": "L",
+        "category": "Beverages"
       },
       "whiteWine": {
-        "cost": 0.003,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 4.8,
+        "unit": "L",
+        "category": "Beverages"
       },
       "bottling": {
-        "cost": 0.5,
+        "cost": 0.6,
         "unit": "unit",
         "category": "Miscellaneous"
       },
       "grapes": {
-        "cost": 0.0035,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 4.2,
+        "unit": "kg",
+        "category": "Fruits"
       },
       "distribution": {
-        "cost": 0.3,
+        "cost": 0.36,
         "unit": "unit",
         "category": "Miscellaneous"
       },
       "oakBarrel": {
-        "cost": 0.004,
+        "cost": 4.8,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "cream": {
-        "cost": 0.0025,
+        "cost": 2.4,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Dairy"
       },
       "butter": {
-        "cost": 0.0058,
-        "unit": "g",
-        "category": "Dairy and Eggs"
+        "cost": 3.6,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "milk": {
-        "cost": 0.0009,
+        "cost": 1.2,
         "unit": "ml",
-        "category": "Dairy and Eggs"
+        "category": "Dairy"
       },
       "eggs": {
-        "cost": 0.29,
+        "cost": 0.6,
         "unit": "unit",
-        "category": "Miscellaneous"
+        "category": "Proteins"
       },
       "rice": {
-        "cost": 0.0015,
-        "unit": "g",
-        "category": "Grains and Carbs"
+        "cost": 1.8,
+        "unit": "kg",
+        "category": "Grains"
       },
       "couscous": {
-        "cost": 0.0012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.16,
+        "unit": "kg",
+        "category": "Grains"
       },
       "bulgur": {
-        "cost": 0.001,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 1.8,
+        "unit": "kg",
+        "category": "Grains"
       },
       "orzo": {
-        "cost": 0.0013,
-        "unit": "g",
+        "cost": 2.4,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "oliveOil": {
-        "cost": 0.006,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "L",
+        "category": "Oils and Vinegars"
       },
       "filo": {
-        "cost": 0.003,
-        "unit": "g",
+        "cost": 3.6,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "sourdough": {
-        "cost": 0.0025,
-        "unit": "g",
+        "cost": 3.6,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "pitta": {
-        "cost": 0.0005,
-        "unit": "g",
+        "cost": 2.4,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "tortillaWraps": {
-        "cost": 0.0015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Grains"
       },
       "pistachio": {
-        "cost": 0.012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 14.4,
+        "unit": "kg",
+        "category": "Nuts and Seeds"
       },
       "almonds": {
-        "cost": 0.01,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Nuts and Seeds"
       },
       "driedFruits": {
-        "cost": 0.007,
-        "unit": "g",
+        "cost": 8.4,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "honey": {
-        "cost": 0.005,
-        "unit": "ml",
+        "cost": 6.0,
+        "unit": "L",
         "category": "Sweeteners"
       },
       "chocolate": {
-        "cost": 0.0065,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Baking Supplies"
       },
       "churros": {
-        "cost": 0.002,
-        "unit": "g",
+        "cost": 3.6,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "meringue": {
-        "cost": 0.002,
-        "unit": "g",
+        "cost": 3.6,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "flour": {
-        "cost": 0.0008,
-        "unit": "g",
-        "category": "Grains and Carbs"
+        "cost": 0.96,
+        "unit": "kg",
+        "category": "Grains"
       },
       "sugar": {
-        "cost": 0.0007,
+        "cost": 0.96,
         "unit": "g",
         "category": "Sweeteners"
       },
       "cinnamonSugar": {
-        "cost": 0.001,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "yogurt": {
-        "cost": 0.0015,
+        "cost": 1.8,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Dairy"
       },
       "tzatziki": {
-        "cost": 0.003,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "L",
+        "category": "Condiments"
       },
       "ezme": {
-        "cost": 0.003,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "L",
+        "category": "Condiments"
       },
       "spicyTomatoSauce": {
-        "cost": 0.002,
+        "cost": 3.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "chimichurri": {
-        "cost": 0.004,
+        "cost": 3.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "guacamole": {
-        "cost": 0.0045,
+        "cost": 4.8,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "truffle": {
-        "cost": 0.05,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 60.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "truffleMayonnaise": {
-        "cost": 0.006,
+        "cost": 6.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "izgaraMayonnaise": {
-        "cost": 0.003,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "L",
+        "category": "Condiments"
       },
       "redPepperDip": {
-        "cost": 0.003,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "L",
+        "category": "Condiments"
       },
       "cheese": {
-        "cost": 0.0075,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "squid": {
-        "cost": 0.01,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 8.4,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "parmesan": {
-        "cost": 0.012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 14.4,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "chorizo": {
-        "cost": 0.008,
-        "unit": "g",
+        "cost": 9.6,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "chorizoPicante": {
-        "cost": 0.009,
-        "unit": "g",
+        "cost": 10.8,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "sucuk": {
-        "cost": 0.008,
-        "unit": "g",
+        "cost": 9.6,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "groundMince": {
-        "cost": 0.0055,
-        "unit": "g",
+        "cost": 7.2,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "mixedVegetables": {
-        "cost": 0.002,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "tenderStemBroccoli": {
-        "cost": 0.004,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 5.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "avocado": {
-        "cost": 0.006,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 4.8,
+        "unit": "kg",
+        "category": "Fruits"
       },
       "padronPeppers": {
-        "cost": 0.006,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "garlic": {
-        "cost": 0.0025,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 4.2,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "dill": {
-        "cost": 0.004,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "rosemary": {
-        "cost": 0.004,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "sherry": {
-        "cost": 0.007,
+        "cost": 12.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "sumac": {
-        "cost": 0.008,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 9.6,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "bechamelSauce": {
-        "cost": 0.003,
+        "cost": 3.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "pineappleJuice": {
-        "cost": 0.0015,
+        "cost": 1.8,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Fruits"
       },
       "vanillaVodka": {
-        "cost": 0.015,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "vodka": {
-        "cost": 0.012,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 18.0,
+        "unit": "L",
+        "category": "Beverages"
       },
       "chambord": {
-        "cost": 0.025,
+        "cost": 30.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "raki": {
-        "cost": 0.02,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "bacardi": {
-        "cost": 0.015,
+        "cost": 18.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "archers": {
-        "cost": 0.018,
+        "cost": 21.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "sugarSyrup": {
-        "cost": 0.002,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "L",
+        "category": "Sweeteners"
       },
       "lemonJuice": {
-        "cost": 0.002,
+        "cost": 2.4,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Fruits"
       },
       "limeJuice": {
-        "cost": 0.002,
+        "cost": 2.4,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Fruits"
       },
       "coconutMilk": {
-        "cost": 0.0025,
+        "cost": 3.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "malibu": {
-        "cost": 0.015,
+        "cost": 18.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "cucumberVodka": {
-        "cost": 0.016,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "elderflowerLiqueur": {
-        "cost": 0.02,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "lavenderSyrup": {
-        "cost": 0.003,
+        "cost": 3.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "soda": {
-        "cost": 0.0005,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 0.72,
+        "unit": "L",
+        "category": "Beverages"
       },
       "espressoLungo": {
-        "cost": 0.005,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 0.24,
+        "unit": "L",
+        "category": "Beverages"
       },
       "hendricksGin": {
-        "cost": 0.025,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 30.0,
+        "unit": "L",
+        "category": "Beverages"
       },
       "kiwiPuree": {
-        "cost": 0.004,
+        "cost": 4.8,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Fruits"
       },
       "passoa": {
-        "cost": 0.018,
+        "cost": 21.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "passionfruitSyrup": {
-        "cost": 0.003,
+        "cost": 3.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "passionfruitPuree": {
-        "cost": 0.004,
+        "cost": 4.8,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "gin": {
-        "cost": 0.012,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 18.0,
+        "unit": "L",
+        "category": "Beverages"
       },
       "cointreau": {
-        "cost": 0.025,
+        "cost": 30.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "kahlua": {
-        "cost": 0.02,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "chivasRegal": {
-        "cost": 0.03,
+        "cost": 36.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "disaronno": {
-        "cost": 0.02,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "strawberrySyrup": {
-        "cost": 0.003,
+        "cost": 3.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "angosturaBitters": {
-        "cost": 0.05,
+        "cost": 60.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "tequilaSilver": {
-        "cost": 0.02,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "tabasco": {
-        "cost": 0.01,
+        "cost": 12.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "orangeJuice": {
-        "cost": 0.0015,
+        "cost": 1.8,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Fruits"
       },
       "cranberryJuice": {
-        "cost": 0.0018,
+        "cost": 2.16,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Fruits"
       },
       "jackDaniels": {
-        "cost": 0.025,
+        "cost": 30.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "martiniRosso": {
-        "cost": 0.012,
+        "cost": 18.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "campari": {
-        "cost": 0.02,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "brownSugar": {
-        "cost": 0.0007,
+        "cost": 0.96,
         "unit": "g",
-        "category": "Miscellaneous"
+        "category": "Sweeteners"
       },
       "cachaca": {
-        "cost": 0.018,
+        "cost": 21.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "cocaCola": {
-        "cost": 0.0008,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 0.96,
+        "unit": "L",
+        "category": "Beverages"
       },
       "havanaWhite": {
-        "cost": 0.015,
+        "cost": 18.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "havanaDark": {
-        "cost": 0.015,
+        "cost": 18.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "kraken": {
-        "cost": 0.025,
+        "cost": 30.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "grenadine": {
-        "cost": 0.002,
+        "cost": 3.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "wrayAndNephew": {
-        "cost": 0.03,
+        "cost": 36.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "lime": {
-        "cost": 0.2,
+        "cost": 0.24,
         "unit": "unit",
         "category": "Miscellaneous"
       },
       "mint": {
-        "cost": 5e-05,
-        "unit": "g",
+        "cost": 6.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "aperol": {
-        "cost": 0.018,
+        "cost": 21.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "prosecco": {
-        "cost": 0.025,
+        "cost": 12.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "proseccoBrut": {
-        "cost": 0.03,
+        "cost": 14.4,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "proseccoRose": {
-        "cost": 0.032,
+        "cost": 14.4,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "cava": {
-        "cost": 0.028,
+        "cost": 12.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "americanoCoffee": {
-        "cost": 0.1,
+        "cost": 0.24,
         "unit": "cup",
-        "category": "Miscellaneous"
+        "category": "Beverages"
       },
       "coffeeBeans": {
-        "cost": 0.2,
+        "cost": 12.0,
         "unit": "g",
-        "category": "Miscellaneous"
+        "category": "Beverages"
       },
       "milkFroth": {
-        "cost": 0.002,
+        "cost": 1.44,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Dairy"
       },
       "steamedMilk": {
-        "cost": 0.002,
+        "cost": 1.44,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Dairy"
       },
       "turkishCoffee": {
-        "cost": 0.15,
+        "cost": 0.36,
         "unit": "cup",
-        "category": "Miscellaneous"
+        "category": "Beverages"
       },
       "teaBag": {
-        "cost": 0.08,
+        "cost": 0.12,
         "unit": "unit",
-        "category": "Miscellaneous"
+        "category": "Beverages"
       },
       "hotChocolatePowder": {
-        "cost": 0.15,
+        "cost": 6.0,
         "unit": "cup",
-        "category": "Miscellaneous"
+        "category": "Beverages"
       },
       "irishWhiskey": {
-        "cost": 0.04,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 36.0,
+        "unit": "L",
+        "category": "Beverages"
       },
       "tiaMaria": {
-        "cost": 0.05,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "coffeeSweet": {
-        "cost": 0.002,
+        "cost": 0.96,
         "unit": "g",
-        "category": "Miscellaneous"
+        "category": "Beverages"
       },
       "hotWater": {
-        "cost": 0.0001,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 0.12,
+        "unit": "L",
+        "category": "Beverages"
       },
       "baileysCream": {
-        "cost": 0.04,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "brandySpirit": {
-        "cost": 0.04,
+        "cost": 30.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "espressoCoffee": {
-        "cost": 0.15,
+        "cost": 0.24,
         "unit": "shot",
-        "category": "Miscellaneous"
+        "category": "Beverages"
       },
       "efes": {
-        "cost": 3,
+        "cost": 3.6,
         "unit": "half",
         "category": "Miscellaneous"
       },
       "efesPint": {
-        "cost": 6,
+        "cost": 7.2,
         "unit": "pint",
         "category": "Miscellaneous"
       },
       "poretti": {
-        "cost": 3.75,
+        "cost": 4.2,
         "unit": "half",
         "category": "Miscellaneous"
       },
       "porettiPint": {
-        "cost": 6.5,
+        "cost": 7.8,
         "unit": "pint",
         "category": "Miscellaneous"
       },
       "estrellaDamm": {
-        "cost": 3.5,
+        "cost": 4.2,
         "unit": "half",
         "category": "Miscellaneous"
       },
       "estrellaDammPint": {
-        "cost": 6,
+        "cost": 7.2,
         "unit": "pint",
         "category": "Miscellaneous"
       },
       "kronenbourg": {
-        "cost": 3.5,
+        "cost": 4.2,
         "unit": "half",
         "category": "Miscellaneous"
       },
       "kronenbourgPint": {
-        "cost": 6,
+        "cost": 7.2,
         "unit": "pint",
         "category": "Miscellaneous"
       },
       "guinness": {
-        "cost": 3.75,
+        "cost": 4.2,
         "unit": "half",
         "category": "Miscellaneous"
       },
       "guinnessPint": {
-        "cost": 6.5,
+        "cost": 7.8,
         "unit": "pint",
         "category": "Miscellaneous"
       },
       "mythos": {
-        "cost": 2.3,
+        "cost": 3.0,
         "unit": "bottle",
         "category": "Miscellaneous"
       },
       "madri": {
-        "cost": 2.3,
+        "cost": 3.0,
         "unit": "bottle",
         "category": "Miscellaneous"
       },
       "corona": {
-        "cost": 2.3,
+        "cost": 3.0,
         "unit": "bottle",
         "category": "Miscellaneous"
       },
       "kopparberg": {
-        "cost": 3,
+        "cost": 3.6,
         "unit": "bottle",
         "category": "Miscellaneous"
       },
       "inches": {
-        "cost": 3.2,
+        "cost": 3.84,
         "unit": "bottle",
         "category": "Miscellaneous"
       },
       "sanMiguel": {
-        "cost": 2.3,
+        "cost": 3.0,
         "unit": "bottle",
         "category": "Miscellaneous"
       },
       "corona0": {
-        "cost": 2.3,
+        "cost": 3.0,
         "unit": "bottle",
         "category": "Miscellaneous"
       },
       "kopparberg0": {
-        "cost": 2.5,
+        "cost": 3.0,
         "unit": "bottle",
         "category": "Miscellaneous"
       },
       "cavaRose": {
-        "cost": 0.03,
+        "cost": 12.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "cremantDeLoire": {
-        "cost": 0.04,
+        "cost": 18.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "moet": {
-        "cost": 0.08,
+        "cost": 60.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "moetRose": {
-        "cost": 0.09,
+        "cost": 72.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "veuve": {
-        "cost": 0.09,
+        "cost": 72.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "bollinger": {
-        "cost": 0.12,
+        "cost": 96.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "laurentPerrier": {
-        "cost": 0.13,
+        "cost": 108.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "riojaRose": {
-        "cost": 0.035,
+        "cost": 12.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "egeoRose": {
-        "cost": 0.035,
+        "cost": 12.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "pierrevertRose": {
-        "cost": 0.04,
+        "cost": 14.4,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "heritageRose": {
-        "cost": 0.045,
+        "cost": 14.4,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "chilli": {
-        "cost": 0.15,
+        "cost": 0.24,
         "unit": "unit",
         "category": "Miscellaneous"
       },
       "spicedRum": {
-        "cost": 0.018,
+        "cost": 21.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "eggWhite": {
-        "cost": 0.08,
+        "cost": 0.12,
         "unit": "unit",
         "category": "Miscellaneous"
       },
       "amaretto": {
-        "cost": 0.02,
+        "cost": 24.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "bourbon": {
-        "cost": 0.022,
+        "cost": 30.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "vanillaIceCream": {
-        "cost": 0.004,
+        "cost": 3.6,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Dairy"
       },
       "peppercorns": {
-        "cost": 0.03,
-        "unit": "g",
+        "cost": 12.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "frenchMustard": {
-        "cost": 0.04,
+        "cost": 3.0,
         "unit": "g",
-        "category": "Miscellaneous"
+        "category": "Condiments"
       },
       "beef": {
         "cost": 0.006,
         "unit": "g",
+        "category": "Proteins"
+      },
+      "test": {
+        "cost": 1,
+        "unit": "kg",
         "category": "Miscellaneous"
       }
     },
@@ -1052,11 +1057,12 @@
           "garlic": 10,
           "chilli": 1,
           "butter": 20,
-          "cream": 50,
+          "cream": 0.05,
           "lemons": 30
         },
         "hasRecipe": true,
-        "id": "99dbf047-467b-43b6-b6a2-f657ff426355"
+        "id": "99dbf047-467b-43b6-b6a2-f657ff426355",
+        "description": "Marinated king prawns cooked with garlic, chilli and creamy lemon butter sauce."
       },
       {
         "name": "Sigara B\u00f6re\u011fi (V)",
@@ -1071,7 +1077,8 @@
           "ezme": 30
         },
         "hasRecipe": true,
-        "id": "735df7ee-b8fd-4a62-a10d-5ef6a839cc01"
+        "id": "735df7ee-b8fd-4a62-a10d-5ef6a839cc01",
+        "description": "Filo pastry rolls filled with feta cheese, egg and parsley. Served with tzatziki and ezme (spicy fine chopped vegetables)."
       },
       {
         "name": "\u0130\u00e7li K\u00f6fte (N)",
@@ -1083,7 +1090,8 @@
           "redPepperDip": 30
         },
         "hasRecipe": true,
-        "id": "9565c729-7580-4b8f-9ebe-dd4762dc0b48"
+        "id": "9565c729-7580-4b8f-9ebe-dd4762dc0b48",
+        "description": "Fried bulgur ball filled with ground lamb mince. Served with a red pepper dip."
       },
       {
         "name": "Lollipop Chicken",
@@ -1091,11 +1099,12 @@
         "sellingPrice": 7.95,
         "ingredients": {
           "chicken": 200,
-          "sugar": 20,
-          "spicyTomatoSauce": 30
+          "sugar": 0.02,
+          "spicyTomatoSauce": 0.03
         },
         "hasRecipe": true,
-        "id": "934a5a9d-614b-4ac3-add1-d0da12323e9c"
+        "id": "934a5a9d-614b-4ac3-add1-d0da12323e9c",
+        "description": "Grilled, marinated chicken wings coated in our homemade barbecue sauce."
       },
       {
         "name": "Pa\u00e7anga B\u00f6re\u011fi",
@@ -1110,7 +1119,8 @@
           "redPepperDip": 30
         },
         "hasRecipe": true,
-        "id": "9073e1ea-9337-4d10-bb3d-6acea6dec597"
+        "id": "9073e1ea-9337-4d10-bb3d-6acea6dec597",
+        "description": "Filo pastry filled with sucuk, red pepper, onion and mozzarella cheese. Served with a spicy red pepper dip."
       },
       {
         "name": "Oyster Chimichurri (V)",
@@ -1118,12 +1128,13 @@
         "sellingPrice": 5.95,
         "ingredients": {
           "oysterMushrooms": 150,
-          "chimichurri": 30,
+          "chimichurri": 0.03,
           "sourdough": 50,
           "garlic": 10
         },
         "hasRecipe": true,
-        "id": "3316445c-0fd1-45a5-a48d-879425e8ab7e"
+        "id": "3316445c-0fd1-45a5-a48d-879425e8ab7e",
+        "description": "Grilled oyster mushrooms topped with chimichurri. Served with grilled garlic sourdough bread."
       },
       {
         "name": "Halloumi Salad (V)",
@@ -1139,7 +1150,8 @@
           "lime": 1
         },
         "hasRecipe": true,
-        "id": "86d421d0-b9ea-4aca-971d-5beb807e8b3a"
+        "id": "86d421d0-b9ea-4aca-971d-5beb807e8b3a",
+        "description": "Grilled halloumi cheese served on a bed of Mediterranean salad with a chilli, honey and lime dressing."
       },
       {
         "name": "Greek Salad (V)",
@@ -1155,7 +1167,8 @@
           "oliveOil": 20
         },
         "hasRecipe": true,
-        "id": "b3f603c2-15e8-429f-b362-f878a016953d"
+        "id": "b3f603c2-15e8-429f-b362-f878a016953d",
+        "description": "Tomato, cucumber, red onion, green pepper, black olive and feta cheese, dressed with olive oil, vinegar and salt."
       },
       {
         "name": "Pulpo a la Gallega",
@@ -1164,10 +1177,11 @@
         "ingredients": {
           "octopus": 150,
           "redPepperDip": 50,
-          "chimichurri": 20
+          "chimichurri": 0.02
         },
         "hasRecipe": true,
-        "id": "5fa75582-f4a7-4a25-9d82-d4833284101e"
+        "id": "5fa75582-f4a7-4a25-9d82-d4833284101e",
+        "description": "Galician style grilled octopus served on a bed of our homemade red pepper paste topped with chimichurri and sea salt."
       },
       {
         "name": "Kolokithokeftedes (V)",
@@ -1179,7 +1193,8 @@
           "tzatziki": 30
         },
         "hasRecipe": true,
-        "id": "dc21a1da-afb2-425e-b0b7-806894bf9bd5"
+        "id": "dc21a1da-afb2-425e-b0b7-806894bf9bd5",
+        "description": "Greek deep fried courgette and feta fritters served with tzatziki."
       },
       {
         "name": "Chorizo",
@@ -1187,12 +1202,13 @@
         "sellingPrice": 8.95,
         "ingredients": {
           "chorizoPicante": 100,
-          "sherry": 50,
+          "sherry": 0.05,
           "sourdough": 50,
           "garlic": 10
         },
         "hasRecipe": true,
-        "id": "abf155ca-74ae-409d-917c-4e2628181375"
+        "id": "abf155ca-74ae-409d-917c-4e2628181375",
+        "description": "Picante chorizo cooked in dry sherry served with grilled garlic sourdough bread."
       },
       {
         "name": "Salmon Tartare",
@@ -1206,7 +1222,8 @@
           "izgaraMayonnaise": 30
         },
         "hasRecipe": true,
-        "id": "b9aa8704-55e8-4454-970e-78e11cb8f7ba"
+        "id": "b9aa8704-55e8-4454-970e-78e11cb8f7ba",
+        "description": "Fresh chopped salmon, red onion, avocado and capers. Served with Izgara mayonnaise and mustard."
       },
       {
         "name": "Kalamari",
@@ -1217,7 +1234,8 @@
           "izgaraMayonnaise": 30
         },
         "hasRecipe": true,
-        "id": "8c86a8b5-2c91-4d6c-8d24-16c6350b8df8"
+        "id": "8c86a8b5-2c91-4d6c-8d24-16c6350b8df8",
+        "description": "Deep fried calamari served with an Izgara mayonnaise dip."
       },
       {
         "name": "Feta Pane (V)",
@@ -1229,7 +1247,8 @@
           "ezme": 30
         },
         "hasRecipe": true,
-        "id": "ba41dd73-b59a-4852-a013-f3d8e798c2c6"
+        "id": "ba41dd73-b59a-4852-a013-f3d8e798c2c6",
+        "description": "Pan-fried breaded feta cheese served with spicy ezme."
       },
       {
         "name": "Lamb Liver",
@@ -1242,7 +1261,8 @@
           "potatoes": 50
         },
         "hasRecipe": true,
-        "id": "41ac2b66-e5dc-438d-8508-a3a228ed385b"
+        "id": "41ac2b66-e5dc-438d-8508-a3a228ed385b",
+        "description": "Deep fried lamb liver cubes with red onion and sumac salad. Served with potatoes."
       },
       {
         "name": "Meze (Serves 2 People)(V)",
@@ -1254,10 +1274,11 @@
           "tzatziki": 30,
           "halloumi": 50,
           "courgette": 50,
-          "yogurt": 30
+          "yogurt": 0.03
         },
         "hasRecipe": true,
-        "id": "724c9217-4119-4dc3-b0e1-6b3eb5b34055"
+        "id": "724c9217-4119-4dc3-b0e1-6b3eb5b34055",
+        "description": "Tirnak pide served with 6 small mezes (Hummus, ezme, tzatziki, carrot yoghurt, courgette balls and halloumi)."
       },
       {
         "name": "Chicken Skewer",
@@ -1268,11 +1289,12 @@
           "pitta": 50,
           "rice": 100,
           "lettuce": 50,
-          "spicyTomatoSauce": 30,
+          "spicyTomatoSauce": 0.03,
           "tzatziki": 30
         },
         "hasRecipe": true,
-        "id": "0cae57d2-e909-4a35-a067-d250b375455d"
+        "id": "0cae57d2-e909-4a35-a067-d250b375455d",
+        "description": "Marinated grilled chicken breast skewer. Served with pitta bread, rice, salad, spicy tomato sauce and tzatziki."
       },
       {
         "name": "Beef Fillet Kebab",
@@ -1282,11 +1304,12 @@
           "beefFillet": 250,
           "pitta": 50,
           "frenchFries": 100,
-          "spicyTomatoSauce": 30,
+          "spicyTomatoSauce": 0.03,
           "tzatziki": 30
         },
         "hasRecipe": true,
-        "id": "1b73085e-318b-40f3-8d58-2a81ae4e39bd"
+        "id": "1b73085e-318b-40f3-8d58-2a81ae4e39bd",
+        "description": "Beef fillet kebab served with pitta bread, French fries, spicy tomato sauce and tzatziki."
       },
       {
         "name": "Lamb Skewer",
@@ -1297,11 +1320,12 @@
           "pitta": 50,
           "rice": 100,
           "lettuce": 50,
-          "spicyTomatoSauce": 30,
+          "spicyTomatoSauce": 0.03,
           "tzatziki": 30
         },
         "hasRecipe": true,
-        "id": "d84cf9a9-33ca-407e-af16-46ecbdc144f6"
+        "id": "d84cf9a9-33ca-407e-af16-46ecbdc144f6",
+        "description": "Marinated lamb skewer served with pitta bread, rice, salad, spicy tomato sauce and tzatziki."
       },
       {
         "name": "Adana Kebab",
@@ -1312,11 +1336,12 @@
           "pitta": 50,
           "rice": 100,
           "lettuce": 50,
-          "spicyTomatoSauce": 30,
+          "spicyTomatoSauce": 0.03,
           "tzatziki": 30
         },
         "hasRecipe": true,
-        "id": "ee46d918-20ea-4ed7-ac31-57cfb78f55e8"
+        "id": "ee46d918-20ea-4ed7-ac31-57cfb78f55e8",
+        "description": "Marinated ground lamb mince skewer. Served with pitta bread, rice, mixed salad, spicy tomato sauce and tzatziki."
       },
       {
         "name": "Salmon Floretine",
@@ -1328,10 +1353,11 @@
           "cherryTomatoes": 100,
           "spinach": 50,
           "chilli": 1,
-          "cream": 50
+          "cream": 0.05
         },
         "hasRecipe": true,
-        "id": "9a76812b-97db-44ff-b98d-1365f5f364bf"
+        "id": "9a76812b-97db-44ff-b98d-1365f5f364bf",
+        "description": "Grilled salmon steak served with a garlic, cherry tomato, spinach, chilli and splash of cream sauce."
       },
       {
         "name": "Lamb Liver",
@@ -1340,12 +1366,13 @@
         "ingredients": {
           "lambLiver": 200,
           "pitta": 50,
-          "chimichurri": 30,
-          "spicyTomatoSauce": 30,
+          "chimichurri": 0.03,
+          "spicyTomatoSauce": 0.03,
           "rosemaryPotatoes": 100
         },
         "hasRecipe": true,
-        "id": "5743c687-3011-4865-b898-469b6c993204"
+        "id": "5743c687-3011-4865-b898-469b6c993204",
+        "description": "Deep fried lamb liver cubes with red onion and sumac salad. Served with potatoes."
       },
       {
         "name": "Seabass",
@@ -1360,7 +1387,8 @@
           "whiteWine": 50
         },
         "hasRecipe": true,
-        "id": "d442f75e-bba7-42ea-9225-a7cd6ba1e962"
+        "id": "d442f75e-bba7-42ea-9225-a7cd6ba1e962",
+        "description": "Marinated, grilled seabass fillet with cherry tomato, garlic, rosemary, chilli and white wine sauce."
       },
       {
         "name": "Lamb Chops",
@@ -1369,11 +1397,12 @@
         "ingredients": {
           "lambChops": 300,
           "pitta": 50,
-          "chimichurri": 30,
+          "chimichurri": 0.03,
           "couscous": 100
         },
         "hasRecipe": true,
-        "id": "fb6035a3-2c9a-42e5-ad4e-a684db28891d"
+        "id": "fb6035a3-2c9a-42e5-ad4e-a684db28891d",
+        "description": "Marinated, grilled lamb chops served on pitta bread with chimichurri and couscous."
       },
       {
         "name": "Ineg\u00f6l K\u00f6fte",
@@ -1383,13 +1412,14 @@
           "groundLamb": 150,
           "mincedBeef": 150,
           "pitta": 50,
-          "truffleMayonnaise": 30,
+          "truffleMayonnaise": 0.03,
           "frenchFries": 100,
-          "spicyTomatoSauce": 30,
+          "spicyTomatoSauce": 0.03,
           "redPepperDip": 30
         },
         "hasRecipe": true,
-        "id": "ff187954-64e2-4b5f-8cc8-d2f6f4457fcd"
+        "id": "ff187954-64e2-4b5f-8cc8-d2f6f4457fcd",
+        "description": "Ground lamb and beef mince meatballs served on pitta bread with truffle Parmesan fries, spicy tomato sauce and red pepper dip."
       },
       {
         "name": "Cheese Keftedes",
@@ -1400,10 +1430,11 @@
           "mincedBeef": 150,
           "mozzarella": 50,
           "frenchFries": 100,
-          "truffleMayonnaise": 30
+          "truffleMayonnaise": 0.03
         },
         "hasRecipe": true,
-        "id": "440a0046-5c2a-4879-99d3-c031459bdbec"
+        "id": "440a0046-5c2a-4879-99d3-c031459bdbec",
+        "description": "Ground lamb and beef mince meatballs, filled with cheese, served with Diana sauce and homemade fries topped with truffle mayonnaise."
       },
       {
         "name": "Izgara Mixed Grill",
@@ -1417,10 +1448,11 @@
           "beefFillet": 150,
           "pitta": 50,
           "couscous": 100,
-          "spicyTomatoSauce": 30
+          "spicyTomatoSauce": 0.03
         },
         "hasRecipe": true,
-        "id": "0292bd78-a696-4bea-8a28-61f890b6b387"
+        "id": "0292bd78-a696-4bea-8a28-61f890b6b387",
+        "description": "Our special mixed marinated grill consisting of Ineg\u00f6l k\u00f6fte, lamb chops, chicken and beef fillet. Served on pitta bread with couscous and spicy tomato sauce."
       },
       {
         "name": "Chicken Fajita",
@@ -1434,10 +1466,11 @@
           "tortillaWraps": 100,
           "tzatziki": 30,
           "ezme": 30,
-          "guacamole": 30
+          "guacamole": 0.03
         },
         "hasRecipe": true,
-        "id": "905af210-5b5f-42d9-8d46-89728e6a1a56"
+        "id": "905af210-5b5f-42d9-8d46-89728e6a1a56",
+        "description": "Marinated, grilled chicken breast with peppers and onions. Served with Tzatziki, Spicy Ezme and Guacamole and warm tortilla wraps."
       },
       {
         "name": "Halloumi Fajita",
@@ -1451,10 +1484,11 @@
           "tortillaWraps": 100,
           "tzatziki": 30,
           "ezme": 30,
-          "guacamole": 30
+          "guacamole": 0.03
         },
         "hasRecipe": true,
-        "id": "e2e99ff4-8f28-4995-9932-df3ecf1ba14a"
+        "id": "e2e99ff4-8f28-4995-9932-df3ecf1ba14a",
+        "description": "Grilled halloumi with peppers and onions. Served with Tzatziki, Spicy Ezme and Guacamole and warm tortilla wraps."
       },
       {
         "name": "Moussaka",
@@ -1465,12 +1499,13 @@
           "aubergine": 100,
           "courgette": 100,
           "mincedBeef": 150,
-          "bechamelSauce": 100,
+          "bechamelSauce": 0.1,
           "cheese": 50,
           "lettuce": 50
         },
         "hasRecipe": true,
-        "id": "21229d4a-a8b9-4dc2-ac4c-b326a977b025"
+        "id": "21229d4a-a8b9-4dc2-ac4c-b326a977b025",
+        "description": "Oven baked layers of potato, aubergine, courgette and ground minced beef topped with cheesy bechamel sauce. Served with Izgara salad."
       },
       {
         "name": "Lamb Tagine (N)",
@@ -1485,7 +1520,8 @@
           "couscous": 100
         },
         "hasRecipe": true,
-        "id": "e5a56429-c479-4b0b-9844-3e7bcf2b2e76"
+        "id": "e5a56429-c479-4b0b-9844-3e7bcf2b2e76",
+        "description": "Lamb cubes slow cooked with tomato, garlic, almonds and dried fruits. Served with couscous."
       },
       {
         "name": "King Prawns",
@@ -1499,10 +1535,11 @@
           "whiteWine": 50,
           "tomatoes": 100,
           "chilli": 1,
-          "cream": 20
+          "cream": 0.02
         },
         "hasRecipe": true,
-        "id": "83385cb4-e5a1-468a-a4e0-c6987abcd59c"
+        "id": "83385cb4-e5a1-468a-a4e0-c6987abcd59c",
+        "description": "Marinated king prawns cooked with garlic, chilli and creamy lemon butter sauce."
       },
       {
         "name": "Karniyarik",
@@ -1516,7 +1553,8 @@
           "rice": 100
         },
         "hasRecipe": true,
-        "id": "12382e44-129a-47d0-9237-bfcd2902eecf"
+        "id": "12382e44-129a-47d0-9237-bfcd2902eecf",
+        "description": "Oven baked aubergine stuffed with ground mince, onion and tomato. Served with our own pilav rice."
       },
       {
         "name": "Beef Ribs",
@@ -1525,11 +1563,12 @@
         "ingredients": {
           "beefRibs": 300,
           "tomatoes": 100,
-          "spicyTomatoSauce": 50,
+          "spicyTomatoSauce": 0.05,
           "mashedPotatoes": 150
         },
         "hasRecipe": true,
-        "id": "be73601a-b5a8-4845-9d57-96bfccf061f9"
+        "id": "be73601a-b5a8-4845-9d57-96bfccf061f9",
+        "description": "Slow cooked beef ribs in a spicy tomato sauce. Served with mashed potatoes."
       },
       {
         "name": "Halibut del Griego",
@@ -1544,7 +1583,8 @@
           "whiteWine": 50
         },
         "hasRecipe": true,
-        "id": "4ad9abae-acb4-4859-8a14-dd736ca47819"
+        "id": "4ad9abae-acb4-4859-8a14-dd736ca47819",
+        "description": "Panfried halibut steak served with king prawns, kalamata olives, capers, dill and white wine sauce."
       },
       {
         "name": "Sebze Bay\u0131ld\u0131 (V)",
@@ -1561,7 +1601,8 @@
           "tzatziki": 30
         },
         "hasRecipe": true,
-        "id": "61d4d29f-8ba7-4cd6-b904-bd1a55181ba8"
+        "id": "61d4d29f-8ba7-4cd6-b904-bd1a55181ba8",
+        "description": "Roasted aubergine filled with mushrooms, onion, peppers, garlic, and tomato sauce. Served with Izgara salad and tzatziki."
       },
       {
         "name": "Lamb Shank Kleftiko",
@@ -1573,7 +1614,8 @@
           "mixedVegetables": 150
         },
         "hasRecipe": true,
-        "id": "9fa52457-0e95-4cf4-982b-ed414fa1ad45"
+        "id": "9fa52457-0e95-4cf4-982b-ed414fa1ad45",
+        "description": "Slow cooked lamb shank served with mash potato and mediterranean vegetable stew."
       },
       {
         "name": "Fillet",
@@ -1586,7 +1628,8 @@
           "tenderStemBroccoli": 100
         },
         "hasRecipe": true,
-        "id": "276db8e3-8c1b-4b15-bfd2-8101806f3d54"
+        "id": "276db8e3-8c1b-4b15-bfd2-8101806f3d54",
+        "description": "Grilled, 8oz, 28 days aged fillet steak."
       },
       {
         "name": "Tomahawk",
@@ -1599,7 +1642,8 @@
           "tenderStemBroccoli": 100
         },
         "hasRecipe": true,
-        "id": "dc32bf3f-53bb-4670-ac66-4b503548787f"
+        "id": "dc32bf3f-53bb-4670-ac66-4b503548787f",
+        "description": "Tomahawk Steak, Dry Aged In-House for 30 days. Served with our homemade Roquefort cheese Sauce, chunky triple cooked chips and grilled Tenderstem broccoli."
       },
       {
         "name": "Sauce Au Poivre",
@@ -1609,10 +1653,11 @@
           "peppercorns": 5,
           "redWine": 30,
           "beef": 10,
-          "cream": 50
+          "cream": 0.05
         },
         "hasRecipe": true,
-        "id": "7f4ab485-9ed6-4585-b398-a76c9abdcf9c"
+        "id": "7f4ab485-9ed6-4585-b398-a76c9abdcf9c",
+        "description": "Green peppercorn, red wine and creamy demi-glace sauce."
       },
       {
         "name": "Sauce Diane",
@@ -1623,10 +1668,11 @@
           "redWine": 30,
           "mushrooms": 20,
           "onions": 10,
-          "cream": 50
+          "cream": 0.05
         },
         "hasRecipe": true,
-        "id": "d65cf021-99a8-4430-9a82-060ffafd159f"
+        "id": "d65cf021-99a8-4430-9a82-060ffafd159f",
+        "description": "French mustard, red wine, mushroom, onion and cream sauce."
       },
       {
         "name": "Sauce Roquefort",
@@ -1636,10 +1682,11 @@
           "roquefortCheese": 30,
           "whiteWine": 30,
           "beef": 10,
-          "cream": 50
+          "cream": 0.05
         },
         "hasRecipe": true,
-        "id": "259b37c8-a879-4955-a226-7873c6152a57"
+        "id": "259b37c8-a879-4955-a226-7873c6152a57",
+        "description": "Roquefort cheese, white wine, demi-glace and cream sauce."
       },
       {
         "name": "Orzotto Verduras",
@@ -1651,11 +1698,12 @@
           "kalamataOlives": 30,
           "tomatoes": 80,
           "whiteWine": 50,
-          "cream": 30,
+          "cream": 0.03,
           "feta": 30
         },
         "hasRecipe": true,
-        "id": "97bc1bb2-cb60-4345-b0c7-70d4b4cb58d8"
+        "id": "97bc1bb2-cb60-4345-b0c7-70d4b4cb58d8",
+        "description": "Orzo pasta with roasted vegetables and kalamata olives with a tomato and creamy white wine sauce. Topped with crumbled feta cheese."
       },
       {
         "name": "Orzotto Chorizo e Pollo",
@@ -1668,11 +1716,12 @@
           "mushrooms": 50,
           "onions": 30,
           "whiteWine": 50,
-          "cream": 30,
+          "cream": 0.03,
           "feta": 30
         },
         "hasRecipe": true,
-        "id": "7f107af8-3185-4803-87db-b228517a54da"
+        "id": "7f107af8-3185-4803-87db-b228517a54da",
+        "description": "Orzo pasta with chicken, chorizo picante, mushrooms and spring onion with a creamy demi-glace sauce. Topped with crumbled feta cheese."
       },
       {
         "name": "Orzotto Del Mar",
@@ -1686,11 +1735,12 @@
           "cherryTomatoes": 50,
           "chilli": 1,
           "tomatoes": 80,
-          "cream": 20,
+          "cream": 0.02,
           "feta": 30
         },
         "hasRecipe": true,
-        "id": "8ea3c80b-886e-4718-9548-59021b542ac6"
+        "id": "8ea3c80b-886e-4718-9548-59021b542ac6",
+        "description": "Orzo pasta with king prawns, kalamari, spring onion, sundried tomatoes and chilli with a tomato and splash of cream sauce. Topped with crumbled feta cheese."
       },
       {
         "name": "Churros (V)",
@@ -1702,31 +1752,34 @@
           "chocolate": 50
         },
         "hasRecipe": true,
-        "id": "35428e53-24eb-4b5d-b0dd-d39a8cabf249"
+        "id": "35428e53-24eb-4b5d-b0dd-d39a8cabf249",
+        "description": "Homemade Deep fried choux pastry dough rings coated in cinnamon sugar. Served with chocolate dipping sauce."
       },
       {
         "name": "Cr\u00e8me Br\u00fbl\u00e9e (V)",
         "category": "Desserts",
         "sellingPrice": 6.95,
         "ingredients": {
-          "cream": 150,
+          "cream": 0.15,
           "eggs": 2,
-          "sugar": 50
+          "sugar": 0.05
         },
         "hasRecipe": true,
-        "id": "16ed4d72-53c8-4694-954e-428ce67ddcad"
+        "id": "16ed4d72-53c8-4694-954e-428ce67ddcad",
+        "description": "Homemade Rich creamy custard base topped with hardened caramelised sugar."
       },
       {
         "name": "Eton Mess",
         "category": "Desserts",
         "sellingPrice": 6.95,
         "ingredients": {
-          "cream": 150,
+          "cream": 0.15,
           "meringue": 50,
-          "strawberrySyrup": 30
+          "strawberrySyrup": 0.03
         },
         "hasRecipe": true,
-        "id": "398701d9-002e-4b3f-942d-9a85babefcfd"
+        "id": "398701d9-002e-4b3f-942d-9a85babefcfd",
+        "description": "Whipped cream, crushed meringue pieces and wild berry sauce."
       },
       {
         "name": "K\u00fcnefe (N)",
@@ -1736,23 +1789,25 @@
           "filo": 100,
           "cheese": 100,
           "pistachio": 30,
-          "vanillaIceCream": 50
+          "vanillaIceCream": 0.05
         },
         "hasRecipe": true,
-        "id": "dea8200d-8c40-4440-bb90-d22f6942b3c1"
+        "id": "dea8200d-8c40-4440-bb90-d22f6942b3c1",
+        "description": "Crispy cheese and pistachio filled kaday\u0131f served with a scoop of vanilla ice cream. (Please allow 15 minutes cooking time)"
       },
       {
         "name": "Lemon Cheesecake",
         "category": "Desserts",
         "sellingPrice": 6.95,
         "ingredients": {
-          "cream": 150,
+          "cream": 0.15,
           "cheese": 100,
           "lemons": 50,
-          "sugar": 50
+          "sugar": 0.05
         },
         "hasRecipe": true,
-        "id": "b22f6732-3a80-4271-aa47-c26f060baa2c"
+        "id": "b22f6732-3a80-4271-aa47-c26f060baa2c",
+        "description": "Homemade lemon cheesecake topped with a lemon drizzle."
       },
       {
         "name": "Brownie (N)",
@@ -1761,12 +1816,13 @@
         "ingredients": {
           "chocolate": 100,
           "flour": 50,
-          "sugar": 50,
+          "sugar": 0.05,
           "butter": 50,
-          "vanillaIceCream": 50
+          "vanillaIceCream": 0.05
         },
         "hasRecipe": true,
-        "id": "49b59bb4-faa9-4f0f-ba85-53701bf12227"
+        "id": "49b59bb4-faa9-4f0f-ba85-53701bf12227",
+        "description": "Our homemade rich chocolate fudge brownie. Served warm with a scoop of Vanilla Ice Cream."
       },
       {
         "name": "Baklava (N)",
@@ -1776,21 +1832,23 @@
           "filo": 100,
           "pistachio": 50,
           "honey": 50,
-          "sugar": 20,
-          "vanillaIceCream": 50
+          "sugar": 0.02,
+          "vanillaIceCream": 0.05
         },
         "hasRecipe": true,
-        "id": "8b14eaa8-66db-4dcf-95c2-15e2e97d915b"
+        "id": "8b14eaa8-66db-4dcf-95c2-15e2e97d915b",
+        "description": "Thin layers of golden, flakey filo pastry filled with chopped nuts and soaked in honey syrup. Served with a scoop of Vanilla ice cream."
       },
       {
         "name": "Ice Cream (V)",
         "category": "Desserts",
         "sellingPrice": 5.95,
         "ingredients": {
-          "vanillaIceCream": 150
+          "vanillaIceCream": 0.15
         },
         "hasRecipe": true,
-        "id": "29eea9b2-6b42-48bb-8449-d688d7365911"
+        "id": "29eea9b2-6b42-48bb-8449-d688d7365911",
+        "description": "A selection of ice creams, choose 3 scoops from vanilla, chocolate, strawberry, pistachio and caramelita."
       },
       {
         "name": "Cauliflower Manchego Cheese (V)(N)",
@@ -1802,7 +1860,8 @@
           "almonds": 10
         },
         "hasRecipe": true,
-        "id": "0f1b5312-1dd8-4f07-8803-825f368b2257"
+        "id": "0f1b5312-1dd8-4f07-8803-825f368b2257",
+        "description": "Roasted cauliflower florets with manchego cheese sauce and flaked almonds."
       },
       {
         "name": "Grilled Tenderstem Broccoli (V)",
@@ -1814,7 +1873,8 @@
           "oliveOil": 10
         },
         "hasRecipe": true,
-        "id": "4f9668d7-0d8a-42d6-8c27-039b40cf6627"
+        "id": "4f9668d7-0d8a-42d6-8c27-039b40cf6627",
+        "description": "Fresh tenderstem broccoli grilled with garlic olive oil."
       },
       {
         "name": "French Fries (V)",
@@ -1824,7 +1884,8 @@
           "frenchFries": 200
         },
         "hasRecipe": true,
-        "id": "1f726965-811e-4300-9647-63d0f1664617"
+        "id": "1f726965-811e-4300-9647-63d0f1664617",
+        "description": "Crispy french fries."
       },
       {
         "name": "Chunky Triple Cooked Chips (V)",
@@ -1834,7 +1895,8 @@
           "tripleCookedChips": 200
         },
         "hasRecipe": true,
-        "id": "4e8749d2-e2a6-4611-9c78-ce26089d624d"
+        "id": "4e8749d2-e2a6-4611-9c78-ce26089d624d",
+        "description": "Thick cut potatoes, triple-cooked for extra crispiness."
       },
       {
         "name": "Creamy Baby Spinach Leaves with Chilli (V)",
@@ -1842,11 +1904,12 @@
         "sellingPrice": 4.95,
         "ingredients": {
           "babySpinach": 150,
-          "cream": 50,
+          "cream": 0.05,
           "chilli": 1
         },
         "hasRecipe": true,
-        "id": "4be9d074-b711-423f-8a5c-d0ab0f16d7d2"
+        "id": "4be9d074-b711-423f-8a5c-d0ab0f16d7d2",
+        "description": "Baby spinach saut\u00e9ed in a light cream sauce with a hint of chilli."
       },
       {
         "name": "Padron Peppers with Garlic (V)",
@@ -1858,7 +1921,8 @@
           "oliveOil": 10
         },
         "hasRecipe": true,
-        "id": "c0341720-69bf-4726-8334-d5f4f20b4390"
+        "id": "c0341720-69bf-4726-8334-d5f4f20b4390",
+        "description": "Blistered padron peppers saut\u00e9ed with garlic and olive oil."
       },
       {
         "name": "Fried Vegetable Tempura with Truffle (V)",
@@ -1871,7 +1935,8 @@
           "truffle": 5
         },
         "hasRecipe": true,
-        "id": "9f649651-1d71-4fd0-9d81-054bdb1e405b"
+        "id": "9f649651-1d71-4fd0-9d81-054bdb1e405b",
+        "description": "Mixed vegetables in a light tempura batter, served with truffle oil drizzle."
       },
       {
         "name": "Tomato, Onion and Caper Salad",
@@ -1884,7 +1949,8 @@
           "oliveOil": 10
         },
         "hasRecipe": true,
-        "id": "eb2f3588-b3e3-4d3f-92ac-63f77ecaac4e"
+        "id": "eb2f3588-b3e3-4d3f-92ac-63f77ecaac4e",
+        "description": "Fresh tomatoes, red onions and capers tossed in olive oil and herbs."
       },
       {
         "name": "Pitta Bread (V)",
@@ -1894,7 +1960,8 @@
           "pitta": 200
         },
         "hasRecipe": true,
-        "id": "365c28f1-b129-4bf0-a3b7-a79e0b2d37e1"
+        "id": "365c28f1-b129-4bf0-a3b7-a79e0b2d37e1",
+        "description": "Warm pitta bread."
       },
       {
         "name": "Skin-On, Roasted, Rosemary New Potatoes (V)",
@@ -1905,7 +1972,8 @@
           "rosemary": 5
         },
         "hasRecipe": true,
-        "id": "19c600dd-7d6a-44a8-ad47-cce6b8dbbbbc"
+        "id": "19c600dd-7d6a-44a8-ad47-cce6b8dbbbbc",
+        "description": "Baby potatoes with skin on, roasted with fresh rosemary."
       },
       {
         "name": "Creamy Mashed Potato",
@@ -1913,11 +1981,12 @@
         "sellingPrice": 3.95,
         "ingredients": {
           "mashedPotatoes": 200,
-          "cream": 20,
+          "cream": 0.02,
           "butter": 20
         },
         "hasRecipe": true,
-        "id": "de1da0f3-2466-4070-bfb8-cefd0a73021c"
+        "id": "de1da0f3-2466-4070-bfb8-cefd0a73021c",
+        "description": "Smooth, creamy mashed potatoes with butter."
       },
       {
         "name": "Valviejo Viura (Glass)",
@@ -1925,7 +1994,8 @@
         "sellingPrice": 8.85,
         "hasRecipe": false,
         "id": "a2a20809-426d-49d0-ae06-95b72fc1d2d7",
-        "buyingPrice": 6.194999999999999
+        "buyingPrice": 6.194999999999999,
+        "description": "A white wine that stands out for its aromas of fruit and white flowers."
       },
       {
         "name": "Sauvignon Blanc (Glass)",
@@ -1933,7 +2003,8 @@
         "sellingPrice": 8.85,
         "hasRecipe": false,
         "id": "354f5840-c032-4b49-b596-efee84c91b32",
-        "buyingPrice": 6.194999999999999
+        "buyingPrice": 6.194999999999999,
+        "description": "Clean, crisp and fruity. Perfect on its own or with food."
       },
       {
         "name": "Chardonnay (Glass)",
@@ -1941,7 +2012,8 @@
         "sellingPrice": 8.85,
         "hasRecipe": false,
         "id": "0e12c180-2461-4457-aa4e-5ee07b450ed9",
-        "buyingPrice": 6.194999999999999
+        "buyingPrice": 6.194999999999999,
+        "description": "Fresh and elegant with nice floral and tropical fruit aromas."
       },
       {
         "name": "Ancyra Narince (Glass)",
@@ -1949,7 +2021,8 @@
         "sellingPrice": 9.3,
         "hasRecipe": false,
         "id": "761525c4-9f90-4216-989e-ab5c2acda437",
-        "buyingPrice": 6.51
+        "buyingPrice": 6.51,
+        "description": "Produced from Turkey's most known white grape. Fresh, full bodied and aromatic."
       },
       {
         "name": "Pinot Grigio (Glass)",
@@ -1957,7 +2030,8 @@
         "sellingPrice": 9.3,
         "hasRecipe": false,
         "id": "aab49a23-bd4f-4f1f-bca9-9e4cd7b5ae99",
-        "buyingPrice": 6.51
+        "buyingPrice": 6.51,
+        "description": "A light, crisp wine with a delicate citrus aroma and flavors of grapefruit and lemon."
       },
       {
         "name": "Gavi di Gavi (Glass)",
@@ -1965,7 +2039,8 @@
         "sellingPrice": 16.9,
         "hasRecipe": false,
         "id": "8e924b71-0791-4d68-8c8d-9f56de908d37",
-        "buyingPrice": 11.829999999999998
+        "buyingPrice": 11.829999999999998,
+        "description": "Elegant Italian white wine with fresh acidity and notes of citrus and pear."
       },
       {
         "name": "Valviejo Viura (Bottle)",
@@ -2037,7 +2112,8 @@
         "sellingPrice": 34,
         "hasRecipe": false,
         "id": "3bb74e90-6874-4e4e-b98d-973bf719f9b0",
-        "buyingPrice": 23.799999999999997
+        "buyingPrice": 23.799999999999997,
+        "description": "A delicate scent of fresh white flowers, notes of pear and intense tropical fruit aromas."
       },
       {
         "name": "Albarino (Bottle)",
@@ -2045,7 +2121,8 @@
         "sellingPrice": 36,
         "hasRecipe": false,
         "id": "83e0510f-a0bb-4b72-b640-c5758fa2c6e3",
-        "buyingPrice": 25.2
+        "buyingPrice": 25.2,
+        "description": "Peach, apple, lime and apricot follow through to zingy fruitness on the palate with spices and vanilla."
       },
       {
         "name": "Picpoul De Pinet (Bottle)",
@@ -2053,7 +2130,8 @@
         "sellingPrice": 40,
         "hasRecipe": false,
         "id": "5b4158db-3dcb-4dce-bfd8-7bf827196d8e",
-        "buyingPrice": 28.0
+        "buyingPrice": 28,
+        "description": "Peach, apple, lime and apricot follow through to zingy fruitiness with a vanilla finish."
       },
       {
         "name": "Kavakildere Selection White (Bottle)",
@@ -2205,7 +2283,7 @@
         "sellingPrice": 110,
         "hasRecipe": false,
         "id": "06be8c84-4bb6-4671-bcfc-7ede33f4c8e6",
-        "buyingPrice": 77.0
+        "buyingPrice": 77
       },
       {
         "name": "Tempranillo (Glass)",
@@ -2213,7 +2291,8 @@
         "sellingPrice": 8.85,
         "hasRecipe": false,
         "id": "be4132d2-958a-4392-9d7d-5a9146eed81f",
-        "buyingPrice": 6.194999999999999
+        "buyingPrice": 6.194999999999999,
+        "description": "A red wine from old vines with great finesse and complexity."
       },
       {
         "name": "Merlot (Glass)",
@@ -2221,7 +2300,8 @@
         "sellingPrice": 8.85,
         "hasRecipe": false,
         "id": "d710e929-3ffc-449a-8af9-2df9e94aa129",
-        "buyingPrice": 6.194999999999999
+        "buyingPrice": 6.194999999999999,
+        "description": "A dark garnet red colour with a fruity nose, mixed with spicy notes of thyme and pepper."
       },
       {
         "name": "Ancyra Kalecik Karasi (Glass)",
@@ -2229,7 +2309,8 @@
         "sellingPrice": 9.3,
         "hasRecipe": false,
         "id": "8f4adaf7-8a0d-4a6f-8d32-aa55eee3fb6a",
-        "buyingPrice": 6.51
+        "buyingPrice": 6.51,
+        "description": "Floral notes and rich, fresh berry flavors with an appealing black pepper finish."
       },
       {
         "name": "Montepulciano DOCG (Glass)",
@@ -2285,7 +2366,7 @@
         "sellingPrice": 30,
         "hasRecipe": false,
         "id": "d4c65926-2d0b-40ec-a391-7a58b6de9f97",
-        "buyingPrice": 21.0
+        "buyingPrice": 21
       },
       {
         "name": "Malbec (Bottle)",
@@ -2349,7 +2430,8 @@
         "sellingPrice": 43,
         "hasRecipe": false,
         "id": "20f58986-c7cd-4318-b5dc-dc2aa788f350",
-        "buyingPrice": 30.099999999999998
+        "buyingPrice": 30.099999999999998,
+        "description": "This wine has elegant aromas of mature dark fruit, spice and mineral notes."
       },
       {
         "name": "Barolo (Bottle)",
@@ -2357,7 +2439,8 @@
         "sellingPrice": 46,
         "hasRecipe": false,
         "id": "eae34d9f-3a61-4171-8a87-9b9430b9787b",
-        "buyingPrice": 32.199999999999996
+        "buyingPrice": 32.199999999999996,
+        "description": "An intense bouquet of mature red fruit and tobacco."
       },
       {
         "name": "Escudo Rojo (Bottle)",
@@ -2365,73 +2448,79 @@
         "sellingPrice": 56,
         "hasRecipe": false,
         "id": "14a9cefb-b253-4486-9cbd-5b64ed60dfc1",
-        "buyingPrice": 39.199999999999996
+        "buyingPrice": 39.199999999999996,
+        "description": "A delightful wine with raspberry, blackcurrant and smooth oak notes."
       },
       {
         "name": "French Martini",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "pineappleJuice": 100,
-          "vanillaVodka": 50,
-          "chambord": 35
+          "pineappleJuice": 0.1,
+          "vanillaVodka": 0.05,
+          "chambord": 0.035
         },
         "hasRecipe": true,
-        "id": "c1a91ec4-c91f-4873-be48-2c6362a627fd"
+        "id": "c1a91ec4-c91f-4873-be48-2c6362a627fd",
+        "description": "Pineapple Juice, Vodka & Chambord."
       },
       {
         "name": "Izgara Martini",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "raki": 35,
-          "spicedRum": 35,
-          "archers": 35,
-          "lemonJuice": 30,
+          "raki": 0.035,
+          "spicedRum": 0.035,
+          "archers": 0.035,
+          "lemonJuice": 0.03,
           "eggWhite": 1
         },
         "hasRecipe": true,
-        "id": "1db56c43-7bf6-4c88-9981-176447d712fd"
+        "id": "1db56c43-7bf6-4c88-9981-176447d712fd",
+        "description": "Raki, Spiced Rum, Archers, Lemon Juice & Egg White."
       },
       {
         "name": "Aperol Spritz",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "prosecco": 100,
-          "aperol": 60,
+          "prosecco": 0.1,
+          "aperol": 0.06,
           "soda": 30
         },
         "hasRecipe": true,
-        "id": "7db73a79-8496-4504-9f15-8c0c0a9b0d16"
+        "id": "7db73a79-8496-4504-9f15-8c0c0a9b0d16",
+        "description": "Prosecco, Aperol & Soda."
       },
       {
         "name": "Pina Colada",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "pineappleJuice": 100,
-          "coconutMilk": 75,
-          "malibu": 50,
-          "bacardi": 35,
+          "pineappleJuice": 0.1,
+          "coconutMilk": 0.075,
+          "malibu": 0.05,
+          "bacardi": 0.035,
           "sugarSyrup": 25
         },
         "hasRecipe": true,
-        "id": "e67cb78a-b7a0-497c-b240-54babe6cd275"
+        "id": "e67cb78a-b7a0-497c-b240-54babe6cd275",
+        "description": "Light Rum, Malibu, Pineapple Juice & Milk."
       },
       {
         "name": "Purple Butterfly",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "cucumberVodka": 35,
-          "elderflowerLiqueur": 35,
-          "lavenderSyrup": 25,
-          "limeJuice": 15,
+          "cucumberVodka": 0.035,
+          "elderflowerLiqueur": 0.035,
+          "lavenderSyrup": 0.025,
+          "limeJuice": 0.015,
           "soda": 50
         },
         "hasRecipe": true,
-        "id": "aa9525a9-19ca-4c53-877e-5c6f80f6abcb"
+        "id": "aa9525a9-19ca-4c53-877e-5c6f80f6abcb",
+        "description": "Cucumber Vodka, Elderflower Liqueur, Soda & Lavendar Syrup."
       },
       {
         "name": "Espresso Martini",
@@ -2439,12 +2528,13 @@
         "sellingPrice": 9.95,
         "ingredients": {
           "espressoLungo": 75,
-          "vanillaVodka": 50,
-          "kahlua": 35,
+          "vanillaVodka": 0.05,
+          "kahlua": 0.035,
           "sugarSyrup": 25
         },
         "hasRecipe": true,
-        "id": "79f0d1c6-9568-4f94-9dda-89d0f9ef0566"
+        "id": "79f0d1c6-9568-4f94-9dda-89d0f9ef0566",
+        "description": "Vodka, Kahlua, Espresso Shot & Sugar Syrup."
       },
       {
         "name": "Kiwi Kiss",
@@ -2452,27 +2542,29 @@
         "sellingPrice": 9.95,
         "ingredients": {
           "hendricksGin": 35,
-          "kiwiPuree": 25,
-          "elderflowerLiqueur": 35,
-          "limeJuice": 15,
+          "kiwiPuree": 0.025,
+          "elderflowerLiqueur": 0.035,
+          "limeJuice": 0.015,
           "soda": 50
         },
         "hasRecipe": true,
-        "id": "2de1f2fb-c780-4bff-9233-14c44eba1af3"
+        "id": "2de1f2fb-c780-4bff-9233-14c44eba1af3",
+        "description": "Hendricks Gin, Kiwi Puree, Elderflower Liqueur, Lime & Soda Water."
       },
       {
         "name": "Passion Martini",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "pineappleJuice": 75,
-          "vanillaVodka": 50,
-          "passoa": 35,
-          "passionfruitSyrup": 25,
-          "passionfruitPuree": 25
+          "pineappleJuice": 0.075,
+          "vanillaVodka": 0.05,
+          "passoa": 0.035,
+          "passionfruitSyrup": 0.025,
+          "passionfruitPuree": 0.025
         },
         "hasRecipe": true,
-        "id": "3374e844-05b0-4727-817b-9288d74eba45"
+        "id": "3374e844-05b0-4727-817b-9288d74eba45",
+        "description": "Vanilla Vodka, Passion Fruit Puree, Passion Fruit Syrup, Passion Fruit Liqueur & A Shot Of Prosecco On The Side."
       },
       {
         "name": "White Lady",
@@ -2480,12 +2572,13 @@
         "sellingPrice": 9.95,
         "ingredients": {
           "gin": 50,
-          "cointreau": 35,
-          "lemonJuice": 35,
+          "cointreau": 0.035,
+          "lemonJuice": 0.035,
           "eggWhite": 1
         },
         "hasRecipe": true,
-        "id": "6feef47b-868b-4b4d-9731-6f50475ac778"
+        "id": "6feef47b-868b-4b4d-9731-6f50475ac778",
+        "description": "Cointreau, Gin, Lemon Juice & Egg White."
       },
       {
         "name": "White Russian",
@@ -2493,11 +2586,12 @@
         "sellingPrice": 9.95,
         "ingredients": {
           "vodka": 50,
-          "kahlua": 50,
-          "cream": 50
+          "kahlua": 0.05,
+          "cream": 0.05
         },
         "hasRecipe": true,
-        "id": "67b2cdb9-6616-4d21-bc99-b05adc499571"
+        "id": "67b2cdb9-6616-4d21-bc99-b05adc499571",
+        "description": "Vodka, Coffee Liqueur & Cream."
       },
       {
         "name": "Mojito",
@@ -2506,22 +2600,24 @@
         "ingredients": {
           "lime": 1,
           "sugarSyrup": 25,
-          "bacardi": 50,
+          "bacardi": 0.05,
           "mint": 50
         },
         "hasRecipe": true,
-        "id": "8bc99fd8-99e4-4014-9ad7-007a057f3c76"
+        "id": "8bc99fd8-99e4-4014-9ad7-007a057f3c76",
+        "description": "Bacardi, Lime, Mint & Soda Water."
       },
       {
         "name": "The Godfather",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "chivasRegal": 70,
-          "amaretto": 35
+          "chivasRegal": 0.07,
+          "amaretto": 0.035
         },
         "hasRecipe": true,
-        "id": "0583ee3f-aa8a-41c1-9bde-1d3ff33421ba"
+        "id": "0583ee3f-aa8a-41c1-9bde-1d3ff33421ba",
+        "description": "Blended Scotch Whisky & Amaretto Liqueur."
       },
       {
         "name": "Strawberry Mojito",
@@ -2530,24 +2626,26 @@
         "ingredients": {
           "lime": 1,
           "sugarSyrup": 25,
-          "bacardi": 50,
+          "bacardi": 0.05,
           "mint": 50,
-          "strawberrySyrup": 25
+          "strawberrySyrup": 0.025
         },
         "hasRecipe": true,
-        "id": "866bfc48-c2f9-4a1f-863c-539673313638"
+        "id": "866bfc48-c2f9-4a1f-863c-539673313638",
+        "description": "Bacardi, Lime, Mint, Soda Water & Strawberry."
       },
       {
         "name": "Old Fashioned",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "chivasRegal": 70,
+          "chivasRegal": 0.07,
           "sugarSyrup": 25,
-          "angosturaBitters": 0.5
+          "angosturaBitters": 0.0005
         },
         "hasRecipe": true,
-        "id": "9a330b57-30f6-4b60-b975-789853c68348"
+        "id": "9a330b57-30f6-4b60-b975-789853c68348",
+        "description": "Whisky, Sugar Syrup & Angostura Bitters."
       },
       {
         "name": "Long Island Iced Tea",
@@ -2556,11 +2654,11 @@
         "ingredients": {
           "vodka": 15,
           "gin": 15,
-          "tequilaSilver": 15,
-          "cointreau": 15,
-          "bacardi": 15,
-          "limeJuice": 15,
-          "lemonJuice": 30,
+          "tequilaSilver": 0.015,
+          "cointreau": 0.015,
+          "bacardi": 0.015,
+          "limeJuice": 0.015,
+          "lemonJuice": 0.03,
           "cocaCola": 100
         },
         "hasRecipe": true,
@@ -2571,56 +2669,60 @@
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "lemonJuice": 40,
-          "limeJuice": 40,
-          "cointreau": 75,
-          "tequilaSilver": 50,
+          "lemonJuice": 0.04,
+          "limeJuice": 0.04,
+          "cointreau": 0.075,
+          "tequilaSilver": 0.05,
           "sugarSyrup": 25
         },
         "hasRecipe": true,
-        "id": "63acb908-c386-47bf-895e-59e1764246f1"
+        "id": "63acb908-c386-47bf-895e-59e1764246f1",
+        "description": "Tequila, Cointreau, Lime & Lemon Juice."
       },
       {
         "name": "Spicy Margarita",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "lemonJuice": 40,
-          "limeJuice": 40,
-          "cointreau": 75,
-          "tequilaSilver": 50,
+          "lemonJuice": 0.04,
+          "limeJuice": 0.04,
+          "cointreau": 0.075,
+          "tequilaSilver": 0.05,
           "sugarSyrup": 25,
           "chilli": 1
         },
         "hasRecipe": true,
-        "id": "d3e4eaab-a3c3-4aed-9141-5bf3d4bb6a2c"
+        "id": "d3e4eaab-a3c3-4aed-9141-5bf3d4bb6a2c",
+        "description": "Tequila, Cointreau, Lemon Juice, Lime Juice and Fresh Chilli."
       },
       {
         "name": "Sex on the Beach",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "vanillaVodka": 50,
-          "archers": 35,
-          "orangeJuice": 50,
-          "cranberryJuice": 50
+          "vanillaVodka": 0.05,
+          "archers": 0.035,
+          "orangeJuice": 0.05,
+          "cranberryJuice": 0.05
         },
         "hasRecipe": true,
-        "id": "e6dbe329-ff0c-4c7e-901b-01f490c908c1"
+        "id": "e6dbe329-ff0c-4c7e-901b-01f490c908c1",
+        "description": "Vodka, Archers, Orange Juice & Cranberry Juice."
       },
       {
         "name": "Whiskey Sour",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "bourbon": 60,
-          "lemonJuice": 30,
+          "bourbon": 0.06,
+          "lemonJuice": 0.03,
           "sugarSyrup": 25,
           "eggWhite": 1,
-          "angosturaBitters": 0.5
+          "angosturaBitters": 0.0005
         },
         "hasRecipe": true,
-        "id": "7f767f1b-1c76-4716-b074-129d4d2b5800"
+        "id": "7f767f1b-1c76-4716-b074-129d4d2b5800",
+        "description": "Bourbon, Lemon Juice, Egg White, Angostura Bitters."
       },
       {
         "name": "Negroni",
@@ -2628,11 +2730,12 @@
         "sellingPrice": 9.95,
         "ingredients": {
           "gin": 35,
-          "martiniRosso": 35,
-          "campari": 35
+          "martiniRosso": 0.035,
+          "campari": 0.035
         },
         "hasRecipe": true,
-        "id": "11811f01-2b89-477d-9870-c4564a04acf0"
+        "id": "11811f01-2b89-477d-9870-c4564a04acf0",
+        "description": "Gin, Campari & Vermouth."
       },
       {
         "name": "Caipirinha",
@@ -2640,12 +2743,13 @@
         "sellingPrice": 9.95,
         "ingredients": {
           "lime": 1,
-          "brownSugar": 20,
+          "brownSugar": 0.02,
           "sugarSyrup": 15,
-          "cachaca": 50
+          "cachaca": 0.05
         },
         "hasRecipe": true,
-        "id": "4c08dc7f-b2df-4ab9-8b99-32546034fe2b"
+        "id": "4c08dc7f-b2df-4ab9-8b99-32546034fe2b",
+        "description": "Cacha\u00e7a, Lime Wedges & Sugar."
       },
       {
         "name": "Cuba Libre",
@@ -2653,28 +2757,30 @@
         "sellingPrice": 9.95,
         "ingredients": {
           "cocaCola": 150,
-          "bacardi": 50,
-          "limeJuice": 25
+          "bacardi": 0.05,
+          "limeJuice": 0.025
         },
         "hasRecipe": true,
-        "id": "54b9d8e0-b943-4a73-a0a1-ddf1ef32d9bf"
+        "id": "54b9d8e0-b943-4a73-a0a1-ddf1ef32d9bf",
+        "description": "Rum, Lime Juice & Coca Cola."
       },
       {
         "name": "Zombie",
         "category": "Cocktails",
         "sellingPrice": 9.95,
         "ingredients": {
-          "havanaWhite": 20,
-          "havanaDark": 20,
-          "kraken": 20,
-          "pineappleJuice": 50,
-          "orangeJuice": 30,
-          "limeJuice": 30,
-          "grenadine": 10,
-          "wrayAndNephew": 10
+          "havanaWhite": 0.02,
+          "havanaDark": 0.02,
+          "kraken": 0.02,
+          "pineappleJuice": 0.05,
+          "orangeJuice": 0.03,
+          "limeJuice": 0.03,
+          "grenadine": 0.01,
+          "wrayAndNephew": 0.01
         },
         "hasRecipe": true,
-        "id": "cbad4714-4bbe-4157-979e-80107d20921d"
+        "id": "cbad4714-4bbe-4157-979e-80107d20921d",
+        "description": "4 Types of Rum, Orange Juice & Pineapple Juice."
       },
       {
         "name": "Efes (Half Pint)",
@@ -3021,7 +3127,7 @@
         "sellingPrice": 4.45,
         "ingredients": {
           "espressoCoffee": 1,
-          "steamedMilk": 200
+          "steamedMilk": 0.2
         },
         "hasRecipe": true,
         "id": "a4552a45-8c61-4a4f-bb4c-b8acae8c7e0d"
@@ -3042,7 +3148,7 @@
         "sellingPrice": 4.95,
         "ingredients": {
           "turkishCoffee": 1,
-          "coffeeSweet": 5
+          "coffeeSweet": 0.005
         },
         "hasRecipe": true,
         "id": "82b91258-29b8-4626-8abf-e6e2409ea479"
@@ -3053,8 +3159,8 @@
         "sellingPrice": 4.45,
         "ingredients": {
           "espressoCoffee": 1,
-          "steamedMilk": 150,
-          "milkFroth": 50
+          "steamedMilk": 0.15,
+          "milkFroth": 0.05
         },
         "hasRecipe": true,
         "id": "f3eb3df8-39d7-4cf6-9396-bcf9fc31a10d"
@@ -3066,7 +3172,7 @@
         "ingredients": {
           "espressoCoffee": 1,
           "hotChocolatePowder": 20,
-          "steamedMilk": 150
+          "steamedMilk": 0.15
         },
         "hasRecipe": true,
         "id": "428c7205-29a6-449b-bc1c-b37580f27cac"
@@ -3088,7 +3194,7 @@
         "sellingPrice": 4.45,
         "ingredients": {
           "hotChocolatePowder": 25,
-          "steamedMilk": 200
+          "steamedMilk": 0.2
         },
         "hasRecipe": true,
         "id": "f2a81363-7c06-4266-a5b8-187c3c3c5565"
@@ -3100,7 +3206,7 @@
         "ingredients": {
           "americanoCoffee": 1,
           "irishWhiskey": 35,
-          "steamedMilk": 50
+          "steamedMilk": 0.05
         },
         "hasRecipe": true,
         "id": "13e55eb5-1275-44f7-9fcf-56d3961102e8"
@@ -3111,8 +3217,8 @@
         "sellingPrice": 6.45,
         "ingredients": {
           "americanoCoffee": 1,
-          "tiaMaria": 35,
-          "steamedMilk": 50
+          "tiaMaria": 0.035,
+          "steamedMilk": 0.05
         },
         "hasRecipe": true,
         "id": "9fe12003-d8b3-42fe-a264-62aaa6d8778c"
@@ -3123,8 +3229,8 @@
         "sellingPrice": 6.45,
         "ingredients": {
           "americanoCoffee": 1,
-          "cointreau": 35,
-          "steamedMilk": 50
+          "cointreau": 0.035,
+          "steamedMilk": 0.05
         },
         "hasRecipe": true,
         "id": "9f2378a8-ccd4-4f76-aa77-b5d85f3f9e9e"
@@ -3135,8 +3241,8 @@
         "sellingPrice": 6.45,
         "ingredients": {
           "americanoCoffee": 1,
-          "baileysCream": 35,
-          "steamedMilk": 30
+          "baileysCream": 0.035,
+          "steamedMilk": 0.03
         },
         "hasRecipe": true,
         "id": "d8699950-fc85-4022-aca6-eb3a0ad98dd9"
@@ -3147,11 +3253,39 @@
         "sellingPrice": 6.45,
         "ingredients": {
           "americanoCoffee": 1,
-          "brandySpirit": 35,
-          "steamedMilk": 50
+          "brandySpirit": 0.035,
+          "steamedMilk": 0.05
         },
         "hasRecipe": true,
         "id": "21f24eb6-29f1-4dd1-a4d0-40e433064598"
+      },
+      {
+        "id": "02691caa-4ffa-4c55-9dda-93138b172dcd",
+        "name": "Test",
+        "category": "Soft Drinks",
+        "sellingPrice": 1,
+        "hasRecipe": false,
+        "buyingPrice": 0.5,
+        "ingredients": {}
+      },
+      {
+        "id": "6a304ae6-183b-402e-8a5f-bbd42ece600e",
+        "name": "test",
+        "category": "Starters",
+        "sellingPrice": 1,
+        "hasRecipe": true,
+        "ingredients": {}
+      },
+      {
+        "id": "8d52873b-d806-4033-8c72-a113a8bee610",
+        "name": "Test",
+        "category": "Starters",
+        "sellingPrice": 1,
+        "hasRecipe": true,
+        "ingredients": {
+          "dsadsadsa": 432,
+          "dsafdsa": 2
+        }
       }
     ],
     "costMultiplier": 1.1,
@@ -3178,643 +3312,648 @@
   "bellFood": {
     "initialIngredients": {
       "chicken": {
-        "cost": 0.0038,
-        "unit": "g",
+        "cost": 4.2,
+        "unit": "kg",
         "category": "Proteins"
       },
       "beefSirloin": {
-        "cost": 0.0085,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "beefFillet": {
-        "cost": 0.012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 18.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "beefMince": {
-        "cost": 0.0055,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.6,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "madeira": {
-        "cost": 0.015,
+        "cost": 14.4,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "truffleOil": {
-        "cost": 0.03,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 36.0,
+        "unit": "L",
+        "category": "Oils and Vinegars"
       },
       "crouton": {
-        "cost": 0.001,
-        "unit": "g",
+        "cost": 2.4,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "oxCheek": {
-        "cost": 0.006,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 8.4,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "lamb": {
-        "cost": 0.0055,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.8,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "pork": {
-        "cost": 0.0045,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "duck": {
-        "cost": 0.014,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "prawns": {
-        "cost": 0.015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 9.6,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "kingPrawns": {
-        "cost": 0.016,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "greenlandPrawns": {
-        "cost": 0.012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 9.6,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "lobster": {
-        "cost": 0.025,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 30.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "cod": {
-        "cost": 0.012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "salmon": {
-        "cost": 0.0145,
-        "unit": "g",
+        "cost": 14.4,
+        "unit": "kg",
         "category": "Proteins"
       },
       "seabass": {
-        "cost": 0.0125,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "squid": {
-        "cost": 0.01,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 8.4,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "kingScallops": {
-        "cost": 0.025,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 24.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "octopus": {
-        "cost": 0.018,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 14.4,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "mussels": {
-        "cost": 0.008,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "mozzarella": {
-        "cost": 0.0075,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "mortadella": {
-        "cost": 0.005,
-        "unit": "g",
+        "cost": 8.4,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "chickenLiverPate": {
-        "cost": 0.004,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "goatCheese": {
-        "cost": 0.009,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 9.6,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "ricotta": {
-        "cost": 0.006,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "parmesan": {
-        "cost": 0.012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 14.4,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "granaPadano": {
-        "cost": 0.01,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "mushrooms": {
-        "cost": 0.0028,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "buttonMushrooms": {
-        "cost": 0.003,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "porciniMushrooms": {
-        "cost": 0.02,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 24.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "onions": {
-        "cost": 0.0012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "redOnions": {
-        "cost": 0.0012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "springOnions": {
-        "cost": 0.0025,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "tenderstemBroccoli": {
-        "cost": 0.0035,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 5.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "potatoes": {
-        "cost": 0.0009,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 1.2,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "cherryTomatoes": {
-        "cost": 0.003,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "tomatoes": {
-        "cost": 0.0025,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "sunDriedTomatoes": {
-        "cost": 0.006,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "asparagus": {
-        "cost": 0.0045,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "spinach": {
-        "cost": 0.003,
-        "unit": "g",
-        "category": "Fruit and Veg"
+        "cost": 4.2,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "beetroot": {
-        "cost": 0.0015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "rocket": {
-        "cost": 0.003,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 4.8,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "lettuce": {
-        "cost": 0.0015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.16,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "redPeppers": {
-        "cost": 0.002,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "greenPeppers": {
-        "cost": 0.002,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "olives": {
-        "cost": 0.0045,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Canned Goods"
       },
       "courgettes": {
-        "cost": 0.0023,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "mixedVegetables": {
-        "cost": 0.002,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "apples": {
-        "cost": 0.0015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Fruits"
       },
       "pineapple": {
-        "cost": 0.003,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.6,
+        "unit": "kg",
+        "category": "Fruits"
       },
       "avocado": {
-        "cost": 0.004,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 4.8,
+        "unit": "kg",
+        "category": "Fruits"
       },
       "italianSausage": {
-        "cost": 0.0065,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.8,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "calabrianSausage": {
-        "cost": 0.007,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 8.4,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "ndujaSausage": {
-        "cost": 0.008,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 9.6,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "ham": {
-        "cost": 0.006,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "sanDanieleHam": {
-        "cost": 0.015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 18.0,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "cream": {
-        "cost": 0.0025,
+        "cost": 2.4,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Dairy"
       },
       "butter": {
-        "cost": 0.0058,
-        "unit": "g",
-        "category": "Dairy and Eggs"
+        "cost": 3.6,
+        "unit": "kg",
+        "category": "Dairy"
       },
       "lemonButter": {
-        "cost": 0.0075,
-        "unit": "g",
+        "cost": 4.8,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "oliveOil": {
-        "cost": 0.006,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "L",
+        "category": "Oils and Vinegars"
       },
       "basilOil": {
-        "cost": 0.008,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 9.6,
+        "unit": "L",
+        "category": "Oils and Vinegars"
       },
       "redWine": {
-        "cost": 0.002,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 4.8,
+        "unit": "L",
+        "category": "Beverages"
       },
       "whiteWine": {
-        "cost": 0.002,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 4.8,
+        "unit": "L",
+        "category": "Beverages"
       },
       "marsalaWine": {
-        "cost": 0.003,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 12.0,
+        "unit": "L",
+        "category": "Beverages"
       },
       "pasta": {
-        "cost": 0.0012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 1.8,
+        "unit": "kg",
+        "category": "Grains"
       },
       "arborioRice": {
-        "cost": 0.002,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "kg",
+        "category": "Grains"
       },
       "vegetableStock": {
-        "cost": 0.0015,
+        "cost": 1.8,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "flour": {
-        "cost": 0.0008,
-        "unit": "g",
-        "category": "Grains and Carbs"
+        "cost": 0.96,
+        "unit": "kg",
+        "category": "Grains"
       },
       "egg": {
-        "cost": 0.29,
+        "cost": 0.6,
         "unit": "unit",
-        "category": "Dairy and Eggs"
+        "category": "Proteins"
       },
       "mayonnaise": {
-        "cost": 0.003,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "L",
+        "category": "Condiments"
       },
       "lemon": {
-        "cost": 0.0016,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 2.4,
+        "unit": "kg",
+        "category": "Fruits"
       },
       "lemonZest": {
-        "cost": 0.0016,
-        "unit": "g",
+        "cost": 2.4,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "mascarpone": {
-        "cost": 0.0065,
-        "unit": "g",
+        "cost": 7.2,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "coffee": {
         "cost": 0.008,
         "unit": "g",
-        "category": "Miscellaneous"
+        "category": "Beverages"
       },
       "cocoa": {
-        "cost": 0.007,
-        "unit": "g",
+        "cost": 18.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "sugar": {
-        "cost": 0.0007,
+        "cost": 0.96,
         "unit": "g",
         "category": "Sweeteners"
       },
       "chocolate": {
-        "cost": 0.0065,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Baking Supplies"
       },
       "pepperoni": {
-        "cost": 0.006,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 8.4,
+        "unit": "kg",
+        "category": "Proteins"
       },
       "jalapenos": {
-        "cost": 0.006,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "chilli": {
-        "cost": 0.005,
-        "unit": "g",
+        "cost": 0.24,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "freshChilli": {
-        "cost": 0.006,
-        "unit": "g",
+        "cost": 0.24,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "basilFresh": {
-        "cost": 0.005,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "englishMustard": {
-        "cost": 0.0025,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "L",
+        "category": "Condiments"
       },
       "frenchMustard": {
-        "cost": 0.0028,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "L",
+        "category": "Condiments"
       },
       "rosemary": {
-        "cost": 0.005,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "garlic": {
-        "cost": 0.0035,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 4.2,
+        "unit": "kg",
+        "category": "Vegetables"
       },
       "ginger": {
-        "cost": 0.005,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "peppercorn": {
-        "cost": 0.01,
-        "unit": "g",
+        "cost": 12.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "greenPeppercorn": {
-        "cost": 0.012,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 14.4,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "demiGlace": {
-        "cost": 0.005,
+        "cost": 6.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "oregano": {
-        "cost": 0.005,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "italianHerbs": {
-        "cost": 0.005,
-        "unit": "g",
+        "cost": 6.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "parsley": {
-        "cost": 0.005,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "mint": {
-        "cost": 0.005,
-        "unit": "g",
+        "cost": 6.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "sage": {
-        "cost": 0.005,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "pancetta": {
-        "cost": 0.008,
-        "unit": "g",
+        "cost": 9.6,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "bechamel": {
         "cost": 0.003,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Proteins"
       },
       "bolognese": {
-        "cost": 0.005,
-        "unit": "g",
+        "cost": 6.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "gelatine": {
-        "cost": 0.015,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 7.2,
+        "unit": "kg",
+        "category": "Baking Supplies"
       },
       "vanilla": {
-        "cost": 0.02,
-        "unit": "g",
+        "cost": 24.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "marieRoseSauce": {
-        "cost": 0.0035,
+        "cost": 3.6,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "orange": {
-        "cost": 0.0015,
-        "unit": "g",
+        "cost": 2.4,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "cinnamon": {
-        "cost": 0.01,
-        "unit": "g",
-        "category": "Miscellaneous"
+        "cost": 6.0,
+        "unit": "kg",
+        "category": "Herbs and Spices"
       },
       "breadcrumbs": {
-        "cost": 0.002,
-        "unit": "g",
+        "cost": 2.4,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "bbqSauce": {
-        "cost": 0.003,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 3.0,
+        "unit": "L",
+        "category": "Condiments"
       },
       "balsamicGlaze": {
-        "cost": 0.005,
+        "cost": 6.0,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "saffron": {
-        "cost": 2,
-        "unit": "g",
+        "cost": 2400.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "anchovies": {
-        "cost": 0.01,
-        "unit": "g",
+        "cost": 12.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "artichoke": {
-        "cost": 0.005,
-        "unit": "g",
+        "cost": 6.0,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "capers": {
-        "cost": 0.008,
-        "unit": "g",
+        "cost": 9.6,
+        "unit": "kg",
         "category": "Miscellaneous"
       },
       "feverTree": {
-        "cost": 1.2,
+        "cost": 1.44,
         "unit": "unit",
         "category": "Miscellaneous"
       },
       "appletiser": {
-        "cost": 1.5,
+        "cost": 1.8,
         "unit": "unit",
         "category": "Miscellaneous"
       },
       "j20": {
-        "cost": 1.4,
+        "cost": 1.68,
         "unit": "unit",
         "category": "Miscellaneous"
       },
       "fruitShoot": {
-        "cost": 0.8,
+        "cost": 0.96,
         "unit": "unit",
         "category": "Miscellaneous"
       },
       "lemonade": {
-        "cost": 0.001,
+        "cost": 1.2,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "bitterLemonade": {
-        "cost": 0.0012,
+        "cost": 1.44,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "fanta": {
-        "cost": 0.001,
+        "cost": 1.2,
         "unit": "ml",
         "category": "Miscellaneous"
       },
       "orangeJuice": {
-        "cost": 0.0015,
+        "cost": 1.8,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Fruits"
       },
       "appleJuice": {
-        "cost": 0.0015,
+        "cost": 1.8,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Fruits"
       },
       "pineappleJuice": {
-        "cost": 0.0015,
+        "cost": 1.8,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Fruits"
       },
       "cranberryJuice": {
-        "cost": 0.0018,
+        "cost": 2.16,
         "unit": "ml",
-        "category": "Miscellaneous"
+        "category": "Fruits"
       },
       "coke": {
-        "cost": 0.0008,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 0.96,
+        "unit": "L",
+        "category": "Beverages"
       },
       "dietCoke": {
-        "cost": 0.0008,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 0.96,
+        "unit": "L",
+        "category": "Beverages"
       },
       "cokeZero": {
-        "cost": 0.0008,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 0.96,
+        "unit": "L",
+        "category": "Beverages"
       },
       "stillWater": {
-        "cost": 0.0003,
-        "unit": "ml",
-        "category": "Miscellaneous"
+        "cost": 0.36,
+        "unit": "L",
+        "category": "Beverages"
       },
       "sparklingWater": {
-        "cost": 0.0004,
-        "unit": "ml",
+        "cost": 0.48,
+        "unit": "L",
+        "category": "Beverages"
+      },
+      "test": {
+        "cost": 1,
+        "unit": "kg",
         "category": "Miscellaneous"
       }
     },
@@ -3830,7 +3969,8 @@
           "flour": 20
         },
         "hasRecipe": true,
-        "id": "f7192209-7be0-4d85-8a55-bc749858e5ce"
+        "id": "f7192209-7be0-4d85-8a55-bc749858e5ce",
+        "description": "Freshly made soup using seasonal ingredients. Served with our homemade bread."
       },
       {
         "name": "Bruschetta Ricotta e Pomodoro",
@@ -3843,7 +3983,8 @@
           "basilOil": 10
         },
         "hasRecipe": true,
-        "id": "ef085175-1c48-41f5-97b7-e55c507b518a"
+        "id": "ef085175-1c48-41f5-97b7-e55c507b518a",
+        "description": "Toasted Italian bread topped with ricotta cheese and fresh tomatoes, drizzled with basil oil."
       },
       {
         "name": "Calamari Fritti con Salsa all'Aglio",
@@ -3857,7 +3998,8 @@
           "lemon": 50
         },
         "hasRecipe": true,
-        "id": "c325fda8-d8e0-4a19-8b91-f167a28ef153"
+        "id": "c325fda8-d8e0-4a19-8b91-f167a28ef153",
+        "description": "Deep fried crispy squid rings served with a garlic mayo dip and lemon wedge."
       },
       {
         "name": "Insalata dell'Adriatico",
@@ -3871,10 +4013,11 @@
           "olives": 20,
           "redPeppers": 50,
           "lettuce": 50,
-          "marieRoseSauce": 20
+          "marieRoseSauce": 0.02
         },
         "hasRecipe": true,
-        "id": "ffc68bad-3f43-443c-be22-f2ef1893901b"
+        "id": "ffc68bad-3f43-443c-be22-f2ef1893901b",
+        "description": "A seafood salad with prawns, squid, octopus, mussels, olives and red peppers on a bed of lettuce with Marie Rose sauce."
       },
       {
         "name": "Pat\u00e9 di Fegatini all'Umbra",
@@ -3888,7 +4031,8 @@
           "cinnamon": 10
         },
         "hasRecipe": true,
-        "id": "ed039048-f9ed-456c-b26a-6dc7161cb1d3"
+        "id": "ed039048-f9ed-456c-b26a-6dc7161cb1d3",
+        "description": "Homemade chicken liver p\u00e2t\u00e9 served with toasted bread and apple & orange chutney with a hint of cinnamon."
       },
       {
         "name": "Involtini di Asparagi (N)",
@@ -3901,7 +4045,8 @@
           "parmesan": 20
         },
         "hasRecipe": true,
-        "id": "4ea3ffb8-2240-4b9f-994c-95cb441f8e3f"
+        "id": "4ea3ffb8-2240-4b9f-994c-95cb441f8e3f",
+        "description": "Asparagus spears wrapped in mortadella and coated in breadcrumbs with parmesan. Deep fried until golden."
       },
       {
         "name": "Costicine di Maiale",
@@ -3912,7 +4057,8 @@
           "bbqSauce": 50
         },
         "hasRecipe": true,
-        "id": "8aab5ad6-5523-424f-a90d-3a08a276f107"
+        "id": "8aab5ad6-5523-424f-a90d-3a08a276f107",
+        "description": "Slow cooked pork ribs in a tangy BBQ sauce."
       },
       {
         "name": "Polpette Salentine",
@@ -3923,11 +4069,12 @@
           "mozzarella": 50,
           "tomatoes": 50,
           "basilFresh": 10,
-          "cream": 20,
+          "cream": 0.02,
           "flour": 20
         },
         "hasRecipe": true,
-        "id": "47b5c728-19c7-44cf-bc1e-f1f8e264e305"
+        "id": "47b5c728-19c7-44cf-bc1e-f1f8e264e305",
+        "description": "Homemade Italian meatballs with mozzarella, tomatoes, fresh basil and a touch of cream. Served with toasted bread."
       },
       {
         "name": "Caprino Impanato",
@@ -3943,7 +4090,8 @@
           "cinnamon": 10
         },
         "hasRecipe": true,
-        "id": "b455b51e-52a7-4c81-bc04-19b3a7ad9047"
+        "id": "b455b51e-52a7-4c81-bc04-19b3a7ad9047",
+        "description": "Breaded goat's cheese served with rocket salad and a sweet apple, orange and cinnamon chutney."
       },
       {
         "name": "Funghi all'Aglio e Prezzemolo",
@@ -3955,11 +4103,12 @@
           "oliveOil": 10,
           "garlic": 10,
           "parsley": 10,
-          "cream": 20,
+          "cream": 0.02,
           "crouton": 20
         },
         "hasRecipe": true,
-        "id": "8aff7cc3-66d5-4732-955a-68bb7624d2c6"
+        "id": "8aff7cc3-66d5-4732-955a-68bb7624d2c6",
+        "description": "Pan-fried mushrooms with garlic, white wine, olive oil, parsley and cream. Served with garlic croutons."
       },
       {
         "name": "Carpaccio di Manzo",
@@ -3973,7 +4122,8 @@
           "truffleOil": 10
         },
         "hasRecipe": true,
-        "id": "b6ab1d33-5696-4726-8790-51168a447d6f"
+        "id": "b6ab1d33-5696-4726-8790-51168a447d6f",
+        "description": "Thinly sliced raw beef fillet topped with rocket, parmesan shavings and drizzled with truffle oil."
       },
       {
         "name": "Gamberoni allo Zafferano",
@@ -3989,7 +4139,8 @@
           "butter": 20
         },
         "hasRecipe": true,
-        "id": "e506bf01-2cad-47b6-99ee-808aa4e9c17d"
+        "id": "e506bf01-2cad-47b6-99ee-808aa4e9c17d",
+        "description": "Saut\u00e9ed king prawns with garlic, saffron, spring onions, white wine, fresh chilli and butter."
       },
       {
         "name": "Insalata Tricolore",
@@ -4002,7 +4153,8 @@
           "basilOil": 10
         },
         "hasRecipe": true,
-        "id": "b2249af7-1b9d-4f9c-987e-04937664bfb1"
+        "id": "b2249af7-1b9d-4f9c-987e-04937664bfb1",
+        "description": "A classic Italian salad of mozzarella, tomatoes and avocado drizzled with basil oil."
       },
       {
         "name": "Pizza Margherita",
@@ -4015,7 +4167,8 @@
           "basilOil": 10
         },
         "hasRecipe": true,
-        "id": "07363599-69ba-4c85-9b7c-6103a6942b06"
+        "id": "07363599-69ba-4c85-9b7c-6103a6942b06",
+        "description": "The classic pizza with tomato sauce, mozzarella cheese and a drizzle of basil oil."
       },
       {
         "name": "Pizza Alternativa",
@@ -4031,7 +4184,8 @@
           "bbqSauce": 50
         },
         "hasRecipe": true,
-        "id": "8e839434-e598-4931-a2aa-c09e03d7c8ce"
+        "id": "8e839434-e598-4931-a2aa-c09e03d7c8ce",
+        "description": "A BBQ base topped with mozzarella, chicken, red onions, red peppers and a sprinkle of parsley."
       },
       {
         "name": "Pizza Calabrese",
@@ -4046,7 +4200,8 @@
           "calabrianSausage": 100
         },
         "hasRecipe": true,
-        "id": "d4481bea-00ca-4c38-866a-4f3891c2a235"
+        "id": "d4481bea-00ca-4c38-866a-4f3891c2a235",
+        "description": "Tomato sauce, mozzarella, spicy Calabrian sausage, spinach and red onions."
       },
       {
         "name": "Calzone Primavera",
@@ -4061,7 +4216,8 @@
           "tomatoes": 50
         },
         "hasRecipe": true,
-        "id": "47d101e5-a124-465b-b3d1-0f491d161eb6"
+        "id": "47d101e5-a124-465b-b3d1-0f491d161eb6",
+        "description": "A folded pizza filled with mozzarella, spinach, mushrooms, ricotta cheese and tomato sauce."
       },
       {
         "name": "Pizza Fresca (N)",
@@ -4072,10 +4228,11 @@
           "mozzarella": 100,
           "mortadella": 100,
           "rocket": 50,
-          "balsamicGlaze": 10
+          "balsamicGlaze": 0.01
         },
         "hasRecipe": true,
-        "id": "477855af-1048-4066-af88-519c0337960d"
+        "id": "477855af-1048-4066-af88-519c0337960d",
+        "description": "A white pizza base topped with mozzarella, mortadella, rocket and drizzled with balsamic glaze."
       },
       {
         "name": "Pizza Chiaramonti",
@@ -4090,7 +4247,8 @@
           "goatCheese": 50
         },
         "hasRecipe": true,
-        "id": "5da5422d-45f2-4158-bb1e-cdd98649e74e"
+        "id": "5da5422d-45f2-4158-bb1e-cdd98649e74e",
+        "description": "A white pizza base topped with mozzarella, ham, mushrooms, garlic and goat's cheese."
       },
       {
         "name": "Pizza Napoli",
@@ -4105,7 +4263,8 @@
           "artichoke": 50
         },
         "hasRecipe": true,
-        "id": "643a3a88-c01c-4dd1-967c-8db8585671fa"
+        "id": "643a3a88-c01c-4dd1-967c-8db8585671fa",
+        "description": "Tomato sauce, mozzarella, anchovies, olives and artichoke hearts."
       },
       {
         "name": "Pizza Domenico",
@@ -4122,7 +4281,8 @@
           "freshChilli": 10
         },
         "hasRecipe": true,
-        "id": "e95ed37b-70a5-46b1-84fa-d1fabbfb4867"
+        "id": "e95ed37b-70a5-46b1-84fa-d1fabbfb4867",
+        "description": "Tomato sauce, mozzarella, chicken, pepperoni, ham, beef mince and fresh chilli."
       },
       {
         "name": "Pizza Gondola",
@@ -4137,7 +4297,8 @@
           "rocket": 30
         },
         "hasRecipe": true,
-        "id": "3f0b6a99-a7b4-4207-aae4-9b378fd0e061"
+        "id": "3f0b6a99-a7b4-4207-aae4-9b378fd0e061",
+        "description": "A white pizza base topped with mozzarella, bolognese sauce, spicy 'nduja sausage, egg and rocket."
       },
       {
         "name": "Calzone Mezza Luna",
@@ -4150,10 +4311,11 @@
           "ham": 50,
           "mushrooms": 50,
           "garlic": 10,
-          "honey": 10
+          "honey": 0.01
         },
         "hasRecipe": true,
-        "id": "057ad2c8-c3cc-41f0-88f3-4cdff9d1c660"
+        "id": "057ad2c8-c3cc-41f0-88f3-4cdff9d1c660",
+        "description": "A half-moon folded pizza filled with mozzarella, chicken, ham, mushrooms, garlic and honey."
       },
       {
         "name": "Pizza Bella Vita",
@@ -4168,7 +4330,8 @@
           "parmesan": 20
         },
         "hasRecipe": true,
-        "id": "f4263551-fa6b-4bd9-bead-4029e45a8c6b"
+        "id": "f4263551-fa6b-4bd9-bead-4029e45a8c6b",
+        "description": "Tomato sauce, mozzarella, San Daniele ham, rocket and parmesan shavings."
       },
       {
         "name": "Pizza Diavola",
@@ -4184,7 +4347,8 @@
           "chilli": 10
         },
         "hasRecipe": true,
-        "id": "c8462f81-073b-44fa-aa79-13bce9c7e94c"
+        "id": "c8462f81-073b-44fa-aa79-13bce9c7e94c",
+        "description": "Tomato sauce, mozzarella, pepperoni, jalapenos, roasted red peppers and chilli flakes."
       },
       {
         "name": "Pizza 'Nduja",
@@ -4200,7 +4364,8 @@
           "springOnions": 30
         },
         "hasRecipe": true,
-        "id": "8b6b5b8a-0a02-4ab4-9b4c-50e7f0dfa14a"
+        "id": "8b6b5b8a-0a02-4ab4-9b4c-50e7f0dfa14a",
+        "description": "Tomato sauce, 'Nduja spicy sausage, garlic, king prawns, mozzarella and spring onions."
       },
       {
         "name": "Tagliatelle Salmone e Spinaci",
@@ -4213,11 +4378,12 @@
           "chilli": 10,
           "onions": 30,
           "spinach": 50,
-          "cream": 50,
+          "cream": 0.05,
           "whiteWine": 50
         },
         "hasRecipe": true,
-        "id": "9a8508dd-e705-433c-b5ad-c7f1228bc7c4"
+        "id": "9a8508dd-e705-433c-b5ad-c7f1228bc7c4",
+        "description": "Egg pasta ribbons cooked with salmon, garlic, chilli, onions, spinach and creamy white wine sauce."
       },
       {
         "name": "Tagliatelle Campagnola",
@@ -4234,7 +4400,8 @@
           "beetroot": 20
         },
         "hasRecipe": true,
-        "id": "048134a3-42b5-41fb-bffa-9cd65f5ee494"
+        "id": "048134a3-42b5-41fb-bffa-9cd65f5ee494",
+        "description": "Egg pasta ribbons cooked with onions, garlic, cherry tomatoes, goat's cheese and aspargus. Topped with parmesan shavings and chopped beetroot."
       },
       {
         "name": "Penne Boscaiola",
@@ -4248,10 +4415,11 @@
           "garlic": 10,
           "parsley": 10,
           "tomatoes": 50,
-          "cream": 20
+          "cream": 0.02
         },
         "hasRecipe": true,
-        "id": "ce0a90e0-c81c-46dc-9935-07b0b884fe54"
+        "id": "ce0a90e0-c81c-46dc-9935-07b0b884fe54",
+        "description": "Penne pasta cooked with chicken, button mushrooms, sun-dried tomatoes, garlic, parsley, tomato sauce and a splash of cream."
       },
       {
         "name": "Linguine Arrabbiata",
@@ -4268,7 +4436,8 @@
           "tomatoes": 50
         },
         "hasRecipe": true,
-        "id": "df8f115d-191b-4381-9bcd-6c36458e8709"
+        "id": "df8f115d-191b-4381-9bcd-6c36458e8709",
+        "description": "Linguine pasta cooked with Italian sausage, red onions, red pepper, fresh chilli and garlic. In a Italian herb and tomato sauce."
       },
       {
         "name": "Tagliatelle Scoglio",
@@ -4287,7 +4456,8 @@
           "tomatoes": 50
         },
         "hasRecipe": true,
-        "id": "a261c18e-50a3-41b3-aa00-dbcd6e8b91bb"
+        "id": "a261c18e-50a3-41b3-aa00-dbcd6e8b91bb",
+        "description": "Egg pasta ribbons cooked with pieces of cod, king prawns, squid rings, cherry tomatoes, basil, garlic, fresh chilli, white wine and tomato sauce."
       },
       {
         "name": "Penne al Baccal\u00e1",
@@ -4302,10 +4472,11 @@
           "parsley": 10,
           "capers": 10,
           "lemonButter": 30,
-          "cream": 30
+          "cream": 0.03
         },
         "hasRecipe": true,
-        "id": "2bf655df-f411-4326-9a03-a8f0f84f0275"
+        "id": "2bf655df-f411-4326-9a03-a8f0f84f0275",
+        "description": "Penne pasta cooked with pieces of cod, Greenland prawns, sun-dried tomatoes, garlic, parsley, capers and a creamy lemon butter sauce."
       },
       {
         "name": "Linguine con Capesante",
@@ -4322,7 +4493,8 @@
           "whiteWine": 50
         },
         "hasRecipe": true,
-        "id": "213b6afc-c027-4810-a0db-9a79e101236a"
+        "id": "213b6afc-c027-4810-a0db-9a79e101236a",
+        "description": "Linguine pasta cooked with garlic, onions, basil, red pepper, lemon zest and white wine. Topped with pan-fried king scallops."
       },
       {
         "name": "Spaghetti con Gamberoni",
@@ -4338,7 +4510,8 @@
           "whiteWine": 50
         },
         "hasRecipe": true,
-        "id": "7175a6f3-210a-40d6-bc87-6b5c07deba0b"
+        "id": "7175a6f3-210a-40d6-bc87-6b5c07deba0b",
+        "description": "Spaghetti pasta cooked with king prawns, salmon, garlic, parsley, spring onions and white wine."
       },
       {
         "name": "Tortelloni d'Asparagi",
@@ -4355,12 +4528,13 @@
           "whiteWine": 50,
           "parsley": 10,
           "tomatoes": 50,
-          "cream": 20,
+          "cream": 0.02,
           "rocket": 50,
           "parmesan": 20
         },
         "hasRecipe": true,
-        "id": "16e3d3bd-2335-4698-bedf-679bc1acd25a"
+        "id": "16e3d3bd-2335-4698-bedf-679bc1acd25a",
+        "description": "Parcels filled with ricotta cheese, Grana Padano and asparagus tips. Cooked with mushrooms, onions, garlic, white wine, parsley, tomato sauce and a splash of cream. Topped with rocket leaves and parmesan shavings."
       },
       {
         "name": "Ravioli d'Aragosta",
@@ -4377,7 +4551,8 @@
           "whiteWine": 50
         },
         "hasRecipe": true,
-        "id": "97dbe89f-9c66-4613-931f-9811c6173ea6"
+        "id": "97dbe89f-9c66-4613-931f-9811c6173ea6",
+        "description": "Lobster ravioli cooked with king prawns, garlic, mushrooms, parsley, butter and white wine."
       },
       {
         "name": "Ravioli di Carne",
@@ -4393,13 +4568,14 @@
           "whiteWine": 50,
           "englishMustard": 10,
           "italianHerbs": 10,
-          "cream": 40,
+          "cream": 0.04,
           "rocket": 20,
           "beetroot": 20,
-          "balsamicGlaze": 10
+          "balsamicGlaze": 0.01
         },
         "hasRecipe": true,
-        "id": "a54b1a1d-680e-430c-b2ae-be510042198e"
+        "id": "a54b1a1d-680e-430c-b2ae-be510042198e",
+        "description": "Homemade meat filled ravioli cooked with ginger, onions, red peppers, garlic, white wine, English mustard, Italian herbs and cream. Topped with rocket leaves, diced beetroot and a balsamic glaze."
       },
       {
         "name": "Lasagna Pasticciata",
@@ -4411,7 +4587,8 @@
           "bechamel": 80
         },
         "hasRecipe": true,
-        "id": "faae8fdb-3a9e-45ae-8528-9e4ff02f4d43"
+        "id": "faae8fdb-3a9e-45ae-8528-9e4ff02f4d43",
+        "description": "Egg pasta layered with bolognese and bechamel sauce. Baked and served with a side salad."
       },
       {
         "name": "Risotto di Mare",
@@ -4424,13 +4601,14 @@
           "mussels": 50,
           "tomatoes": 50,
           "whiteWine": 50,
-          "vegetableStock": 100,
+          "vegetableStock": 0.1,
           "oliveOil": 10,
           "garlic": 10,
           "courgettes": 50
         },
         "hasRecipe": true,
-        "id": "c564e339-e64e-4db2-b48c-ee18b9dea967"
+        "id": "c564e339-e64e-4db2-b48c-ee18b9dea967",
+        "description": "Arborio rice cooked with garlic, king prawns, calamari rings, courgettes and tomato sauce."
       },
       {
         "name": "Risotto dell'Orto",
@@ -4444,11 +4622,12 @@
           "redPeppers": 30,
           "asparagus": 50,
           "ginger": 5,
-          "cream": 50,
+          "cream": 0.05,
           "whiteWine": 50
         },
         "hasRecipe": true,
-        "id": "b0abf185-2771-4607-a7e2-681bd583752a"
+        "id": "b0abf185-2771-4607-a7e2-681bd583752a",
+        "description": "Arborio rice cooked with garlic, chilli, onions, red pepper, asparagus, ginger, cream and white wine."
       },
       {
         "name": "Risotto con Pollo e Porcini",
@@ -4462,10 +4641,11 @@
           "onions": 50,
           "garlic": 10,
           "whiteWine": 50,
-          "cream": 50
+          "cream": 0.05
         },
         "hasRecipe": true,
-        "id": "1ff414b2-dfa8-4a66-87a0-9ed387745c54"
+        "id": "1ff414b2-dfa8-4a66-87a0-9ed387745c54",
+        "description": "Arborio rice cooked with chicken, porcini mushrooms, button mushrooms, onions, garlic, white wine and cream."
       },
       {
         "name": "Pollo all'Inglese",
@@ -4475,13 +4655,14 @@
           "chicken": 200,
           "mushrooms": 50,
           "onions": 50,
-          "cream": 50,
+          "cream": 0.05,
           "whiteWine": 50,
           "englishMustard": 10,
           "garlic": 10
         },
         "hasRecipe": true,
-        "id": "61255176-748b-4f2a-92bb-49dc84c1c4cb"
+        "id": "61255176-748b-4f2a-92bb-49dc84c1c4cb",
+        "description": "Pan-fried chicken fillet cooked with garlic, mushrooms, onions, English mustard, white wine and cream."
       },
       {
         "name": "Pollo alla Valdostana",
@@ -4497,7 +4678,8 @@
           "whiteWine": 30
         },
         "hasRecipe": true,
-        "id": "41b01dad-5bdd-48b7-b253-85d1d5c789c9"
+        "id": "41b01dad-5bdd-48b7-b253-85d1d5c789c9",
+        "description": "Pan-fried chicken fillet topped with mortadella and mozzarella cheese. Served with a tomato, garlic and white wine sauce."
       },
       {
         "name": "Bistecca di Manzo Diana",
@@ -4507,12 +4689,13 @@
           "beefSirloin": 250,
           "mushrooms": 50,
           "onions": 50,
-          "cream": 50,
+          "cream": 0.05,
           "redWine": 50,
           "frenchMustard": 10
         },
         "hasRecipe": true,
-        "id": "7f27ec21-a768-447a-a24b-65e345c722c0"
+        "id": "7f27ec21-a768-447a-a24b-65e345c722c0",
+        "description": "Grilled sirloin steak with a rich Diana sauce of mushrooms, onions, French mustard, cream and red wine."
       },
       {
         "name": "Guancia di Bue al Vino Rosso",
@@ -4527,7 +4710,8 @@
           "oliveOil": 10
         },
         "hasRecipe": true,
-        "id": "620a4d8a-3044-4358-a348-0b1cb7946230"
+        "id": "620a4d8a-3044-4358-a348-0b1cb7946230",
+        "description": "Slow-cooked ox cheek in a rich red wine sauce with rosemary and garlic. Served with roasted potatoes."
       },
       {
         "name": "Filetto di Manzo Pepe",
@@ -4535,13 +4719,14 @@
         "sellingPrice": 29.95,
         "ingredients": {
           "beefFillet": 200,
-          "cream": 50,
+          "cream": 0.05,
           "redWine": 50,
           "greenPeppercorn": 10,
-          "demiGlace": 50
+          "demiGlace": 0.05
         },
         "hasRecipe": true,
-        "id": "2f5cc056-fd66-4e2e-a639-2fbed878d447"
+        "id": "2f5cc056-fd66-4e2e-a639-2fbed878d447",
+        "description": "Prime beef fillet steak cooked to your liking, served with a creamy green peppercorn and red wine sauce."
       },
       {
         "name": "Filetto di Manzo Rossini",
@@ -4551,12 +4736,13 @@
           "beefFillet": 200,
           "chickenLiverPate": 30,
           "flour": 30,
-          "madeira": 50,
+          "madeira": 0.05,
           "truffleOil": 10,
           "crouton": 20
         },
         "hasRecipe": true,
-        "id": "0198694c-42db-4bb7-9269-e31ca9255108"
+        "id": "0198694c-42db-4bb7-9269-e31ca9255108",
+        "description": "Pan-fried fillet of beef topped with chicken liver p\u00e2t\u00e9, served on a crouton with a Madeira and truffle sauce."
       },
       {
         "name": "Anatra al Gran Marnier",
@@ -4566,11 +4752,12 @@
           "duck": 200,
           "orange": 50,
           "pineapple": 50,
-          "honey": 20,
+          "honey": 0.02,
           "chilli": 5
         },
         "hasRecipe": true,
-        "id": "c4be3356-bdbe-4b7e-9628-c61729c10593"
+        "id": "c4be3356-bdbe-4b7e-9628-c61729c10593",
+        "description": "Pan-fried duck breast served sliced with an orange, pineapple, Millefiore honey, chilli sauce."
       },
       {
         "name": "Agnello Abruzzo",
@@ -4583,7 +4770,8 @@
           "potatoes": 150
         },
         "hasRecipe": true,
-        "id": "79a4df60-2ffc-4492-926c-aeb9075b8071"
+        "id": "79a4df60-2ffc-4492-926c-aeb9075b8071",
+        "description": "Roasted marinated lamb chops with a rosemary and red wine sauce. Served with sliced roasted potatoes."
       },
       {
         "name": "Carr\u00e9 d'Agnello",
@@ -4596,7 +4784,8 @@
           "oliveOil": 10
         },
         "hasRecipe": true,
-        "id": "516272a8-3648-40fc-86eb-9182ed4a87c8"
+        "id": "516272a8-3648-40fc-86eb-9182ed4a87c8",
+        "description": "Roasted rack of lamb with a mint and red wine reduction. Served with seasonal vegetables."
       },
       {
         "name": "Tiramisu",
@@ -4607,10 +4796,11 @@
           "egg": 2,
           "coffee": 20,
           "cocoa": 10,
-          "sugar": 50
+          "sugar": 0.05
         },
         "hasRecipe": true,
-        "id": "53dbd4d1-4b3f-4a3b-8638-ff9bc94deb18"
+        "id": "53dbd4d1-4b3f-4a3b-8638-ff9bc94deb18",
+        "description": "Layers of coffee-soaked sponge and mascarpone cream, dusted with cocoa powder."
       },
       {
         "name": "Hot Chocolate Fudge Cake",
@@ -4618,12 +4808,13 @@
         "sellingPrice": 6.95,
         "ingredients": {
           "flour": 50,
-          "sugar": 50,
+          "sugar": 0.05,
           "chocolate": 50,
-          "cream": 50
+          "cream": 0.05
         },
         "hasRecipe": true,
-        "id": "b915e6be-691f-41b7-9f88-bc97936ab198"
+        "id": "b915e6be-691f-41b7-9f88-bc97936ab198",
+        "description": "Rich chocolate cake served warm with vanilla ice cream."
       },
       {
         "name": "Dark and White Chocolate Mousse",
@@ -4631,24 +4822,26 @@
         "sellingPrice": 6.75,
         "ingredients": {
           "chocolate": 50,
-          "cream": 100,
+          "cream": 0.1,
           "egg": 1
         },
         "hasRecipe": true,
-        "id": "cbbed3c7-2672-4147-8c13-670c188c4d3a"
+        "id": "cbbed3c7-2672-4147-8c13-670c188c4d3a",
+        "description": "A light and airy chocolate mousse made with dark and white chocolate, topped with fresh cream."
       },
       {
         "name": "Panna Cotta",
         "category": "Desserts",
         "sellingPrice": 6.95,
         "ingredients": {
-          "cream": 100,
-          "sugar": 50,
+          "cream": 0.1,
+          "sugar": 0.05,
           "gelatine": 10,
           "vanilla": 10
         },
         "hasRecipe": true,
-        "id": "b9d11925-5036-496a-9c0f-0911bb0c7f04"
+        "id": "b9d11925-5036-496a-9c0f-0911bb0c7f04",
+        "description": "Classic Italian dessert made with sweetened cream and vanilla, set with gelatine and served with a fruit coulis."
       },
       {
         "name": "Fever Tree Premium",
@@ -4656,7 +4849,8 @@
         "sellingPrice": 2.95,
         "hasRecipe": false,
         "id": "a67b1681-a7a1-49ca-bab7-015f350104cc",
-        "buyingPrice": 2.065
+        "buyingPrice": 2.065,
+        "description": "Premium tonic water made with natural ingredients and spring water. Served cold with ice (200ml)."
       },
       {
         "name": "Appletiser",
@@ -4664,7 +4858,8 @@
         "sellingPrice": 3.25,
         "hasRecipe": false,
         "id": "8e01de20-73eb-4a4c-bf96-d0d1f32b25e2",
-        "buyingPrice": 2.275
+        "buyingPrice": 2.275,
+        "description": "Sparkling 100% apple juice. Served cold with ice (275ml)."
       },
       {
         "name": "J20 Orange & Passionfruit",
@@ -4672,7 +4867,8 @@
         "sellingPrice": 3.25,
         "hasRecipe": false,
         "id": "c3d06a98-a337-4cf4-9365-b53846df7f8d",
-        "buyingPrice": 2.275
+        "buyingPrice": 2.275,
+        "description": "Refreshing blend of orange and passion fruit juices. Served cold with ice (275ml)."
       },
       {
         "name": "J20 Apple & Raspberry",
@@ -4680,7 +4876,8 @@
         "sellingPrice": 3.25,
         "hasRecipe": false,
         "id": "727939dd-dc8e-4574-a2d6-c210738d21e6",
-        "buyingPrice": 2.275
+        "buyingPrice": 2.275,
+        "description": "Refreshing blend of apple and raspberry juices. Served cold with ice (275ml)."
       },
       {
         "name": "J20 Apple & Mango",
@@ -4688,7 +4885,8 @@
         "sellingPrice": 3.25,
         "hasRecipe": false,
         "id": "2106e027-502e-4ad2-8559-355d22abfad4",
-        "buyingPrice": 2.275
+        "buyingPrice": 2.275,
+        "description": "Refreshing blend of apple and mango juices. Served cold with ice (275ml)."
       },
       {
         "name": "Fruit Shoot Orange",
@@ -4696,7 +4894,8 @@
         "sellingPrice": 1.95,
         "hasRecipe": false,
         "id": "1d17f0c7-5613-4099-8369-d86268fe8e87",
-        "buyingPrice": 1.365
+        "buyingPrice": 1.365,
+        "description": "Kid-friendly orange flavored drink, no artificial colors or flavors."
       },
       {
         "name": "Fruit Shoot Summer Fruit",
@@ -4704,7 +4903,8 @@
         "sellingPrice": 1.95,
         "hasRecipe": false,
         "id": "6b071401-d8dd-43e6-b467-b63053047145",
-        "buyingPrice": 1.365
+        "buyingPrice": 1.365,
+        "description": "Kid-friendly summer fruit flavored drink, no artificial colors or flavors."
       },
       {
         "name": "Fruit Shoot Blackcurrant",
@@ -4712,7 +4912,8 @@
         "sellingPrice": 1.95,
         "hasRecipe": false,
         "id": "ab9506f7-4faf-4e4f-ab21-5e5aa10776bc",
-        "buyingPrice": 1.365
+        "buyingPrice": 1.365,
+        "description": "Kid-friendly blackcurrant flavored drink, no artificial colors or flavors."
       },
       {
         "name": "Lemonade",
@@ -4720,7 +4921,8 @@
         "sellingPrice": 2.95,
         "hasRecipe": false,
         "id": "9b8e2e2c-235a-4f4b-8ed8-1938e8ce963f",
-        "buyingPrice": 2.065
+        "buyingPrice": 2.065,
+        "description": "Classic refreshing lemonade. Served cold with ice."
       },
       {
         "name": "Bitter Lemonade",
@@ -4728,7 +4930,8 @@
         "sellingPrice": 2.95,
         "hasRecipe": false,
         "id": "f3b78c7a-99b0-49d0-8154-1f172c5e43f6",
-        "buyingPrice": 2.065
+        "buyingPrice": 2.065,
+        "description": "Bitter lemon soda with a tangy citrus flavor. Served cold with ice."
       },
       {
         "name": "Fanta",
@@ -4736,7 +4939,8 @@
         "sellingPrice": 2.95,
         "hasRecipe": false,
         "id": "36e2df09-5509-4e75-b95d-1a32f3f63cd0",
-        "buyingPrice": 2.065
+        "buyingPrice": 2.065,
+        "description": "Orange-flavored carbonated soft drink. Served cold with ice."
       },
       {
         "name": "Orange Juice",
@@ -4744,7 +4948,8 @@
         "sellingPrice": 2.95,
         "hasRecipe": false,
         "id": "01c41e1c-db93-4b00-b512-5f0ef24660b8",
-        "buyingPrice": 2.065
+        "buyingPrice": 2.065,
+        "description": "Freshly squeezed orange juice. Served cold with ice."
       },
       {
         "name": "Apple Juice",
@@ -4752,7 +4957,8 @@
         "sellingPrice": 2.95,
         "hasRecipe": false,
         "id": "57e2a3c8-4273-4a89-a20a-25d54c4e7880",
-        "buyingPrice": 2.065
+        "buyingPrice": 2.065,
+        "description": "Freshly pressed apple juice. Served cold with ice."
       },
       {
         "name": "Pineapple Juice",
@@ -4760,7 +4966,8 @@
         "sellingPrice": 2.95,
         "hasRecipe": false,
         "id": "f822a5a8-e720-4b68-b6e8-7ac983801fe8",
-        "buyingPrice": 2.065
+        "buyingPrice": 2.065,
+        "description": "Sweet and refreshing pineapple juice. Served cold with ice."
       },
       {
         "name": "Cranberry Juice",
@@ -4768,7 +4975,8 @@
         "sellingPrice": 2.95,
         "hasRecipe": false,
         "id": "978517f9-acda-4ab9-b510-c09f389f4383",
-        "buyingPrice": 2.065
+        "buyingPrice": 2.065,
+        "description": "Tangy cranberry juice. Served cold with ice."
       },
       {
         "name": "Coca Cola",
@@ -4776,7 +4984,8 @@
         "sellingPrice": 3.25,
         "hasRecipe": false,
         "id": "601d0139-6494-4dce-ab7e-67aa7e1025be",
-        "buyingPrice": 2.275
+        "buyingPrice": 2.275,
+        "description": "Classic cola soft drink. Served cold with ice (330ml)."
       },
       {
         "name": "Diet Coke",
@@ -4784,7 +4993,8 @@
         "sellingPrice": 3.25,
         "hasRecipe": false,
         "id": "1acb7f4b-6098-47b4-9504-502adbe16721",
-        "buyingPrice": 2.275
+        "buyingPrice": 2.275,
+        "description": "Sugar-free cola soft drink. Served cold with ice (330ml)."
       },
       {
         "name": "Coke Zero",
@@ -4792,7 +5002,8 @@
         "sellingPrice": 3.25,
         "hasRecipe": false,
         "id": "75f64d28-c0a9-4a67-a652-2ab72f36f386",
-        "buyingPrice": 2.275
+        "buyingPrice": 2.275,
+        "description": "Zero-calorie cola soft drink. Served cold with ice (330ml)."
       },
       {
         "name": "Still Mineral Water",
@@ -4800,7 +5011,8 @@
         "sellingPrice": 3.95,
         "hasRecipe": false,
         "id": "56b52157-6e43-4d48-99f7-5baf77a72543",
-        "buyingPrice": 2.765
+        "buyingPrice": 2.765,
+        "description": "Refreshing still mineral water (750ml bottle)."
       },
       {
         "name": "Sparkling Mineral Water",
@@ -4808,7 +5020,8 @@
         "sellingPrice": 3.95,
         "hasRecipe": false,
         "id": "06d8ee95-48f7-4831-9ccb-e523f9e5e035",
-        "buyingPrice": 2.765
+        "buyingPrice": 2.765,
+        "description": "Refreshing sparkling mineral water with fine bubbles (750ml bottle)."
       }
     ],
     "costMultiplier": 1.1,
