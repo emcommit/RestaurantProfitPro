@@ -1,7 +1,11 @@
 {
-    "name": "restaurant-profit-pro-client",
-    "version": "1.0.0",
+    "name": "restaurant-profit-pro",
+    "version": "0.0.0",
+    "engines": {
+        "node": "18.x"
+    },
     "scripts": {
+        "prebuild": "node -v && npm list vite || echo 'vite not found'",
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview"
