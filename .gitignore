@@ -1,7 +1,15 @@
 node_modules/
+package-lock.json
 client/node_modules/
 server/node_modules/
 client/dist/
 server/dist/
 .vite/
 *.log
+
+# macOS system files
+.DS_Store
+*/.DS_Store
+
+# Python pip installer
+get-pip.py
