@@ -12,5 +12,6 @@
       "node": "18.x"
     },
     "framework": "vite",
-    "installCommand": "node -v && npm -v && npm install && ls -la node_modules/.bin && npm list vite || echo 'vite not found'",
-    "buildCommand": "./build.sh"  }
+    "installCommand": "yarn install && yarn list vite || echo 'vite not found'",
+    "buildCommand": "./build.sh"
+  }
