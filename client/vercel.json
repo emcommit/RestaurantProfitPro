@@ -1,17 +1,18 @@
 {
     "builds": [
       {
-        "src": "package.json",
+        "src": "client/package.json",
         "use": "@vercel/static-build",
         "config": {
           "distDir": "dist"
         }
       }
     ],
+    "root": "client",
     "engines": {
       "node": "18.x"
     },
     "framework": "vite",
-    "installCommand": "yarn install && yarn list vite || echo 'vite not found'",
-    "buildCommand": "./build.sh"
+    "installCommand": "cd client && ./debug.sh",
+    "buildCommand": "cd client && yarn build"
   }
