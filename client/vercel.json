@@ -8,9 +8,7 @@
         }
       }
     ],
-    "engines": {
-      "node": "18.x"
-    },
+    
     "framework": "vite",
     "installCommand": "cd client && ./debug.sh",
     "buildCommand": "cd client && yarn build"
