@@ -9,7 +9,7 @@
       }
     ],
     "framework": "vite",
-    "installCommand": "yarn install",
+    "installCommand": "yarn install --ignore-engines && yarn list vite || echo 'vite not found'",
     "buildCommand": "yarn build && ls -la dist",
     "rewrites": [
       {
