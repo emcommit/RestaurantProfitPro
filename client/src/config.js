@@ -1,1 +1,1 @@
-export const API_URL = 'http://localhost:3000/api/menus';
+export const API_URL = 'https://restaurantprofitprobackend-production.up.railway.app/api/menus';
