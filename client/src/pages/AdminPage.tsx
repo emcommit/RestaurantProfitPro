@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import { API_URL } from '../config'; // Import the API_URL
+import { API_URL } from '../config';
 import { toast } from 'react-toastify';
 import { useAppStore } from '../store';
 import GenericModal from '../components/common/GenericModal';
@@ -17,9 +17,24 @@ interface MenusResponse {
 }
 
 const fetchMenus = async (): Promise<MenusResponse> => {
-  const { data } = await axios.get(API_URL); // Use API_URL from config instead of localhost
-  if (!data.success) throw new Error('Failed to fetch menus');
-  return data;
+  console.log('AdminPage - Starting fetch, URL:', API_URL);
+  try {
+    console.log('AdminPage - Attempting fetch...');
+    const { data } = await axios.get(API_URL);
+    console.log('AdminPage - API Data:', data);
+    if (!data.success) throw new Error('Failed to fetch menus');
+    return data;
+  } catch (error) {
+    console.error('AdminPage - Fetch Error:', error.message);
+    console.error('AdminPage - Error Details:', error.response || error);
+    throw error;
+  }
+};
+
+const updateMenus = async (updatedMenus: Record<string, any>) => {
+  const response = await axios.post(API_URL, updatedMenus);
+  if (!response.data.success) throw new Error('Failed to update menus');
+  return response.data;
 };
 
 const INGREDIENT_CATEGORIES = [
@@ -39,16 +54,23 @@ const AdminPage: React.FC = () => {
   const [modalType, setModalType] = useState<'ingredient' | 'item'>('ingredient');
   const [modalData, setModalData] = useState<any>(null);
 
-  const { isLoading, error } = useQuery('menus', fetchMenus, {
+  const { isLoading, error, data } = useQuery('menus', fetchMenus, {
     retry: 1,
-    onSuccess: (data) => setMenus(data.data),
+    onSuccess: (data) => {
+      console.log('AdminPage - onSuccess - Fetched Data:', data);
+      setMenus(data.data);
+    },
     onError: () => toast.error('Failed to fetch menus')
   });
 
   if (isLoading) return <div className="flex justify-center items-center h-screen text-foreground">Loading...</div>;
   if (error) return <div className="container mx-auto p-4 text-destructive text-center">Error: {(error as Error).message}</div>;
 
-  const currentMenu = menus[selectedMenu];
+  console.log('AdminPage - Current Menus State:', menus);
+  console.log('AdminPage - Selected Menu:', selectedMenu);
+
+  const currentMenu = menus[selectedMenu] || { initialIngredients: {}, items: [], costMultiplier: 1, categories: [] };
+  console.log('AdminPage - Current Menu:', currentMenu);
 
   const handleEditIngredient = (ingredient: any) => {
     setModalType('ingredient');
@@ -74,40 +96,40 @@ const AdminPage: React.FC = () => {
     setIsModalOpen(true);
   };
 
-  const handleDelete = () => {
-    setMenus(prev => {
+  const handleDelete = async () => {
+    try {
+      const updatedMenus = { ...menus };
       if (modalType === 'ingredient') {
-        const updatedIngredients = { ...prev[selectedMenu].initialIngredients };
+        const updatedIngredients = { ...updatedMenus[selectedMenu].initialIngredients };
         if (modalData?.name) {
           delete updatedIngredients[modalData.name];
           toast.success(`Ingredient "${modalData.name}" deleted successfully`);
         }
-        return {
-          ...prev,
-          [selectedMenu]: {
-            ...prev[selectedMenu],
-            initialIngredients: updatedIngredients
-          }
+        updatedMenus[selectedMenu] = {
+          ...updatedMenus[selectedMenu],
+          initialIngredients: updatedIngredients
         };
       } else {
-        const updatedItems = prev[selectedMenu].items.filter((item: any) => item.name !== modalData?.name);
+        const updatedItems = updatedMenus[selectedMenu].items.filter((item: any) => item.name !== modalData?.name);
         toast.success(`Item "${modalData.name}" deleted successfully`);
-        return {
-          ...prev,
-          [selectedMenu]: {
-            ...prev[selectedMenu],
-            items: updatedItems
-          }
+        updatedMenus[selectedMenu] = {
+          ...updatedMenus[selectedMenu],
+          items: updatedItems
         };
       }
-    });
-    setIsModalOpen(false);
+      await updateMenus(updatedMenus);
+      setMenus(updatedMenus);
+      setIsModalOpen(false);
+    } catch (error) {
+      toast.error('Failed to delete item');
+    }
   };
 
-  const handleSubmit = (data: any) => {
-    setMenus(prev => {
+  const handleSubmit = async (data: any) => {
+    try {
+      const updatedMenus = { ...menus };
       if (modalType === 'ingredient') {
-        const updatedIngredients = { ...prev[selectedMenu].initialIngredients };
+        const updatedIngredients = { ...updatedMenus[selectedMenu].initialIngredients };
         if (modalData?.name && modalData.name !== data.name) {
           delete updatedIngredients[modalData.name];
         }
@@ -117,29 +139,27 @@ const AdminPage: React.FC = () => {
           category: data.category
         };
         toast.success(`Ingredient "${data.name}" ${modalData ? 'updated' : 'added'} successfully`);
-        return {
-          ...prev,
-          [selectedMenu]: {
-            ...prev[selectedMenu],
-            initialIngredients: updatedIngredients
-          }
+        updatedMenus[selectedMenu] = {
+          ...updatedMenus[selectedMenu],
+          initialIngredients: updatedIngredients
         };
       } else {
-        const updatedItems = prev[selectedMenu].items.map((item: any) =>
+        const updatedItems = updatedMenus[selectedMenu].items.map((item: any) =>
           item.name === modalData?.name ? { ...item, ...data } : item
         );
         if (!modalData) updatedItems.push({ ...data, hasRecipe: !!data.ingredients });
         toast.success(`Item "${data.name}" ${modalData ? 'updated' : 'added'} successfully`);
-        return {
-          ...prev,
-          [selectedMenu]: {
-            ...prev[selectedMenu],
-            items: updatedItems
-          }
+        updatedMenus[selectedMenu] = {
+          ...updatedMenus[selectedMenu],
+          items: updatedItems
         };
       }
-    });
-    setIsModalOpen(false);
+      await updateMenus(updatedMenus);
+      setMenus(updatedMenus);
+      setIsModalOpen(false);
+    } catch (error) {
+      toast.error('Failed to save changes');
+    }
   };
 
   const ingredientFields = [
