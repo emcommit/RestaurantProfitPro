@@ -13,3 +13,5 @@ server/dist/
 
 # Python pip installer
 get-pip.py
+# Local Netlify folder
+.netlify
