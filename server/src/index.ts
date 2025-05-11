@@ -23,7 +23,7 @@ app.get('/api/menus', (req, res) => {
     { id: 1, name: "Burger", price: 10 },
     { id: 2, name: "Pizza", price: 12 },
   ];
-  res.json(menus);
+  res.json({ success: true, data: menus });
 });
 
 const PORT = process.env.PORT || 3000;
