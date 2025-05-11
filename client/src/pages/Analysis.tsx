@@ -21,7 +21,7 @@ interface MenuData {
 
 interface MenusResponse {
   success: boolean;
-  data: MenuData[];
+  data: MenuItem[];
 }
 
 const fetchMenus = async (): Promise<MenusResponse> => {
