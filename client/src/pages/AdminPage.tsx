@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from 'axios';
+import { API_URL } from '../config'; // Import the API_URL
 import { toast } from 'react-toastify';
 import { useAppStore } from '../store';
 import GenericModal from '../components/common/GenericModal';
@@ -16,7 +17,7 @@ interface MenusResponse {
 }
 
 const fetchMenus = async (): Promise<MenusResponse> => {
-  const { data } = await axios.get('http://localhost:3000/api/menus');
+  const { data } = await axios.get(API_URL); // Use API_URL from config instead of localhost
   if (!data.success) throw new Error('Failed to fetch menus');
   return data;
 };
