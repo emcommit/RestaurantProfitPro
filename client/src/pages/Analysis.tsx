@@ -17,6 +17,7 @@ interface MenuItem {
 interface MenuData {
   items: MenuItem[];
   initialIngredients: Record<string, any>;
+  costMultiplier?: number;
 }
 
 interface MenusResponse {
@@ -47,9 +48,9 @@ const Analysis: React.FC = () => {
     onSuccess: (data) => {
       console.log('Analysis - Setting menus:', data.data);
       const menuData = {
-        items: data.data, // Directly use the array of items
-        initialIngredients: {}, // Provide default empty object
-        costMultiplier: 1 // Add default costMultiplier value
+        items: data.data, // The array of items
+        initialIngredients: {}, // Default empty object
+        costMultiplier: 1 // Add default costMultiplier as suggested
       };
       setMenus({ [selectedMenu]: menuData });
     },
@@ -62,7 +63,7 @@ const Analysis: React.FC = () => {
   console.log('Analysis - Current menus state:', menus);
   console.log('Analysis - Selected menu:', selectedMenu);
 
-  const currentMenu = menus[selectedMenu] || { items: [], initialIngredients: {} };
+  const currentMenu = menus && menus[selectedMenu] ? menus[selectedMenu] : { items: [], initialIngredients: {}, costMultiplier: 1 };
   const totalItems = currentMenu.items ? currentMenu.items.length : 0;
   const recipeItems = currentMenu.items ? currentMenu.items.filter((item: any) => item.hasRecipe) : [];
   const resaleItems = currentMenu.items ? currentMenu.items.filter((item: any) => !item.hasRecipe) : [];
