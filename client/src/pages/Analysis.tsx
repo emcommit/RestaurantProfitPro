@@ -48,9 +48,9 @@ const Analysis: React.FC = () => {
     onSuccess: (data) => {
       console.log('Analysis - Setting menus:', data.data);
       const menuData = {
-        items: data.data, // The array of items
+        items: data.data, // Use the fetched array as items
         initialIngredients: {}, // Default empty object
-        costMultiplier: 1 // Add default costMultiplier as suggested
+        costMultiplier: 1 // Default value
       };
       setMenus({ [selectedMenu]: menuData });
     },
