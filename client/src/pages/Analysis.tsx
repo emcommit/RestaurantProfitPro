@@ -46,7 +46,7 @@ const Analysis: React.FC = () => {
     retry: 1,
     onSuccess: (data) => {
       console.log('Analysis - Setting menus:', data.data);
-      setMenus(data.data);
+      setMenus({ [selectedMenu]: data.data[0] }); // Store as object with selectedMenu key
     },
     onError: () => toast.error('Failed to fetch menus')
   });
@@ -57,7 +57,7 @@ const Analysis: React.FC = () => {
   console.log('Analysis - Current menus state:', menus);
   console.log('Analysis - Selected menu:', selectedMenu);
 
-  const currentMenu = menus && menus.length > 0 ? menus[0] : { items: [], initialIngredients: {} };
+  const currentMenu = menus[selectedMenu] || { items: [], initialIngredients: {} };
   const totalItems = currentMenu.items ? currentMenu.items.length : 0;
   const recipeItems = currentMenu.items ? currentMenu.items.filter((item: any) => item.hasRecipe) : [];
   const resaleItems = currentMenu.items ? currentMenu.items.filter((item: any) => !item.hasRecipe) : [];
