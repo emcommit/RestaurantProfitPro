@@ -2,7 +2,7 @@
     "name": "restaurant-profit-pro",
     "version": "0.0.0",
     "engines": {
-        "node": "18.x"
+        "node": "22.x"
     },
     "scripts": {
         "prebuild": "node -v && npm list vite || echo 'vite not found'",
@@ -37,4 +37,6 @@
         "typescript": "^5.6.2",
         "vite": "^6.3.5"
     }
+
 }
+
