@@ -7,9 +7,21 @@ import { toast } from 'react-toastify';
 import { useAppStore } from '../store';
 import ToastProvider from '../components/common/ToastProvider';
 
+interface MenuItem {
+  id: number;
+  name: string;
+  price: number;
+  hasRecipe?: boolean;
+}
+
+interface MenuData {
+  items: MenuItem[];
+  initialIngredients: Record<string, any>;
+}
+
 interface MenusResponse {
   success: boolean;
-  data: Record<string, any>;
+  data: MenuData[];
 }
 
 const fetchMenus = async (): Promise<MenusResponse> => {
@@ -32,18 +44,23 @@ const Analysis: React.FC = () => {
 
   const { isLoading, error } = useQuery('menus', fetchMenus, {
     retry: 1,
-    onSuccess: (data) => setMenus(data.data),
+    onSuccess: (data) => {
+      console.log('Analysis - Setting menus:', data.data);
+      setMenus(data.data);
+    },
     onError: () => toast.error('Failed to fetch menus')
   });
 
   if (isLoading) return <div className="flex justify-center items-center h-screen text-foreground">Loading...</div>;
   if (error) return <div className="container mx-auto p-4 text-destructive text-center">Error: {(error as Error).message}</div>;
 
-  const currentMenu = menus[selectedMenu];
+  console.log('Analysis - Current menus state:', menus);
+  console.log('Analysis - Selected menu:', selectedMenu);
 
-  const totalItems = currentMenu.items.length;
-  const recipeItems = currentMenu.items.filter((item: any) => item.hasRecipe);
-  const resaleItems = currentMenu.items.filter((item: any) => !item.hasRecipe);
+  const currentMenu = menus && menus.length > 0 ? menus[0] : { items: [], initialIngredients: {} };
+  const totalItems = currentMenu.items ? currentMenu.items.length : 0;
+  const recipeItems = currentMenu.items ? currentMenu.items.filter((item: any) => item.hasRecipe) : [];
+  const resaleItems = currentMenu.items ? currentMenu.items.filter((item: any) => !item.hasRecipe) : [];
 
   return (
     <div className="min-h-screen bg-background">
@@ -83,7 +100,7 @@ const Analysis: React.FC = () => {
           <div className="card bg-base-200 shadow-xl">
             <div className="card-body">
               <h2 className="card-title">Ingredients Overview</h2>
-              <p>Total Ingredients: {Object.keys(currentMenu.initialIngredients).length}</p>
+              <p>Total Ingredients: {Object.keys(currentMenu.initialIngredients || {}).length}</p>
             </div>
           </div>
         </div>
