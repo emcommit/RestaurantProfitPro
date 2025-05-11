@@ -4,13 +4,12 @@ import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
 import path from 'path';
 
-// Define the shape of the database
 interface MenuItem {
   id: string;
   name: string;
   category: string;
   sellingPrice: number;
-  ingredients: Record<string, number>;
+  ingredients?: Record<string, number>;
   hasRecipe: boolean;
   description: string;
   buyingPrice?: number;
@@ -25,11 +24,11 @@ interface MenuData {
 
 interface Database {
   izMenu: MenuData;
+  bellFood?: MenuData;
 }
 
 const app = express();
 
-// Set up lowdb
 const file = path.join(process.cwd(), 'menus.json');
 console.log('Database file path:', file);
 const adapter = new JSONFile<Database>(file);
@@ -53,8 +52,21 @@ app.use(express.json());
 app.get('/api/menus', async (req, res) => {
   await db.read();
   console.log('Database contents:', db.data);
-  const menus = db.data.izMenu.items || [];
-  res.json({ success: true, data: menus });
+  res.json({ success: true, data: db.data });
+});
+
+app.post('/api/menus', async (req, res) => {
+  try {
+    const updatedData = req.body;
+    console.log('Received updated data:', updatedData);
+    db.data = updatedData;
+    await db.write();
+    console.log('Updated database contents:', db.data);
+    res.json({ success: true, message: 'Menus updated successfully' });
+  } catch (error) {
+    console.error('Error updating menus:', error);
+    res.status(500).json({ success: false, message: 'Failed to update menus' });
+  }
 });
 
 const PORT = process.env.PORT || 3000;
