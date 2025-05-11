@@ -20,8 +20,11 @@ app.use(express.json());
 
 app.get('/api/menus', (req, res) => {
   const menus = [
-    { id: 1, name: "Burger", price: 10 },
-    { id: 2, name: "Pizza", price: 12 },
+    { id: 1, name: "Burger", price: 10, hasRecipe: false },
+    { id: 2, name: "Pizza", price: 12, hasRecipe: true },
+    { id: 3, name: "Salad", price: 8, hasRecipe: true },
+    { id: 4, name: "Fries", price: 5, hasRecipe: false },
+    { id: 5, name: "Soda", price: 3, hasRecipe: false }
   ];
   res.json({ success: true, data: menus });
 });
