@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import { API_URL } from '../config'; // Import the API_URL
+import { API_URL } from '../config';
 import { toast } from 'react-toastify';
 import { useAppStore } from '../store';
 import ToastProvider from '../components/common/ToastProvider';
@@ -13,9 +13,18 @@ interface MenusResponse {
 }
 
 const fetchMenus = async (): Promise<MenusResponse> => {
-  const { data } = await axios.get(API_URL); // Use API_URL from config instead of localhost
-  if (!data.success) throw new Error('Failed to fetch menus');
-  return data;
+  console.log('Analysis - Starting fetch, URL:', API_URL);
+  try {
+    console.log('Analysis - Attempting fetch...');
+    const { data } = await axios.get(API_URL);
+    console.log('Analysis - API Data:', data);
+    if (!data.success) throw new Error('Failed to fetch menus');
+    return data;
+  } catch (error) {
+    console.error('Analysis - Fetch Error:', error.message);
+    console.error('Analysis - Error Details:', error.response || error);
+    throw error;
+  }
 };
 
 const Analysis: React.FC = () => {
@@ -32,7 +41,6 @@ const Analysis: React.FC = () => {
 
   const currentMenu = menus[selectedMenu];
 
-  // Example analysis logic (adjust based on your actual requirements)
   const totalItems = currentMenu.items.length;
   const recipeItems = currentMenu.items.filter((item: any) => item.hasRecipe);
   const resaleItems = currentMenu.items.filter((item: any) => !item.hasRecipe);
