@@ -46,7 +46,11 @@ const Analysis: React.FC = () => {
     retry: 1,
     onSuccess: (data) => {
       console.log('Analysis - Setting menus:', data.data);
-      setMenus({ [selectedMenu]: { items: data.data, initialIngredients: {} } });
+      const menuData = {
+        items: data.data, // Directly use the array of items
+        initialIngredients: {} // Provide default empty object
+      };
+      setMenus({ [selectedMenu]: menuData });
     },
     onError: () => toast.error('Failed to fetch menus')
   });
