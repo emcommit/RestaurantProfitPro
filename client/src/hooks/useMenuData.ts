@@ -13,7 +13,8 @@ const fetchMenus = async (): Promise<MenusResponse> => {
     if (!data.success) throw new Error('Failed to fetch menus');
     return data;
   } catch (error) {
-    console.error('useMenuData - Fetch Error:', error);
+    console.error('useMenuData - Fetch Error:', error.message);
+    console.error('useMenuData - Error Details:', error.response || error);
     throw error;
   }
 };
