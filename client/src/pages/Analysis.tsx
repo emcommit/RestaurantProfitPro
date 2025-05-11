@@ -4,7 +4,6 @@ import { useQuery } from 'react-query';
 import axios from 'axios';
 import { API_URL } from '../config';
 import { toast } from 'react-toastify';
-import { useAppStore } from '../store';
 import ToastProvider from '../components/common/ToastProvider';
 
 interface MenuItem {
@@ -12,12 +11,6 @@ interface MenuItem {
   name: string;
   price: number;
   hasRecipe?: boolean;
-}
-
-interface MenuData {
-  items: MenuItem[];
-  initialIngredients: Record<string, any>;
-  costMultiplier?: number;
 }
 
 interface MenusResponse {
@@ -41,32 +34,18 @@ const fetchMenus = async (): Promise<MenusResponse> => {
 };
 
 const Analysis: React.FC = () => {
-  const { menus, selectedMenu, setMenus } = useAppStore();
-
-  const { isLoading, error } = useQuery('menus', fetchMenus, {
+  const { isLoading, error, data } = useQuery('menus', fetchMenus, {
     retry: 1,
-    onSuccess: (data) => {
-      console.log('Analysis - Setting menus:', data.data);
-      const menuData = {
-        items: data.data, // Use the array directly as items
-        initialIngredients: {}, // Default empty object
-        costMultiplier: 1 // Default value
-      };
-      setMenus({ [selectedMenu]: menuData });
-    },
     onError: () => toast.error('Failed to fetch menus')
   });
 
   if (isLoading) return <div className="flex justify-center items-center h-screen text-foreground">Loading...</div>;
   if (error) return <div className="container mx-auto p-4 text-destructive text-center">Error: {(error as Error).message}</div>;
 
-  console.log('Analysis - Current menus state:', menus);
-  console.log('Analysis - Selected menu:', selectedMenu);
-
-  const currentMenu = menus && menus[selectedMenu] ? menus[selectedMenu] : { items: [], initialIngredients: {}, costMultiplier: 1 };
-  const totalItems = currentMenu.items ? currentMenu.items.length : 0;
-  const recipeItems = currentMenu.items ? currentMenu.items.filter((item: any) => item.hasRecipe) : [];
-  const resaleItems = currentMenu.items ? currentMenu.items.filter((item: any) => !item.hasRecipe) : [];
+  const menuItems = data ? data.data : [];
+  const totalItems = menuItems.length;
+  const recipeItems = menuItems.filter((item: any) => item.hasRecipe);
+  const resaleItems = menuItems.filter((item: any) => !item.hasRecipe);
 
   return (
     <div className="min-h-screen bg-background">
@@ -88,7 +67,7 @@ const Analysis: React.FC = () => {
             <label className="label"><span className="label-text">Selected Restaurant Menu</span></label>
             <input
               type="text"
-              value={selectedMenu === 'izMenu' ? 'IZ Menu' : 'Bell Menu'}
+              value="Local Menu"
               readOnly
               className="input w-full"
             />
@@ -106,7 +85,7 @@ const Analysis: React.FC = () => {
           <div className="card bg-base-200 shadow-xl">
             <div className="card-body">
               <h2 className="card-title">Ingredients Overview</h2>
-              <p>Total Ingredients: {Object.keys(currentMenu.initialIngredients || {}).length}</p>
+              <p>Total Ingredients: 0</p>
             </div>
           </div>
         </div>
