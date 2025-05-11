@@ -1,46 +1,19 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import { API_URL } from '../config'; // Import the API_URL
+import { API_URL } from '../config';
 import { useAppStore } from '../store';
 import { MenusResponse } from '../types/menu';
 
 const fetchMenus = async (): Promise<MenusResponse> => {
-  const { data } = await axios.get(API_URL); // Use API_URL from config instead of localhost
-  if (!data.success) throw new Error('Failed to fetch menus');
-  return data;
+  console.log('useMenuData - Starting fetch, URL:', API_URL);
+  try {
+    console.log('useMenuData - Attempting fetch...');
+    const { data } = await axios.get(API_URL);
+    console.log('useMenuData - API Data:', data);
+    if (!data.success) throw new Error('Failed to fetch menus');
+    return data;
+  } catch (error) {
+    console.error('useMenuData - Fetch Error:', error);
+    throw error;
+  }
 };
-
-const useMenuData = () => {
-  const { selectedMenu } = useAppStore();
-  const { data, error, isLoading } = useQuery('menus', fetchMenus, { 
-    retry: 1,
-    refetchOnWindowFocus: false,
-    staleTime: 5 * 60 * 1000, // Cache data for 5 minutes
-  });
-
-  // Debug logs
-  console.log('useMenuData - Selected Menu:', selectedMenu);
-  console.log('useMenuData - API Data:', data);
-  console.log('useMenuData - Error:', error);
-
-  const menus = data?.data || {
-    izMenu: { items: [], initialIngredients: {}, costMultiplier: 1 },
-    bellFood: { items: [], initialIngredients: {}, costMultiplier: 1 },
-  };
-  const currentMenu = menus[selectedMenu] || { items: [], initialIngredients: {}, costMultiplier: 1 };
-
-  return {
-    menus,
-    currentMenu,
-    ingredientList: Object.entries(currentMenu.initialIngredients || {}).map(([name, { cost, unit, category }]) => ({
-      name,
-      cost,
-      unit,
-      category,
-    })),
-    isLoading,
-    error: error ? (error as Error).message : null,
-  };
-};
-
-export default useMenuData;
