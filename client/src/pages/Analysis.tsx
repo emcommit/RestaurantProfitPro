@@ -8,10 +8,14 @@ import { useAppStore } from '../store';
 import ToastProvider from '../components/common/ToastProvider';
 
 interface MenuItem {
-  id: number;
+  id: string;
   name: string;
-  price: number;
-  hasRecipe?: boolean;
+  category: string;
+  sellingPrice: number;
+  ingredients: Record<string, number>;
+  hasRecipe: boolean;
+  description: string;
+  buyingPrice?: number;
 }
 
 interface MenuData {
@@ -45,28 +49,41 @@ const Analysis: React.FC = () => {
 
   useEffect(() => {
     clearStore();
+    console.log('Analysis - Store cleared');
   }, [clearStore]);
 
   const { isLoading, error } = useQuery('menus', fetchMenus, {
     retry: 1,
     onSuccess: (data) => {
+      console.log('Analysis - Fetched data:', data.data);
       const menuData = {
         items: data.data,
         initialIngredients: {},
         costMultiplier: 1
       };
       setMenus({ [selectedMenu]: menuData });
+      console.log('Analysis - Updated store with:', { [selectedMenu]: menuData });
     },
     onError: () => toast.error('Failed to fetch menus')
   });
+
+  console.log('Analysis - Current store state:', menus);
 
   if (isLoading) return <div className="flex justify-center items-center h-screen text-foreground">Loading...</div>;
   if (error) return <div className="container mx-auto p-4 text-destructive text-center">Error: {(error as Error).message}</div>;
 
   const currentMenu = menus[selectedMenu] || { items: [], initialIngredients: {}, costMultiplier: 1 };
   const totalItems = currentMenu.items.length;
-  const recipeItems = currentMenu.items.filter((item: any) => item.hasRecipe);
-  const resaleItems = currentMenu.items.filter((item: any) => !item.hasRecipe);
+  const recipeItems = currentMenu.items.filter((item: MenuItem) => item.hasRecipe);
+  const resaleItems = currentMenu.items.filter((item: MenuItem) => !item.hasRecipe);
+
+  // Aggregate unique ingredients
+  const allIngredients = new Set<string>();
+  currentMenu.items.forEach((item: MenuItem) => {
+    Object.keys(item.ingredients).forEach((ingredient: string) => {
+      if (ingredient) allIngredients.add(ingredient);
+    });
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -106,7 +123,8 @@ const Analysis: React.FC = () => {
           <div className="card bg-base-200 shadow-xl">
             <div className="card-body">
               <h2 className="card-title">Ingredients Overview</h2>
-              <p>Total Ingredients: {Object.keys(currentMenu.initialIngredients).length}</p>
+              <p>Total Unique Ingredients: {allIngredients.size}</p>
+              <p>Ingredients List: {Array.from(allIngredients).join(', ')}</p>
             </div>
           </div>
         </div>

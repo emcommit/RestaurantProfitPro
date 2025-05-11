@@ -1,7 +1,39 @@
 import express from 'express';
 import cors from 'cors';
+import { Low } from 'lowdb';
+import { JSONFile } from 'lowdb/node';
+import path from 'path';
+
+// Define the shape of the database
+interface MenuItem {
+  id: string;
+  name: string;
+  category: string;
+  sellingPrice: number;
+  ingredients: Record<string, number>;
+  hasRecipe: boolean;
+  description: string;
+  buyingPrice?: number;
+}
+
+interface MenuData {
+  initialIngredients: Record<string, { cost: number; unit: string; category: string }>;
+  items: MenuItem[];
+  costMultiplier: number;
+  categories: string[];
+}
+
+interface Database {
+  izMenu: MenuData;
+}
 
 const app = express();
+
+// Set up lowdb
+const file = path.join(process.cwd(), 'menus.json');
+console.log('Database file path:', file);
+const adapter = new JSONFile<Database>(file);
+const db = new Low<Database>(adapter, { izMenu: { initialIngredients: {}, items: [], costMultiplier: 1, categories: [] } });
 
 app.use(cors({
   origin: '*',
@@ -18,14 +50,10 @@ app.options('/api/menus', (req, res) => {
 
 app.use(express.json());
 
-app.get('/api/menus', (req, res) => {
-  const menus = [
-    { id: 1, name: "Burger", price: 10, hasRecipe: false },
-    { id: 2, name: "Pizza", price: 12, hasRecipe: true },
-    { id: 3, name: "Salad", price: 8, hasRecipe: true },
-    { id: 4, name: "Fries", price: 5, hasRecipe: false },
-    { id: 5, name: "Soda", price: 3, hasRecipe: false }
-  ];
+app.get('/api/menus', async (req, res) => {
+  await db.read();
+  console.log('Database contents:', db.data);
+  const menus = db.data.izMenu.items || [];
   res.json({ success: true, data: menus });
 });
 
