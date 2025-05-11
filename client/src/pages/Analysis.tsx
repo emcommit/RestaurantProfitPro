@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import axios from 'axios';
@@ -41,7 +41,11 @@ const fetchMenus = async (): Promise<MenusResponse> => {
 };
 
 const Analysis: React.FC = () => {
-  const { menus, selectedMenu, setMenus } = useAppStore();
+  const { menus, selectedMenu, setMenus, clearStore } = useAppStore();
+
+  useEffect(() => {
+    clearStore();
+  }, [clearStore]);
 
   const { isLoading, error } = useQuery('menus', fetchMenus, {
     retry: 1,

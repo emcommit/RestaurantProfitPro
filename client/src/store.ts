@@ -1,24 +1,30 @@
-import create from 'zustand';
+import { create } from 'zustand';
 
-interface MenuInterface {
-  items: any[];
-  initialIngredients: Record<string, { cost: number; unit: string; category: string }>;
+interface MenuItem {
+  id: number;
+  name: string;
+  price: number;
+  hasRecipe?: boolean;
+}
+
+interface MenuData {
+  items: MenuItem[];
+  initialIngredients: Record<string, any>;
   costMultiplier: number;
 }
 
 interface AppState {
-  menus: Record<string, MenuInterface>;
-  selectedMenu: 'izMenu' | 'bellFood';
-  setMenus: (menus: Record<string, MenuInterface>) => void;
-  setSelectedMenu: (menu: 'izMenu' | 'bellFood') => void;
+  menus: Record<string, MenuData>;
+  selectedMenu: string;
+  setMenus: (menus: Record<string, MenuData>) => void;
+  setSelectedMenu: (menu: string) => void;
+  clearStore: () => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
-  menus: {
-    izMenu: { items: [], initialIngredients: {}, costMultiplier: 1 },
-    bellFood: { items: [], initialIngredients: {}, costMultiplier: 1 }
-  },
+  menus: {},
   selectedMenu: 'izMenu',
   setMenus: (menus) => set({ menus }),
-  setSelectedMenu: (menu) => set({ selectedMenu: menu }),
+  setSelectedMenu: (selectedMenu) => set({ selectedMenu }),
+  clearStore: () => set({ menus: {}, selectedMenu: 'izMenu' })
 }));
