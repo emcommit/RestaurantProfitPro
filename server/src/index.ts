@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
-import path from 'path';
 
 interface MenuItem {
   id: string;
@@ -31,8 +31,11 @@ const app = express();
 
 const file = path.join(process.cwd(), 'menus.json');
 console.log('Database file path:', file);
+
 const adapter = new JSONFile<Database>(file);
-const db = new Low<Database>(adapter, { izMenu: { initialIngredients: {}, items: [], costMultiplier: 1, categories: [] } });
+const db = new Low<Database>(adapter, {
+  izMenu: { initialIngredients: {}, items: [], costMultiplier: 1, categories: [] }
+});
 
 app.use(cors({
   origin: '*',
@@ -40,6 +43,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
+
 app.options('/api/menus', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -57,7 +61,7 @@ app.get('/api/menus', async (req, res) => {
 
 app.post('/api/menus', async (req, res) => {
   try {
-    const updatedData = req.body;
+    const updatedData = req.body as Database;
     console.log('Received updated data:', updatedData);
     db.data = updatedData;
     await db.write();
