@@ -37,41 +37,34 @@ const db = new Low<Database>(adapter, {
   izMenu: { initialIngredients: {}, items: [], costMultiplier: 1, categories: [] }
 });
 
+// CORS middleware (allow only your Netlify frontend)
+const allowedOrigin = 'https://willowy-begonia-4a2a9f.netlify.app';
+
 app.use(cors({
-  origin: '*',
+  origin: allowedOrigin,
   methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: ['Content-Type'],
   credentials: true
 }));
 
-app.options('/api/menus', (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.sendStatus(204);
-});
+// Ensure preflight OPTIONS requests work
+app.options('*', cors({
+  origin: allowedOrigin,
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true
+}));
 
 app.use(express.json());
 
+// API route
 app.get('/api/menus', async (req, res) => {
   await db.read();
-  console.log('Database contents:', db.data);
-  res.json({ success: true, data: db.data });
+  res.json(db.data);
 });
 
-app.post('/api/menus', async (req, res) => {
-  try {
-    const updatedData = req.body as Database;
-    console.log('Received updated data:', updatedData);
-    db.data = updatedData;
-    await db.write();
-    console.log('Updated database contents:', db.data);
-    res.json({ success: true, message: 'Menus updated successfully' });
-  } catch (error) {
-    console.error('Error updating menus:', error);
-    res.status(500).json({ success: false, message: 'Failed to update menus' });
-  }
-});
-
+// Default port
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

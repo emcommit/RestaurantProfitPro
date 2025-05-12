@@ -1,7 +1,7 @@
 [build]
   command = "cd client && npm install && npm run build && ls -la dist"
   publish = "client/dist"
-  environment = { NODE_VERSION = "18" }
+  environment = { NODE_VERSION = "22" }
 
 [functions]
   directory = "netlify/functions"
