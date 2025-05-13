@@ -21,8 +21,8 @@ const fetchMenus = async (): Promise<MenusResponse> => {
   console.log('Analysis - Starting fetch, URL:', API_URL);
   try {
     console.log('Analysis - Attempting fetch...');
-    const { data } = await axios.get(API_URL);
-    console.log('Analysis - API Data:', data);
+    const { data } = await axios.get("http://localhost:3000/api/menus") ;
+        console.log('Analysis - API Data:', data);
     if (!data.success) throw new Error('Failed to fetch menus');
     return data;
   } catch (error) {

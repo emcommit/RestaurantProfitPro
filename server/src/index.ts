@@ -41,11 +41,11 @@ const db = new Low<Database>(adapter, {
 const allowedOrigin = 'https://willowy-begonia-4a2a9f.netlify.app';
 
 app.use(cors({
-  origin: allowedOrigin,
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type'],
+  origin: "*",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
-}));
+}) );
 
 // Ensure preflight OPTIONS requests work
 app.options('*', cors({
@@ -60,7 +60,7 @@ app.use(express.json());
 // API route
 app.get('/api/menus', async (req, res) => {
   await db.read();
-  res.json(db.data);
+  res.json({ success: true, data: db.data }); 
 });
 
 // Default port
