@@ -1,9 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-import { Low } from 'lowdb';
-import { JSONFile } from 'lowdb/node';
+// import { Low } from 'lowdb'; // Temporarily commented out for diagnostics
+// import { JSONFile } from 'lowdb/node'; // Temporarily commented out for diagnostics
 
+// Interface definitions (can be kept or commented out, not critical for this diagnostic)
 interface MenuItem {
   id: string;
   name: string;
@@ -29,17 +30,17 @@ interface Database {
 
 const app = express();
 
-const file = path.join(process.cwd(), 'menus.json');
-console.log('Database file path:', file);
+// const file = path.join(process.cwd(), 'menus.json'); // Temporarily commented out
+// console.log('Database file path:', file); // Temporarily commented out
 
-const adapter = new JSONFile<Database>(file);
-const db = new Low<Database>(adapter, {
-  izMenu: { initialIngredients: {}, items: [], costMultiplier: 1, categories: [] }
-});
+// const adapter = new JSONFile<Database>(file); // Temporarily commented out
+// const db = new Low<Database>(adapter, { // Temporarily commented out
+//   izMenu: { initialIngredients: {}, items: [], costMultiplier: 1, categories: [] }
+// });
 
 // CORS middleware
 app.use(cors({
-  origin: "*", // For development, consider restricting this in production
+  origin: "*", 
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
@@ -53,21 +54,18 @@ app.get('/', (req, res) => {
 });
 
 
-// API route with enhanced logging and error handling
+// DIAGNOSTIC VERSION of /api/menus route
 app.get('/api/menus', async (req, res) => {
-  console.log("Attempting to access /api/menus endpoint");
+  console.log("DIAGNOSTIC: /api/menus endpoint was hit!");
   try {
-    console.log("Attempting to read database (db.read())");
-    await db.read();
-    console.log("Successfully read database. Data:", JSON.stringify(db.data)); // Log the data to see its structure
-    console.log("Attempting to send response with db.data");
-    res.json({ success: true, data: db.data });
-    console.log("Successfully sent response for /api/menus");
+    // No database interaction in this diagnostic version
+    console.log("DIAGNOSTIC: Attempting to send simple static response.");
+    res.json({ success: true, message: "Diagnostic response from /api/menus", data: { test: "ok" } });
+    console.log("DIAGNOSTIC: Successfully sent static response for /api/menus");
   } catch (error) {
-    console.error("Error in /api/menus endpoint:", error);
-    // Check if error is an instance of Error to safely access message property
-    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
-    res.status(500).json({ success: false, message: 'Failed to retrieve menus.', error: errorMessage });
+    console.error("DIAGNOSTIC: Error in simplified /api/menus endpoint:", error);
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred in diagnostic route';
+    res.status(500).json({ success: false, message: 'Failed in diagnostic /api/menus.', error: errorMessage });
   }
 });
 
