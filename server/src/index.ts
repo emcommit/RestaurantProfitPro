@@ -1,10 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-// import { Low } from 'lowdb'; // Temporarily commented out for diagnostics
-// import { JSONFile } from 'lowdb/node'; // Temporarily commented out for diagnostics
-//
-// Interface definitions (can be kept or commented out, not critical for this diagnostic)
+import { Low } from 'lowdb';
+import { JSONFile } from 'lowdb/node';
+
 interface MenuItem {
   id: string;
   name: string;
@@ -30,17 +29,19 @@ interface Database {
 
 const app = express();
 
-// const file = path.join(process.cwd(), 'menus.json'); // Temporarily commented out
-// console.log('Database file path:', file); // Temporarily commented out
+const file = path.join(process.cwd(), 'menus.json');
+console.log('Database file path:', file);
 
-// const adapter = new JSONFile<Database>(file); // Temporarily commented out
-// const db = new Low<Database>(adapter, { // Temporarily commented out
-//   izMenu: { initialIngredients: {}, items: [], costMultiplier: 1, categories: [] }
-// });
+const adapter = new JSONFile<Database>(file);
+const db = new Low<Database>(adapter, {
+  izMenu: { initialIngredients: {}, items: [], costMultiplier: 1, categories: [] },
+  // Ensure bellFood also has a default structure if it's expected to exist
+  bellFood: { initialIngredients: {}, items: [], costMultiplier: 1, categories: [] }
+});
 
 // CORS middleware
 app.use(cors({
-  origin: "*", 
+  origin: "*", // For development, consider restricting this in production to your Netlify URL
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
@@ -54,18 +55,26 @@ app.get('/', (req, res) => {
 });
 
 
-// DIAGNOSTIC VERSION of /api/menus route
+// API route with full database logic and enhanced error handling
 app.get('/api/menus', async (req, res) => {
-  console.log("DIAGNOSTIC: /api/menus endpoint was hit!");
+  console.log("Attempting to access /api/menus endpoint (full logic)");
   try {
-    // No database interaction in this diagnostic version
-    console.log("DIAGNOSTIC: Attempting to send simple static response.");
-    res.json({ success: true, message: "Diagnostic response from /api/menus", data: { test: "ok" } });
-    console.log("DIAGNOSTIC: Successfully sent static response for /api/menus");
+    console.log("Attempting to read database (db.read())");
+    await db.read();
+    console.log("Successfully read database. Data keys:", Object.keys(db.data || {}));
+    
+    if (!db.data) {
+      console.error("Error in /api/menus: Database data is null or undefined after read.");
+      return res.status(500).json({ success: false, message: 'Failed to retrieve menus: Database data not available.' });
+    }
+    
+    console.log("Attempting to send response with db.data");
+    res.json({ success: true, data: db.data });
+    console.log("Successfully sent response for /api/menus (full logic)");
   } catch (error) {
-    console.error("DIAGNOSTIC: Error in simplified /api/menus endpoint:", error);
-    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred in diagnostic route';
-    res.status(500).json({ success: false, message: 'Failed in diagnostic /api/menus.', error: errorMessage });
+    console.error("Error in /api/menus endpoint (full logic):", error);
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    res.status(500).json({ success: false, message: 'Failed to retrieve menus.', error: errorMessage });
   }
 });
 
