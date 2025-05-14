@@ -49,6 +49,11 @@ app.use(cors({
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.status(200).send('OK');
+});
+
+
 // API route
 app.get('/api/menus', async (req, res) => {
   await db.read();
